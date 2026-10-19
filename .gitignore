@@ -1,0 +1,29 @@
+# Generated outputs (rebuild with reproduce.py)
+build/scores/
+build/tables/
+build/figures/
+build/numbers.json
+build/paper.docx
+build/paper.pdf
+
+# Keep locked values
+!build/.gitkeep
+!paper/numbers.lock.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Benchmark evaluators (downloaded by setup.py)
+data/benchmarks/spider/test_suite/
+data/benchmarks/bird/llm/
