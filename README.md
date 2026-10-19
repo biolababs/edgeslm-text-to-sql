@@ -165,7 +165,7 @@ Controlled precision comparison (F16 / Q8 / Q4 from the same source weights) and
 @misc{biolababs2026texttosql,
   title   = {Text-to-SQL on an 8\,GB Edge Device: Accuracy, Generalisation,
              and Energy Cost of Small Open-Weight Models},
-  author  = {Biola Adeniyi},
+  author  = {Abiola Babsalaam},
   year    = {2026},
   url     = {https://github.com/biolababs/edgeslm-text-to-sql}
 }
