@@ -1,0 +1,2 @@
+0 */6 * * * /home/trafficedge01/ec2_healthcheck.sh
+@reboot /home/trafficedge01/jetson-agent/scripts/start.sh

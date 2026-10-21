@@ -1,0 +1,15 @@
+{
+ "n": 1145,
+ "duration_s": 119.894089653,
+ "rate_hz": 9.54175475464211,
+ "ts_monotonic": true,
+ "vdd_in_median_w": 6.512,
+ "vdd_in_mean_w": 6.5013187772925765,
+ "vdd_in_sd_w": 0.03792153063684572,
+ "gr3d_zero_share": 1.0,
+ "cpu_mean_pct": 0.2924308588064047,
+ "tj_median_c": 54.625,
+ "tj_max_c": 55.062,
+ "ram_mb_median": 670,
+ "swap_mb_max": 0
+}

@@ -1,0 +1,2 @@
+NAME                     ID              SIZE      PROCESSOR    CONTEXT    UNTIL               
+qc15-q4-ollama:latest    d7372fd82851    1.2 GB    100% GPU     4096       29 minutes from now    

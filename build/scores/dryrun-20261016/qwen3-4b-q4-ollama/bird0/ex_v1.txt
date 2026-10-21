@@ -1,0 +1,10 @@
+start calculate EX
+
+Traceback (most recent call last):
+  File "C:\Users\biola\paper\models-cache\c9\data\mini_dev\evaluation\evaluation_ex.py", line 147, in <module>
+    simple_acc, moderate_acc, challenging_acc, acc, count_lists = compute_acc_by_diff(
+                                                                  ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\biola\paper\models-cache\c9\data\mini_dev\evaluation\evaluation_ex.py", line 89, in compute_acc_by_diff
+    moderate_acc = sum([res["res"] for res in moderate_results]) / len(moderate_results)
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+ZeroDivisionError: division by zero

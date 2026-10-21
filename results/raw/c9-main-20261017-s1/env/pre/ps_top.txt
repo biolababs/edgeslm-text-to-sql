@@ -1,0 +1,40 @@
+USER         PID %CPU   RSS     ELAPSED COMMAND
+traffic+  573121  6.0 324280      01:38 /home/trafficedge01/jetson-agent/opencode/node_modules/.bin/opencode web --hostname 127.0.0.1 --port 8788 --log-level INFO --print-logs
+gdm       573208  1.7 124868      01:37 /usr/bin/gnome-shell
+traffic+  573127  1.3 64016       01:38 /home/trafficedge01/jetson-agent/workflow-venv/bin/python /home/trafficedge01/jetson-agent/workflow/server.py
+traffic+  573167  1.3 1252976     01:38 /home/trafficedge01/jetson-agent/bin/llama-server --no-cache-idle-slots --cache-prompt --host 127.0.0.1 --jinja --log-colors off --metrics --port 47739 --slots --no-webui --alias liquid-general --batch-size 512 --ctx-size 16384 --cache-ram 0 --cache-type-k q8_0 --cache-type-v q8_0 --flash-attn on --model /home/trafficedge01/jetson-agent/models/LFM2.5-1.2B-Instruct-QAD-Q4_0.gguf --n-gpu-layers 99 --parallel 1 --threads 6 --threads-batch 6 --timeout 600 --ubatch-size 128
+root      573041  0.4 39100       01:40 /usr/libexec/fwupd/fwupd
+traffic+  573115  0.3 144120      01:38 /home/trafficedge01/jetson-agent/bin/llama-server --models-preset /home/trafficedge01/jetson-agent/config/models.ini --models-max 1 --models-autoload --host 127.0.0.1 --port 8001 --n-gpu-layers 99 --flash-attn on --cache-type-k q8_0 --cache-type-v q8_0 --parallel 1 --threads 6 --threads-batch 6 --jinja --cache-prompt --cache-ram 0 --no-cache-idle-slots --api-key-file /home/trafficedge01/jetson-agent/config/api-keys.txt --no-ui --metrics --slots --timeout 600
+gdm       573155  0.3 18076       01:38 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+root      573158  0.3 54808       01:38 /usr/lib/xorg/Xorg vt1 -displayfd 3 -auth /run/user/128/gdm/Xauthority -nolisten tcp -background none -noreset -keeptty -novtswitch -verbose 3
+root         342  0.2  3260  4-10:00:42 /lib/systemd/systemd-udevd
+gdm       573130  0.2  8520       01:38 /lib/systemd/systemd --user
+root           1  0.1  9332  4-10:00:52 /sbin/init 2
+root         705  0.1  7556  4-10:00:38 /usr/libexec/polkitd --no-debug
+ollama    572895  0.1 29388       01:42 /usr/local/bin/ollama serve
+traffic+  573118  0.1 43632       01:38 node /home/trafficedge01/jetson-agent/proxy/server.js
+gdm       573188  0.1  3588       01:38 dbus-daemon --nofork --print-address 4 --session
+gdm       573189  0.1 14976       01:38 /usr/libexec/gnome-session-binary --autostart /usr/share/gdm/greeter/autostart
+root           2  0.0     0  4-10:00:52 [kthreadd]
+root           3  0.0     0  4-10:00:52 [rcu_gp]
+root           4  0.0     0  4-10:00:52 [rcu_par_gp]
+root           5  0.0     0  4-10:00:52 [slub_flushwq]
+root           6  0.0     0  4-10:00:52 [netns]
+root          10  0.0     0  4-10:00:52 [mm_percpu_wq]
+root          11  0.0     0  4-10:00:52 [rcu_tasks_kthre]
+root          12  0.0     0  4-10:00:52 [rcu_tasks_rude_]
+root          13  0.0     0  4-10:00:52 [rcu_tasks_trace]
+root          14  0.0     0  4-10:00:52 [ksoftirqd/0]
+root          15  0.0     0  4-10:00:52 [rcu_preempt]
+root          16  0.0     0  4-10:00:52 [migration/0]
+root          17  0.0     0  4-10:00:52 [cpuhp/0]
+root          18  0.0     0  4-10:00:52 [cpuhp/1]
+root          19  0.0     0  4-10:00:52 [migration/1]
+root          20  0.0     0  4-10:00:52 [ksoftirqd/1]
+root          23  0.0     0  4-10:00:52 [cpuhp/2]
+root          24  0.0     0  4-10:00:52 [migration/2]
+root          25  0.0     0  4-10:00:52 [ksoftirqd/2]
+root          28  0.0     0  4-10:00:52 [cpuhp/3]
+root          29  0.0     0  4-10:00:52 [migration/3]
+root          30  0.0     0  4-10:00:52 [ksoftirqd/3]
+root          33  0.0     0  4-10:00:52 [cpuhp/4]

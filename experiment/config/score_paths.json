@@ -1,0 +1,13 @@
+{
+ "experiment": "C:/Users/biola/paper/projects/c9-text-to-sql/experiment",
+ "taxi_db": "C:/Users/biola/paper/models-cache/c9/data/nyc/data/taxi.db",
+ "spider_root": "C:/Users/biola/paper/models-cache/c9/data/spider/spider_data",
+ "testsuite_db": "C:/Users/biola/paper/models-cache/c9/dl/testsuite/extracted/database",
+ "spider_eval_dir": "C:/Users/biola/paper/models-cache/c9/data/test-suite-sql-eval",
+ "bird_root": "C:/Users/biola/paper/models-cache/c9/data/minidev/minidev/MINIDEV",
+ "bird_eval_dir": "C:/Users/biola/paper/models-cache/c9/data/mini_dev/evaluation",
+ "arcwise_json": "C:/Users/biola/paper/models-cache/c9/data/text_to_sql_benchmarks/data/arcwise_plat_sql_only_with_diff.json",
+ "arcwise_unchanged": "C:/Users/biola/paper/projects/c9-text-to-sql/experiment/config/arcwise_unchanged.json",
+ "eval_python": "C:/Users/biola/paper/models-cache/c9/envs/eval/Scripts/python.exe",
+ "nltk_data": "C:/Users/biola/paper/models-cache/c9/nltk_data"
+}

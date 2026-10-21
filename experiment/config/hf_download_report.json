@@ -1,0 +1,233 @@
+{
+ "xiyan3b": {
+  "repo": "XGenerationLab/XiYanSQL-QwenCoder-3B-2504",
+  "revision": "b883e58ed83f74bab037d6a7b90c4b8706d357d7",
+  "resolved_sha": "b883e58ed83f74bab037d6a7b90c4b8706d357d7",
+  "license": "apache-2.0",
+  "files": {
+   ".gitattributes": {
+    "size": 1570,
+    "sha256": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+    "hub_lfs_sha256": null,
+    "ok": true
+   },
+   "README.md": {
+    "size": 10085,
+    "sha256": "70c2d017b4c08e7b66c40292d64c65ef10c55e394e1f33f98677be9a1c1c8692",
+    "hub_lfs_sha256": null,
+    "ok": true
+   },
+   "added_tokens.json": {
+    "size": 605,
+    "sha256": "58b54bbe36fc752f79a24a271ef66a0a0830054b4dfad94bde757d851968060b",
+    "hub_lfs_sha256": null,
+    "ok": true
+   },
+   "config.json": {
+    "size": 755,
+    "sha256": "381a64617fdaa2532f71c5fd9281b52f5906be6a230f9f5c5385cf5de1b96f2b",
+    "hub_lfs_sha256": null,
+    "ok": true
+   },
+   "configuration.json": {
+    "size": 26,
+    "sha256": "563571360b3c5a4cf9b14b09732f686a8ed9da2d0dfcd1728d72140b4aeb1467",
+    "hub_lfs_sha256": null,
+    "ok": true
+   },
+   "generation_config.json": {
+    "size": 156,
+    "sha256": "e2a3e0c703499ac8906a010ab42a416db8d8c12dcdce152e39590716855afc73",
+    "hub_lfs_sha256": null,
+    "ok": true
+   },
+   "merges.txt": {
+    "size": 1671853,
+    "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+    "hub_lfs_sha256": null,
+    "ok": true
+   },
+   "model-00001-of-00002.safetensors": {
+    "size": 4957560304,
+    "sha256": "8e0d712f78d7a91f3b7ddbb50a0ae83c1ef7b5d838bf2c633aa9bf3a7d462b22",
+    "hub_lfs_sha256": "8e0d712f78d7a91f3b7ddbb50a0ae83c1ef7b5d838bf2c633aa9bf3a7d462b22",
+    "ok": true
+   },
+   "model-00002-of-00002.safetensors": {
+    "size": 1214366696,
+    "sha256": "62aa777645926e88133be37737955be9a6f77c57208d50a872c6cb9176d15341",
+    "hub_lfs_sha256": "62aa777645926e88133be37737955be9a6f77c57208d50a872c6cb9176d15341",
+    "ok": true
+   },
+   "model.safetensors.index.json": {
+    "size": 35581,
+    "sha256": "7b85f79fd7612df2e5d7f03d7f92d65c8967f790a331146ca7f45658823060d3",
+    "hub_lfs_sha256": null,
+    "ok": true
+   },
+   "special_tokens_map.json": {
+    "size": 613,
+    "sha256": "76862e765266b85aa9459767e33cbaf13970f327a0e88d1c65846c2ddd3a1ecd",
+    "hub_lfs_sha256": null,
+    "ok": true
+   },
+   "tokenizer.json": {
+    "size": 11422063,
+    "sha256": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "hub_lfs_sha256": "5eee858c5123a4279c3e1f7b81247343f356ac767940b2692a928ad929543214",
+    "ok": true
+   },
+   "tokenizer_config.json": {
+    "size": 7335,
+    "sha256": "22f45267afe4ae8e6dab129cbfa05da5709911e0c7d9b0d2b37885e21b6a0296",
+    "hub_lfs_sha256": null,
+    "ok": true
+   },
+   "vocab.json": {
+    "size": 2776833,
+    "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "hub_lfs_sha256": null,
+    "ok": true
+   }
+  },
+  "all_ok": true
+ },
+ "prem1b": {
+  "repo": "prem-research/prem-1B-SQL",
+  "revision": "44dd7fcf9227af4efed936bf29323c61bf66aad1",
+  "resolved_sha": "44dd7fcf9227af4efed936bf29323c61bf66aad1",
+  "license": "apache-2.0",
+  "files": {
+   ".gitattributes": {
+    "size": 1519,
+    "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+    "hub_lfs_sha256": null,
+    "ok": true
+   },
+   "README.md": {
+    "size": 7887,
+    "sha256": "6dd52936d822da68d8efc3ea959ace511d059d9ca0f60723c43214657c691a3f",
+    "hub_lfs_sha256": null,
+    "ok": true
+   },
+   "config.json": {
+    "size": 794,
+    "sha256": "108dde01a0a51aa0c8f20f6db3ac85edaebf11d18ba701f381df6b5c6c1c9101",
+    "hub_lfs_sha256": null,
+    "ok": true
+   },
+   "generation_config.json": {
+    "size": 119,
+    "sha256": "a757955c5f369287e90be2bdf0df0f620d7bc89c365d0d032796585bea9090da",
+    "hub_lfs_sha256": null,
+    "ok": true
+   },
+   "model-00001-of-00002.safetensors": {
+    "size": 4986380064,
+    "sha256": "34a7e0c12737c54f1c824032489551825c626a1643c93ff05baa82cd588d83ab",
+    "hub_lfs_sha256": "34a7e0c12737c54f1c824032489551825c626a1643c93ff05baa82cd588d83ab",
+    "ok": true
+   },
+   "model-00002-of-00002.safetensors": {
+    "size": 399532808,
+    "sha256": "983686ed30eb67909631f0c5c3a97233409d5b38b9c32b06ab2913ff5293def3",
+    "hub_lfs_sha256": "983686ed30eb67909631f0c5c3a97233409d5b38b9c32b06ab2913ff5293def3",
+    "ok": true
+   },
+   "model.safetensors.index.json": {
+    "size": 18005,
+    "sha256": "6a5e0f8f3bbfc3a10bd68ce634e6a0ed69de013eef696631cef84b58a27195e3",
+    "hub_lfs_sha256": null,
+    "ok": true
+   },
+   "special_tokens_map.json": {
+    "size": 462,
+    "sha256": "c84ff2ebbafb4cf16adc872b8d9819b2e9cde7572fcd78f4a10affa8885ed0e0",
+    "hub_lfs_sha256": null,
+    "ok": true
+   },
+   "tokenizer.json": {
+    "size": 1369037,
+    "sha256": "fb3b345a7989596caaad9138426bb2175153412319428584e2835bf9b23ad6df",
+    "hub_lfs_sha256": null,
+    "ok": true
+   },
+   "tokenizer_config.json": {
+    "size": 5489,
+    "sha256": "13e5f87ee9b223f37de3942bddea9c32289cd3bb9e2433db8783b6e83847667b",
+    "hub_lfs_sha256": null,
+    "ok": true
+   }
+  },
+  "all_ok": true
+ },
+ "qc15": {
+  "repo": "Qwen/Qwen2.5-Coder-1.5B-Instruct",
+  "revision": "2e1fd397ee46e1388853d2af2c993145b0f1098a",
+  "resolved_sha": "2e1fd397ee46e1388853d2af2c993145b0f1098a",
+  "license": "apache-2.0",
+  "files": {
+   ".gitattributes": {
+    "size": 1519,
+    "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+    "hub_lfs_sha256": null,
+    "ok": true
+   },
+   "LICENSE": {
+    "size": 11343,
+    "sha256": "832dd9e00a68dd83b3c3fb9f5588dad7dcf337a0db50f7d9483f310cd292e92e",
+    "hub_lfs_sha256": null,
+    "ok": true
+   },
+   "README.md": {
+    "size": 5258,
+    "sha256": "a8504fd3e1247c90e4fe640d84df963237134bf29db02b0de7d502eed6c93c33",
+    "hub_lfs_sha256": null,
+    "ok": true
+   },
+   "config.json": {
+    "size": 660,
+    "sha256": "88f9a17863c05fb313515d2ff74b1098e0c35579f99068e32beda00618508ae0",
+    "hub_lfs_sha256": null,
+    "ok": true
+   },
+   "generation_config.json": {
+    "size": 242,
+    "sha256": "1a628a5775bc69cde01c6749a531150ca4d3189652c618a174f7077923acf3b1",
+    "hub_lfs_sha256": null,
+    "ok": true
+   },
+   "merges.txt": {
+    "size": 1671839,
+    "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+    "hub_lfs_sha256": null,
+    "ok": true
+   },
+   "model.safetensors": {
+    "size": 3087467144,
+    "sha256": "c1b9b30e907950516ba3c646bdf570d8084c25a6410a0cdca80cf04b11bc13a8",
+    "hub_lfs_sha256": "c1b9b30e907950516ba3c646bdf570d8084c25a6410a0cdca80cf04b11bc13a8",
+    "ok": true
+   },
+   "tokenizer.json": {
+    "size": 7031645,
+    "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "hub_lfs_sha256": null,
+    "ok": true
+   },
+   "tokenizer_config.json": {
+    "size": 7305,
+    "sha256": "959e7f1d9a1b7641a6d6ce05ca97b75c7894fcb66cbe5a040406458fb1128ee4",
+    "hub_lfs_sha256": null,
+    "ok": true
+   },
+   "vocab.json": {
+    "size": 2776833,
+    "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
+    "hub_lfs_sha256": null,
+    "ok": true
+   }
+  },
+  "all_ok": true
+ }
+}

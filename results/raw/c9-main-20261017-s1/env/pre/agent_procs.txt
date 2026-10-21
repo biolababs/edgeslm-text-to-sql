@@ -1,0 +1,6 @@
+573106 bash /home/trafficedge01/jetson-agent/scripts/run-server.sh
+573115 /home/trafficedge01/jetson-agent/bin/llama-server --models-preset /home/trafficedge01/jetson-agent/config/models.ini --models-max 1 --models-autoload --host 127.0.0.1 --port 8001 --n-gpu-layers 99 --flash-attn on --cache-type-k q8_0 --cache-type-v q8_0 --parallel 1 --threads 6 --threads-batch 6 --jinja --cache-prompt --cache-ram 0 --no-cache-idle-slots --api-key-file /home/trafficedge01/jetson-agent/config/api-keys.txt --no-ui --metrics --slots --timeout 600
+573118 node /home/trafficedge01/jetson-agent/proxy/server.js
+573121 /home/trafficedge01/jetson-agent/opencode/node_modules/.bin/opencode web --hostname 127.0.0.1 --port 8788 --log-level INFO --print-logs
+573127 /home/trafficedge01/jetson-agent/workflow-venv/bin/python /home/trafficedge01/jetson-agent/workflow/server.py
+573167 /home/trafficedge01/jetson-agent/bin/llama-server --no-cache-idle-slots --cache-prompt --host 127.0.0.1 --jinja --log-colors off --metrics --port 47739 --slots --no-webui --alias liquid-general --batch-size 512 --ctx-size 16384 --cache-ram 0 --cache-type-k q8_0 --cache-type-v q8_0 --flash-attn on --model /home/trafficedge01/jetson-agent/models/LFM2.5-1.2B-Instruct-QAD-Q4_0.gguf --n-gpu-layers 99 --parallel 1 --threads 6 --threads-batch 6 --timeout 600 --ubatch-size 128

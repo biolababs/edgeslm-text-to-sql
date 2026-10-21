@@ -1,0 +1,3 @@
+timer: 00:00~24:00/4
+last: today at 01:56 MDT
+next: today at 09:35 MDT

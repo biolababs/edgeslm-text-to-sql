@@ -1,0 +1,10 @@
+SELECT MIN("Number_products"), MAX("Number_products") FROM "shop";
+SELECT COUNT(*) FROM Paragraphs;
+SELECT dp.degree_summary_name FROM Degree_Programs dp JOIN Student_Enrolment se ON dp.degree_program_id = se.degree_program_id GROUP BY dp.degree_summary_name ORDER BY COUNT(se.student_id) DESC LIMIT 1;
+SELECT other_student_details FROM Students ORDER BY other_student_details DESC;
+SELECT t."Air_Date" FROM "TV_series" t WHERE t."Episode" = 'A Love of a Lifetime';
+SELECT SUM(`SurfaceArea`) FROM `country` WHERE `Continent` = 'Asia' OR `Continent` = 'Europe';
+SELECT c.Continent FROM country c JOIN countrylanguage cl ON c.Code = cl.CountryCode GROUP BY c.Continent ORDER BY COUNT(DISTINCT cl.Language) DESC LIMIT 1;
+SELECT DISTINCT c.`Code` FROM `country` c WHERE c.`Code` NOT IN ( SELECT cl.`CountryCode` FROM `countrylanguage` cl WHERE cl.`Language` = 'English' );
+SELECT COUNT(*) FROM Highschooler;
+SELECT b.breed_name FROM Dogs d JOIN Breeds b ON d.breed_code = b.breed_code GROUP BY b.breed_name ORDER BY COUNT(d.dog_id) DESC LIMIT 1;

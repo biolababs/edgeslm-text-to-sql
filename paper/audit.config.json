@@ -1,0 +1,106 @@
+{
+ "models": {
+  "prem1b-q4-ours": "Prem-1B-SQL",
+  "qc15-q4-ollama": "QwenCoder-1.5B",
+  "qc3-q4-ollama": "QwenCoder-3B",
+  "xiyan3b-q4-ours": "XiYanSQL-3B",
+  "llama32-3b-q4-ollama": "Llama-3.2-3B",
+  "qwen3-4b-q4-ollama": "Qwen3-4B"
+ },
+ "metrics": {
+  "nyc0_ex": {
+   "label": "taxi zero-shot accuracy",
+   "higher_is_better": true
+  },
+  "nycsim_ex": {
+   "label": "taxi 3-shot retrieved accuracy",
+   "higher_is_better": true
+  },
+  "nycfix_ex": {
+   "label": "taxi 3-shot fixed accuracy",
+   "higher_is_better": true
+  },
+  "cur0_ex": {
+   "label": "curated zero-shot accuracy",
+   "higher_is_better": true
+  },
+  "cursim_ex": {
+   "label": "curated 3-shot accuracy",
+   "higher_is_better": true
+  },
+  "spider_ex": {
+   "label": "Spider EX",
+   "higher_is_better": true
+  },
+  "spider_ts": {
+   "label": "Spider TS",
+   "higher_is_better": true
+  },
+  "spider_em": {
+   "label": "Spider EM",
+   "higher_is_better": true
+  },
+  "bird_ex": {
+   "label": "BIRD EX",
+   "higher_is_better": true
+  },
+  "bird_f1": {
+   "label": "BIRD soft F1",
+   "higher_is_better": true
+  },
+  "seen_ex": {
+   "label": "accuracy, template covered",
+   "higher_is_better": true
+  },
+  "unseen_ex": {
+   "label": "accuracy, template withheld",
+   "higher_is_better": true
+  },
+  "gen_gap": {
+   "label": "exposure gap (pp)",
+   "higher_is_better": true
+  },
+  "3shot_lift": {
+   "label": "zero-shot to 3-shot lift (pp)",
+   "higher_is_better": true
+  },
+  "template_share": {
+   "label": "exposure share of covered-pool gain",
+   "higher_is_better": true
+  },
+  "decode_toks": {
+   "label": "decode throughput",
+   "higher_is_better": true
+  },
+  "nycsim_j_per_correct": {
+   "label": "energy per correct answer (J)",
+   "higher_is_better": false
+  },
+  "nyc0_j_per_query": {
+   "label": "energy per query (J)",
+   "higher_is_better": false
+  }
+ },
+ "subject_terms": [
+  "Prem-1B",
+  "QwenCoder",
+  "XiYanSQL",
+  "Llama-3\\.2",
+  "Qwen3-4B",
+  "Spider",
+  "BIRD",
+  "taxi",
+  "curated",
+  "accuracy",
+  "energy",
+  "J/correct",
+  "joules",
+  "throughput",
+  "latency",
+  "model",
+  "interval",
+  "gap",
+  "lift",
+  "share"
+ ]
+}

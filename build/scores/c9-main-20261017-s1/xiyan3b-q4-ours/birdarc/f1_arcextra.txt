@@ -1,0 +1,11 @@
+start calculate Soft F1
+                     simple               moderate             challenging          total               
+count                24                   71                   34                   129                 
+======================================    Soft-F1    =====================================
+Soft-F1              47.82                31.66                21.59                32.01               
+===========================================================================================
+Finished EX evaluation for SQLite on Mini Dev set
+
+
+
+

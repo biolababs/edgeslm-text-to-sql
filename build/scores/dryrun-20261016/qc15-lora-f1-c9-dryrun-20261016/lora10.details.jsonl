@@ -1,0 +1,1 @@
+{"rid": "train_00169|F1|seen", "id": "train_00169", "cond": "lora10", "strict": false, "lenient": false, "error": null, "class": "wrong_result", "role": null, "template_id": "avg_fare_zone", "fold": "F4"}

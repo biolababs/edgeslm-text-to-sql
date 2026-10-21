@@ -1,0 +1,1 @@
+{"rid": "test_unseen_00018|F1|fixed", "id": "test_unseen_00018", "cond": "nycfix", "strict": false, "lenient": false, "error": "OperationalError: no such column: pz.location", "class": "exec_error", "role": null, "template_id": "highest_avg_fare_zone_min_pickups", "fold": "F1"}

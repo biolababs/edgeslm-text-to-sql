@@ -1,0 +1,3 @@
+{
+ "0": "SELECT COUNT(CASE WHEN c.Currency = 'EUR' THEN 1 END) * 1.0 / COUNT(CASE WHEN c.Currency = 'CZK' THEN 1 END) AS ratio FROM customers c;\t----- bird -----\tdebit_card_specializing"
+}

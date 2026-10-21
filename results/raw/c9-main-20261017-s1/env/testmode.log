@@ -1,0 +1,47 @@
+2026-10-17T09:01:46-06:00 precheck busy=0
+2026-10-17T09:01:46-06:00 ENTER test mode
+2026-10-17T09:01:47-06:00 agent stop.sh rc=0
+2026-10-17T09:01:54-06:00 agent stack stopped; ports closed
+2026-10-17T09:01:54-06:00 gdm stopped rc=0
+2026-10-17T09:01:55-06:00 snap hold rc=0
+2026-10-17T09:01:55-06:00 stopped units: trafficedge-ip-reporter.timer apt-daily.timer apt-daily-upgrade.timer fwupd-refresh.timer man-db.timer motd-news.timer update-notifier-download.timer update-notifier-motd.timer anacron.timer e2scrub_all.timer fstrim.timer dpkg-db-backup.timer logrotate.timer systemd-tmpfiles-clean.timer cron fwupd packagekit 
+2026-10-17T09:01:56-06:00 ollama restarted loopback-only with f16 KV cache
+2026-10-17T09:01:56-06:00 MAXN_SUPER, jetson_clocks on (GPU 1020000000 Hz)
+2026-10-17T09:01:56-06:00 swap flushed (was 0 MB)
+2026-10-17T09:01:57-06:00 ENTER done
+2026-10-17T09:01:57-06:00 VERIFY idle (180 s)
+2026-10-17T09:04:58-06:00 VERIFY rc=0
+2026-10-17T09:06:32-06:00 BASELINE session_start 300s
+2026-10-17T09:11:32-06:00 BASELINE session_start done
+2026-10-18T02:39:12-06:00 BASELINE session_end 120s
+2026-10-18T02:41:12-06:00 BASELINE session_end done
+2026-10-18T02:41:23-06:00 EXIT test mode
+2026-10-18T02:41:24-06:00 ollama env restored
+2026-10-18T02:41:24-06:00 ollama listening on *:11434
+2026-10-18T02:41:24-06:00 start trafficedge-ip-reporter.timer rc=0
+2026-10-18T02:41:24-06:00 start apt-daily.timer rc=0
+2026-10-18T02:41:24-06:00 start apt-daily-upgrade.timer rc=0
+2026-10-18T02:41:24-06:00 start fwupd-refresh.timer rc=0
+2026-10-18T02:41:24-06:00 start man-db.timer rc=0
+2026-10-18T02:41:24-06:00 start motd-news.timer rc=0
+2026-10-18T02:41:25-06:00 start update-notifier-download.timer rc=0
+2026-10-18T02:41:25-06:00 start update-notifier-motd.timer rc=0
+2026-10-18T02:41:25-06:00 start anacron.timer rc=0
+2026-10-18T02:41:25-06:00 start e2scrub_all.timer rc=0
+2026-10-18T02:41:25-06:00 start fstrim.timer rc=0
+2026-10-18T02:41:25-06:00 start dpkg-db-backup.timer rc=0
+2026-10-18T02:41:25-06:00 start logrotate.timer rc=0
+2026-10-18T02:41:25-06:00 start systemd-tmpfiles-clean.timer rc=0
+2026-10-18T02:41:25-06:00 start cron rc=0
+2026-10-18T02:41:25-06:00 start fwupd rc=0
+2026-10-18T02:41:25-06:00 start packagekit rc=0
+2026-10-18T02:41:27-06:00 snap unhold rc=0
+2026-10-18T02:41:27-06:00 gdm start rc=0
+2026-10-18T02:41:32-06:00 agent health.sh rc=0 after 5 s
+2026-10-18T02:41:32-06:00 port 8000 listening
+2026-10-18T02:41:32-06:00 port 8001 listening
+2026-10-18T02:41:32-06:00 port 8787 listening
+2026-10-18T02:41:32-06:00 port 8788 listening
+2026-10-18T02:41:32-06:00 port 8790 listening
+2026-10-18T02:41:32-06:00 liquid-general llama-server loaded
+2026-10-18T02:41:52-06:00 EXIT done (health rc=0)

@@ -1,0 +1,146 @@
+You are writing reference (gold) SQL for a text-to-SQL benchmark over a SQLite database of NYC yellow-taxi trips (January 2024, 200,000 sampled trips).
+Schema (SQLite DDL with column comments):
+
+CREATE TABLE zones (
+    location_id   INTEGER PRIMARY KEY,  -- TLC taxi zone id
+    borough       TEXT,                 -- 'Manhattan', 'Brooklyn', 'Queens', 'Bronx', 'Staten Island', 'EWR'
+    zone          TEXT,                 -- zone name, e.g. 'JFK Airport', 'Upper East Side North'
+    service_zone  TEXT                  -- 'Yellow Zone', 'Boro Zone', 'Airports', 'EWR'
+);
+
+CREATE TABLE payment_types (
+    payment_type_id  INTEGER PRIMARY KEY,
+    name             TEXT               -- 'Credit card', 'Cash', 'No charge', 'Dispute', 'Unknown', 'Voided trip'
+);
+
+CREATE TABLE trips (
+    trip_id               INTEGER PRIMARY KEY,
+    vendor_id             INTEGER,      -- TPEP provider code
+    pickup_datetime       TEXT,         -- 'YYYY-MM-DD HH:MM:SS', local time
+    dropoff_datetime      TEXT,         -- 'YYYY-MM-DD HH:MM:SS', local time
+    passenger_count       INTEGER,
+    trip_distance         REAL,         -- miles
+    rate_code_id          INTEGER,      -- 1 standard, 2 JFK, 3 Newark, 4 Nassau/Westchester, 5 negotiated, 6 group ride, 99 unknown
+    pu_location_id        INTEGER REFERENCES zones(location_id),  -- pickup zone
+    do_location_id        INTEGER REFERENCES zones(location_id),  -- dropoff zone
+    payment_type          INTEGER REFERENCES payment_types(payment_type_id),
+    fare_amount           REAL,         -- metered fare, USD
+    tip_amount            REAL,         -- USD; cash tips are not recorded
+    tolls_amount          REAL,         -- USD
+    total_amount          REAL,         -- USD, total charged (excludes cash tips)
+    congestion_surcharge  REAL,         -- USD
+    airport_fee           REAL          -- USD
+);
+
+CREATE INDEX idx_trips_pu ON trips(pu_location_id);
+
+CREATE INDEX idx_trips_do ON trips(do_location_id);
+
+CREATE INDEX idx_trips_pickup ON trips(pickup_datetime);
+
+
+For EACH question below, write ONE correct SQLite query that answers it exactly as worded. Rules:
+- Return exactly the columns the question asks for, in the order the question mentions them; no extra columns.
+- When a question asks for names, return names (not IDs) unless it asks for IDs.
+- Percentages are on a 0-100 scale; use floating-point division (e.g. 100.0 * ...).
+- Use ORDER BY only when the question asks for an order or a top-k; add LIMIT for top-k / 'which ... most' questions.
+- Pickup zone/borough = zones joined on trips.pu_location_id; dropoff = zones joined on trips.do_location_id.
+- Do not round results.
+Output ONLY JSON Lines, one object per question, in the same order: {"id": "<id>", "sql": "<query>"}. No commentary, no code fences.
+
+Questions:
+cur_001: How many trips carried exactly 2 passengers and were paid in cash?
+cur_002: How many trips were charged the JFK rate code (rate code 2)?
+cur_003: How many trips recorded by vendor 1 covered more than 10 miles?
+cur_004: How many rides that began at LaGuardia Airport were paid with a credit card?
+cur_005: How many trips had tolls of more than $10?
+cur_006: How many trips ended in Brooklyn?
+cur_007: How many trips had a total amount between $50 and $100, inclusive?
+cur_008: How many trips were charged an airport fee (an airport fee greater than zero)?
+cur_009: What is the average trip distance, in miles, of trips paid by credit card?
+cur_010: What is the sum of all tips, in dollars, on trips picked up in Queens?
+cur_011: What is the longest distance, in miles, of any trip that started at JFK Airport?
+cur_012: What is the average total amount of trips with five or more passengers?
+cur_013: What is the smallest fare amount above zero in the data?
+cur_014: On average, how many passengers did vendor 2's trips carry?
+cur_015: How much was paid in tolls, in total, on trips that ended at Newark Airport?
+cur_016: How many distinct pickup location IDs appear in the trip records?
+cur_017: List each vendor ID together with its number of trips.
+cur_018: For each payment type that appears in the trips, give the payment type name and the average tip amount.
+cur_019: For each pickup borough, give the borough name and the average trip distance in miles.
+cur_020: For each passenger count from 1 to 6, give the passenger count and the number of trips.
+cur_021: For every rate code ID used in the trips, give the rate code ID and the average fare amount.
+cur_022: For rides that started at JFK Airport, give each dropoff borough and how many of those rides ended there.
+cur_023: Group trips by the service zone of their pickup zone: give each service zone and the total amount collected.
+cur_024: For trips with more than 3 passengers, give each vendor ID and the average trip distance.
+cur_025: Name the 5 dropoff zones that received the most trips, from most to fewest.
+cur_026: Which pickup zone generated the largest total tip amount? Give the zone name.
+cur_027: Give the trip IDs of the 3 longest trips by distance, longest first.
+cur_028: Which payment type has the highest average total amount? Give its name.
+cur_029: Not counting JFK Airport and LaGuardia Airport, which Queens zone had the most pickups? Give the zone name.
+cur_030: Name the 3 Brooklyn pickup zones with the most trips, from most to fewest.
+cur_031: For trips that started in Manhattan, which dropoff borough has the highest average fare? Give the borough name.
+cur_032: Among pickup zones with at least 200 pickups, name the 10 with the highest average trip distance, highest first.
+cur_033: What percentage of all trips were paid in cash?
+cur_034: What percentage of rides that started at JFK Airport ended in Manhattan?
+cur_035: For credit card trips, what is total tips divided by total fares (as a fraction, not a percentage)?
+cur_036: What percentage of trips carried more than one passenger?
+cur_037: What percentage of vendor 2's trips were longer than 5 miles?
+cur_038: What percentage of the total amount collected across all trips came from rides picked up at JFK Airport or LaGuardia Airport?
+cur_039: For pickups in Midtown Center, what is the total fare divided by the total distance, in dollars per mile?
+cur_040: Of the trips that ended at LaGuardia Airport, what percentage paid any tolls (toll amount above zero)?
+cur_041: How many trips were picked up on New Year's Day, January 1, 2024?
+cur_042: How many trips were picked up between 7:00 AM and 9:59 AM?
+cur_043: Which date had the fewest pickups? Answer in YYYY-MM-DD format.
+cur_044: What is the average trip duration, in minutes, for trips picked up on a Saturday?
+cur_045: How many trips were dropped off on a later calendar date than the date they were picked up?
+cur_046: How many trips were picked up from January 25 through January 31, 2024, inclusive?
+cur_047: For each day of the week, give the day number (0 = Sunday through 6 = Saturday) and the number of pickups.
+cur_048: How many trips lasted longer than two hours?
+cur_049: How many trips both started and ended in Brooklyn?
+cur_050: How many rides went from JFK Airport to LaGuardia Airport?
+cur_051: What is the average fare of rides that started in Manhattan and ended in Queens?
+cur_052: Where did rides starting at Times Sq/Theatre District most often end? Give the dropoff zone name.
+cur_053: How many trips were picked up in a Yellow Zone service zone and dropped off in a Boro Zone service zone?
+cur_054: Which pickup borough and dropoff borough combination is the most common? Give the pickup borough and the dropoff borough.
+cur_055: How many trips that started in Queens ended at Newark Airport?
+cur_056: For credit card rides from LaGuardia Airport to any Manhattan zone, what is the average total amount?
+cur_057: How many trips were longer than the average trip distance across all trips?
+cur_058: Considering only pickup zones with at least one pickup, how many of them have more pickups than the average number of pickups per such zone?
+cur_059: What is the trip ID of the trip with the highest total amount?
+cur_060: How many credit card trips had a tip larger than the average tip of credit card trips?
+cur_061: What is the average fare of trips picked up in the pickup zone that has the most pickups overall?
+cur_062: For the dropoff zone that received the most trips, what is the average tip of trips that ended there?
+cur_063: How many trips had a fare more than twice the overall average fare?
+cur_064: Among pickup zones with at least one pickup, what percentage have an average tip above $3?
+cur_065: How many Manhattan taxi zones never appear as a trip's dropoff location?
+cur_066: How many location IDs were used as a pickup location but never as a dropoff location?
+cur_067: How many location IDs appear both as a pickup location and as a dropoff location?
+cur_068: How many Queens zones had neither a pickup nor a dropoff in the data?
+cur_069: How many Bronx zones had at least one dropoff but no pickups?
+cur_070: How many distinct dropoff location IDs were reached by trips from Manhattan but never by trips from Queens?
+cur_071: Which payment type names never occur in the trip records?
+cur_072: How many dropoff location IDs were reached from JFK Airport but never from LaGuardia Airport?
+cur_073: How many trips had a fare of exactly zero?
+cur_074: What percentage of cash trips have a recorded tip of zero?
+cur_075: What is the average tip of credit card trips, counting only trips with a fare above zero?
+cur_076: How many trips recorded zero passengers?
+cur_077: How many trips had a total amount smaller than their fare amount?
+cur_078: What percentage of credit card trips had no tip (a tip amount of zero)?
+cur_079: How many trips had no congestion surcharge, meaning a surcharge of zero?
+cur_080: Leaving out cash trips, whose tips are not recorded, what is the average tip in dollars for trips picked up in Queens?
+hw_001: How many rides started and ended in the same taxi zone?
+hw_002: Of the rides dropped off at LaGuardia Airport, what percentage were picked up in Manhattan?
+hw_003: On which day of the week (give the name) is the average trip distance longest?
+hw_004: How many trips cost over $100 in total but covered less than one mile?
+hw_005: For trips from JFK Airport to any Manhattan zone, what is the total fare divided by the total distance, in dollars per mile?
+hw_006: Which vendor ID completed the most trips?
+hw_007: How many trips were picked up on a weekend?
+hw_008: Where do people who get picked up at JFK Airport most often get dropped off? Give the zone name.
+hw_009: Which three Brooklyn pickup zones collected the most tips in total, from most to least?
+hw_010: Citywide, which hour of the day (0-23) sees the most pickups?
+hw_011: How many riders left a tip bigger than the fare itself?
+hw_012: What does a cash trip that both starts and ends in Queens cost on average, all-in?
+hw_013: How many Manhattan zones had at least 1,000 pickups?
+hw_014: Of all trips longer than 20 miles, what percentage ended at JFK, LaGuardia or Newark airport?
+hw_015: How long, in minutes, is the average ride picked up between midnight and 4 AM?

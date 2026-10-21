@@ -1,0 +1,6 @@
+2026-10-17T10:59:34-06:00 cooldown ok elapsed=705s tj_mC=54437 target_mC=54437
+2026-10-17T12:50:19-06:00 cooldown ok elapsed=630s tj_mC=54343 target_mC=54437
+2026-10-17T15:37:22-06:00 cooldown ok elapsed=470s tj_mC=54375 target_mC=54437
+2026-10-17T19:38:28-06:00 cooldown ok elapsed=760s tj_mC=54406 target_mC=54437
+2026-10-17T22:34:32-06:00 cooldown ok elapsed=410s tj_mC=54375 target_mC=54437
+2026-10-18T02:39:10-06:00 FLAG cooldown_max_reached elapsed=1201s tj_mC=54625 target_mC=54437

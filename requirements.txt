@@ -1,0 +1,7 @@
+pandas
+matplotlib
+scipy
+pyarrow
+requests
+pypandoc_binary
+typst

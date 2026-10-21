@@ -1,0 +1,3 @@
+{
+ "0": "SELECT CAST(SUM(Currency = 'EUR') AS REAL) / SUM(Currency = 'CZK') FROM customers;\t----- bird -----\tdebit_card_specializing"
+}

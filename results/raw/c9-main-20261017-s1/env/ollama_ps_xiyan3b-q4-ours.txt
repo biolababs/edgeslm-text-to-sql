@@ -1,0 +1,2 @@
+NAME                      ID              SIZE      PROCESSOR    CONTEXT    UNTIL               
+xiyan3b-q4-ours:latest    ad14726bf3db    2.2 GB    100% GPU     4096       29 minutes from now    

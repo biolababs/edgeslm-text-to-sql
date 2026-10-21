@@ -1,0 +1,4 @@
+1792255668409088268	swap delta 106MB during prem1b-q4-ours (accuracy run kept, flagged)
+1792286746157879791	swap delta 266MB during xiyan3b-q4-ours (accuracy run kept, flagged)
+1792311548878095860	swap delta 114MB during qwen3-4b-q4-ollama (accuracy run kept, flagged)
+1792312750655010026	cooldown_max_reached

@@ -1,0 +1,14 @@
+你是一名{dialect}专家，现在需要阅读并理解下面的【数据库schema】描述，以及可能用到的【参考信息】，并运用{dialect}知识生成sql语句回答【用户问题】。
+【用户问题】
+{question}
+
+【数据库schema】
+{db_schema}
+
+【参考信息】
+{evidence}
+
+【用户问题】
+{question}
+
+```sql

@@ -1,0 +1,1 @@
+{"rid": "test_seen_00027|F3|unseen", "id": "test_seen_00027", "cond": "lora3sim", "strict": false, "lenient": false, "error": null, "class": "wrong_result", "role": null, "template_id": "longest_trip_per_payment_borough", "fold": "F3"}

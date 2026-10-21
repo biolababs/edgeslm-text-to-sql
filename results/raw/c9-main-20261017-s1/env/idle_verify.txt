@@ -1,0 +1,53 @@
+{
+ "pass": true,
+ "checks": {
+  "gr3d_zero_ge_99pct": true,
+  "cpu_mean_lt_5pct": true,
+  "vdd_sd_lt_0.2w": true,
+  "power_rate_ge_9hz": true,
+  "ts_monotonic": true,
+  "no_foreign_proc_gt_1pct": true,
+  "ollama_ps_empty": true,
+  "listeners_allowed_only": true,
+  "swap_used_lt_50mb": true
+ },
+ "summary": {
+  "n": 1718,
+  "duration_s": 179.953203749,
+  "rate_hz": 9.541369446219383,
+  "ts_monotonic": true,
+  "vdd_in_median_w": 6.512,
+  "vdd_in_mean_w": 6.5279318975552965,
+  "vdd_in_sd_w": 0.03526885786755385,
+  "gr3d_zero_share": 1.0,
+  "cpu_mean_pct": 0.3503104384943733,
+  "tj_median_c": 52.937,
+  "tj_max_c": 54.156,
+  "ram_mb_median": 647.0,
+  "swap_mb_max": 0
+ },
+ "top_iterations": 35,
+ "procs_over_1pct_excluding_samplers": {},
+ "top_procs_avg_pct": {
+  "tegrast+": 0.78,
+  "systemd+": 0.27,
+  "top": 0.17,
+  "systemd": 0.11,
+  "irq/167+": 0.1,
+  "kworker+": 0.09,
+  "dbus-da+": 0.05,
+  "python3": 0.03,
+  "snapd": 0.03,
+  "contain+": 0.03,
+  "Network+": 0.02,
+  "irq/198+": 0.02,
+  "nvfanco+": 0.02,
+  "nvgpu_c+": 0.02,
+  "sshd": 0.02
+ },
+ "bad_listeners": [],
+ "swap_used_mb": 0,
+ "ollama_ps": [
+  "NAME    ID    SIZE    PROCESSOR    CONTEXT    UNTIL "
+ ]
+}

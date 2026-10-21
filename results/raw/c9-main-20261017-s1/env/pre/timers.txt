@@ -1,0 +1,20 @@
+NEXT                        LEFT               LAST                        PASSED       UNIT                           ACTIVATES
+Sat 2026-10-17 09:05:06 MDT 3min 19s left      Sat 2026-10-17 09:00:06 MDT 1min 40s ago trafficedge-ip-reporter.timer  trafficedge-ip-reporter.service
+Sat 2026-10-17 09:27:56 MDT 26min left         Sat 2026-10-17 08:32:27 MDT 29min ago    fwupd-refresh.timer            fwupd-refresh.service
+Sat 2026-10-17 09:32:37 MDT 30min left         Sat 2026-10-17 08:31:36 MDT 30min ago    anacron.timer                  anacron.service
+Sat 2026-10-17 18:04:30 MDT 9h left            Sat 2026-10-17 06:25:28 MDT 2h 36min ago apt-daily.timer                apt-daily.service
+Sat 2026-10-17 18:54:39 MDT 9h left            Sat 2026-10-17 06:18:08 MDT 2h 43min ago motd-news.timer                motd-news.service
+Sun 2026-10-18 00:00:00 MDT 14h left           n/a                         n/a          dpkg-db-backup.timer           dpkg-db-backup.service
+Sun 2026-10-18 00:00:00 MDT 14h left           Sat 2026-10-17 00:00:01 MDT 9h ago       logrotate.timer                logrotate.service
+Sun 2026-10-18 03:10:54 MDT 18h left           Sun 2026-10-11 03:10:20 MDT 6 days ago   e2scrub_all.timer              e2scrub_all.service
+Sun 2026-10-18 06:20:10 MDT 21h left           Sat 2026-10-17 06:08:34 MDT 2h 53min ago apt-daily-upgrade.timer        apt-daily-upgrade.service
+Sun 2026-10-18 09:00:06 MDT 23h left           Sat 2026-10-17 09:00:06 MDT 1min 39s ago update-notifier-download.timer update-notifier-download.service
+Sun 2026-10-18 09:00:07 MDT 23h left           Sat 2026-10-17 09:00:07 MDT 1min 39s ago systemd-tmpfiles-clean.timer   systemd-tmpfiles-clean.service
+Sun 2026-10-18 10:52:56 MDT 1 day 1h left      Sat 2026-10-17 02:50:46 MDT 6h ago       man-db.timer                   man-db.service
+Mon 2026-10-19 01:06:24 MDT 1 day 16h left     Mon 2026-10-12 00:20:16 MDT 5 days ago   fstrim.timer                   fstrim.service
+Sun 2026-10-25 02:02:43 MDT 1 week 0 days left Sun 2026-10-11 12:42:08 MDT 5 days ago   update-notifier-motd.timer     update-notifier-motd.service
+n/a                         n/a                n/a                         n/a          apport-autoreport.timer        apport-autoreport.service
+n/a                         n/a                n/a                         n/a          snapd.snap-repair.timer        snapd.snap-repair.service
+n/a                         n/a                n/a                         n/a          ua-timer.timer                 ua-timer.service
+
+17 timers listed.

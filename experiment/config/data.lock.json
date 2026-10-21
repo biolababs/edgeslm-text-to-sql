@@ -1,0 +1,31 @@
+{
+ "_doc": "PLAN 3.3 step 7 freeze, after the step 8 sign-off (all 10 spot-check items accepted). Curated items are never edited after this; a later-found error is marked excluded with the reason.",
+ "frozen_utc": "2026-10-17T02:49:00+00:00",
+ "curated": {
+  "label": "curated (AI-drafted)",
+  "n": 92,
+  "spotcheck": "10/10 accepted by the team (step 8)"
+ },
+ "evaluator_commits": {
+  "test-suite-sql-eval": "e97acc546ecbee8fa27fa8dbf025ef61493a876c",
+  "bird-bench/mini_dev": "abd11b6db92a1c9f809b32f7564c7c71b34d67f0",
+  "text_to_sql_benchmarks": "fe766045c55b6875a43b30e9ac7683df5582f8cf"
+ },
+ "sha256": {
+  "curated/curated.jsonl": "a00ccd7bfa48b2364f0a3e0672a007d9bc64dbf8fb989872715d27af6bb038d7",
+  "data/nyc_eval.jsonl": "7461ed1d45128f5927acf2c218c5013e433ba2d658a32f25e099f6464954a4c1",
+  "data/nyc_pool.jsonl": "0ef6a9ee3ae01bfbd92441ad9c3afbd08821784bb2baf89b49c19c3b31433a8b",
+  "data/schema.sql": "07dd260f77173faf5110a78000b68e2a1a2d342b75cfe95452e93614d69a9925",
+  "config/folds.json": "49e07c0dbc05ca70df1dc23f9a14e63b2e37d96962e9528293dc83e7c87ab055",
+  "config/arcwise_unchanged.json": "8c693cd8cf3f0a6c6354f49b7c0f7dc84003fabfc5005fc1cc39b93c2e8c6c1d",
+  "requests/MANIFEST.json": "2276f5fbf1c543c69179ff2530b06020650a1debcb769e952e89a2186b9127e3",
+  "prompts/xiyan_nl2sqlite_cn.txt": "ac5b503593ff2cd37e46e7882de6ae26ac9c7de182ba1e0130d869f81f09cea3",
+  "external: taxi.db": "378129e4ca3f46ea20ace339cda615c64821a5fcc3c4ed286cd8de2e1c4676f7",
+  "external: yellow_tripdata_2024-01.parquet": "c4d59da7bbc8abaeeeb1727947ee93d9891a71acb42854bd80db1571b2030510",
+  "external: taxi_zone_lookup.csv": "1a99e105092230f8620f301edcca7f80d3080642ff404d28ed957d3fa222c8ed",
+  "external: spider_data.zip": "00636695dabed6b5f4b8328a16b13e069a2f16591d5efcce57660669c85b121b",
+  "external: minidev.zip (BIRD Mini-Dev v1)": "cc48ba16838204e4e214512030cb572eeb5f7bcdd999bae4b9b6ff12ec13b92f",
+  "external: testsuite_database.zip": "9ec24ea8debc6bd04abfe137b5f1a739b5a8836f32c0464e4dfc94eb7f41da96",
+  "external: arcwise_plat_sql_only_with_diff.json @fe76604": "af531ec54b8b7c08a141b84ac59c82a7f29fa81db1bd16805c17aa044366c01c"
+ }
+}

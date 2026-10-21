@@ -1,0 +1,3317 @@
+{
+ "summary": {
+  "drafted": 80,
+  "seed_items": 15,
+  "accepted": 92,
+  "accepted_new": 77,
+  "accepted_seed": 15,
+  "template_like": 2,
+  "rejected": [
+   [
+    "cur_066",
+    [
+     "empty or degenerate result"
+    ]
+   ],
+   [
+    "cur_068",
+    [
+     "empty or degenerate result"
+    ]
+   ],
+   [
+    "cur_077",
+    [
+     "empty or degenerate result"
+    ]
+   ]
+  ]
+ },
+ "items": [
+  {
+   "id": "cur_001",
+   "category": "filtering_counting",
+   "seed": false,
+   "question": "How many trips carried exactly 2 passengers and were paid in cash?",
+   "sql_a": "SELECT COUNT(*) FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE t.passenger_count = 2 AND p.name = 'Cash'",
+   "sql_b": "SELECT COUNT(*) FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE t.passenger_count = 2 AND p.name = 'Cash'",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.181,
+   "time_b_s": 0.014,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      4824.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      4824.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_002",
+   "category": "filtering_counting",
+   "seed": false,
+   "question": "How many trips were charged the JFK rate code (rate code 2)?",
+   "sql_a": "SELECT COUNT(*) FROM trips WHERE rate_code_id = 2",
+   "sql_b": "SELECT COUNT(*) FROM trips WHERE rate_code_id = 2",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.006,
+   "time_b_s": 0.006,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      6837.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      6837.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_003",
+   "category": "filtering_counting",
+   "seed": false,
+   "question": "How many trips recorded by vendor 1 covered more than 10 miles?",
+   "sql_a": "SELECT COUNT(*) FROM trips WHERE vendor_id = 1 AND trip_distance > 10",
+   "sql_b": "SELECT COUNT(*) FROM trips WHERE vendor_id = 1 AND trip_distance > 10",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.006,
+   "time_b_s": 0.006,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      3386.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      3386.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_004",
+   "category": "filtering_counting",
+   "seed": false,
+   "question": "How many rides that began at LaGuardia Airport were paid with a credit card?",
+   "sql_a": "SELECT COUNT(*) FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE pz.zone = 'LaGuardia Airport' AND p.name = 'Credit card'",
+   "sql_b": "SELECT COUNT(*) FROM trips t JOIN zones z ON t.pu_location_id = z.location_id JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE z.zone = 'LaGuardia Airport' AND p.name = 'Credit card'",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.003,
+   "time_b_s": 0.002,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      5349.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      5349.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_005",
+   "category": "filtering_counting",
+   "seed": false,
+   "question": "How many trips had tolls of more than $10?",
+   "sql_a": "SELECT COUNT(*) FROM trips WHERE tolls_amount > 10",
+   "sql_b": "SELECT COUNT(*) FROM trips WHERE tolls_amount > 10",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.009,
+   "time_b_s": 0.009,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      696.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      696.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_006",
+   "category": "filtering_counting",
+   "seed": false,
+   "question": "How many trips ended in Brooklyn?",
+   "sql_a": "SELECT COUNT(*) FROM trips t JOIN zones dz ON t.do_location_id = dz.location_id WHERE dz.borough = 'Brooklyn'",
+   "sql_b": "SELECT COUNT(*) FROM trips t JOIN zones z ON t.do_location_id = z.location_id WHERE z.borough = 'Brooklyn'",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.003,
+   "time_b_s": 0.0,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      7145.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      7145.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_007",
+   "category": "filtering_counting",
+   "seed": false,
+   "question": "How many trips had a total amount between $50 and $100, inclusive?",
+   "sql_a": "SELECT COUNT(*) FROM trips WHERE total_amount BETWEEN 50 AND 100",
+   "sql_b": "SELECT COUNT(*) FROM trips WHERE total_amount BETWEEN 50 AND 100",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.013,
+   "time_b_s": 0.012,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      18868.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      18868.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_008",
+   "category": "filtering_counting",
+   "seed": false,
+   "question": "How many trips were charged an airport fee (an airport fee greater than zero)?",
+   "sql_a": "SELECT COUNT(*) FROM trips WHERE airport_fee > 0",
+   "sql_b": "SELECT COUNT(*) FROM trips WHERE airport_fee > 0",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.013,
+   "time_b_s": 0.011,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      16329.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      16329.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_009",
+   "category": "aggregation",
+   "seed": false,
+   "question": "What is the average trip distance, in miles, of trips paid by credit card?",
+   "sql_a": "SELECT AVG(t.trip_distance) FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE p.name = 'Credit card'",
+   "sql_b": "SELECT AVG(t.trip_distance) FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE p.name = 'Credit card'",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.009,
+   "time_b_s": 0.013,
+   "structure": "template-like",
+   "matched_template": "avg_fare_zone",
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      3.2434722795926794
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      3.2434722795926794
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_010",
+   "category": "aggregation",
+   "seed": false,
+   "question": "What is the sum of all tips, in dollars, on trips picked up in Queens?",
+   "sql_a": "SELECT SUM(t.tip_amount) FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id WHERE pz.borough = 'Queens'",
+   "sql_b": "SELECT SUM(t.tip_amount) FROM trips t JOIN zones z ON t.pu_location_id = z.location_id WHERE z.borough = 'Queens'",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.007,
+   "time_b_s": 0.004,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      153949.45
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      153949.45
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_011",
+   "category": "aggregation",
+   "seed": false,
+   "question": "What is the longest distance, in miles, of any trip that started at JFK Airport?",
+   "sql_a": "SELECT MAX(t.trip_distance) FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id WHERE pz.zone = 'JFK Airport'",
+   "sql_b": "SELECT MAX(t.trip_distance) FROM trips t JOIN zones z ON t.pu_location_id = z.location_id WHERE z.zone = 'JFK Airport'",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.002,
+   "time_b_s": 0.002,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      38.83
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      38.83
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_012",
+   "category": "aggregation",
+   "seed": false,
+   "question": "What is the average total amount of trips with five or more passengers?",
+   "sql_a": "SELECT AVG(total_amount) FROM trips WHERE passenger_count >= 5",
+   "sql_b": "SELECT AVG(total_amount) FROM trips WHERE passenger_count >= 5",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.005,
+   "time_b_s": 0.005,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      26.277561690691424
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      26.277561690691424
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_013",
+   "category": "aggregation",
+   "seed": false,
+   "question": "What is the smallest fare amount above zero in the data?",
+   "sql_a": "SELECT MIN(fare_amount) FROM trips WHERE fare_amount > 0",
+   "sql_b": "SELECT MIN(fare_amount) FROM trips WHERE fare_amount > 0",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.01,
+   "time_b_s": 0.012,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      0.01
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      0.01
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_014",
+   "category": "aggregation",
+   "seed": false,
+   "question": "On average, how many passengers did vendor 2's trips carry?",
+   "sql_a": "SELECT AVG(passenger_count) FROM trips WHERE vendor_id = 2",
+   "sql_b": "SELECT AVG(passenger_count) FROM trips WHERE vendor_id = 2",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.007,
+   "time_b_s": 0.007,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      1.3863913235303802
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      1.3863913235303802
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_015",
+   "category": "aggregation",
+   "seed": false,
+   "question": "How much was paid in tolls, in total, on trips that ended at Newark Airport?",
+   "sql_a": "SELECT SUM(t.tolls_amount) FROM trips t JOIN zones dz ON t.do_location_id = dz.location_id WHERE dz.zone = 'Newark Airport'",
+   "sql_b": "SELECT SUM(t.tolls_amount) FROM trips t JOIN zones z ON t.do_location_id = z.location_id WHERE z.zone = 'Newark Airport'",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.001,
+   "time_b_s": 0.0,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      9418.65
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      9418.65
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_016",
+   "category": "aggregation",
+   "seed": false,
+   "question": "How many distinct pickup location IDs appear in the trip records?",
+   "sql_a": "SELECT COUNT(DISTINCT pu_location_id) FROM trips",
+   "sql_b": "SELECT COUNT(DISTINCT pu_location_id) FROM trips",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.003,
+   "time_b_s": 0.0,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      228.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      228.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_017",
+   "category": "grouping",
+   "seed": false,
+   "question": "List each vendor ID together with its number of trips.",
+   "sql_a": "SELECT vendor_id, COUNT(*) FROM trips GROUP BY vendor_id",
+   "sql_b": "SELECT vendor_id, COUNT(*) FROM trips GROUP BY vendor_id",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.024,
+   "time_b_s": 0.027,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 2,
+    "head": [
+     [
+      1.0,
+      48141.0
+     ],
+     [
+      2.0,
+      151859.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 2,
+    "head": [
+     [
+      1.0,
+      48141.0
+     ],
+     [
+      2.0,
+      151859.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_018",
+   "category": "grouping",
+   "seed": false,
+   "question": "For each payment type that appears in the trips, give the payment type name and the average tip amount.",
+   "sql_a": "SELECT p.name, AVG(t.tip_amount) FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id GROUP BY p.name",
+   "sql_b": "SELECT p.name, AVG(t.tip_amount) FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id GROUP BY p.payment_type_id, p.name",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.058,
+   "time_b_s": 0.056,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 4,
+    "head": [
+     [
+      "cash",
+      0.0002024871410899147
+     ],
+     [
+      "credit card",
+      4.127807690235448
+     ],
+     [
+      "dispute",
+      0.0
+     ],
+     [
+      "no charge",
+      0.002577903682719547
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 4,
+    "head": [
+     [
+      "credit card",
+      4.127807690235448
+     ],
+     [
+      "cash",
+      0.0002024871410899147
+     ],
+     [
+      "no charge",
+      0.002577903682719547
+     ],
+     [
+      "dispute",
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_019",
+   "category": "grouping",
+   "seed": false,
+   "question": "For each pickup borough, give the borough name and the average trip distance in miles.",
+   "sql_a": "SELECT pz.borough, AVG(t.trip_distance) FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id GROUP BY pz.borough",
+   "sql_b": "SELECT z.borough, AVG(t.trip_distance) FROM trips t JOIN zones z ON t.pu_location_id = z.location_id GROUP BY z.borough",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.151,
+   "time_b_s": 0.125,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 6,
+    "head": [
+     [
+      "bronx",
+      8.178253521126761
+     ],
+     [
+      "brooklyn",
+      6.450553154710458
+     ],
+     [
+      "ewr",
+      15.8
+     ],
+     [
+      "manhattan",
+      2.273234060704769
+     ],
+     [
+      "queens",
+      12.70508596227675
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 6,
+    "head": [
+     [
+      "bronx",
+      8.178253521126761
+     ],
+     [
+      "brooklyn",
+      6.450553154710458
+     ],
+     [
+      "ewr",
+      15.8
+     ],
+     [
+      "manhattan",
+      2.273234060704769
+     ],
+     [
+      "queens",
+      12.70508596227675
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_020",
+   "category": "grouping",
+   "seed": false,
+   "question": "For each passenger count from 1 to 6, give the passenger count and the number of trips.",
+   "sql_a": "SELECT passenger_count, COUNT(*) FROM trips WHERE passenger_count BETWEEN 1 AND 6 GROUP BY passenger_count",
+   "sql_b": "SELECT passenger_count, COUNT(*) FROM trips WHERE passenger_count BETWEEN 1 AND 6 GROUP BY passenger_count",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.032,
+   "time_b_s": 0.03,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 6,
+    "head": [
+     [
+      1.0,
+      155209.0
+     ],
+     [
+      2.0,
+      28618.0
+     ],
+     [
+      3.0,
+      6367.0
+     ],
+     [
+      4.0,
+      3586.0
+     ],
+     [
+      5.0,
+      2507.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 6,
+    "head": [
+     [
+      1.0,
+      155209.0
+     ],
+     [
+      2.0,
+      28618.0
+     ],
+     [
+      3.0,
+      6367.0
+     ],
+     [
+      4.0,
+      3586.0
+     ],
+     [
+      5.0,
+      2507.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_021",
+   "category": "grouping",
+   "seed": false,
+   "question": "For every rate code ID used in the trips, give the rate code ID and the average fare amount.",
+   "sql_a": "SELECT rate_code_id, AVG(fare_amount) FROM trips GROUP BY rate_code_id",
+   "sql_b": "SELECT rate_code_id, AVG(fare_amount) FROM trips GROUP BY rate_code_id",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.038,
+   "time_b_s": 0.037,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 6,
+    "head": [
+     [
+      1.0,
+      15.799522506002829
+     ],
+     [
+      2.0,
+      69.97952318268246
+     ],
+     [
+      3.0,
+      88.57939001848429
+     ],
+     [
+      4.0,
+      97.79024390243903
+     ],
+     [
+      5.0,
+      63.5108945686901
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 6,
+    "head": [
+     [
+      1.0,
+      15.799522506002829
+     ],
+     [
+      2.0,
+      69.97952318268246
+     ],
+     [
+      3.0,
+      88.57939001848429
+     ],
+     [
+      4.0,
+      97.79024390243903
+     ],
+     [
+      5.0,
+      63.5108945686901
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_022",
+   "category": "grouping",
+   "seed": false,
+   "question": "For rides that started at JFK Airport, give each dropoff borough and how many of those rides ended there.",
+   "sql_a": "SELECT dz.borough, COUNT(*) FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id JOIN zones dz ON t.do_location_id = dz.location_id WHERE pz.zone = 'JFK Airport' GROUP BY dz.borough",
+   "sql_b": "SELECT zd.borough, COUNT(*) FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id JOIN zones zd ON t.do_location_id = zd.location_id WHERE zp.zone = 'JFK Airport' GROUP BY zd.borough",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.005,
+   "time_b_s": 0.004,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 6,
+    "head": [
+     [
+      "bronx",
+      212.0
+     ],
+     [
+      "brooklyn",
+      1888.0
+     ],
+     [
+      "ewr",
+      13.0
+     ],
+     [
+      "manhattan",
+      5275.0
+     ],
+     [
+      "queens",
+      2289.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 6,
+    "head": [
+     [
+      "bronx",
+      212.0
+     ],
+     [
+      "brooklyn",
+      1888.0
+     ],
+     [
+      "ewr",
+      13.0
+     ],
+     [
+      "manhattan",
+      5275.0
+     ],
+     [
+      "queens",
+      2289.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_023",
+   "category": "grouping",
+   "seed": false,
+   "question": "Group trips by the service zone of their pickup zone: give each service zone and the total amount collected.",
+   "sql_a": "SELECT pz.service_zone, SUM(t.total_amount) FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id GROUP BY pz.service_zone",
+   "sql_b": "SELECT z.service_zone, SUM(t.total_amount) FROM trips t JOIN zones z ON t.pu_location_id = z.location_id GROUP BY z.service_zone",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.099,
+   "time_b_s": 0.093,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 4,
+    "head": [
+     [
+      "airports",
+      1174879.2
+     ],
+     [
+      "boro zone",
+      228094.6
+     ],
+     [
+      "ewr",
+      87.0
+     ],
+     [
+      "yellow zone",
+      4005945.14
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 4,
+    "head": [
+     [
+      "airports",
+      1174879.2
+     ],
+     [
+      "boro zone",
+      228094.6
+     ],
+     [
+      "ewr",
+      87.0
+     ],
+     [
+      "yellow zone",
+      4005945.14
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_024",
+   "category": "grouping",
+   "seed": false,
+   "question": "For trips with more than 3 passengers, give each vendor ID and the average trip distance.",
+   "sql_a": "SELECT vendor_id, AVG(trip_distance) FROM trips WHERE passenger_count > 3 GROUP BY vendor_id",
+   "sql_b": "SELECT vendor_id, AVG(trip_distance) FROM trips WHERE passenger_count > 3 GROUP BY vendor_id",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.006,
+   "time_b_s": 0.006,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 2,
+    "head": [
+     [
+      1.0,
+      3.450413223140496
+     ],
+     [
+      2.0,
+      3.46088882496764
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 2,
+    "head": [
+     [
+      1.0,
+      3.450413223140496
+     ],
+     [
+      2.0,
+      3.46088882496764
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_025",
+   "category": "ranking_topk",
+   "seed": false,
+   "question": "Name the 5 dropoff zones that received the most trips, from most to fewest.",
+   "sql_a": "SELECT dz.zone FROM trips t JOIN zones dz ON t.do_location_id = dz.location_id GROUP BY dz.zone ORDER BY COUNT(*) DESC LIMIT 5",
+   "sql_b": "SELECT z.zone FROM trips t JOIN zones z ON t.do_location_id = z.location_id GROUP BY z.location_id, z.zone ORDER BY COUNT(*) DESC LIMIT 5",
+   "ordered": true,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.049,
+   "time_b_s": 0.012,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 5,
+    "head": [
+     [
+      "upper east side north"
+     ],
+     [
+      "upper east side south"
+     ],
+     [
+      "midtown center"
+     ],
+     [
+      "lincoln square east"
+     ],
+     [
+      "times sq/theatre district"
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 5,
+    "head": [
+     [
+      "upper east side north"
+     ],
+     [
+      "upper east side south"
+     ],
+     [
+      "midtown center"
+     ],
+     [
+      "lincoln square east"
+     ],
+     [
+      "times sq/theatre district"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_026",
+   "category": "ranking_topk",
+   "seed": false,
+   "question": "Which pickup zone generated the largest total tip amount? Give the zone name.",
+   "sql_a": "SELECT pz.zone FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id GROUP BY pz.zone ORDER BY SUM(t.tip_amount) DESC LIMIT 1",
+   "sql_b": "SELECT z.zone FROM trips t JOIN zones z ON t.pu_location_id = z.location_id GROUP BY z.location_id, z.zone ORDER BY SUM(t.tip_amount) DESC LIMIT 1",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.097,
+   "time_b_s": 0.061,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      "jfk airport"
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      "jfk airport"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_027",
+   "category": "ranking_topk",
+   "seed": false,
+   "question": "Give the trip IDs of the 3 longest trips by distance, longest first.",
+   "sql_a": "SELECT trip_id FROM trips ORDER BY trip_distance DESC LIMIT 3",
+   "sql_b": "SELECT trip_id FROM trips ORDER BY trip_distance DESC LIMIT 3",
+   "ordered": true,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.015,
+   "time_b_s": 0.015,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 3,
+    "head": [
+     [
+      4724.0
+     ],
+     [
+      27948.0
+     ],
+     [
+      39766.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 3,
+    "head": [
+     [
+      4724.0
+     ],
+     [
+      27948.0
+     ],
+     [
+      39766.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_028",
+   "category": "ranking_topk",
+   "seed": false,
+   "question": "Which payment type has the highest average total amount? Give its name.",
+   "sql_a": "SELECT p.name FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id GROUP BY p.name ORDER BY AVG(t.total_amount) DESC LIMIT 1",
+   "sql_b": "SELECT p.name FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id GROUP BY p.payment_type_id, p.name ORDER BY AVG(t.total_amount) DESC LIMIT 1",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.064,
+   "time_b_s": 0.061,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      "credit card"
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      "credit card"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_029",
+   "category": "ranking_topk",
+   "seed": false,
+   "question": "Not counting JFK Airport and LaGuardia Airport, which Queens zone had the most pickups? Give the zone name.",
+   "sql_a": "SELECT pz.zone FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id WHERE pz.borough = 'Queens' AND pz.zone NOT IN ('JFK Airport', 'LaGuardia Airport') GROUP BY pz.zone ORDER BY COUNT(*) DESC LIMIT 1",
+   "sql_b": "SELECT z.zone FROM trips t JOIN zones z ON t.pu_location_id = z.location_id WHERE z.borough = 'Queens' AND z.zone NOT IN ('JFK Airport', 'LaGuardia Airport') GROUP BY z.location_id, z.zone ORDER BY COUNT(*) DESC LIMIT 1",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.0,
+   "time_b_s": 0.0,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      "east elmhurst"
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      "east elmhurst"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_030",
+   "category": "ranking_topk",
+   "seed": false,
+   "question": "Name the 3 Brooklyn pickup zones with the most trips, from most to fewest.",
+   "sql_a": "SELECT pz.zone FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id WHERE pz.borough = 'Brooklyn' GROUP BY pz.zone ORDER BY COUNT(*) DESC LIMIT 3",
+   "sql_b": "SELECT z.zone FROM trips t JOIN zones z ON t.pu_location_id = z.location_id WHERE z.borough = 'Brooklyn' GROUP BY z.location_id, z.zone ORDER BY COUNT(*) DESC LIMIT 3",
+   "ordered": true,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.0,
+   "time_b_s": 0.0,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 3,
+    "head": [
+     [
+      "downtown brooklyn/metrotech"
+     ],
+     [
+      "fort greene"
+     ],
+     [
+      "brooklyn heights"
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 3,
+    "head": [
+     [
+      "downtown brooklyn/metrotech"
+     ],
+     [
+      "fort greene"
+     ],
+     [
+      "brooklyn heights"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_031",
+   "category": "ranking_topk",
+   "seed": false,
+   "question": "For trips that started in Manhattan, which dropoff borough has the highest average fare? Give the borough name.",
+   "sql_a": "SELECT dz.borough FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id JOIN zones dz ON t.do_location_id = dz.location_id WHERE pz.borough = 'Manhattan' GROUP BY dz.borough ORDER BY AVG(t.fare_amount) DESC LIMIT 1",
+   "sql_b": "SELECT zd.borough FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id JOIN zones zd ON t.do_location_id = zd.location_id WHERE zp.borough = 'Manhattan' GROUP BY zd.borough ORDER BY AVG(t.fare_amount) DESC LIMIT 1",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.123,
+   "time_b_s": 0.118,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      "ewr"
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      "ewr"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_032",
+   "category": "ranking_topk",
+   "seed": false,
+   "question": "Among pickup zones with at least 200 pickups, name the 10 with the highest average trip distance, highest first.",
+   "sql_a": "SELECT pz.zone FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id GROUP BY pz.zone HAVING COUNT(*) >= 200 ORDER BY AVG(t.trip_distance) DESC LIMIT 10",
+   "sql_b": "SELECT z.zone FROM trips t JOIN zones z ON t.pu_location_id = z.location_id GROUP BY z.location_id, z.zone HAVING COUNT(*) >= 200 ORDER BY AVG(t.trip_distance) DESC LIMIT 10",
+   "ordered": true,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.357,
+   "time_b_s": 0.264,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 10,
+    "head": [
+     [
+      "jfk airport"
+     ],
+     [
+      "east elmhurst"
+     ],
+     [
+      "laguardia airport"
+     ],
+     [
+      "financial district south"
+     ],
+     [
+      "battery park city"
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 10,
+    "head": [
+     [
+      "jfk airport"
+     ],
+     [
+      "east elmhurst"
+     ],
+     [
+      "laguardia airport"
+     ],
+     [
+      "financial district south"
+     ],
+     [
+      "battery park city"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_033",
+   "category": "ratio_percentage",
+   "seed": false,
+   "question": "What percentage of all trips were paid in cash?",
+   "sql_a": "SELECT 100.0 * SUM(CASE WHEN p.name = 'Cash' THEN 1 ELSE 0 END) / COUNT(*) FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id",
+   "sql_b": "SELECT 100.0 * SUM(CASE WHEN p.name = 'Cash' THEN 1 ELSE 0 END) / COUNT(*) FROM trips t LEFT JOIN payment_types p ON t.payment_type = p.payment_type_id",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.051,
+   "time_b_s": 0.053,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      15.359
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      15.359
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_034",
+   "category": "ratio_percentage",
+   "seed": false,
+   "question": "What percentage of rides that started at JFK Airport ended in Manhattan?",
+   "sql_a": "SELECT 100.0 * SUM(CASE WHEN dz.borough = 'Manhattan' THEN 1 ELSE 0 END) / COUNT(*) FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id JOIN zones dz ON t.do_location_id = dz.location_id WHERE pz.zone = 'JFK Airport'",
+   "sql_b": "SELECT 100.0 * SUM(CASE WHEN zd.borough = 'Manhattan' THEN 1 ELSE 0 END) / COUNT(*) FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id LEFT JOIN zones zd ON t.do_location_id = zd.location_id WHERE zp.zone = 'JFK Airport'",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.013,
+   "time_b_s": 0.013,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      54.40948942753997
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      54.40948942753997
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_035",
+   "category": "ratio_percentage",
+   "seed": false,
+   "question": "For credit card trips, what is total tips divided by total fares (as a fraction, not a percentage)?",
+   "sql_a": "SELECT SUM(t.tip_amount) / SUM(t.fare_amount) FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE p.name = 'Credit card'",
+   "sql_b": "SELECT SUM(t.tip_amount) * 1.0 / SUM(t.fare_amount) FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE p.name = 'Credit card'",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.049,
+   "time_b_s": 0.03,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      0.2280898038491156
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      0.2280898038491156
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_036",
+   "category": "ratio_percentage",
+   "seed": false,
+   "question": "What percentage of trips carried more than one passenger?",
+   "sql_a": "SELECT 100.0 * SUM(CASE WHEN passenger_count > 1 THEN 1 ELSE 0 END) / COUNT(*) FROM trips",
+   "sql_b": "SELECT 100.0 * SUM(CASE WHEN passenger_count > 1 THEN 1 ELSE 0 END) / COUNT(*) FROM trips",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.018,
+   "time_b_s": 0.032,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      21.332
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      21.332
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_037",
+   "category": "ratio_percentage",
+   "seed": false,
+   "question": "What percentage of vendor 2's trips were longer than 5 miles?",
+   "sql_a": "SELECT 100.0 * SUM(CASE WHEN trip_distance > 5 THEN 1 ELSE 0 END) / COUNT(*) FROM trips WHERE vendor_id = 2",
+   "sql_b": "SELECT 100.0 * SUM(CASE WHEN trip_distance > 5 THEN 1 ELSE 0 END) / COUNT(*) FROM trips WHERE vendor_id = 2",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.056,
+   "time_b_s": 0.047,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      15.729064461111953
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      15.729064461111953
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_038",
+   "category": "ratio_percentage",
+   "seed": false,
+   "question": "What percentage of the total amount collected across all trips came from rides picked up at JFK Airport or LaGuardia Airport?",
+   "sql_a": "SELECT 100.0 * SUM(CASE WHEN pz.zone IN ('JFK Airport', 'LaGuardia Airport') THEN t.total_amount ELSE 0 END) / SUM(t.total_amount) FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id",
+   "sql_b": "SELECT 100.0 * SUM(CASE WHEN z.zone IN ('JFK Airport', 'LaGuardia Airport') THEN t.total_amount ELSE 0 END) / SUM(t.total_amount) FROM trips t LEFT JOIN zones z ON t.pu_location_id = z.location_id",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.184,
+   "time_b_s": 0.101,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      21.720797001010503
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      21.720797001010503
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_039",
+   "category": "ratio_percentage",
+   "seed": false,
+   "question": "For pickups in Midtown Center, what is the total fare divided by the total distance, in dollars per mile?",
+   "sql_a": "SELECT SUM(t.fare_amount) / SUM(t.trip_distance) FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id WHERE pz.zone = 'Midtown Center'",
+   "sql_b": "SELECT SUM(t.fare_amount) * 1.0 / SUM(t.trip_distance) FROM trips t JOIN zones z ON t.pu_location_id = z.location_id WHERE z.zone = 'Midtown Center'",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.008,
+   "time_b_s": 0.009,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      6.636842555210881
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      6.636842555210881
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_040",
+   "category": "ratio_percentage",
+   "seed": false,
+   "question": "Of the trips that ended at LaGuardia Airport, what percentage paid any tolls (toll amount above zero)?",
+   "sql_a": "SELECT 100.0 * SUM(CASE WHEN t.tolls_amount > 0 THEN 1 ELSE 0 END) / COUNT(*) FROM trips t JOIN zones dz ON t.do_location_id = dz.location_id WHERE dz.zone = 'LaGuardia Airport'",
+   "sql_b": "SELECT 100.0 * SUM(CASE WHEN t.tolls_amount > 0 THEN 1 ELSE 0 END) / COUNT(*) FROM trips t JOIN zones z ON t.do_location_id = z.location_id WHERE z.zone = 'LaGuardia Airport'",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.002,
+   "time_b_s": 0.002,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      75.8796532381438
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      75.8796532381438
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_041",
+   "category": "time",
+   "seed": false,
+   "question": "How many trips were picked up on New Year's Day, January 1, 2024?",
+   "sql_a": "SELECT COUNT(*) FROM trips WHERE date(pickup_datetime) = '2024-01-01'",
+   "sql_b": "SELECT COUNT(*) FROM trips WHERE date(pickup_datetime) = '2024-01-01'",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.096,
+   "time_b_s": 0.054,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      4892.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      4892.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_042",
+   "category": "time",
+   "seed": false,
+   "question": "How many trips were picked up between 7:00 AM and 9:59 AM?",
+   "sql_a": "SELECT COUNT(*) FROM trips WHERE CAST(strftime('%H', pickup_datetime) AS INTEGER) BETWEEN 7 AND 9",
+   "sql_b": "SELECT COUNT(*) FROM trips WHERE CAST(strftime('%H', pickup_datetime) AS INTEGER) BETWEEN 7 AND 9",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.113,
+   "time_b_s": 0.132,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      21946.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      21946.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_043",
+   "category": "time",
+   "seed": false,
+   "question": "Which date had the fewest pickups? Answer in YYYY-MM-DD format.",
+   "sql_a": "SELECT date(pickup_datetime) AS d FROM trips GROUP BY d ORDER BY COUNT(*) ASC LIMIT 1",
+   "sql_b": "SELECT date(pickup_datetime) FROM trips GROUP BY date(pickup_datetime) ORDER BY COUNT(*) ASC LIMIT 1",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.088,
+   "time_b_s": 0.118,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      "2024-01-07"
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      "2024-01-07"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_044",
+   "category": "time",
+   "seed": false,
+   "question": "What is the average trip duration, in minutes, for trips picked up on a Saturday?",
+   "sql_a": "SELECT AVG((julianday(dropoff_datetime) - julianday(pickup_datetime)) * 1440) FROM trips WHERE strftime('%w', pickup_datetime) = '6'",
+   "sql_b": "SELECT AVG((strftime('%s', dropoff_datetime) - strftime('%s', pickup_datetime)) / 60.0) FROM trips WHERE strftime('%w', pickup_datetime) = '6'",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.113,
+   "time_b_s": 0.109,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      13.719557714998261
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      13.71955771458289
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_045",
+   "category": "time",
+   "seed": false,
+   "question": "How many trips were dropped off on a later calendar date than the date they were picked up?",
+   "sql_a": "SELECT COUNT(*) FROM trips WHERE date(dropoff_datetime) > date(pickup_datetime)",
+   "sql_b": "SELECT COUNT(*) FROM trips WHERE date(dropoff_datetime) > date(pickup_datetime)",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.109,
+   "time_b_s": 0.103,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      1485.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      1485.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_046",
+   "category": "time",
+   "seed": false,
+   "question": "How many trips were picked up from January 25 through January 31, 2024, inclusive?",
+   "sql_a": "SELECT COUNT(*) FROM trips WHERE date(pickup_datetime) BETWEEN '2024-01-25' AND '2024-01-31'",
+   "sql_b": "SELECT COUNT(*) FROM trips WHERE date(pickup_datetime) BETWEEN '2024-01-25' AND '2024-01-31'",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.051,
+   "time_b_s": 0.033,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      47730.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      47730.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_047",
+   "category": "time",
+   "seed": false,
+   "question": "For each day of the week, give the day number (0 = Sunday through 6 = Saturday) and the number of pickups.",
+   "sql_a": "SELECT CAST(strftime('%w', pickup_datetime) AS INTEGER) AS dow, COUNT(*) FROM trips GROUP BY dow",
+   "sql_b": "SELECT CAST(strftime('%w', pickup_datetime) AS INTEGER), COUNT(*) FROM trips GROUP BY CAST(strftime('%w', pickup_datetime) AS INTEGER)",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.14,
+   "time_b_s": 0.126,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 7,
+    "head": [
+     [
+      0.0,
+      22670.0
+     ],
+     [
+      1.0,
+      27048.0
+     ],
+     [
+      2.0,
+      31118.0
+     ],
+     [
+      3.0,
+      33768.0
+     ],
+     [
+      4.0,
+      29337.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 7,
+    "head": [
+     [
+      0.0,
+      22670.0
+     ],
+     [
+      1.0,
+      27048.0
+     ],
+     [
+      2.0,
+      31118.0
+     ],
+     [
+      3.0,
+      33768.0
+     ],
+     [
+      4.0,
+      29337.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_048",
+   "category": "time",
+   "seed": false,
+   "question": "How many trips lasted longer than two hours?",
+   "sql_a": "SELECT COUNT(*) FROM trips WHERE (julianday(dropoff_datetime) - julianday(pickup_datetime)) * 1440 > 120",
+   "sql_b": "SELECT COUNT(*) FROM trips WHERE strftime('%s', dropoff_datetime) - strftime('%s', pickup_datetime) > 7200",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.074,
+   "time_b_s": 0.261,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      71.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      71.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_049",
+   "category": "multi_join",
+   "seed": false,
+   "question": "How many trips both started and ended in Brooklyn?",
+   "sql_a": "SELECT COUNT(*) FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id JOIN zones dz ON t.do_location_id = dz.location_id WHERE pz.borough = 'Brooklyn' AND dz.borough = 'Brooklyn'",
+   "sql_b": "SELECT COUNT(*) FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id JOIN zones zd ON t.do_location_id = zd.location_id WHERE zp.borough = 'Brooklyn' AND zd.borough = 'Brooklyn'",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.006,
+   "time_b_s": 0.007,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      599.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      599.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_050",
+   "category": "multi_join",
+   "seed": false,
+   "question": "How many rides went from JFK Airport to LaGuardia Airport?",
+   "sql_a": "SELECT COUNT(*) FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id JOIN zones dz ON t.do_location_id = dz.location_id WHERE pz.zone = 'JFK Airport' AND dz.zone = 'LaGuardia Airport'",
+   "sql_b": "SELECT COUNT(*) FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id JOIN zones zd ON t.do_location_id = zd.location_id WHERE zp.zone = 'JFK Airport' AND zd.zone = 'LaGuardia Airport'",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.002,
+   "time_b_s": 0.002,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      165.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      165.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_051",
+   "category": "multi_join",
+   "seed": false,
+   "question": "What is the average fare of rides that started in Manhattan and ended in Queens?",
+   "sql_a": "SELECT AVG(t.fare_amount) FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id JOIN zones dz ON t.do_location_id = dz.location_id WHERE pz.borough = 'Manhattan' AND dz.borough = 'Queens'",
+   "sql_b": "SELECT AVG(t.fare_amount) FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id JOIN zones zd ON t.do_location_id = zd.location_id WHERE zp.borough = 'Manhattan' AND zd.borough = 'Queens'",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.01,
+   "time_b_s": 0.011,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      47.39510688370269
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      47.39510688370269
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_052",
+   "category": "multi_join",
+   "seed": false,
+   "question": "Where did rides starting at Times Sq/Theatre District most often end? Give the dropoff zone name.",
+   "sql_a": "SELECT dz.zone FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id JOIN zones dz ON t.do_location_id = dz.location_id WHERE pz.zone = 'Times Sq/Theatre District' GROUP BY dz.zone ORDER BY COUNT(*) DESC LIMIT 1",
+   "sql_b": "SELECT zd.zone FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id JOIN zones zd ON t.do_location_id = zd.location_id WHERE zp.zone = 'Times Sq/Theatre District' GROUP BY zd.location_id, zd.zone ORDER BY COUNT(*) DESC LIMIT 1",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.016,
+   "time_b_s": 0.224,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      "penn station/madison sq west"
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      "penn station/madison sq west"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_053",
+   "category": "multi_join",
+   "seed": false,
+   "question": "How many trips were picked up in a Yellow Zone service zone and dropped off in a Boro Zone service zone?",
+   "sql_a": "SELECT COUNT(*) FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id JOIN zones dz ON t.do_location_id = dz.location_id WHERE pz.service_zone = 'Yellow Zone' AND dz.service_zone = 'Boro Zone'",
+   "sql_b": "SELECT COUNT(*) FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id JOIN zones zd ON t.do_location_id = zd.location_id WHERE zp.service_zone = 'Yellow Zone' AND zd.service_zone = 'Boro Zone'",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.032,
+   "time_b_s": 0.029,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      12407.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      12407.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_054",
+   "category": "multi_join",
+   "seed": false,
+   "question": "Which pickup borough and dropoff borough combination is the most common? Give the pickup borough and the dropoff borough.",
+   "sql_a": "SELECT pz.borough, dz.borough FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id JOIN zones dz ON t.do_location_id = dz.location_id GROUP BY pz.borough, dz.borough ORDER BY COUNT(*) DESC LIMIT 1",
+   "sql_b": "SELECT zp.borough, zd.borough FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id JOIN zones zd ON t.do_location_id = zd.location_id GROUP BY zp.borough, zd.borough ORDER BY COUNT(*) DESC LIMIT 1",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.453,
+   "time_b_s": 0.475,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      "manhattan",
+      "manhattan"
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      "manhattan",
+      "manhattan"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_055",
+   "category": "multi_join",
+   "seed": false,
+   "question": "How many trips that started in Queens ended at Newark Airport?",
+   "sql_a": "SELECT COUNT(*) FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id JOIN zones dz ON t.do_location_id = dz.location_id WHERE pz.borough = 'Queens' AND dz.zone = 'Newark Airport'",
+   "sql_b": "SELECT COUNT(*) FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id JOIN zones zd ON t.do_location_id = zd.location_id WHERE zp.borough = 'Queens' AND zd.zone = 'Newark Airport'",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.001,
+   "time_b_s": 0.001,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      21.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      21.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_056",
+   "category": "multi_join",
+   "seed": false,
+   "question": "For credit card rides from LaGuardia Airport to any Manhattan zone, what is the average total amount?",
+   "sql_a": "SELECT AVG(t.total_amount) FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id JOIN zones dz ON t.do_location_id = dz.location_id JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE pz.zone = 'LaGuardia Airport' AND dz.borough = 'Manhattan' AND p.name = 'Credit card'",
+   "sql_b": "SELECT AVG(t.total_amount) FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id JOIN zones zd ON t.do_location_id = zd.location_id JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE p.name = 'Credit card' AND zp.zone = 'LaGuardia Airport' AND zd.borough = 'Manhattan'",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.225,
+   "time_b_s": 0.232,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      70.84774217402021
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      70.84774217402021
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_057",
+   "category": "nested_subquery",
+   "seed": false,
+   "question": "How many trips were longer than the average trip distance across all trips?",
+   "sql_a": "SELECT COUNT(*) FROM trips WHERE trip_distance > (SELECT AVG(trip_distance) FROM trips)",
+   "sql_b": "SELECT COUNT(*) FROM trips WHERE trip_distance > (SELECT AVG(trip_distance) FROM trips)",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.073,
+   "time_b_s": 0.032,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      47883.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      47883.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_058",
+   "category": "nested_subquery",
+   "seed": false,
+   "question": "Considering only pickup zones with at least one pickup, how many of them have more pickups than the average number of pickups per such zone?",
+   "sql_a": "SELECT COUNT(*) FROM (SELECT pu_location_id, COUNT(*) AS n FROM trips GROUP BY pu_location_id) WHERE n > (SELECT AVG(n) FROM (SELECT COUNT(*) AS n FROM trips GROUP BY pu_location_id))",
+   "sql_b": "WITH c AS (SELECT pu_location_id, COUNT(*) AS n FROM trips GROUP BY pu_location_id) SELECT COUNT(*) FROM c WHERE n > (SELECT AVG(n) FROM c)",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.062,
+   "time_b_s": 0.009,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      46.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      46.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_059",
+   "category": "nested_subquery",
+   "seed": false,
+   "question": "What is the trip ID of the trip with the highest total amount?",
+   "sql_a": "SELECT trip_id FROM trips WHERE total_amount = (SELECT MAX(total_amount) FROM trips)",
+   "sql_b": "SELECT trip_id FROM trips ORDER BY total_amount DESC LIMIT 1",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.064,
+   "time_b_s": 0.024,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      4502.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      4502.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_060",
+   "category": "nested_subquery",
+   "seed": false,
+   "question": "How many credit card trips had a tip larger than the average tip of credit card trips?",
+   "sql_a": "SELECT COUNT(*) FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE p.name = 'Credit card' AND t.tip_amount > (SELECT AVG(t2.tip_amount) FROM trips t2 JOIN payment_types p2 ON t2.payment_type = p2.payment_type_id WHERE p2.name = 'Credit card')",
+   "sql_b": "SELECT COUNT(*) FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE p.name = 'Credit card' AND t.tip_amount > (SELECT AVG(t2.tip_amount) FROM trips t2 JOIN payment_types p2 ON t2.payment_type = p2.payment_type_id WHERE p2.name = 'Credit card')",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.446,
+   "time_b_s": 0.428,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      51640.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      51640.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_061",
+   "category": "nested_subquery",
+   "seed": false,
+   "question": "What is the average fare of trips picked up in the pickup zone that has the most pickups overall?",
+   "sql_a": "SELECT AVG(fare_amount) FROM trips WHERE pu_location_id = (SELECT pu_location_id FROM trips GROUP BY pu_location_id ORDER BY COUNT(*) DESC LIMIT 1)",
+   "sql_b": "SELECT AVG(fare_amount) FROM trips WHERE pu_location_id = (SELECT pu_location_id FROM trips GROUP BY pu_location_id ORDER BY COUNT(*) DESC LIMIT 1)",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.028,
+   "time_b_s": 0.027,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      12.345215107057891
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      12.345215107057891
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_062",
+   "category": "nested_subquery",
+   "seed": false,
+   "question": "For the dropoff zone that received the most trips, what is the average tip of trips that ended there?",
+   "sql_a": "SELECT AVG(tip_amount) FROM trips WHERE do_location_id = (SELECT do_location_id FROM trips GROUP BY do_location_id ORDER BY COUNT(*) DESC LIMIT 1)",
+   "sql_b": "SELECT AVG(tip_amount) FROM trips WHERE do_location_id = (SELECT do_location_id FROM trips GROUP BY do_location_id ORDER BY COUNT(*) DESC LIMIT 1)",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.029,
+   "time_b_s": 0.03,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      2.884820664357041
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      2.884820664357041
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_063",
+   "category": "nested_subquery",
+   "seed": false,
+   "question": "How many trips had a fare more than twice the overall average fare?",
+   "sql_a": "SELECT COUNT(*) FROM trips WHERE fare_amount > 2 * (SELECT AVG(fare_amount) FROM trips)",
+   "sql_b": "SELECT COUNT(*) FROM trips WHERE fare_amount > 2 * (SELECT AVG(fare_amount) FROM trips)",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.036,
+   "time_b_s": 0.062,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      21296.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      21296.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_064",
+   "category": "nested_subquery",
+   "seed": false,
+   "question": "Among pickup zones with at least one pickup, what percentage have an average tip above $3?",
+   "sql_a": "SELECT 100.0 * SUM(CASE WHEN avg_tip > 3 THEN 1 ELSE 0 END) / COUNT(*) FROM (SELECT pu_location_id, AVG(tip_amount) AS avg_tip FROM trips GROUP BY pu_location_id)",
+   "sql_b": "WITH z AS (SELECT pu_location_id, AVG(tip_amount) AS avg_tip FROM trips GROUP BY pu_location_id) SELECT 100.0 * SUM(CASE WHEN avg_tip > 3 THEN 1 ELSE 0 END) / COUNT(*) FROM z",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.193,
+   "time_b_s": 0.17,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      25.43859649122807
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      25.43859649122807
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_065",
+   "category": "anti_join_set",
+   "seed": false,
+   "question": "How many Manhattan taxi zones never appear as a trip's dropoff location?",
+   "sql_a": "SELECT COUNT(*) FROM zones z WHERE z.borough = 'Manhattan' AND z.location_id NOT IN (SELECT do_location_id FROM trips)",
+   "sql_b": "SELECT COUNT(*) FROM zones WHERE borough = 'Manhattan' AND location_id NOT IN (SELECT do_location_id FROM trips WHERE do_location_id IS NOT NULL)",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.001,
+   "time_b_s": 0.027,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      3.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      3.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_066",
+   "category": "anti_join_set",
+   "seed": false,
+   "question": "How many location IDs were used as a pickup location but never as a dropoff location?",
+   "sql_a": "SELECT COUNT(*) FROM (SELECT pu_location_id FROM trips EXCEPT SELECT do_location_id FROM trips)",
+   "sql_b": "SELECT COUNT(DISTINCT pu_location_id) FROM trips WHERE pu_location_id NOT IN (SELECT do_location_id FROM trips WHERE do_location_id IS NOT NULL)",
+   "ordered": false,
+   "status": "rejected",
+   "reasons": [
+    "empty or degenerate result"
+   ],
+   "time_a_s": 0.031,
+   "time_b_s": 0.034,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      0.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_067",
+   "category": "anti_join_set",
+   "seed": false,
+   "question": "How many location IDs appear both as a pickup location and as a dropoff location?",
+   "sql_a": "SELECT COUNT(*) FROM (SELECT pu_location_id FROM trips INTERSECT SELECT do_location_id FROM trips)",
+   "sql_b": "SELECT COUNT(*) FROM (SELECT pu_location_id FROM trips INTERSECT SELECT do_location_id FROM trips)",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.03,
+   "time_b_s": 0.044,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      228.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      228.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_068",
+   "category": "anti_join_set",
+   "seed": false,
+   "question": "How many Queens zones had neither a pickup nor a dropoff in the data?",
+   "sql_a": "SELECT COUNT(*) FROM zones z WHERE z.borough = 'Queens' AND z.location_id NOT IN (SELECT pu_location_id FROM trips) AND z.location_id NOT IN (SELECT do_location_id FROM trips)",
+   "sql_b": "SELECT COUNT(*) FROM zones WHERE borough = 'Queens' AND location_id NOT IN (SELECT pu_location_id FROM trips WHERE pu_location_id IS NOT NULL) AND location_id NOT IN (SELECT do_location_id FROM trips WHERE do_location_id IS NOT NULL)",
+   "ordered": false,
+   "status": "rejected",
+   "reasons": [
+    "empty or degenerate result"
+   ],
+   "time_a_s": 0.001,
+   "time_b_s": 0.07,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      0.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_069",
+   "category": "anti_join_set",
+   "seed": false,
+   "question": "How many Bronx zones had at least one dropoff but no pickups?",
+   "sql_a": "SELECT COUNT(*) FROM zones z WHERE z.borough = 'Bronx' AND z.location_id IN (SELECT do_location_id FROM trips) AND z.location_id NOT IN (SELECT pu_location_id FROM trips)",
+   "sql_b": "SELECT COUNT(*) FROM zones WHERE borough = 'Bronx' AND location_id IN (SELECT do_location_id FROM trips) AND location_id NOT IN (SELECT pu_location_id FROM trips WHERE pu_location_id IS NOT NULL)",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.032,
+   "time_b_s": 0.059,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      4.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      4.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_070",
+   "category": "anti_join_set",
+   "seed": false,
+   "question": "How many distinct dropoff location IDs were reached by trips from Manhattan but never by trips from Queens?",
+   "sql_a": "SELECT COUNT(*) FROM (SELECT t.do_location_id FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id WHERE pz.borough = 'Manhattan' EXCEPT SELECT t.do_location_id FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id WHERE pz.borough = 'Queens')",
+   "sql_b": "SELECT COUNT(*) FROM (SELECT t.do_location_id FROM trips t JOIN zones z ON t.pu_location_id = z.location_id WHERE z.borough = 'Manhattan' EXCEPT SELECT t.do_location_id FROM trips t JOIN zones z ON t.pu_location_id = z.location_id WHERE z.borough = 'Queens')",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.311,
+   "time_b_s": 0.238,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      10.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      10.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_071",
+   "category": "anti_join_set",
+   "seed": false,
+   "question": "Which payment type names never occur in the trip records?",
+   "sql_a": "SELECT name FROM payment_types WHERE payment_type_id NOT IN (SELECT payment_type FROM trips)",
+   "sql_b": "SELECT name FROM payment_types WHERE payment_type_id NOT IN (SELECT payment_type FROM trips WHERE payment_type IS NOT NULL)",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.041,
+   "time_b_s": 0.045,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 2,
+    "head": [
+     [
+      "unknown"
+     ],
+     [
+      "voided trip"
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 2,
+    "head": [
+     [
+      "unknown"
+     ],
+     [
+      "voided trip"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_072",
+   "category": "anti_join_set",
+   "seed": false,
+   "question": "How many dropoff location IDs were reached from JFK Airport but never from LaGuardia Airport?",
+   "sql_a": "SELECT COUNT(*) FROM (SELECT t.do_location_id FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id WHERE pz.zone = 'JFK Airport' EXCEPT SELECT t.do_location_id FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id WHERE pz.zone = 'LaGuardia Airport')",
+   "sql_b": "SELECT COUNT(*) FROM (SELECT t.do_location_id FROM trips t JOIN zones z ON t.pu_location_id = z.location_id WHERE z.zone = 'JFK Airport' EXCEPT SELECT t.do_location_id FROM trips t JOIN zones z ON t.pu_location_id = z.location_id WHERE z.zone = 'LaGuardia Airport')",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.009,
+   "time_b_s": 0.009,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      25.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      25.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_073",
+   "category": "null_edge",
+   "seed": false,
+   "question": "How many trips had a fare of exactly zero?",
+   "sql_a": "SELECT COUNT(*) FROM trips WHERE fare_amount = 0",
+   "sql_b": "SELECT COUNT(*) FROM trips WHERE fare_amount = 0",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.026,
+   "time_b_s": 0.027,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      17.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      17.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_074",
+   "category": "null_edge",
+   "seed": false,
+   "question": "What percentage of cash trips have a recorded tip of zero?",
+   "sql_a": "SELECT 100.0 * SUM(CASE WHEN t.tip_amount = 0 THEN 1 ELSE 0 END) / COUNT(*) FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE p.name = 'Cash'",
+   "sql_b": "SELECT 100.0 * SUM(CASE WHEN t.tip_amount = 0 THEN 1 ELSE 0 END) / COUNT(*) FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE p.name = 'Cash'",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.03,
+   "time_b_s": 0.03,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      99.99674457972525
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      99.99674457972525
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_075",
+   "category": "null_edge",
+   "seed": false,
+   "question": "What is the average tip of credit card trips, counting only trips with a fare above zero?",
+   "sql_a": "SELECT AVG(t.tip_amount) FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE p.name = 'Credit card' AND t.fare_amount > 0",
+   "sql_b": "SELECT AVG(t.tip_amount) FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE p.name = 'Credit card' AND t.fare_amount > 0",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.051,
+   "time_b_s": 0.047,
+   "structure": "template-like",
+   "matched_template": "avg_passengers_miles",
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      4.127832401431975
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      4.127832401431975
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_076",
+   "category": "null_edge",
+   "seed": false,
+   "question": "How many trips recorded zero passengers?",
+   "sql_a": "SELECT COUNT(*) FROM trips WHERE passenger_count = 0",
+   "sql_b": "SELECT COUNT(*) FROM trips WHERE passenger_count = 0",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.023,
+   "time_b_s": 0.023,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      2127.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      2127.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_077",
+   "category": "null_edge",
+   "seed": false,
+   "question": "How many trips had a total amount smaller than their fare amount?",
+   "sql_a": "SELECT COUNT(*) FROM trips WHERE total_amount < fare_amount",
+   "sql_b": "SELECT COUNT(*) FROM trips WHERE total_amount < fare_amount",
+   "ordered": false,
+   "status": "rejected",
+   "reasons": [
+    "empty or degenerate result"
+   ],
+   "time_a_s": 0.032,
+   "time_b_s": 0.029,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      0.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      0.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_078",
+   "category": "null_edge",
+   "seed": false,
+   "question": "What percentage of credit card trips had no tip (a tip amount of zero)?",
+   "sql_a": "SELECT 100.0 * SUM(CASE WHEN t.tip_amount = 0 THEN 1 ELSE 0 END) / COUNT(*) FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE p.name = 'Credit card'",
+   "sql_b": "SELECT 100.0 * SUM(CASE WHEN t.tip_amount = 0 THEN 1 ELSE 0 END) / COUNT(*) FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE p.name = 'Credit card'",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.042,
+   "time_b_s": 0.045,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      4.574271295414953
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      4.574271295414953
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_079",
+   "category": "null_edge",
+   "seed": false,
+   "question": "How many trips had no congestion surcharge, meaning a surcharge of zero?",
+   "sql_a": "SELECT COUNT(*) FROM trips WHERE congestion_surcharge = 0",
+   "sql_b": "SELECT COUNT(*) FROM trips WHERE congestion_surcharge = 0",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.032,
+   "time_b_s": 0.03,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      13227.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      13227.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "cur_080",
+   "category": "null_edge",
+   "seed": false,
+   "question": "Leaving out cash trips, whose tips are not recorded, what is the average tip in dollars for trips picked up in Queens?",
+   "sql_a": "SELECT AVG(t.tip_amount) FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE pz.borough = 'Queens' AND p.name <> 'Cash'",
+   "sql_b": "SELECT AVG(t.tip_amount) FROM trips t JOIN zones z ON t.pu_location_id = z.location_id LEFT JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE z.borough = 'Queens' AND p.name IS NOT 'Cash'",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.018,
+   "time_b_s": 0.018,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      10.67536578600652
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      10.67536578600652
+     ]
+    ]
+   }
+  },
+  {
+   "id": "hw_001",
+   "category": "seed",
+   "seed": true,
+   "question": "How many rides started and ended in the same taxi zone?",
+   "sql_a": "SELECT COUNT(*) FROM trips WHERE pu_location_id = do_location_id",
+   "sql_b": "SELECT COUNT(*) FROM trips WHERE pu_location_id = do_location_id",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.029,
+   "time_b_s": 0.029,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      8194.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      8194.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "hw_002",
+   "category": "seed",
+   "seed": true,
+   "question": "Of the rides dropped off at LaGuardia Airport, what percentage were picked up in Manhattan?",
+   "sql_a": "SELECT 100.0 * SUM(CASE WHEN pz.borough = 'Manhattan' THEN 1 ELSE 0 END) / COUNT(*) FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id JOIN zones dz ON t.do_location_id = dz.location_id WHERE dz.zone = 'LaGuardia Airport'",
+   "sql_b": "SELECT 100.0 * SUM(CASE WHEN zp.borough = 'Manhattan' THEN 1 ELSE 0 END) / COUNT(*) FROM trips t JOIN zones zd ON t.do_location_id = zd.location_id LEFT JOIN zones zp ON t.pu_location_id = zp.location_id WHERE zd.zone = 'LaGuardia Airport'",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.003,
+   "time_b_s": 0.003,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      88.47526772055073
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      88.47526772055073
+     ]
+    ]
+   }
+  },
+  {
+   "id": "hw_003",
+   "category": "seed",
+   "seed": true,
+   "question": "On which day of the week (give the name) is the average trip distance longest?",
+   "sql_a": "SELECT CASE strftime('%w', pickup_datetime) WHEN '0' THEN 'Sunday' WHEN '1' THEN 'Monday' WHEN '2' THEN 'Tuesday' WHEN '3' THEN 'Wednesday' WHEN '4' THEN 'Thursday' WHEN '5' THEN 'Friday' ELSE 'Saturday' END AS dow FROM trips GROUP BY dow ORDER BY AVG(trip_distance) DESC LIMIT 1",
+   "sql_b": "SELECT CASE strftime('%w', pickup_datetime) WHEN '0' THEN 'Sunday' WHEN '1' THEN 'Monday' WHEN '2' THEN 'Tuesday' WHEN '3' THEN 'Wednesday' WHEN '4' THEN 'Thursday' WHEN '5' THEN 'Friday' WHEN '6' THEN 'Saturday' END FROM trips GROUP BY strftime('%w', pickup_datetime) ORDER BY AVG(trip_distance) DESC LIMIT 1",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.257,
+   "time_b_s": 0.26,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      "monday"
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      "monday"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "hw_004",
+   "category": "seed",
+   "seed": true,
+   "question": "How many trips cost over $100 in total but covered less than one mile?",
+   "sql_a": "SELECT COUNT(*) FROM trips WHERE total_amount > 100 AND trip_distance < 1",
+   "sql_b": "SELECT COUNT(*) FROM trips WHERE total_amount > 100 AND trip_distance < 1",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.03,
+   "time_b_s": 0.03,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      8.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      8.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "hw_005",
+   "category": "seed",
+   "seed": true,
+   "question": "For trips from JFK Airport to any Manhattan zone, what is the total fare divided by the total distance, in dollars per mile?",
+   "sql_a": "SELECT SUM(t.fare_amount) / SUM(t.trip_distance) FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id JOIN zones dz ON t.do_location_id = dz.location_id WHERE pz.zone = 'JFK Airport' AND dz.borough = 'Manhattan'",
+   "sql_b": "SELECT SUM(t.fare_amount) * 1.0 / SUM(t.trip_distance) FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id JOIN zones zd ON t.do_location_id = zd.location_id WHERE zp.zone = 'JFK Airport' AND zd.borough = 'Manhattan'",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.134,
+   "time_b_s": 0.134,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      3.762369228165358
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      3.762369228165358
+     ]
+    ]
+   }
+  },
+  {
+   "id": "hw_006",
+   "category": "seed",
+   "seed": true,
+   "question": "Which vendor ID completed the most trips?",
+   "sql_a": "SELECT vendor_id FROM trips GROUP BY vendor_id ORDER BY COUNT(*) DESC LIMIT 1",
+   "sql_b": "SELECT vendor_id FROM trips GROUP BY vendor_id ORDER BY COUNT(*) DESC LIMIT 1",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.096,
+   "time_b_s": 0.089,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      2.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      2.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "hw_007",
+   "category": "seed",
+   "seed": true,
+   "question": "How many trips were picked up on a weekend?",
+   "sql_a": "SELECT COUNT(*) FROM trips WHERE strftime('%w', pickup_datetime) IN ('0', '6')",
+   "sql_b": "SELECT COUNT(*) FROM trips WHERE strftime('%w', pickup_datetime) IN ('0', '6')",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.105,
+   "time_b_s": 0.118,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      50872.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      50872.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "hw_008",
+   "category": "seed",
+   "seed": true,
+   "question": "Where do people who get picked up at JFK Airport most often get dropped off? Give the zone name.",
+   "sql_a": "SELECT dz.zone FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id JOIN zones dz ON t.do_location_id = dz.location_id WHERE pz.zone = 'JFK Airport' GROUP BY dz.zone ORDER BY COUNT(*) DESC LIMIT 1",
+   "sql_b": "SELECT zd.zone FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id JOIN zones zd ON t.do_location_id = zd.location_id WHERE zp.zone = 'JFK Airport' GROUP BY zd.location_id, zd.zone ORDER BY COUNT(*) DESC LIMIT 1",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.008,
+   "time_b_s": 0.142,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      "times sq/theatre district"
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      "times sq/theatre district"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "hw_009",
+   "category": "seed",
+   "seed": true,
+   "question": "Which three Brooklyn pickup zones collected the most tips in total, from most to least?",
+   "sql_a": "SELECT pz.zone FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id WHERE pz.borough = 'Brooklyn' GROUP BY pz.zone ORDER BY SUM(t.tip_amount) DESC LIMIT 3",
+   "sql_b": "SELECT z.zone FROM trips t JOIN zones z ON t.pu_location_id = z.location_id WHERE z.borough = 'Brooklyn' GROUP BY z.location_id, z.zone ORDER BY SUM(t.tip_amount) DESC LIMIT 3",
+   "ordered": true,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.003,
+   "time_b_s": 0.001,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 3,
+    "head": [
+     [
+      "downtown brooklyn/metrotech"
+     ],
+     [
+      "brooklyn heights"
+     ],
+     [
+      "williamsburg (north side)"
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 3,
+    "head": [
+     [
+      "downtown brooklyn/metrotech"
+     ],
+     [
+      "brooklyn heights"
+     ],
+     [
+      "williamsburg (north side)"
+     ]
+    ]
+   }
+  },
+  {
+   "id": "hw_010",
+   "category": "seed",
+   "seed": true,
+   "question": "Citywide, which hour of the day (0-23) sees the most pickups?",
+   "sql_a": "SELECT CAST(strftime('%H', pickup_datetime) AS INTEGER) AS hour FROM trips GROUP BY hour ORDER BY COUNT(*) DESC LIMIT 1",
+   "sql_b": "SELECT CAST(strftime('%H', pickup_datetime) AS INTEGER) FROM trips GROUP BY CAST(strftime('%H', pickup_datetime) AS INTEGER) ORDER BY COUNT(*) DESC LIMIT 1",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.155,
+   "time_b_s": 0.191,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      18.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      18.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "hw_011",
+   "category": "seed",
+   "seed": true,
+   "question": "How many riders left a tip bigger than the fare itself?",
+   "sql_a": "SELECT COUNT(*) FROM trips WHERE tip_amount > fare_amount",
+   "sql_b": "SELECT COUNT(*) FROM trips WHERE tip_amount > fare_amount",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.047,
+   "time_b_s": 0.045,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      203.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      203.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "hw_012",
+   "category": "seed",
+   "seed": true,
+   "question": "What does a cash trip that both starts and ends in Queens cost on average, all-in?",
+   "sql_a": "SELECT AVG(t.total_amount) FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id JOIN zones dz ON t.do_location_id = dz.location_id JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE p.name = 'Cash' AND pz.borough = 'Queens' AND dz.borough = 'Queens'",
+   "sql_b": "SELECT AVG(t.total_amount) FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id JOIN zones zd ON t.do_location_id = zd.location_id JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE p.name = 'Cash' AND zp.borough = 'Queens' AND zd.borough = 'Queens'",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.013,
+   "time_b_s": 0.012,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      34.4666844563042
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      34.4666844563042
+     ]
+    ]
+   }
+  },
+  {
+   "id": "hw_013",
+   "category": "seed",
+   "seed": true,
+   "question": "How many Manhattan zones had at least 1,000 pickups?",
+   "sql_a": "SELECT COUNT(*) FROM (SELECT pz.location_id FROM trips t JOIN zones pz ON t.pu_location_id = pz.location_id WHERE pz.borough = 'Manhattan' GROUP BY pz.location_id HAVING COUNT(*) >= 1000)",
+   "sql_b": "SELECT COUNT(*) FROM (SELECT z.location_id FROM trips t JOIN zones z ON t.pu_location_id = z.location_id WHERE z.borough = 'Manhattan' GROUP BY z.location_id HAVING COUNT(*) >= 1000)",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.024,
+   "time_b_s": 0.025,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      41.0
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      41.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": "hw_014",
+   "category": "seed",
+   "seed": true,
+   "question": "Of all trips longer than 20 miles, what percentage ended at JFK, LaGuardia or Newark airport?",
+   "sql_a": "SELECT 100.0 * SUM(CASE WHEN dz.zone IN ('JFK Airport', 'LaGuardia Airport', 'Newark Airport') THEN 1 ELSE 0 END) / COUNT(*) FROM trips t JOIN zones dz ON t.do_location_id = dz.location_id WHERE t.trip_distance > 20",
+   "sql_b": "SELECT 100.0 * SUM(CASE WHEN zd.zone IN ('JFK Airport', 'LaGuardia Airport', 'Newark Airport') THEN 1 ELSE 0 END) / COUNT(*) FROM trips t LEFT JOIN zones zd ON t.do_location_id = zd.location_id WHERE t.trip_distance > 20",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.163,
+   "time_b_s": 0.034,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      17.220376522702104
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      17.220376522702104
+     ]
+    ]
+   }
+  },
+  {
+   "id": "hw_015",
+   "category": "seed",
+   "seed": true,
+   "question": "How long, in minutes, is the average ride picked up between midnight and 4 AM?",
+   "sql_a": "SELECT AVG((julianday(dropoff_datetime) - julianday(pickup_datetime)) * 1440) FROM trips WHERE CAST(strftime('%H', pickup_datetime) AS INTEGER) < 4",
+   "sql_b": "SELECT AVG((strftime('%s', dropoff_datetime) - strftime('%s', pickup_datetime)) / 60.0) FROM trips WHERE CAST(strftime('%H', pickup_datetime) AS INTEGER) BETWEEN 0 AND 3",
+   "ordered": false,
+   "status": "accepted",
+   "reasons": [],
+   "time_a_s": 0.113,
+   "time_b_s": 0.121,
+   "structure": "novel",
+   "matched_template": null,
+   "result_a": {
+    "n_rows": 1,
+    "head": [
+     [
+      12.791111389995509
+     ]
+    ]
+   },
+   "result_b": {
+    "n_rows": 1,
+    "head": [
+     [
+      12.791111386684303
+     ]
+    ]
+   }
+  }
+ ]
+}

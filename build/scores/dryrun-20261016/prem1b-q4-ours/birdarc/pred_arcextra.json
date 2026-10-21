@@ -1,0 +1,3 @@
+{
+ "0": "SELECT AVG(Consumption) FROM yearmonth WHERE Date BETWEEN '201301' AND '201312' AND CustomerID IN ( SELECT CustomerID FROM customers WHERE Segment = 'SME' );\t----- bird -----\tdebit_card_specializing"
+}

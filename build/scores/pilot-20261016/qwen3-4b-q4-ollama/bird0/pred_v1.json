@@ -1,0 +1,12 @@
+{
+ "0": "SELECT COUNT(*) FROM \"transactions_1k\" JOIN gasstations ON \"transactions_1k\".GasStationID = gasstations.GasStationID WHERE \"transactions_1k\".Date = '2012-08-26' AND \"transactions_1k\".Time BETWEEN '08:00:00' AND '09:00:00' AND gasstations.Country = 'CZE';\t----- bird -----\tdebit_card_specializing",
+ "1": "SELECT DISTINCT COUNT(*) FROM Patient JOIN Laboratory ON Patient.ID = Laboratory.ID WHERE Laboratory.RNP IN ('-', '+-') AND Patient.Admission = '+';\t----- bird -----\tthrombosis_prediction",
+ "2": "SELECT s.url FROM seasons s JOIN races r ON s.year = r.year WHERE r.raceId = 901;\t----- bird -----\tformula_1",
+ "3": "SELECT r.fastestLap FROM results r JOIN races ra ON r.raceId = ra.raceId WHERE ra.year = 2009 AND r.position = 1;\t----- bird -----\tformula_1",
+ "4": "SELECT COUNT(*) FROM results WHERE raceId BETWEEN 50 AND 100 AND statusId = 2 AND time IS NULL;\t----- bird -----\tformula_1",
+ "5": "SELECT DisplayName FROM users WHERE strftime('%Y', CreationDate) = '2011';\t----- bird -----\tcodebase_community",
+ "6": "SELECT u.DisplayName FROM comments c JOIN users u ON c.UserId = u.Id WHERE c.Text = 'thank you user93!';\t----- bird -----\tcodebase_community",
+ "7": "SELECT s.name AS play_format, c.name AS card_name FROM legalities l JOIN sets s ON l.format = s.name JOIN cards c ON l.uuid = c.uuid WHERE l.status = 'Banned' GROUP BY s.name, c.name ORDER BY COUNT(l.status) DESC LIMIT 1;\t----- bird -----\tcard_games",
+ "8": "SELECT MAX(s.`Percent (%) Eligible Free (Ages 5-17)`) FROM satscores s JOIN frpm f ON s.cds = f.CDSCode WHERE (s.NumGE1500 * 1.0 / s.NumTstTakr) > 0.3;\t----- bird -----\tcalifornia_schools",
+ "9": "SELECT (COUNT(CASE WHEN c.gender = 'M' THEN 1 END) * 100.0 / COUNT(*)) AS percentage FROM client c JOIN disp d ON c.client_id = d.client_id JOIN account a ON d.account_id = a.account_id WHERE a.frequency = 'POPLATEK TYDNE';\t----- bird -----\tfinancial"
+}

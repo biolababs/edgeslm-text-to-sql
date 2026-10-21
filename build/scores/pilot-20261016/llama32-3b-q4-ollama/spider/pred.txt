@@ -1,0 +1,10 @@
+SELECT MIN(Number_products), MAX(Number_products) FROM shop
+SELECT COUNT(Paragraph_ID) FROM Paragraphs
+SELECT T1.degree_summary_name FROM Degree_Programs AS T1 INNER JOIN Student_Enrolment AS T2 ON T1.degree_program_id = T2.degree_program_id GROUP BY T1.degree_program_id ORDER BY COUNT(T2.student_id) DESC LIMIT 1
+SELECT other_student_details FROM Students ORDER BY other_student_details DESC
+SELECT Air_Date FROM TV_series WHERE Episode = 'A Love of a Lifetime'
+SELECT SUM(T2.SurfaceArea) FROM country AS T1 INNER JOIN continent AS T2 ON T1.Continent = T2.Name WHERE T2.Name IN ('Asia', 'Europe')
+SELECT T2.Continent FROM countrylanguage AS T1 INNER JOIN country AS T2 ON T1.CountryCode = T2.Code GROUP BY T2.Continent ORDER BY COUNT(T1.Language) DESC LIMIT 1
+SELECT T1.Code FROM country AS T1 INNER JOIN countrylanguage AS T2 ON T1.Code = T2.CountryCode WHERE T2.Language != 'English'
+SELECT COUNT(ID) FROM Highschooler
+SELECT T1.breed_name FROM Breeds AS T1 INNER JOIN Dogs AS T2 ON T1.breed_code = T2.breed_code GROUP BY T1.breed_code ORDER BY COUNT(T2.breed_code) DESC LIMIT 1

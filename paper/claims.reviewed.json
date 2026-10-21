@@ -1,0 +1,1474 @@
+{
+ "008a2204bbef5483": {
+  "kinds": [
+   "exclusivity"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Approximately 49.3% of the zero-shot-to-covered-template improvement (range 37.1\u201359.7%) is associated with the difference between covered and withheld example pools, and once the item's own template is withheld, retrieval's paired advantage over a fixed generic example set separates from zero for on"
+ },
+ "01f33ae27139935a": {
+  "kinds": [
+   "exclusivity",
+   "ordinal",
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Reading the first and third columns of that table \u2014 v1 on the full set against the corrected gold on the unchanged-input subset \u2014 every model appears to gain several points from annotation correction, and a paper reporting only those two columns would say so."
+ },
+ "02745ca05b3fa262": {
+  "kinds": [
+   "bound",
+   "superlative",
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Every model improves from zero-shot to S-similar on the NYC set, by at least 50.1 percentage points (QwenCoder-3B, the smallest of the six pooled gains) and by as much as 66.2 percentage points (QwenCoder-1.5B)."
+ },
+ "02f1f4c73ca648ab": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Nor is it a harness artifact or a token cap \u2014 every one of those generations terminated with a normal stop reason rather than at the 384-token output limit of Section 4.5, and the scorer classified none of the items in this condition as truncated."
+ },
+ "063434350844a184": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Running `python reproduce.py` in the repository root is intended to verify data integrity against the SHA-256 manifest, rerun the analysis, regenerate every reported number, and check the citations."
+ },
+ "06a294b4cb22dd87": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Widening the template inventory, adding databases, and repeating the session are the measurements that would change what can be concluded, and none of them is a matter of further analysis of the data already collected."
+ },
+ "07e75522a94f5925": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Scored denominators follow the protocol: 449 NYC evaluation items, 898 NYC S-similar items (each evaluation item in both seen and unseen roles), 449 NYC S-fixed items, 92 curated items, 1,034 Spider development items, and 500 BIRD Mini-Dev v1 items per model, with corrected-BIRD rescoring on the 498"
+ },
+ "0881344e55ea44fa": {
+  "kinds": [
+   "exclusivity"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "QwenCoder-1.5B gains 56.3 pp under S-fixed (8.5% to 64.8%) with an interval of [40.3, 72.4], whereas Qwen3-4B moves only 6.9 pp (20.7% to 27.6%) with an interval of [-9.4, 22.9] \u2014 **an interval that includes zero**."
+ },
+ "088b25ddc988d530": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Because every evaluation item is measured both against an example pool that contains its own query template and against one from which that template is withheld, the improvement from zero-shot to a covered pool splits into a component present even when no example matches the required structure and a"
+ },
+ "0897baf4c8f09a07": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "We therefore keep the template as the resampling unit throughout and report how many templates each estimate rests on \u2014 a design choice for our analysis, not a result borrowed from a prior paper."
+ },
+ "08dda42470b6fb86": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "One item in QwenCoder-3B's zero-shot taxi run produced a runaway, degenerate generation, and one item in Prem-1B-SQL's fixed-example taxi run behaved likewise; in both cases the response carried no server timing fields at all, so no decode-token count exists."
+ },
+ "096ad0389b9652f5": {
+  "kinds": [
+   "superlative"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Qwen3-4B is not the model with the highest zero-shot taxi accuracy \u2014 that is QwenCoder-3B at 31.2% against Qwen3-4B's 20.7% \u2014 so the unresolved fixed-example effect is not simply a ceiling artifact."
+ },
+ "0a62e6fd001e4313": {
+  "kinds": [
+   "ordinal",
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The second column shows why that is an artifact: the subset of items whose question and evidence text are unchanged is simply easier, and every model already scores higher on it under v1 gold."
+ },
+ "0bf67224508cf209": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "That is reason to examine contamination risk, not evidence that every model here has seen Spider or a measure of how much contamination contributes."
+ },
+ "0c1575050948bcee": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "All six loaded 100% on GPU."
+ },
+ "0ceeaa825be8678b": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "No interval was computed for its accuracies in this draft; that is an omission in the analysis, not a consequence of the set's size, and a 92-item sample is precisely a case where an interval would be informative."
+ },
+ "0cf2c9f5fbd4c79a": {
+  "kinds": [
+   "exclusivity",
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "The measured window is generation only: it opens when the request is sent and closes when the response is received, so example retrieval, SQL extraction, and SQL execution against the database all happen outside it and none of their cost is counted here."
+ },
+ "0d2aef7d347128e2": {
+  "kinds": [
+   "exclusivity"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "A BIRD number is therefore interpretable only with its dataset version, its scored item set, and its question wording attached."
+ },
+ "0e7d994e5052fd87": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Where the Holm column shows a value below the resolution of the resampling it is printed as an inequality rather than as an exact figure: a bootstrap p-value in which none of the 10,000 replicates crossed zero is floored at that resolution, because 10,000 replicates cannot distinguish a small p-valu"
+ },
+ "0fec35dc4ac6d121": {
+  "kinds": [
+   "exclusivity",
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "The experiment covers single-query generation only, with no interactive clarification and no retrying agent."
+ },
+ "102fbc3559e57942": {
+  "kinds": [
+   "superlative"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Within the zero-shot condition shown here, the comparable concentrations are far smaller: QwenCoder-1.5B's largest single execution-error message accounts for 20.9% of its items and Prem-1B-SQL's for 10.0%, and no other model-condition among the two scanned reaches a tenth of its set."
+ },
+ "10365a7a477fce56": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Both contrasts are paired item by item \u2014 zero-shot against three fixed examples with one measurement each on the same 449 questions, and template withheld against template present with one measurement each on those same questions \u2014 and an exact McNemar test uses that pairing."
+ },
+ "10e89a9b12a46f3b": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Every interval-backed accuracy result above rests on one database, one scored session, and 26 query templates resampled as 26 exchangeable clusters; the Spider, BIRD and curated-set accuracies carry no interval of any kind, and the energy intervals describe variation across the workload rather than "
+ },
+ "1166cc1549b88f96": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "That exception has an identified cause: 202 of Qwen3-4B's 449 fixed-example answers (45.0%) fail on one repeated column-name error that no other model commits once, so that condition's score is a failure mode rather than a capability estimate."
+ },
+ "11702c2d2dc29e9c": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The server also reports a prompt-token rate, but every prompt in a condition shares a long schema prefix that the server caches, so the token count it divides by includes tokens that were never recomputed; the resulting figure implies more arithmetic than the board can perform and is not reported he"
+ },
+ "141046b6baad5b19": {
+  "kinds": [
+   "ordinal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The first is methodological: a documented, re-runnable procedure that scores task correctness and on-board device energy on the same items in the same run, so that a correctness result and an energy result cannot drift apart."
+ },
+ "15846aa359e8bb66": {
+  "kinds": [
+   "ordinal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "The BIRD evaluator returned 99.6% on both EX and soft F1, and 99.46% on the corrected-gold path, short of the 100% the protocol registered; the shortfall is gold queries that exceed the evaluator's thirty-second deadline, and the pilot record logged it as a pass with notes rather than a clean pass."
+ },
+ "1a4bed2d075c6cc2": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Their workload is a warm-state, fixed explanation prompt capped at 100 generated tokens, with input power measured externally and no idle subtraction [@renney2026cloudedge]."
+ },
+ "1aedf8a7846f10f8": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Dataset version, evidence availability, decoding, and candidate count stay attached to every comparison."
+ },
+ "1bb92db99457bb9e": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Moving from zero-shot to a prompt whose three examples exclude the item's own template measures what examples supply when none of them instantiates the required query skeleton; the further step to a pool that does contain the template is the template-coverage contrast."
+ },
+ "200da75d3f3099c0": {
+  "kinds": [
+   "superlative"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "That is why the template-coverage gap, which is tens of percentage points, clears the resampling scheme easily while a model-to-model difference of a point or two does not: the two highest-scoring configurations differ by 1.4 pp, an estimate whose unadjusted per-pair interval [-4.4, 7.1] already spa"
+ },
+ "210152ac08aab2b7": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Its primary products are the procedure, the energy-per-correct-answer figures it produces, and the estimates and intervals attached to each comparison it makes."
+ },
+ "213f9764379c61d8": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "The latency and energy figures come from the accuracy runs themselves, and no LoadGen run contributed to any number reported above."
+ },
+ "2143814a4ba1212e": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Three retrieved similar examples raise strict taxi accuracy from 8.5\u201331.2% to 70.2\u201382.7%, with every template-clustered interval for the lift far above zero."
+ },
+ "21504521092ae8cf": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Twenty-six templates are drawn with replacement, all the items belonging to each drawn template are taken with it, and the statistic is recomputed; the quoted bounds are the 2.5th and 97.5th percentiles of 10,000 such replicates under the fixed seed 20261017, so any reader re-running the script obta"
+ },
+ "253599d567ac0adf": {
+  "kinds": [
+   "superlative"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Energy per correct answer under retrieval spans 42.4\u201394.5 J, so the most accurate configuration was not the cheapest."
+ },
+ "260a788d9f902a47": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "One board, one serving configuration, one scored run per condition, and greedy decoding throughout: accuracy has no repeat measurement, so run-to-run variation is assumed rather than observed, and nothing here separates residual decoding or scheduling non-determinism from a genuine difference."
+ },
+ "292a32e4ed300fb7": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "The two conditions score the same 449 questions once each, so the difference is formed within items and then resampled over query templates like every other taxi contrast in this paper."
+ },
+ "2c405a082ff51782": {
+  "kinds": [
+   "ordinal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The fifth is the model comparison, estimated for all 15 pairs rather than asserted from the closest one: 2 pairs remain separated after Holm adjustment over the family, several more have unadjusted intervals excluding zero without surviving adjustment, and the closest pairs are genuinely indistingui"
+ },
+ "2c48f6969a202e33": {
+  "kinds": [
+   "superlative"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "QwenCoder-3B, with the highest observed zero-shot score at 31.2%, combines a low execution-error count with a high wrong-result count, which is the profile of a model producing plausible but still incorrect queries."
+ },
+ "2cc734b1108da0b3": {
+  "kinds": [
+   "superlative"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Qwen3-4B produces the fewest execution errors and the most wrong results: its SQL is valid and misdirected."
+ },
+ "2e0f0f465f61efc1": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "No complete energy ordering of the six is established here."
+ },
+ "2fb366b9a61d2d66": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "The board ran under ambient laboratory conditions with no active cooling beyond the built-in fan under `nvfancontrol` dynamic control."
+ },
+ "3176f4e07cd938c9": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Withholding the item's own query template from the pool costs 28.3\u201348.8 pp on the same items, with every cluster-bootstrap interval excluding zero; approximately 49.3% of the zero-shot-to-covered-template improvement is associated with the difference between covered and withheld example pools, and a"
+ },
+ "328232b418f43bba": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Template withholding measures a controlled form of within-database generalisation, and no more than that: templates share component expressions and pretraining exposure is unknown, so the withheld condition shows what happens when the matching structure is absent from the example pool, not what happ"
+ },
+ "343bce68907cc59b": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "The missing benchmark intervals constrain Section 6.2, and no separation between adjacent Spider or BIRD values is claimed there."
+ },
+ "3891cb8ea18e6eb7": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "The pooled figure sits exactly between each pair by construction, because the rotation requests every item once in each role and the condition therefore contains the two exposures in equal numbers: QwenCoder-3B is 68.6 pp covered, 31.6 pp withheld, and 50.1 pp pooled."
+ },
+ "3b42b15a7d865775": {
+  "kinds": [
+   "exclusivity"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The extremes separate cleanly \u2014 QwenCoder-1.5B's interval lies entirely below Qwen3-4B's, with a wide margin \u2014 but adjacent configurations do not: QwenCoder-3B and XiYanSQL-3B overlap almost entirely, and several other neighbouring pairs overlap substantially."
+ },
+ "3c9a5a257ea8cda6": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Those two decode rates are therefore means over all but one of the 449 items rather than over all of them."
+ },
+ "3d6933eccc8bc0b4": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "**Model-contrast family and multiplicity.** All 15 pairs of the six models are estimated under the S-similar condition, each paired per request and clustered by template, and the resulting bootstrap p-values are adjusted by the Holm\u2013Bonferroni procedure across the family of 15."
+ },
+ "3d9c957db981b619": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Three swap flags were recorded \u2014 Prem-1B-SQL (106 MB), XiYanSQL-3B (266 MB), and Qwen3-4B (114 MB) \u2014 and all those runs were kept per protocol."
+ },
+ "414625397d5170d9": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Qwen3-4B's margin is itself largely one repeated mistake: 202 of its 449 fixed-example answers fail on a single identical column-name error that no other model makes once."
+ },
+ "42809351bd975d2c": {
+  "kinds": [
+   "superlative"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Under S-similar prompting, QwenCoder-1.5B is cheapest at 42.4 J, followed by Prem-1B-SQL at 51.4 J, QwenCoder-3B at 69.6 J, XiYanSQL-3B at 70.3 J, Llama-3.2-3B at 77.7 J, and Qwen3-4B at 94.5 J."
+ },
+ "44233db04d249a82": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "The six zero-shot-to-S-similar lifts, the six fixed-example lifts, the six template-coverage gaps, the six coverage shares, and the six energy-per-correct-answer intervals are all reported as unadjusted 95% intervals, one per model, with no correction for the fact that six models are examined."
+ },
+ "4661cea692da83af": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "All four folds were executed, every evaluation item appears in both roles, and the two roles contribute equal numbers of requests."
+ },
+ "46fdb256ae462bb8": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Every table is populated from the scored outputs, and every result number in the text is substituted from the analysis output rather than typed; design constants such as item counts, the template count and the bootstrap settings are written as literals."
+ },
+ "47edf29431f41600": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "For the taxi accuracy runs, energy per correct answer is the total energy spent on all evaluated items divided by the number answered strictly correctly, and so includes energy spent on wrong answers."
+ },
+ "4995ff1002801d73": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Each request writes its own send and receive timestamps from the same clock."
+ },
+ "4998ae51ec8c6136": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Across all 15 pairs under retrieval, estimated per item and clustered by template, 2 separate after Holm adjustment \u2014 Prem-1B-SQL against QwenCoder-3B and against XiYanSQL-3B, both at Holm p < 1e-4 and both with family-simultaneous intervals excluding zero \u2014 several more have per-pair intervals excl"
+ },
+ "4b962b0e28a12da0": {
+  "kinds": [
+   "ordinal",
+   "superlative"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Resampling query templates puts a 95% interval of [37.5, 70.9] on the first share for QwenCoder-3B and [24.6, 50.8] for Qwen3-4B, whose share is the lowest of the six; the intervals are wide enough that the per-model ordering of the share should not be read closely, but every one of them sits well a"
+ },
+ "4c1aa47992e4ce12": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Fixed generic examples are the weaker treatment against zero-shot and not uniformly effective: five of the six clustered intervals exclude zero, but Qwen3-4B's is [-9.4, 22.9] pp and includes zero, so the claim that fixed examples help every model is not supported by this evidence."
+ },
+ "4d8dc30d87c5b739": {
+  "kinds": [
+   "bound",
+   "ordinal",
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The first is the size of the retrieval effect: every model gains at least 50.1 percentage points on the taxi set from three retrieved examples, QwenCoder-1.5B gains 66.2 points, and every paired template-cluster interval for those lifts is far above zero."
+ },
+ "4de16d9746b5b261": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Those pooled gains are the midpoint of two very different conditional gains and should always be quoted as the pair: QwenCoder-3B gains 68.6 pp when the example pool contains the item's own query template and 31.6 pp when it does not, pooling to 50.1 pp, and Qwen3-4B gains 76.2 pp against 47.9 pp, p"
+ },
+ "4e6f796d984b593b": {
+  "kinds": [
+   "exclusivity"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Only the simultaneous column is logically consistent with the Holm decision: reporting a per-pair interval that excludes zero next to an adjusted verdict of \"not separated\" states two things that contradict each other at a glance, which is why both are shown with their coverage levels named rather t"
+ },
+ "4e9dcd092d552ca4": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The prompt is not at fault: the fixed demonstration set names the column correctly several times over and never in the erroneous form, so the model is not copying the mistake from its examples."
+ },
+ "4ff2d8456195dea0": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "The pooled lift is therefore the arithmetic midpoint of the other two by construction, because the four-fold rotation requests every item exactly once in each role and the condition contains the two exposures in equal numbers."
+ },
+ "5145d9ae7f8a3cfd": {
+  "kinds": [
+   "superlative"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The template-coverage gap survives the resampling scheme with room to spare: the narrowest of the six intervals is [17.5, 39.2] pp for Qwen3-4B and the widest [33.6, 63.5] pp for Llama-3.2-3B, and every one of them excludes zero, even though all 26 templates are resampled as exchangeable clusters an"
+ },
+ "5516385df4131212": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Each prediction then falls into exactly one of five categories: correct, wrong result (executes but returns incorrect rows), execution error (SQL fails to execute), no SQL extracted, or truncated output (generation cap hit)."
+ },
+ "5554d31ca078fa4d": {
+  "kinds": [
+   "exclusivity",
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Counting signs is in general the wrong operation here \u2014 four of the six point estimates are positive, but on these 26 clusters only two of the six differences are distinguishable from no difference at all."
+ },
+ "55577abb77cc8ad5": {
+  "kinds": [
+   "ordinal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Fourth, repeat runs per condition, so that decoding non-determinism and session-to-session power variation can be separated from genuine differences, and extend the resampling to the curated set and to the Spider and BIRD estimates, neither of which carries intervals in this draft; the withheld-pool"
+ },
+ "555ff704a980a2f9": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Against this background, our study evaluates six small open-weight models on a Jetson Orin Nano Super using a taxi database with a held-out query-template split, a curated question set, and separately labelled public benchmarks, all under one documented serving configuration."
+ },
+ "577593382d0b0504": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Each evaluation item is requested twice under retrieval, in equal numbers across the condition: once against an example pool that contains its own query template and once against a pool from which that template has been withheld."
+ },
+ "58181e3fb2a9e476": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Scored on the items whose inputs are unchanged, corrected gold moves every model by a small amount and mostly downwards, and that is enough to split the two models that tie on the subset under v1 gold; the much larger shifts appear when the scored subset changes."
+ },
+ "588c204feb6e50c6": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "All raw outputs are fingerprinted in a SHA-256 manifest, and the scored denominators match the protocol figures given in Section 4.4."
+ },
+ "58bae84c073c9661": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Every other model-condition combination contributes its full complement of requests."
+ },
+ "5af07d5817b7543a": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "That does not hold everywhere: Prem-1B-SQL yielded no extractable statement on one BIRD item and on two Spider items."
+ },
+ "5bd7a9bf82de5837": {
+  "kinds": [
+   "ordinal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Second, a substantial share of the retrieval benefit is associated with the example pool covering the question's structure."
+ },
+ "5c9854459a6e7cf2": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "This paper reports accuracy and per-query costs without formal LoadGen latency percentiles, a controlled same-source precision comparison, or on-device LoRA results; all three belong to the companion study, and no precision ladder or adaptation cost is measured here."
+ },
+ "5c99ccffc487ef21": {
+  "kinds": [
+   "ordinal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Scoring used the official Spider test-suite evaluator (EX, TS, EM), the official BIRD Mini-Dev evaluator (EX, Soft F1) with its 30-second SQLite deadline, and the project's own strict and lenient execution evaluator for the NYC taxi set."
+ },
+ "5d0de975c251c473": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Each evaluation item therefore carries one request in which its own template is absent from the pool and one in which it is present, and every request records its pool fold and its exposure role in its own identifier, from which the analysis reads them."
+ },
+ "5e5fdabff01babf1": {
+  "kinds": [
+   "exclusivity",
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The main accuracy table gives every model on all four question sets: the two local sets under all three prompting conditions, and Spider and BIRD zero-shot only, since the public benchmarks were not run with examples; the subsections below read it against each research question in turn."
+ },
+ "5ef7559cda998784": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The decomposition does carry intervals \u2014 Section 6.2 reports a template-clustered interval on the coverage share for each model \u2014 but those intervals are wide, and the across-model spread of the share (37.1\u201359.7% against the covered-pool denominator) should not be read as an ordering."
+ },
+ "608555f6da5cd115": {
+  "kinds": [
+   "exclusivity",
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Because each item supplies exactly one measurement in each role, the contrast is paired within items, and the discordant-pair counts in the supplementary paired-test table of Section 6.2 (RQ3) fall overwhelmingly one way: in every model, items answered correctly only when the template was present fa"
+ },
+ "609c7788bca6b666": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "All taxi intervals are 95% percentile bootstraps that resample the 26 query templates the question set is generated from, which is the main reason they are wide; the Spider, BIRD and curated-set accuracies are single-run point estimates with no interval."
+ },
+ "647884e912af127a": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "One scored session cannot estimate run-to-run or session-to-session variation in power, and none is included here, so the true uncertainty on each figure is wider than the interval shown."
+ },
+ "65d310605c179233": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "In this zero-shot taxi condition every model emits extractable SQL on every item \u2014 the no-SQL column is zero \u2014 so the failures divide between queries that execute and return the wrong rows, queries that do not execute at all, and a handful of truncated outputs."
+ },
+ "668a9d38dce1e9a6": {
+  "kinds": [
+   "ordinal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "First, Qwen3-4B's low fixed-example score reflects one repeated lexical error on nearly half the set, not a broad inability to use generic examples: on the items where it does not make this slip the model is not conspicuously weak."
+ },
+ "66fc983e4703f4aa": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Ollama 0.30.11 starts its underlying llama-server without an explicit `--cache-ram` flag and exposes no user-facing setting for it, so the llama.cpp default host-RAM prompt cache was in force throughout session 1, its size not recorded in the session logs because the server exposes no setting for it"
+ },
+ "6aa566284f6a01c7": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "The four folds rotate so that every item occupies both roles, and the role travels with the request identifier, so the comparison is paired within items rather than drawn between two subsets of the question set."
+ },
+ "6aecade5ff41737d": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Accuracy falls from 89.8\u201399.8% to 50.6\u201368.6%, a within-item gap of 28.3\u201348.8 pp whose interval excludes zero for every model."
+ },
+ "6bf4d2f31ce6f54e": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "The analysis script reads the scored outputs and generates every scored result quoted in this paper; no accuracy, latency, or energy value was entered by hand."
+ },
+ "6c5990f7c06d2ba5": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "For QwenCoder-3B, XiYanSQL-3B, Llama-3.2-3B, and QwenCoder-1.5B the interval contains zero, so no direction is established for any of them; in particular QwenCoder-1.5B's negative point estimate of -10.0 pp carries the interval [-26.8, 8.2], and this study therefore does not find retrieval worse tha"
+ },
+ "715a86cc0786907d": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "The quoted S-similar accuracy is the mean over both roles, and it is accordingly neither the accuracy a deployment would see if its example pool covered every incoming question nor the accuracy it would see if the pool covered none."
+ },
+ "71669747f4aafe02": {
+  "kinds": [
+   "superlative"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "For scale, the largest dominant error mode anywhere else in the two taxi conditions the analysis scans is well below this: 20.9% for QwenCoder-1.5B and 10.0% for Prem-1B-SQL, both at zero-shot, and no other model-condition has any single error message accounting for as much as a tenth of its set."
+ },
+ "719dc604a6b71ddd": {
+  "kinds": [
+   "exclusivity"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The extremes of that range separate \u2014 QwenCoder-1.5B's template-clustered interval lies wholly below Qwen3-4B's \u2014 while adjacent configurations such as QwenCoder-3B and XiYanSQL-3B overlap almost entirely, so this study establishes no complete energy ordering, and the intervals cover workload variat"
+ },
+ "73a79efb3ca07b49": {
+  "kinds": [
+   "exclusivity",
+   "ordinal",
+   "superlative"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Figure 4 plots Spider execution accuracy against taxi zero-shot accuracy: Prem-1B-SQL records the highest observed Spider value at 84.5% yet answers only 14.9% of the taxi questions zero-shot \u2014 second-lowest of the six, and below three of the four artifacts with no SQL-specific training \u2014 while Qwen"
+ },
+ "73cd2b9b90f15f03": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "The curated set has 92 items; no interval was computed for it in this draft, which is an omission rather than a consequence of its size, since a small sample is a reason to quantify uncertainty and not to leave it unstated."
+ },
+ "741d04b35c54bdcc": {
+  "kinds": [
+   "superlative"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Prem-1B-SQL has the highest truncation count at seven items, with the other models at two or fewer, consistent with occasional generation beyond the 384-token cap."
+ },
+ "74e1ac972f9b320a": {
+  "kinds": [
+   "ordinal",
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Second, the S-similar condition contributes two measurements per item \u2014 each of the 449 items is requested once against a pool containing its template and once against a pool without it, giving 898 rows \u2014 so those rows are repeated measurements of the same item and must not be resampled independentl"
+ },
+ "77dd836d6e9e6d45": {
+  "kinds": [
+   "superlative",
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Three-shot prompts add three user/assistant question-and-SQL pairs: the primary strategy (S-similar) selects them by deterministic TF-IDF cosine similarity within the permitted pool, ordered so the most similar sits nearest the target question, and the secondary strategy (S-fixed) uses one generic s"
+ },
+ "7969caa64617f95b": {
+  "kinds": [
+   "exclusivity",
+   "ordinal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "What this evidence supports is narrower, and now rests on intervals rather than on a count of signs: retrieval is clearly stronger than no examples, and stronger than a fixed set when the pool covers the incoming question's structure, while on structurally novel questions its advantage over a fixed "
+ },
+ "79cf3991cbff8196": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "An effect of tens of percentage points survives a resampling scheme that treats all 26 templates as exchangeable clusters \u2014 and 26 clusters is the whole of the independent information behind that interval."
+ },
+ "7a790f248f9c1080": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "That one exception now has a concrete cause rather than standing as an anomaly: 45.0% of Qwen3-4B's fixed-example answers fail on a single repeated column-name error (`pz.location` for `pz.location_id`) that no other model commits once, so its fixed-example score is better read as a failure mode tha"
+ },
+ "7d69545e924e4897": {
+  "kinds": [
+   "exclusivity"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Only the simultaneous column is on the same footing as the Holm-adjusted p-value, so every statement below about whether a pair is separated cites the simultaneous interval."
+ },
+ "7ed042b79c4535fa": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The gap is therefore specific to this SQL deployment setting; we make no broad claim that edge accuracy and energy have never been studied together."
+ },
+ "80178afd14689c9d": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Its questions were drafted separately and are not template instances, so no pool entry is another instance of the same generator rule, and on it Qwen3-4B moves from 72.8% zero-shot to 85.9% with retrieval \u2014 a gain several times smaller than the 62.0 pp it gains on the generated taxi set in pooled te"
+ },
+ "80529733f96aedea": {
+  "kinds": [
+   "ordinal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The BIRD evaluator keeps a thirty-second query deadline, and the pilot found gold queries that exceed it."
+ },
+ "8293d63f689ca2dc": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The setting was identical for all six models in the session."
+ },
+ "83450fcafa53af7b": {
+  "kinds": [
+   "superlative",
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "These lifts are not point estimates alone: the paired template-cluster interval for the lift sits far above zero for all six models, and the lowest lower bound of the six is 39.1 pp (QwenCoder-3B), with Prem-1B-SQL's lift interval running [45.0, 64.8] and QwenCoder-1.5B's [57.8, 74.1]."
+ },
+ "8351f3399efbac87": {
+  "kinds": [
+   "superlative"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Speed follows model size closely, as Figure 6 shows: the two 1B-class models are the fastest per query at both zero-shot and S-similar, the three 3B models sit in the middle, and Qwen3-4B is the slowest."
+ },
+ "84486aa02c6ba6d6": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "The comparison comprises six models, all served as Q4_K_M GGUF artifacts through Ollama: The four Ollama-library models use the blobs already on the Jetson; the two SQL-specialised models were converted from pinned Hugging Face revisions through one pinned llama.cpp toolchain."
+ },
+ "85991ed5e5cd53b9": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "It is a half-and-half mixture because the rotation made it one, and that ratio is a feature of the design rather than an estimate of anything: a deployment's coverage rate is whatever its pool and its users produce, and every pooled retrieval figure in this paper should be read with that substitutio"
+ },
+ "86a0434bc2303fce": {
+  "kinds": [
+   "exclusivity"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "No prompt-processing or prefill throughput figure appears anywhere in this paper, and no claim below rests on prompt-processing speed; the decode rate, which divides generated tokens by the server's own generation duration, is unaffected by prefix caching and is the only token-rate figure reported."
+ },
+ "87517210621c8365": {
+  "kinds": [
+   "exclusivity"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The taxi questions are generated from templates and the example pool is drawn from the same generator, so a retrieved neighbour can share not only the required SQL structure but much of the question's wording \u2014 which is precisely the confound the withheld condition was built to control."
+ },
+ "891240935505777f": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The common prompt supports a controlled artifact comparison but is not optimal for every model."
+ },
+ "8974bea46d0dbf5a": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "How much of the retrieval gain is associated with template coverage rather than with having relevant examples at all is the natural follow-up, and the fold rotation gives a quantitative answer."
+ },
+ "8a54bc7b58c7d391": {
+  "kinds": [
+   "superlative"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The useful reading of that pair is the absence of an expected advantage on this workload, not a demonstration that specialisation hurts; the paired interval on the contrast is one of the narrowest in the table and sits around zero, so this is a null estimated with reasonable precision rather than an"
+ },
+ "8bb219635ced42bd": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "The scorer then integrates power over the interval between those two timestamps by the trapezoidal rule across every sample inside it, adding a boundary point at each end, each carrying the power of the nearest preceding sample, so that partial intervals at the start and end of generation are not dr"
+ },
+ "8bed10fdba078e91": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "No ambient temperature sensor was available at the board; idle junction temperature was approximately 53 degrees C at session start."
+ },
+ "8c92732019de8845": {
+  "kinds": [
+   "ordinal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Tokens per second cannot show whether a generated query answers the question, and energy per generated token rewards short but wrong outputs."
+ },
+ "8d1690bfc6c49db8": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Three statistical limitations should be read with every number above."
+ },
+ "939c29fb9e7c3b2d": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Evaluation items never enter those pools."
+ },
+ "93eec28eaa15f35c": {
+  "kinds": [
+   "superlative"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The gap is 28.3 pp at its narrowest, for Qwen3-4B, and 48.8 pp at its widest, for Llama-3.2-3B."
+ },
+ "9589a13d290f291a": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Marginal bands are the wrong instrument for a comparison, however, because a model-to-model difference can be estimated on paired items; RQ4 below reports all 15 pairs estimated that way, of which 2 remain separated after adjustment over the family."
+ },
+ "95d5f5a4438aca8a": {
+  "kinds": [
+   "exclusivity"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The lesson generalises past BIRD: a correctness number is comparable only with its dataset version, its scored item set, and its gold source attached, and a rescoring experiment must hold the item set fixed to measure the gold."
+ },
+ "9925b86da0792cbe": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "The author is responsible for all claims, experimental design decisions, citations, data integrity, and verification of reported numbers."
+ },
+ "992a312b88b5e606": {
+  "kinds": [
+   "exclusivity"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The curated set, which is the only non-template question set on the local database, contains 92 accepted items, drafted and gold-labelled by related AI systems with a limited human spot-check."
+ },
+ "994ad636eb672297": {
+  "kinds": [
+   "superlative"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "For Llama-3.2-3B the asymmetry is total, 219 items against 0, and even the most balanced case, Prem-1B-SQL, runs 198 against 22."
+ },
+ "995b76bddf33105e": {
+  "kinds": [
+   "exclusivity",
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Zero-shot accuracy on the NYC evaluation set is low for every model, ranging from 8.5% (QwenCoder-1.5B) to 31.2% (QwenCoder-3B): a schema-only prompt is not enough to query this database reliably."
+ },
+ "9ef8d7da227a0b39": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "The final row of the table reports the top-two contrast as a clustered difference, 1.4 pp with an unadjusted per-pair interval of [-4.4, 7.1], and RQ4 extends that to all 15 pairs and reports the family-simultaneous interval alongside it."
+ },
+ "9fdf27b5b0f88a53": {
+  "kinds": [
+   "superlative"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The two SQL-specialised artifacts record the two highest values \u2014 Prem-1B-SQL at 84.5% EX / 78.9% TS and XiYanSQL-3B at 80.9% EX / 75.8% TS \u2014 ahead of Qwen3-4B (77.1% / 67.9%), QwenCoder-3B (67.7% / 60.3%), Llama-3.2-3B (64.0% / 57.9%), and QwenCoder-1.5B (61.8% / 53.6%)."
+ },
+ "a06d9ac5ad31324b": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Every accuracy run was logged with VDD_IN power, so energy per query and energy per correct answer come from the integrated module-input power over each query's generation window, on the same items and in the same run as the accuracy figures."
+ },
+ "a481ab447f7e30ff": {
+  "kinds": [
+   "superlative",
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "A deployment that can tolerate occasional wrong answers therefore has a measurable reason to prefer QwenCoder-1.5B, the smallest-footprint artifact, over the largest, and no measured reason here to prefer one 3B artifact over another on either axis."
+ },
+ "a72523b3b9607308": {
+  "kinds": [
+   "superlative"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Two accuracy findings carry the most weight."
+ },
+ "aa4bdc5831b11a7e": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Our common prompt requests SQL directly and uses no PICARD-style constrained decoding, so the comparison also measures each model's ability to follow that output contract."
+ },
+ "aa722797b440fb66": {
+  "kinds": [
+   "exclusivity"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Relatedly, the error-mode scan behind the Qwen3-4B explanation covers the taxi zero-shot and fixed-example conditions only and reports a mode only when it reaches a tenth of the condition's items; a per-condition error taxonomy for the two three-shot conditions, which would show whether other repeat"
+ },
+ "af7122c4ee8ea1e8": {
+  "kinds": [
+   "exclusivity"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "We cannot say what the retrieval infrastructure costs: the measured window covers generation only, so the time, energy, and engineering effort of building and maintaining a validated pool of question\u2013SQL pairs, and of retrieving from it, were not measured in this study at all."
+ },
+ "afe8452aa26ae7b5": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "A four-fold rotation requests every item twice under retrieval: once against an example pool containing its own query template and once against a pool from which that template is withheld."
+ },
+ "b1302995425430fc": {
+  "kinds": [
+   "exclusivity"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Those are the only two rows whose simultaneous interval excludes zero, and they are exactly the two the Holm procedure marks as separated."
+ },
+ "b3c48680b5678547": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Session 1 ran block B3 (core accuracy across all six models, six conditions each), B4 (S-fixed prompting), and B5 (XiYan native prompt) on the Jetson in test mode."
+ },
+ "b4f59ac846481f70": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "That complements rather than replaces Spider's database-disjoint evaluation \u2014 a new schema and a new template over a familiar schema test different capabilities \u2014 and Section 6.2 reports the resulting contrast, which is large and one-directional for every model here."
+ },
+ "b5659a85ad44669d": {
+  "kinds": [
+   "superlative"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "On Spider development, execution accuracy ranges from 61.8% (QwenCoder-1.5B) to 84.5% (Prem-1B-SQL), so the artifact with the fewest parameters (1.35B) records the highest observed value, and test-suite accuracy preserves that order (53.6% to 78.9%)."
+ },
+ "b5ae98db8dd6245b": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "It is choosing between a retrieval pipeline \u2014 an indexed, maintained, validated pool plus a similarity search on every request \u2014 and three good generic examples pasted into the system message once."
+ },
+ "b6cd8c96ff6ba361": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "The per-pair column is the ordinary 95% interval for one comparison considered alone; the simultaneous column is the same bootstrap read at Bonferroni-level percentiles so that all 15 intervals hold jointly at 95%."
+ },
+ "b71aba6a3b7d72ad": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "For the coverage gaps and the retrieved-example lifts this makes little practical difference, because those effects are tens of percentage points and every bound is far from zero; for the fixed-example lifts, where one interval already includes zero and the nearest of the others has a lower bound of"
+ },
+ "b83aa30f2450e0ed": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Every taxi question is generated from a template, so a question's wording resembles the wording of other instances of the same template by construction, and the example pool is drawn from the same generator."
+ },
+ "b933719fae1f69e3": {
+  "kinds": [
+   "exclusivity"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "**Adjustment is applied to one family only.** The model-contrast family of 15 pairs is the only set of comparisons in this paper that receives a multiplicity adjustment."
+ },
+ "b9ca12d0375135ae": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The effect is large and runs the same way for every model."
+ },
+ "bad05a69276f43eb": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "The contrast table carries two interval columns for each pair, and the distinction matters for how a row is read."
+ },
+ "bb58581a30873347": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Of the 449 requests made against a withheld pool, 449 carried none \u2014 that is, every one of them."
+ },
+ "bc49bb6daa19daaa": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "With no correct answers the ratio is undefined and is labelled as such."
+ },
+ "bc501c099dd9e787": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "We claim no invention of template withholding, energy normalisation, or small-model text-to-SQL, and the literature search cannot prove the absence of overlapping work."
+ },
+ "bd818091eca9feee": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Each row is the difference in strict S-similar accuracy, formed per request on the items both models answered, resampled over query templates, and adjusted by Holm across the family of 15 pairs."
+ },
+ "bd9f2de39f63faa6": {
+  "kinds": [
+   "ordinal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Third, no prefill or prompt-processing throughput is reported anywhere in this paper."
+ },
+ "bdf19c72def36023": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "All six models completed every condition, and no run was aborted or excluded."
+ },
+ "be801f1025e8ba94": {
+  "kinds": [
+   "ordinal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The BIRD evaluator's thirty-second deadline affects gold queries identified in the pilot, and no sensitivity analysis excluding those items was computed for this draft, so the BIRD figures should be read as the evaluator's own verdict including them."
+ },
+ "c060aa225c5dd851": {
+  "kinds": [
+   "superlative"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "QwenCoder-1.5B is the opposite, with the highest execution-error count, and simply struggles to write valid SQL without examples."
+ },
+ "c1783e5e20ad2bed": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "**Cluster bootstrap over templates.** Every interval quoted for the taxi set is a 95% percentile bootstrap in which the unit resampled with replacement is the query template \u2014 and there are 26 of them \u2014 not the item."
+ },
+ "c1b50508fdfb5690": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "The protocol, raw outputs, scoring and analysis code, and manuscript source are being prepared for release so that every number above can be regenerated."
+ },
+ "c1bb915a74415582": {
+  "kinds": [
+   "ordinal",
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "First, having examples in the prompt matters more than the choice among these models: three-shot prompting with retrieved similar examples lifted taxi accuracy from 8.5\u201331.2% to 70.2\u201382.7% for every model, with paired cluster-bootstrap intervals far from zero."
+ },
+ "c2864d979ca86fb7": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "That is a statement about each strategy against zero-shot, not a statement that relevance beats mere presence; the next paragraph makes the direct retrieval-against-fixed comparison and finds it much less one-sided."
+ },
+ "c3aed5ba5e7f4763": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Because the rotation puts every template's items into both exposure roles, each cluster carries rows from both conditions, so a resampled set of templates always contains both and the coverage-gap statistic is defined on every replicate."
+ },
+ "c49b4d8b1a5091a3": {
+  "kinds": [
+   "exclusivity"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The corrected-BIRD sensitivity analysis follows the pilot amendment rather than the original assumption that only the SQL changed."
+ },
+ "c58801b96c3c2e2b": {
+  "kinds": [
+   "superlative"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Templates can share component expressions, so withholding a template does not withhold every SQL construct it contains, and the condition is best read as absence of the matching structure from the example pool rather than absence of its parts."
+ },
+ "c6c58ed44970e465": {
+  "kinds": [
+   "superlative"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The split is model-dependent \u2014 the artifact with the highest observed pooled S-similar accuracy shows the smallest coverage share, although the ordering differs if models are ranked by covered-pool accuracy instead \u2014 though with six models and one session that pattern is an observation rather than a"
+ },
+ "c804fa7b96f14de6": {
+  "kinds": [
+   "exclusivity"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "That scan covers the taxi zero-shot and fixed-example conditions only; the retrieval conditions, the curated set, and the public benchmarks were not examined for repeated error modes, so this is not an exhaustive survey of such failures in the campaign."
+ },
+ "c8df8be899072891": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "All energy values quoted are total energy over that window, as stated in Section 5.2."
+ },
+ "c97c00b1c01e6405": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "For every model the discordant pairs fall towards the examples, most extremely for QwenCoder-1.5B, which loses a handful of items and wins hundreds."
+ },
+ "ca0506cb3489d276": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "**Every energy value quoted in this paper, including every energy-per-correct-answer figure, is total energy.** The above-idle values are computed by the scorer for every condition and carried into the analysis output for the four taxi and curated conditions, where they are available for readers who"
+ },
+ "ca082c33fc93c05f": {
+  "kinds": [
+   "exclusivity"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The energy intervals quoted in Section 6.3 make that explicit \u2014 QwenCoder-1.5B's lies wholly below Qwen3-4B's, while QwenCoder-3B's and XiYanSQL-3B's almost coincide \u2014 and they cover workload variation only, with no estimate of run-to-run variation from a single session."
+ },
+ "cfc64505accbb227": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The defensible claim is therefore narrower than the headline: on this workload, three retrieved demonstrations produced accuracy gains larger than every model-pair difference measured here, including the 2 of 15 that the design separates, conditional on access to a pool of validated examples whose o"
+ },
+ "d02d34f3f14bc831": {
+  "kinds": [
+   "ordinal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The second is the metric and its values: energy per correct answer for six deployed quantised artifacts under two prompting strategies, alongside latency, memory, and per-query energy."
+ },
+ "d1eb3775186b496b": {
+  "kinds": [
+   "ordinal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "First, the 449 evaluation items are generated from 26 templates, so items sharing a template share their SQL skeleton and are strongly correlated: treating them as 449 independent Bernoulli trials would understate the true uncertainty by a large factor, because the effective sample size is closer to"
+ },
+ "d655f1ffdffac56e": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Each item was measured both against an example pool containing its own query template and against a pool from which that template was withheld; accuracy falls from 89.8\u201399.8% to 50.6\u201368.6%, a within-item gap of 28.3\u201348.8 pp whose cluster-bootstrap interval excludes zero for every model."
+ },
+ "d6a91e70a5f9f34a": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "A window that is not fully covered by samples \u2014 no sample before the send timestamp, or none after the receipt timestamp \u2014 yields no value and the condition is reported without energy rather than with a truncated integral."
+ },
+ "d7c37c2828c814d5": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Retrieval's advantage over those generic examples, however, is largely contingent on coverage: with the item's own template withheld, the paired, template-clustered advantage separates from zero for two of the six models \u2014 18.9 pp [5.3, 32.8] for Prem-1B-SQL and 41.0 pp [27.8, 53.5] for Qwen3-4B, th"
+ },
+ "d94b96eac930f0ac": {
+  "kinds": [
+   "exclusivity",
+   "ordinal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Second, the comparison of withheld-pool retrieval against fixed examples \u2014 the comparison that qualifies the retrieval result most sharply \u2014 now carries paired template-clustered intervals, and they are wide: four of the six contain zero, so only two of the six differences are resolved and the per-m"
+ },
+ "da9e6a0498adfe5b": {
+  "kinds": [
+   "exclusivity"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Both are printed because the per-pair interval is what a reader with a single pre-specified comparison in mind would want, and because showing only the narrower one beside a family-adjusted verdict would let a row read as separated and not separated at the same time, which is not a hypothetical here"
+ },
+ "dc6a2ac05474a912": {
+  "kinds": [
+   "ordinal",
+   "superlative"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Prem-1B-SQL records the highest observed execution accuracy on both Spider and BIRD, the benchmarks its specialisation targets, and sits second-lowest on the zero-shot taxi set, while QwenCoder-3B shows the opposite profile."
+ },
+ "ddd3a030c4dfc980": {
+  "kinds": [
+   "superlative"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "evaluate distilled test suites on a set of submitted Spider systems and report that the then-current Spider metric produced an average 2.5% false-negative rate and an 8.1% worst-case rate [@zhong2020testsuite]."
+ },
+ "de23d0bd74289fa1": {
+  "kinds": [
+   "exclusivity",
+   "superlative"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Prem-1B-SQL is the sharper case, and the only artifact appearing in both pairs this design separates: the model with the highest observed execution accuracy on both public benchmarks reaches 14.9% zero-shot on the taxi database, above only QwenCoder-1.5B, and under retrieval it sits measurably below"
+ },
+ "ded8b74329fef555": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "**What is not in this draft.** Two quantities the protocol specifies remain absent from the script rather than merely from the tables: database-cluster intervals for Spider and BIRD, whose accuracies appear as single-run point estimates with no interval of any kind; and any interval on the curated-s"
+ },
+ "e012cd5a2bf8c70a": {
+  "kinds": [
+   "exclusivity"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "A zero-shot model has no experiment-defined seen/unseen exposure condition, so its fold-level performance serves only as a difficulty baseline."
+ },
+ "e06e73fdf910d963": {
+  "kinds": [
+   "ordinal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The first step is worth 31.6 pp for QwenCoder-3B at the low end and 47.9 pp for Qwen3-4B at the high end \u2014 these are the withheld-pool lifts listed earlier in this subsection, reached by a different route \u2014 and the second is worth 28.3\u201348.8 pp."
+ },
+ "e0da01f767c677a8": {
+  "kinds": [
+   "superlative"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "On the public benchmarks the two SQL-specialised artifacts record the two highest execution accuracies on Spider and BIRD, although Qwen3-4B edges XiYanSQL-3B on BIRD soft F1 and leads it on no other benchmark metric; on the taxi database that advantage does not appear."
+ },
+ "e496d7142c93b932": {
+  "kinds": [
+   "ordinal",
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The claim this draft supports is accordingly that fixed generic examples help five of the six models and are not resolved for the sixth, while retrieved examples help all six."
+ },
+ "e783f31131663c09": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Their 52.8% figure pertains to the inspected 498-item BIRD Mini-Dev set, not to every BIRD release."
+ },
+ "e818f82ede383c1c": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "**Primary inference for every taxi contrast.** The template cluster bootstrap described above is the primary inference for all of them: the prompting contrasts, the template-coverage contrast, the decomposition share, the model-against-model contrasts, and energy per correct answer."
+ },
+ "e99f655a9b1d6d1a": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Five untimed pool requests warm each model after loading."
+ },
+ "e9a2bd68338731d2": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "The per-query wall times in Section 6.3 contain whatever prompt processing each request required but do not isolate it, and no claim in this paper rests on how fast the board ingests a prompt."
+ },
+ "ea9427b152e1f576": {
+  "kinds": [
+   "exclusivity"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The record is retained in the archive, keeps its wall time and its energy integral, and is scored for correctness like any other item; only the throughput mean omits it."
+ },
+ "ee0a30628f86f4c7": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "The shifts are small and these subset scores carry no interval, so the separation is a change in displayed order rather than a demonstrated one; what it shows is that even a correction of this modest size can rearrange adjacent entries."
+ },
+ "ee522bfc1613063c": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "These are single-run point estimates on a fixed development set, with no database-cluster intervals computed in this draft, so small separations between adjacent artifacts carry no weight."
+ },
+ "f0304b0d524e14af": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "**Exact McNemar tests are supplementary.** Two contrasts are paired at the item level \u2014 zero-shot against three fixed examples, and the template-coverage contrast \u2014 and for each the analysis matches the two measurements of every item, counts the discordant pairs, and reports the exact binomial two-s"
+ },
+ "f07965d61daa55ea": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "**Pooled and conditional three-shot lifts.** Three different lifts can be formed from the retrieval condition, and the analysis reports all three because they answer different questions."
+ },
+ "f07d3d1adca11479": {
+  "kinds": [
+   "superlative"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "Energy per correct answer under retrieval ranges from 42.4 J to 94.5 J across the six artifacts, so the configuration with the highest observed accuracy is not the cheapest per correct answer."
+ },
+ "f1089b6813cb24b3": {
+  "kinds": [
+   "exclusivity",
+   "ordinal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "First, multiplicity adjustment is applied to the model-contrast family only; the six retrieved-example lifts, the six fixed-example lifts, the six coverage gaps, the six coverage shares, and the six energy-per-correct-answer intervals are nominal single-comparison intervals with no correction for ex"
+ },
+ "f15d84f0a6a07c15": {
+  "kinds": [
+   "ordinal",
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "First, the 498-item corrected set is a different item set from the 500-item v1 release, so its scores are not comparable with the v1 full-set figures quoted above and no such comparison is made in this paper."
+ },
+ "f5f669d2f0c8a542": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "The template-coverage half of questions 1 and 3 \u2014 how accuracy differs when a query template is present in or absent from the example pool \u2014 is answered from the within-item paired rotation described in Section 4.3; all five questions are answered with the uncertainty attached."
+ },
+ "f80865480024c962": {
+  "kinds": [
+   "exclusivity",
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "This paper does not answer it: no adaptation results are reported here, and on-device low-rank adaptation is reserved for the companion study, so parameter adaptation enters only as context for the prompting conditions we do measure."
+ },
+ "f83a9aa65acc2f7a": {
+  "kinds": [
+   "exclusivity",
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "The comparison is made on paired items for every pair of models, not only for the closest one, because a single closest-pair test says nothing about the rest of the field."
+ },
+ "f96107f814b321f5": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Every BIRD figure below is therefore scored with those items included and counted as the evaluator counts them; a sensitivity analysis excluding the affected questions, and the per-subset accuracy ceiling it would imply, were not computed for this draft and are listed in Section 8 as open work."
+ },
+ "fa218c94bd7b0435": {
+  "kinds": [
+   "ordinal"
+  ],
+  "reason": "Verified 2026-10-20 against build/numbers.json, build/tables and the scored run c9-main-20261017-s1. Two independent read-only passes covered all flagged claims (superlative/ordinal, and universal/exclusivity/bound); 11 false or unsupported claims were corrected before acceptance.",
+  "text": "The third is a worked demonstration of how uncontrolled comparison misleads, with the corrected-BIRD subset as the case study: the scored denominator moves the numbers more than the annotation correction does."
+ },
+ "fa761d005337a70e": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "Each is formed as a difference or a ratio of resampled quantities, resampled over templates, and reported as an interval."
+ },
+ "fd41a0ed2d38131f": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "No new modelling method is proposed."
+ },
+ "ff970ec249d516e4": {
+  "kinds": [
+   "universal"
+  ],
+  "reason": "Round 2, verified 2026-10-21 against build/numbers.json, build/tables, build/oracle and the scored run c9-main-20261017-s1. Widened quantifier patterns exposed 109 previously unchecked claims; an independent read-only pass found 7 false and 2 unsupported, all corrected before acceptance.",
+  "text": "This section states what the analysis script actually does, because every estimate and interval reported below depends on those choices."
+ }
+}

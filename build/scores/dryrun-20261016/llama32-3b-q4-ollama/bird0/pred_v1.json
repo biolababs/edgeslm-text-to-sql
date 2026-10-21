@@ -1,0 +1,3 @@
+{
+ "0": "SELECT SUM(CASE WHEN Currency = 'EUR' THEN 1 ELSE 0 END) / SUM(CASE WHEN Currency = 'CZK' THEN 1 ELSE 0 END) FROM customers\t----- bird -----\tdebit_card_specializing"
+}

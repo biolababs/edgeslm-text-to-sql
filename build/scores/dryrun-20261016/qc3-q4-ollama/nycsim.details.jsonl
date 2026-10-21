@@ -1,0 +1,1 @@
+{"rid": "test_unseen_00018|F1|unseen", "id": "test_unseen_00018", "cond": "nycsim", "strict": false, "lenient": true, "error": null, "class": "wrong_result", "role": null, "template_id": "highest_avg_fare_zone_min_pickups", "fold": "F1"}

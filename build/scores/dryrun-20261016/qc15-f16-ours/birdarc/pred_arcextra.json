@@ -1,0 +1,3 @@
+{
+ "0": "SELECT AVG(SUM(Consumption) / 12) FROM yearmonth WHERE CustomerID IN (SELECT CustomerID FROM customers WHERE Segment = 'SME') AND Date BETWEEN '201301' AND '201312'\t----- bird -----\tdebit_card_specializing"
+}

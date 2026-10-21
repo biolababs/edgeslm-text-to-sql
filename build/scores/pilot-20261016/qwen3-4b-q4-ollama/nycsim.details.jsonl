@@ -1,0 +1,8 @@
+{"rid": "test_seen_00116|F4|seen", "id": "test_seen_00116", "cond": "nycsim", "strict": true, "lenient": true, "error": null, "class": "correct", "role": null, "template_id": "avg_tip_pct_hour_credit", "fold": "F3"}
+{"rid": "train_00078|F3|seen", "id": "train_00078", "cond": "nycsim", "strict": true, "lenient": true, "error": null, "class": "correct", "role": null, "template_id": "busiest_pickup_zone_hour", "fold": "F2"}
+{"rid": "train_00526|F4|seen", "id": "train_00526", "cond": "nycsim", "strict": true, "lenient": true, "error": null, "class": "correct", "role": null, "template_id": "airport_dropoffs_from_borough", "fold": "F3"}
+{"rid": "test_unseen_00134|F2|seen", "id": "test_unseen_00134", "cond": "nycsim", "strict": true, "lenient": true, "error": null, "class": "correct", "role": null, "template_id": "avg_speed_borough", "fold": "F1"}
+{"rid": "train_00687|F3|unseen", "id": "train_00687", "cond": "nycsim", "strict": true, "lenient": true, "error": null, "class": "correct", "role": null, "template_id": "avg_tolls_borough_to_borough", "fold": "F3"}
+{"rid": "test_seen_00149|F4|unseen", "id": "test_seen_00149", "cond": "nycsim", "strict": true, "lenient": true, "error": null, "class": "correct", "role": null, "template_id": "top_tip_borough", "fold": "F4"}
+{"rid": "test_unseen_00211|F1|unseen", "id": "test_unseen_00211", "cond": "nycsim", "strict": true, "lenient": true, "error": null, "class": "correct", "role": null, "template_id": "zones_without_pickups", "fold": "F1"}
+{"rid": "test_unseen_00044|F1|unseen", "id": "test_unseen_00044", "cond": "nycsim", "strict": true, "lenient": true, "error": null, "class": "correct", "role": null, "template_id": "highest_avg_fare_zone_min_pickups", "fold": "F1"}

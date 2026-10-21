@@ -1,0 +1,49 @@
+extra pred: SELECT T1.degree_summary_name FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id = T2.degree_program_id GROUP BY T1.degree_summary_name ORDER BY COUNT(T2.student_id) DESC LIMIT 1
+extra gold: SELECT T1.degree_summary_name FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id GROUP BY T1.degree_summary_name ORDER BY count(*) DESC LIMIT 1
+
+easy pred: SELECT T1.Air_Date FROM TV_series AS T1 INNER JOIN TV_Channel AS T2 ON T1.Channel = T2.id WHERE T1.Episode = 'A Love of a Lifetime'
+easy gold: SELECT Air_Date FROM TV_series WHERE Episode = "A Love of a Lifetime";
+
+extra pred: SELECT T1.Continent FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code = T2.CountryCode GROUP BY T1.Continent ORDER BY COUNT(T2.Language) DESC LIMIT 1
+extra gold: SELECT T1.Continent FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode GROUP BY T1.Continent ORDER BY COUNT(*) DESC LIMIT 1
+
+                     easy                 medium               hard                 extra                all                 
+count                5                    2                    0                    3                    10                  
+
+====================== EXACT MATCHING ACCURACY =====================
+exact match          0.800                1.000                0.000                0.333                0.700               
+
+---------------------PARTIAL MATCHING ACCURACY----------------------
+select               1.000                1.000                0.000                1.000                1.000               
+select(no AGG)       1.000                1.000                0.000                1.000                1.000               
+where                1.000                1.000                0.000                0.000                1.000               
+where(no OP)         1.000                1.000                0.000                0.000                1.000               
+group(no Having)     0.000                0.000                0.000                1.000                1.000               
+group                0.000                0.000                0.000                1.000                1.000               
+order                1.000                0.000                0.000                0.333                0.500               
+and/or               1.000                1.000                0.000                1.000                1.000               
+IUEN                 0.000                0.000                0.000                0.000                0.000               
+keywords             1.000                1.000                0.000                1.000                1.000               
+---------------------- PARTIAL MATCHING RECALL ----------------------
+select               0.800                1.000                0.000                1.000                0.900               
+select(no AGG)       0.800                1.000                0.000                1.000                0.900               
+where                0.500                1.000                0.000                0.000                0.667               
+where(no OP)         0.500                1.000                0.000                0.000                0.667               
+group(no Having)     0.000                0.000                0.000                1.000                1.000               
+group                0.000                0.000                0.000                1.000                1.000               
+order                1.000                0.000                0.000                0.333                0.500               
+and/or               1.000                1.000                0.000                1.000                1.000               
+IUEN                 0.000                0.000                0.000                0.000                0.000               
+keywords             0.667                1.000                0.000                1.000                0.857               
+---------------------- PARTIAL MATCHING F1 --------------------------
+select               0.889                1.000                0.000                1.000                0.947               
+select(no AGG)       0.889                1.000                0.000                1.000                0.947               
+where                0.667                1.000                0.000                1.000                0.800               
+where(no OP)         0.667                1.000                0.000                1.000                0.800               
+group(no Having)     1.000                1.000                0.000                1.000                1.000               
+group                1.000                1.000                0.000                1.000                1.000               
+order                1.000                1.000                0.000                0.333                0.500               
+and/or               1.000                1.000                0.000                1.000                1.000               
+IUEN                 1.000                1.000                0.000                1.000                1.000               
+keywords             0.800                1.000                0.000                1.000                0.923               
+

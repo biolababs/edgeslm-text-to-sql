@@ -1,0 +1,95 @@
+{"id": "cur_001", "sql": "SELECT COUNT(*) FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE t.passenger_count = 2 AND p.name = 'Cash'"}
+{"id": "cur_002", "sql": "SELECT COUNT(*) FROM trips WHERE rate_code_id = 2"}
+{"id": "cur_003", "sql": "SELECT COUNT(*) FROM trips WHERE vendor_id = 1 AND trip_distance > 10"}
+{"id": "cur_004", "sql": "SELECT COUNT(*) FROM trips t JOIN zones z ON t.pu_location_id = z.location_id JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE z.zone = 'LaGuardia Airport' AND p.name = 'Credit card'"}
+{"id": "cur_005", "sql": "SELECT COUNT(*) FROM trips WHERE tolls_amount > 10"}
+{"id": "cur_006", "sql": "SELECT COUNT(*) FROM trips t JOIN zones z ON t.do_location_id = z.location_id WHERE z.borough = 'Brooklyn'"}
+{"id": "cur_007", "sql": "SELECT COUNT(*) FROM trips WHERE total_amount BETWEEN 50 AND 100"}
+{"id": "cur_008", "sql": "SELECT COUNT(*) FROM trips WHERE airport_fee > 0"}
+{"id": "cur_009", "sql": "SELECT AVG(t.trip_distance) FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE p.name = 'Credit card'"}
+{"id": "cur_010", "sql": "SELECT SUM(t.tip_amount) FROM trips t JOIN zones z ON t.pu_location_id = z.location_id WHERE z.borough = 'Queens'"}
+{"id": "cur_011", "sql": "SELECT MAX(t.trip_distance) FROM trips t JOIN zones z ON t.pu_location_id = z.location_id WHERE z.zone = 'JFK Airport'"}
+{"id": "cur_012", "sql": "SELECT AVG(total_amount) FROM trips WHERE passenger_count >= 5"}
+{"id": "cur_013", "sql": "SELECT MIN(fare_amount) FROM trips WHERE fare_amount > 0"}
+{"id": "cur_014", "sql": "SELECT AVG(passenger_count) FROM trips WHERE vendor_id = 2"}
+{"id": "cur_015", "sql": "SELECT SUM(t.tolls_amount) FROM trips t JOIN zones z ON t.do_location_id = z.location_id WHERE z.zone = 'Newark Airport'"}
+{"id": "cur_016", "sql": "SELECT COUNT(DISTINCT pu_location_id) FROM trips"}
+{"id": "cur_017", "sql": "SELECT vendor_id, COUNT(*) FROM trips GROUP BY vendor_id"}
+{"id": "cur_018", "sql": "SELECT p.name, AVG(t.tip_amount) FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id GROUP BY p.payment_type_id, p.name"}
+{"id": "cur_019", "sql": "SELECT z.borough, AVG(t.trip_distance) FROM trips t JOIN zones z ON t.pu_location_id = z.location_id GROUP BY z.borough"}
+{"id": "cur_020", "sql": "SELECT passenger_count, COUNT(*) FROM trips WHERE passenger_count BETWEEN 1 AND 6 GROUP BY passenger_count"}
+{"id": "cur_021", "sql": "SELECT rate_code_id, AVG(fare_amount) FROM trips GROUP BY rate_code_id"}
+{"id": "cur_022", "sql": "SELECT zd.borough, COUNT(*) FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id JOIN zones zd ON t.do_location_id = zd.location_id WHERE zp.zone = 'JFK Airport' GROUP BY zd.borough"}
+{"id": "cur_023", "sql": "SELECT z.service_zone, SUM(t.total_amount) FROM trips t JOIN zones z ON t.pu_location_id = z.location_id GROUP BY z.service_zone"}
+{"id": "cur_024", "sql": "SELECT vendor_id, AVG(trip_distance) FROM trips WHERE passenger_count > 3 GROUP BY vendor_id"}
+{"id": "cur_025", "sql": "SELECT z.zone FROM trips t JOIN zones z ON t.do_location_id = z.location_id GROUP BY z.location_id, z.zone ORDER BY COUNT(*) DESC LIMIT 5"}
+{"id": "cur_026", "sql": "SELECT z.zone FROM trips t JOIN zones z ON t.pu_location_id = z.location_id GROUP BY z.location_id, z.zone ORDER BY SUM(t.tip_amount) DESC LIMIT 1"}
+{"id": "cur_027", "sql": "SELECT trip_id FROM trips ORDER BY trip_distance DESC LIMIT 3"}
+{"id": "cur_028", "sql": "SELECT p.name FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id GROUP BY p.payment_type_id, p.name ORDER BY AVG(t.total_amount) DESC LIMIT 1"}
+{"id": "cur_029", "sql": "SELECT z.zone FROM trips t JOIN zones z ON t.pu_location_id = z.location_id WHERE z.borough = 'Queens' AND z.zone NOT IN ('JFK Airport', 'LaGuardia Airport') GROUP BY z.location_id, z.zone ORDER BY COUNT(*) DESC LIMIT 1"}
+{"id": "cur_030", "sql": "SELECT z.zone FROM trips t JOIN zones z ON t.pu_location_id = z.location_id WHERE z.borough = 'Brooklyn' GROUP BY z.location_id, z.zone ORDER BY COUNT(*) DESC LIMIT 3"}
+{"id": "cur_031", "sql": "SELECT zd.borough FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id JOIN zones zd ON t.do_location_id = zd.location_id WHERE zp.borough = 'Manhattan' GROUP BY zd.borough ORDER BY AVG(t.fare_amount) DESC LIMIT 1"}
+{"id": "cur_032", "sql": "SELECT z.zone FROM trips t JOIN zones z ON t.pu_location_id = z.location_id GROUP BY z.location_id, z.zone HAVING COUNT(*) >= 200 ORDER BY AVG(t.trip_distance) DESC LIMIT 10"}
+{"id": "cur_033", "sql": "SELECT 100.0 * SUM(CASE WHEN p.name = 'Cash' THEN 1 ELSE 0 END) / COUNT(*) FROM trips t LEFT JOIN payment_types p ON t.payment_type = p.payment_type_id"}
+{"id": "cur_034", "sql": "SELECT 100.0 * SUM(CASE WHEN zd.borough = 'Manhattan' THEN 1 ELSE 0 END) / COUNT(*) FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id LEFT JOIN zones zd ON t.do_location_id = zd.location_id WHERE zp.zone = 'JFK Airport'"}
+{"id": "cur_035", "sql": "SELECT SUM(t.tip_amount) * 1.0 / SUM(t.fare_amount) FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE p.name = 'Credit card'"}
+{"id": "cur_036", "sql": "SELECT 100.0 * SUM(CASE WHEN passenger_count > 1 THEN 1 ELSE 0 END) / COUNT(*) FROM trips"}
+{"id": "cur_037", "sql": "SELECT 100.0 * SUM(CASE WHEN trip_distance > 5 THEN 1 ELSE 0 END) / COUNT(*) FROM trips WHERE vendor_id = 2"}
+{"id": "cur_038", "sql": "SELECT 100.0 * SUM(CASE WHEN z.zone IN ('JFK Airport', 'LaGuardia Airport') THEN t.total_amount ELSE 0 END) / SUM(t.total_amount) FROM trips t LEFT JOIN zones z ON t.pu_location_id = z.location_id"}
+{"id": "cur_039", "sql": "SELECT SUM(t.fare_amount) * 1.0 / SUM(t.trip_distance) FROM trips t JOIN zones z ON t.pu_location_id = z.location_id WHERE z.zone = 'Midtown Center'"}
+{"id": "cur_040", "sql": "SELECT 100.0 * SUM(CASE WHEN t.tolls_amount > 0 THEN 1 ELSE 0 END) / COUNT(*) FROM trips t JOIN zones z ON t.do_location_id = z.location_id WHERE z.zone = 'LaGuardia Airport'"}
+{"id": "cur_041", "sql": "SELECT COUNT(*) FROM trips WHERE date(pickup_datetime) = '2024-01-01'"}
+{"id": "cur_042", "sql": "SELECT COUNT(*) FROM trips WHERE CAST(strftime('%H', pickup_datetime) AS INTEGER) BETWEEN 7 AND 9"}
+{"id": "cur_043", "sql": "SELECT date(pickup_datetime) FROM trips GROUP BY date(pickup_datetime) ORDER BY COUNT(*) ASC LIMIT 1"}
+{"id": "cur_044", "sql": "SELECT AVG((strftime('%s', dropoff_datetime) - strftime('%s', pickup_datetime)) / 60.0) FROM trips WHERE strftime('%w', pickup_datetime) = '6'"}
+{"id": "cur_045", "sql": "SELECT COUNT(*) FROM trips WHERE date(dropoff_datetime) > date(pickup_datetime)"}
+{"id": "cur_046", "sql": "SELECT COUNT(*) FROM trips WHERE date(pickup_datetime) BETWEEN '2024-01-25' AND '2024-01-31'"}
+{"id": "cur_047", "sql": "SELECT CAST(strftime('%w', pickup_datetime) AS INTEGER), COUNT(*) FROM trips GROUP BY CAST(strftime('%w', pickup_datetime) AS INTEGER)"}
+{"id": "cur_048", "sql": "SELECT COUNT(*) FROM trips WHERE strftime('%s', dropoff_datetime) - strftime('%s', pickup_datetime) > 7200"}
+{"id": "cur_049", "sql": "SELECT COUNT(*) FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id JOIN zones zd ON t.do_location_id = zd.location_id WHERE zp.borough = 'Brooklyn' AND zd.borough = 'Brooklyn'"}
+{"id": "cur_050", "sql": "SELECT COUNT(*) FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id JOIN zones zd ON t.do_location_id = zd.location_id WHERE zp.zone = 'JFK Airport' AND zd.zone = 'LaGuardia Airport'"}
+{"id": "cur_051", "sql": "SELECT AVG(t.fare_amount) FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id JOIN zones zd ON t.do_location_id = zd.location_id WHERE zp.borough = 'Manhattan' AND zd.borough = 'Queens'"}
+{"id": "cur_052", "sql": "SELECT zd.zone FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id JOIN zones zd ON t.do_location_id = zd.location_id WHERE zp.zone = 'Times Sq/Theatre District' GROUP BY zd.location_id, zd.zone ORDER BY COUNT(*) DESC LIMIT 1"}
+{"id": "cur_053", "sql": "SELECT COUNT(*) FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id JOIN zones zd ON t.do_location_id = zd.location_id WHERE zp.service_zone = 'Yellow Zone' AND zd.service_zone = 'Boro Zone'"}
+{"id": "cur_054", "sql": "SELECT zp.borough, zd.borough FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id JOIN zones zd ON t.do_location_id = zd.location_id GROUP BY zp.borough, zd.borough ORDER BY COUNT(*) DESC LIMIT 1"}
+{"id": "cur_055", "sql": "SELECT COUNT(*) FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id JOIN zones zd ON t.do_location_id = zd.location_id WHERE zp.borough = 'Queens' AND zd.zone = 'Newark Airport'"}
+{"id": "cur_056", "sql": "SELECT AVG(t.total_amount) FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id JOIN zones zd ON t.do_location_id = zd.location_id JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE p.name = 'Credit card' AND zp.zone = 'LaGuardia Airport' AND zd.borough = 'Manhattan'"}
+{"id": "cur_057", "sql": "SELECT COUNT(*) FROM trips WHERE trip_distance > (SELECT AVG(trip_distance) FROM trips)"}
+{"id": "cur_058", "sql": "WITH c AS (SELECT pu_location_id, COUNT(*) AS n FROM trips GROUP BY pu_location_id) SELECT COUNT(*) FROM c WHERE n > (SELECT AVG(n) FROM c)"}
+{"id": "cur_059", "sql": "SELECT trip_id FROM trips ORDER BY total_amount DESC LIMIT 1"}
+{"id": "cur_060", "sql": "SELECT COUNT(*) FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE p.name = 'Credit card' AND t.tip_amount > (SELECT AVG(t2.tip_amount) FROM trips t2 JOIN payment_types p2 ON t2.payment_type = p2.payment_type_id WHERE p2.name = 'Credit card')"}
+{"id": "cur_061", "sql": "SELECT AVG(fare_amount) FROM trips WHERE pu_location_id = (SELECT pu_location_id FROM trips GROUP BY pu_location_id ORDER BY COUNT(*) DESC LIMIT 1)"}
+{"id": "cur_062", "sql": "SELECT AVG(tip_amount) FROM trips WHERE do_location_id = (SELECT do_location_id FROM trips GROUP BY do_location_id ORDER BY COUNT(*) DESC LIMIT 1)"}
+{"id": "cur_063", "sql": "SELECT COUNT(*) FROM trips WHERE fare_amount > 2 * (SELECT AVG(fare_amount) FROM trips)"}
+{"id": "cur_064", "sql": "WITH z AS (SELECT pu_location_id, AVG(tip_amount) AS avg_tip FROM trips GROUP BY pu_location_id) SELECT 100.0 * SUM(CASE WHEN avg_tip > 3 THEN 1 ELSE 0 END) / COUNT(*) FROM z"}
+{"id": "cur_065", "sql": "SELECT COUNT(*) FROM zones WHERE borough = 'Manhattan' AND location_id NOT IN (SELECT do_location_id FROM trips WHERE do_location_id IS NOT NULL)"}
+{"id": "cur_066", "sql": "SELECT COUNT(DISTINCT pu_location_id) FROM trips WHERE pu_location_id NOT IN (SELECT do_location_id FROM trips WHERE do_location_id IS NOT NULL)"}
+{"id": "cur_067", "sql": "SELECT COUNT(*) FROM (SELECT pu_location_id FROM trips INTERSECT SELECT do_location_id FROM trips)"}
+{"id": "cur_068", "sql": "SELECT COUNT(*) FROM zones WHERE borough = 'Queens' AND location_id NOT IN (SELECT pu_location_id FROM trips WHERE pu_location_id IS NOT NULL) AND location_id NOT IN (SELECT do_location_id FROM trips WHERE do_location_id IS NOT NULL)"}
+{"id": "cur_069", "sql": "SELECT COUNT(*) FROM zones WHERE borough = 'Bronx' AND location_id IN (SELECT do_location_id FROM trips) AND location_id NOT IN (SELECT pu_location_id FROM trips WHERE pu_location_id IS NOT NULL)"}
+{"id": "cur_070", "sql": "SELECT COUNT(*) FROM (SELECT t.do_location_id FROM trips t JOIN zones z ON t.pu_location_id = z.location_id WHERE z.borough = 'Manhattan' EXCEPT SELECT t.do_location_id FROM trips t JOIN zones z ON t.pu_location_id = z.location_id WHERE z.borough = 'Queens')"}
+{"id": "cur_071", "sql": "SELECT name FROM payment_types WHERE payment_type_id NOT IN (SELECT payment_type FROM trips WHERE payment_type IS NOT NULL)"}
+{"id": "cur_072", "sql": "SELECT COUNT(*) FROM (SELECT t.do_location_id FROM trips t JOIN zones z ON t.pu_location_id = z.location_id WHERE z.zone = 'JFK Airport' EXCEPT SELECT t.do_location_id FROM trips t JOIN zones z ON t.pu_location_id = z.location_id WHERE z.zone = 'LaGuardia Airport')"}
+{"id": "cur_073", "sql": "SELECT COUNT(*) FROM trips WHERE fare_amount = 0"}
+{"id": "cur_074", "sql": "SELECT 100.0 * SUM(CASE WHEN t.tip_amount = 0 THEN 1 ELSE 0 END) / COUNT(*) FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE p.name = 'Cash'"}
+{"id": "cur_075", "sql": "SELECT AVG(t.tip_amount) FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE p.name = 'Credit card' AND t.fare_amount > 0"}
+{"id": "cur_076", "sql": "SELECT COUNT(*) FROM trips WHERE passenger_count = 0"}
+{"id": "cur_077", "sql": "SELECT COUNT(*) FROM trips WHERE total_amount < fare_amount"}
+{"id": "cur_078", "sql": "SELECT 100.0 * SUM(CASE WHEN t.tip_amount = 0 THEN 1 ELSE 0 END) / COUNT(*) FROM trips t JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE p.name = 'Credit card'"}
+{"id": "cur_079", "sql": "SELECT COUNT(*) FROM trips WHERE congestion_surcharge = 0"}
+{"id": "cur_080", "sql": "SELECT AVG(t.tip_amount) FROM trips t JOIN zones z ON t.pu_location_id = z.location_id LEFT JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE z.borough = 'Queens' AND p.name IS NOT 'Cash'"}
+{"id": "hw_001", "sql": "SELECT COUNT(*) FROM trips WHERE pu_location_id = do_location_id"}
+{"id": "hw_002", "sql": "SELECT 100.0 * SUM(CASE WHEN zp.borough = 'Manhattan' THEN 1 ELSE 0 END) / COUNT(*) FROM trips t JOIN zones zd ON t.do_location_id = zd.location_id LEFT JOIN zones zp ON t.pu_location_id = zp.location_id WHERE zd.zone = 'LaGuardia Airport'"}
+{"id": "hw_003", "sql": "SELECT CASE strftime('%w', pickup_datetime) WHEN '0' THEN 'Sunday' WHEN '1' THEN 'Monday' WHEN '2' THEN 'Tuesday' WHEN '3' THEN 'Wednesday' WHEN '4' THEN 'Thursday' WHEN '5' THEN 'Friday' WHEN '6' THEN 'Saturday' END FROM trips GROUP BY strftime('%w', pickup_datetime) ORDER BY AVG(trip_distance) DESC LIMIT 1"}
+{"id": "hw_004", "sql": "SELECT COUNT(*) FROM trips WHERE total_amount > 100 AND trip_distance < 1"}
+{"id": "hw_005", "sql": "SELECT SUM(t.fare_amount) * 1.0 / SUM(t.trip_distance) FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id JOIN zones zd ON t.do_location_id = zd.location_id WHERE zp.zone = 'JFK Airport' AND zd.borough = 'Manhattan'"}
+{"id": "hw_006", "sql": "SELECT vendor_id FROM trips GROUP BY vendor_id ORDER BY COUNT(*) DESC LIMIT 1"}
+{"id": "hw_007", "sql": "SELECT COUNT(*) FROM trips WHERE strftime('%w', pickup_datetime) IN ('0', '6')"}
+{"id": "hw_008", "sql": "SELECT zd.zone FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id JOIN zones zd ON t.do_location_id = zd.location_id WHERE zp.zone = 'JFK Airport' GROUP BY zd.location_id, zd.zone ORDER BY COUNT(*) DESC LIMIT 1"}
+{"id": "hw_009", "sql": "SELECT z.zone FROM trips t JOIN zones z ON t.pu_location_id = z.location_id WHERE z.borough = 'Brooklyn' GROUP BY z.location_id, z.zone ORDER BY SUM(t.tip_amount) DESC LIMIT 3"}
+{"id": "hw_010", "sql": "SELECT CAST(strftime('%H', pickup_datetime) AS INTEGER) FROM trips GROUP BY CAST(strftime('%H', pickup_datetime) AS INTEGER) ORDER BY COUNT(*) DESC LIMIT 1"}
+{"id": "hw_011", "sql": "SELECT COUNT(*) FROM trips WHERE tip_amount > fare_amount"}
+{"id": "hw_012", "sql": "SELECT AVG(t.total_amount) FROM trips t JOIN zones zp ON t.pu_location_id = zp.location_id JOIN zones zd ON t.do_location_id = zd.location_id JOIN payment_types p ON t.payment_type = p.payment_type_id WHERE p.name = 'Cash' AND zp.borough = 'Queens' AND zd.borough = 'Queens'"}
+{"id": "hw_013", "sql": "SELECT COUNT(*) FROM (SELECT z.location_id FROM trips t JOIN zones z ON t.pu_location_id = z.location_id WHERE z.borough = 'Manhattan' GROUP BY z.location_id HAVING COUNT(*) >= 1000)"}
+{"id": "hw_014", "sql": "SELECT 100.0 * SUM(CASE WHEN zd.zone IN ('JFK Airport', 'LaGuardia Airport', 'Newark Airport') THEN 1 ELSE 0 END) / COUNT(*) FROM trips t LEFT JOIN zones zd ON t.do_location_id = zd.location_id WHERE t.trip_distance > 20"}
+{"id": "hw_015", "sql": "SELECT AVG((strftime('%s', dropoff_datetime) - strftime('%s', pickup_datetime)) / 60.0) FROM trips WHERE CAST(strftime('%H', pickup_datetime) AS INTEGER) BETWEEN 0 AND 3"}

@@ -1,0 +1,35 @@
+$ ollama -v
+ollama version is 0.30.11
+
+$ systemctl show ollama -p Environment
+Environment=OLLAMA_HOST=127.0.0.1:11434 OLLAMA_LLM_LIBRARY=cuda_jetpack6 OLLAMA_GPU_OVERHEAD=0 OLLAMA_FLASH_ATTENTION=1 OLLAMA_KV_CACHE_TYPE=f16 OLLAMA_NUM_PARALLEL=1 OLLAMA_KEEP_ALIVE=-1 PATH=/usr/local/bin:/usr/bin:/bin
+
+$ ollama list
+NAME                                       ID              SIZE      MODIFIED     
+qc15-lora-f4-c9-dryrun2-20261017:latest    7068028eb5f1    1.0 GB    18 hours ago    
+qc15-lora-f3-c9-dryrun2-20261017:latest    51ecbdb409ac    1.0 GB    18 hours ago    
+qc15-lora-f2-c9-dryrun2-20261017:latest    1e8c2ffcba0d    1.0 GB    18 hours ago    
+qc15-lora-f1-c9-dryrun2-20261017:latest    f9c5853fff35    1.0 GB    18 hours ago    
+qc15-lora-f4-c9-dryrun-20261016:latest     d1d31c17c076    1.0 GB    29 hours ago    
+qc15-lora-f3-c9-dryrun-20261016:latest     d74b1c97a4d9    1.0 GB    29 hours ago    
+qc15-lora-f2-c9-dryrun-20261016:latest     9f44debb6ac2    1.0 GB    29 hours ago    
+qc15-lora-f1-c9-dryrun-20261016:latest     6076afac433c    1.0 GB    29 hours ago    
+qc15-lora-f1-smoke:latest                  7b16cef8e5fe    1.0 GB    37 hours ago    
+qc15-q4-ours:latest                        bd97a790fb91    986 MB    40 hours ago    
+qc15-q8-ours:latest                        b313a2c38bb1    1.6 GB    40 hours ago    
+qc15-f16-ours:latest                       578b0ab0fdaa    3.1 GB    40 hours ago    
+prem1b-q4-ours:latest                      ee3a5e1b9957    873 MB    40 hours ago    
+xiyan3b-q4-ours:latest                     ad14726bf3db    1.9 GB    40 hours ago    
+llama32-3b-q4-ollama:latest                a80c4f17acd5    2.0 GB    40 hours ago    
+qc3-q4-ollama:latest                       f72c60cabf62    1.9 GB    40 hours ago    
+qwen3-4b-q4-ollama:latest                  0edcdef34593    2.5 GB    40 hours ago    
+qc15-q4-ollama:latest                      d7372fd82851    986 MB    40 hours ago    
+qwen3:4b-instruct-2507-q4_K_M              0edcdef34593    2.5 GB    4 days ago      
+llama3.2:3b                                a80c4f17acd5    2.0 GB    4 days ago      
+qwen2.5-coder:3b                           f72c60cabf62    1.9 GB    4 days ago      
+qwen2.5-coder:1.5b                         d7372fd82851    986 MB    4 days ago      
+qwen3:4b                                   359d7dd4bcda    2.5 GB    10 days ago     
+
+$ ollama ps
+NAME    ID    SIZE    PROCESSOR    CONTEXT    UNTIL 
+

@@ -1,0 +1,19 @@
+{
+ "_doc": "PLAN 5.5. Sent verbatim as /api/chat 'options' for every model and condition; think=false, keep_alive=30m, stream=false.",
+ "options": {
+  "temperature": 0,
+  "top_k": 1,
+  "top_p": 1.0,
+  "min_p": 0,
+  "repeat_penalty": 1.0,
+  "presence_penalty": 0,
+  "frequency_penalty": 0,
+  "seed": 0,
+  "num_ctx": 4096,
+  "num_predict": 384
+ },
+ "think": false,
+ "keep_alive": "30m",
+ "warmup_requests": 5,
+ "server_env_testmode": {"OLLAMA_HOST": "127.0.0.1:11434", "OLLAMA_KV_CACHE_TYPE": "f16", "OLLAMA_FLASH_ATTENTION": "1", "OLLAMA_NUM_PARALLEL": "1"}
+}

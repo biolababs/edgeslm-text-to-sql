@@ -1,0 +1,17 @@
+# prem1b-q4-ours: our conversion (llama.cpp b11602 / ecdd29e8). TEMPLATE reproduces the GGUF/HF tokenizer.chat_template
+# (DeepSeek-Coder style) of prem-research/prem-1B-SQL @ 44dd7fc; BOS is added by the tokenizer (add_bos_token = true).
+FROM /home/trafficedge01/c9/models/prem1b-q4_k_m.gguf
+TEMPLATE """{{- if .System }}{{ .System }}{{ else }}You are an AI programming assistant, utilizing the Deepseek Coder model, developed by Deepseek Company, and you only answer questions related to computer science. For politically sensitive questions, security and privacy issues, and other non-computer science questions, you will refuse to answer
+{{ end }}
+{{- range $i, $_ := .Messages }}
+{{- $last := eq (len (slice $.Messages $i)) 1 -}}
+{{- if eq .Role "user" }}### Instruction:
+{{ .Content }}
+{{ if $last }}### Response:
+{{ end }}
+{{- else if eq .Role "assistant" }}### Response:
+{{ .Content }}
+<|EOT|>
+{{ end }}
+{{- end }}"""
+PARAMETER stop <|EOT|>

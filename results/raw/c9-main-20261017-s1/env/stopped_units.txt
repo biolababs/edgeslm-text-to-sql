@@ -1,0 +1,17 @@
+trafficedge-ip-reporter.timer
+apt-daily.timer
+apt-daily-upgrade.timer
+fwupd-refresh.timer
+man-db.timer
+motd-news.timer
+update-notifier-download.timer
+update-notifier-motd.timer
+anacron.timer
+e2scrub_all.timer
+fstrim.timer
+dpkg-db-backup.timer
+logrotate.timer
+systemd-tmpfiles-clean.timer
+cron
+fwupd
+packagekit

@@ -1,0 +1,127 @@
+$ systemctl list-units --type=service --state=running --no-pager --plain --no-legend
+accounts-daemon.service        loaded active running Accounts Service
+avahi-daemon.service           loaded active running Avahi mDNS/DNS-SD Stack
+bluetooth.service              loaded active running Bluetooth service
+colord.service                 loaded active running Manage, Install and Generate Color Profiles
+containerd.service             loaded active running containerd container runtime
+dbus.service                   loaded active running D-Bus System Message Bus
+docker.service                 loaded active running Docker Application Container Engine
+haveged.service                loaded active running Entropy Daemon based on the HAVEGE algorithm
+kerneloops.service             loaded active running Tool to automatically collect and submit kernel crash signatures
+ModemManager.service           loaded active running Modem Manager
+networkd-dispatcher.service    loaded active running Dispatcher daemon for systemd-networkd
+NetworkManager.service         loaded active running Network Manager
+nv-tee-supplicant.service      loaded active running OP-TEE Client Supplicant
+nvargus-daemon.service         loaded active running Argus daemon
+nvfancontrol.service           loaded active running nvfancontrol service
+nvidia-pva-allowd.service      loaded active running service for managing PVA allowlists
+nvmemwarning.service           loaded active running Display Low memory warning
+nvphs.service                  loaded active running PHS daemon
+nvs-service.service            loaded active running NVS-SERVICE Embedded Sensor HAL Daemon
+ollama.service                 loaded active running Ollama Service
+polkit.service                 loaded active running Authorization Manager
+power-profiles-daemon.service  loaded active running Power Profiles daemon
+rpcbind.service                loaded active running RPC bind portmap service
+rsyslog.service                loaded active running System Logging Service
+rtkit-daemon.service           loaded active running RealtimeKit Scheduling Policy Service
+seatd.service                  loaded active running Seat management daemon
+serial-getty@ttyGS0.service    loaded active running Serial Getty on ttyGS0
+serial-getty@ttyTCU0.service   loaded active running Serial Getty on ttyTCU0
+snap.cups.cups-browsed.service loaded active running Service for snap application cups.cups-browsed
+snap.cups.cupsd.service        loaded active running Service for snap application cups.cupsd
+snapd.service                  loaded active running Snap Daemon
+ssh-tunnel.service             loaded active running SSH Reverse Tunnel to EC2
+ssh.service                    loaded active running OpenBSD Secure Shell server
+switcheroo-control.service     loaded active running Switcheroo Control Proxy service
+systemd-journald.service       loaded active running Journal Service
+systemd-logind.service         loaded active running User Login Management
+systemd-resolved.service       loaded active running Network Name Resolution
+systemd-timesyncd.service      loaded active running Network Time Synchronization
+systemd-udevd.service          loaded active running Rule-based Manager for Device Events and Files
+udisks2.service                loaded active running Disk Manager
+upower.service                 loaded active running Daemon for power management
+user@1000.service              loaded active running User Manager for UID 1000
+wpa_supplicant.service         loaded active running WPA supplicant
+
+$ systemctl list-timers --all --no-pager
+NEXT LEFT LAST                        PASSED       UNIT                           ACTIVATES
+n/a  n/a  Sat 2026-10-17 08:31:36 MDT 34min ago    anacron.timer                  anacron.service
+n/a  n/a  n/a                         n/a          apport-autoreport.timer        apport-autoreport.service
+n/a  n/a  Sat 2026-10-17 06:08:34 MDT 2h 57min ago apt-daily-upgrade.timer        apt-daily-upgrade.service
+n/a  n/a  Sat 2026-10-17 06:25:28 MDT 2h 41min ago apt-daily.timer                apt-daily.service
+n/a  n/a  n/a                         n/a          dpkg-db-backup.timer           dpkg-db-backup.service
+n/a  n/a  Sun 2026-10-11 03:10:20 MDT 6 days ago   e2scrub_all.timer              e2scrub_all.service
+n/a  n/a  Mon 2026-10-12 00:20:16 MDT 5 days ago   fstrim.timer                   fstrim.service
+n/a  n/a  Sat 2026-10-17 08:32:27 MDT 34min ago    fwupd-refresh.timer            fwupd-refresh.service
+n/a  n/a  Sat 2026-10-17 00:00:01 MDT 9h ago       logrotate.timer                logrotate.service
+n/a  n/a  Sat 2026-10-17 02:50:46 MDT 6h ago       man-db.timer                   man-db.service
+n/a  n/a  Sat 2026-10-17 06:18:08 MDT 2h 48min ago motd-news.timer                motd-news.service
+n/a  n/a  n/a                         n/a          snapd.snap-repair.timer        snapd.snap-repair.service
+n/a  n/a  Sat 2026-10-17 09:00:07 MDT 6min ago     systemd-tmpfiles-clean.timer   systemd-tmpfiles-clean.service
+n/a  n/a  Sat 2026-10-17 09:00:06 MDT 6min ago     trafficedge-ip-reporter.timer  trafficedge-ip-reporter.service
+n/a  n/a  n/a                         n/a          ua-timer.timer                 ua-timer.service
+n/a  n/a  Sat 2026-10-17 09:00:06 MDT 6min ago     update-notifier-download.timer update-notifier-download.service
+n/a  n/a  Sun 2026-10-11 12:42:08 MDT 5 days ago   update-notifier-motd.timer     update-notifier-motd.service
+
+17 timers listed.
+
+$ ps -eo user,pid,pcpu,rss,etime,args --sort=-pcpu | head -30
+USER         PID %CPU   RSS     ELAPSED COMMAND
+ollama    574439  0.8 53544       04:37 /usr/local/bin/ollama serve
+root         342  0.2  3260  4-10:05:27 /lib/systemd/systemd-udevd
+root           1  0.1  9332  4-10:05:37 /sbin/init 2
+root         705  0.1  7508  4-10:05:23 /usr/libexec/polkitd --no-debug
+root           2  0.0     0  4-10:05:37 [kthreadd]
+root           3  0.0     0  4-10:05:37 [rcu_gp]
+root           4  0.0     0  4-10:05:37 [rcu_par_gp]
+root           5  0.0     0  4-10:05:37 [slub_flushwq]
+root           6  0.0     0  4-10:05:37 [netns]
+root          10  0.0     0  4-10:05:37 [mm_percpu_wq]
+root          11  0.0     0  4-10:05:37 [rcu_tasks_kthre]
+root          12  0.0     0  4-10:05:37 [rcu_tasks_rude_]
+root          13  0.0     0  4-10:05:37 [rcu_tasks_trace]
+root          14  0.0     0  4-10:05:37 [ksoftirqd/0]
+root          15  0.0     0  4-10:05:37 [rcu_preempt]
+root          16  0.0     0  4-10:05:37 [migration/0]
+root          17  0.0     0  4-10:05:37 [cpuhp/0]
+root          18  0.0     0  4-10:05:37 [cpuhp/1]
+root          19  0.0     0  4-10:05:37 [migration/1]
+root          20  0.0     0  4-10:05:37 [ksoftirqd/1]
+root          23  0.0     0  4-10:05:37 [cpuhp/2]
+root          24  0.0     0  4-10:05:37 [migration/2]
+root          25  0.0     0  4-10:05:37 [ksoftirqd/2]
+root          28  0.0     0  4-10:05:37 [cpuhp/3]
+root          29  0.0     0  4-10:05:37 [migration/3]
+root          30  0.0     0  4-10:05:37 [ksoftirqd/3]
+root          33  0.0     0  4-10:05:37 [cpuhp/4]
+root          34  0.0     0  4-10:05:37 [migration/4]
+root          35  0.0     0  4-10:05:37 [ksoftirqd/4]
+
+$ for z in /sys/class/thermal/thermal_zone*; do echo $z $(cat $z/type) $(cat $z/temp 2>/dev/null); done
+/sys/class/thermal/thermal_zone0 cpu-thermal 52218
+/sys/class/thermal/thermal_zone1 gpu-thermal 53031
+/sys/class/thermal/thermal_zone2 cv0-thermal
+/sys/class/thermal/thermal_zone3 cv1-thermal
+/sys/class/thermal/thermal_zone4 cv2-thermal
+/sys/class/thermal/thermal_zone5 soc0-thermal 51062
+/sys/class/thermal/thermal_zone6 soc1-thermal 52156
+/sys/class/thermal/thermal_zone7 soc2-thermal 51781
+/sys/class/thermal/thermal_zone8 tj-thermal 53156
+
+$ cat /sys/bus/i2c/drivers/ina3221/*/hwmon/hwmon*/in*_label
+VDD_IN
+VDD_CPU_GPU_CV
+VDD_SOC
+sum of shunt voltages
+
+$ sudo ss -tlnp
+State  Recv-Q Send-Q Local Address:Port  Peer Address:PortProcess                                                   
+LISTEN 0      4096       127.0.0.1:11434      0.0.0.0:*    users:(("ollama",pid=574439,fd=4))                       
+LISTEN 0      4096         0.0.0.0:631        0.0.0.0:*    users:(("cupsd",pid=2280,fd=8))                          
+LISTEN 0      4096         0.0.0.0:111        0.0.0.0:*    users:(("rpcbind",pid=671,fd=4),("systemd",pid=1,fd=91)) 
+LISTEN 0      128          0.0.0.0:22         0.0.0.0:*    users:(("sshd",pid=1352,fd=3))                           
+LISTEN 0      4096   127.0.0.53%lo:53         0.0.0.0:*    users:(("systemd-resolve",pid=672,fd=14))                
+LISTEN 0      4096            [::]:631           [::]:*    users:(("cupsd",pid=2280,fd=9))                          
+LISTEN 0      4096            [::]:111           [::]:*    users:(("rpcbind",pid=671,fd=6),("systemd",pid=1,fd=102))
+LISTEN 0      128             [::]:22            [::]:*    users:(("sshd",pid=1352,fd=4))                           
+

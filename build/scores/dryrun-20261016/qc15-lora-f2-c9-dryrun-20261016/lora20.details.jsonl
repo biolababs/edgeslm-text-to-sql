@@ -1,0 +1,1 @@
+{"rid": "test_seen_00003|F2|unseen", "id": "test_seen_00003", "cond": "lora20", "strict": false, "lenient": false, "error": "OperationalError: no such column: borough", "class": "exec_error", "role": null, "template_id": "count_trips_borough", "fold": "F2"}

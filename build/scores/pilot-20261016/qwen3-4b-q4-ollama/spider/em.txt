@@ -1,0 +1,61 @@
+medium pred: SELECT MIN("Number_products"), MAX("Number_products") FROM "shop";
+medium gold: SELECT min(Number_products) ,  max(Number_products) FROM shop
+
+extra pred: SELECT dp.degree_summary_name FROM Degree_Programs dp JOIN Student_Enrolment se ON dp.degree_program_id = se.degree_program_id GROUP BY dp.degree_summary_name ORDER BY COUNT(se.student_id) DESC LIMIT 1;
+extra gold: SELECT T1.degree_summary_name FROM Degree_Programs AS T1 JOIN Student_Enrolment AS T2 ON T1.degree_program_id  =  T2.degree_program_id GROUP BY T1.degree_summary_name ORDER BY count(*) DESC LIMIT 1
+
+easy pred: SELECT t."Air_Date" FROM "TV_series" t WHERE t."Episode" = 'A Love of a Lifetime';
+easy gold: SELECT Air_Date FROM TV_series WHERE Episode = "A Love of a Lifetime";
+
+medium pred: SELECT SUM(`SurfaceArea`) FROM `country` WHERE `Continent` = 'Asia' OR `Continent` = 'Europe';
+medium gold: SELECT sum(SurfaceArea) FROM country WHERE Continent  =  "Asia" OR Continent  =  "Europe"
+
+extra pred: SELECT c.Continent FROM country c JOIN countrylanguage cl ON c.Code = cl.CountryCode GROUP BY c.Continent ORDER BY COUNT(DISTINCT cl.Language) DESC LIMIT 1;
+extra gold: SELECT T1.Continent FROM country AS T1 JOIN countrylanguage AS T2 ON T1.Code  =  T2.CountryCode GROUP BY T1.Continent ORDER BY COUNT(*) DESC LIMIT 1
+
+easy pred: SELECT DISTINCT c.`Code` FROM `country` c WHERE c.`Code` NOT IN ( SELECT cl.`CountryCode` FROM `countrylanguage` cl WHERE cl.`Language` = 'English' );
+easy gold: SELECT DISTINCT CountryCode FROM countrylanguage WHERE LANGUAGE != "English"
+
+extra pred: SELECT b.breed_name FROM Dogs d JOIN Breeds b ON d.breed_code = b.breed_code GROUP BY b.breed_name ORDER BY COUNT(d.dog_id) DESC LIMIT 1;
+extra gold: SELECT T1.breed_name FROM Breeds AS T1 JOIN Dogs AS T2 ON T1.breed_code  =  T2.breed_code GROUP BY T1.breed_name ORDER BY count(*) DESC LIMIT 1
+
+                     easy                 medium               hard                 extra                all                 
+count                5                    2                    0                    3                    10                  
+
+====================== EXACT MATCHING ACCURACY =====================
+exact match          0.600                0.000                0.000                0.000                0.300               
+
+---------------------PARTIAL MATCHING ACCURACY----------------------
+select               1.000                0.000                0.000                0.000                1.000               
+select(no AGG)       1.000                0.000                0.000                0.000                1.000               
+where                0.000                0.000                0.000                0.000                0.000               
+where(no OP)         0.000                0.000                0.000                0.000                0.000               
+group(no Having)     0.000                0.000                0.000                0.000                0.000               
+group                0.000                0.000                0.000                0.000                0.000               
+order                1.000                0.000                0.000                0.000                1.000               
+and/or               1.000                0.500                0.000                1.000                0.900               
+IUEN                 0.000                0.000                0.000                0.000                0.000               
+keywords             1.000                0.000                0.000                0.000                1.000               
+---------------------- PARTIAL MATCHING RECALL ----------------------
+select               0.600                0.000                0.000                0.000                0.300               
+select(no AGG)       0.600                0.000                0.000                0.000                0.300               
+where                0.000                0.000                0.000                0.000                0.000               
+where(no OP)         0.000                0.000                0.000                0.000                0.000               
+group(no Having)     0.000                0.000                0.000                0.000                0.000               
+group                0.000                0.000                0.000                0.000                0.000               
+order                1.000                0.000                0.000                0.000                0.250               
+and/or               1.000                1.000                0.000                1.000                1.000               
+IUEN                 0.000                0.000                0.000                0.000                0.000               
+keywords             0.333                0.000                0.000                0.000                0.143               
+---------------------- PARTIAL MATCHING F1 --------------------------
+select               0.750                1.000                0.000                1.000                0.462               
+select(no AGG)       0.750                1.000                0.000                1.000                0.462               
+where                1.000                1.000                0.000                1.000                1.000               
+where(no OP)         1.000                1.000                0.000                1.000                1.000               
+group(no Having)     1.000                1.000                0.000                1.000                1.000               
+group                1.000                1.000                0.000                1.000                1.000               
+order                1.000                1.000                0.000                1.000                0.400               
+and/or               1.000                0.667                0.000                1.000                0.947               
+IUEN                 1.000                1.000                0.000                1.000                1.000               
+keywords             0.500                1.000                0.000                1.000                0.250               
+

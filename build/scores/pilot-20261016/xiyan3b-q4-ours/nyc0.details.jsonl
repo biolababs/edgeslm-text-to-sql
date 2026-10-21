@@ -1,0 +1,8 @@
+{"rid": "test_unseen_00241", "id": "test_unseen_00241", "cond": "nyc0", "strict": false, "lenient": false, "error": null, "class": "wrong_result", "role": null, "template_id": "zones_without_pickups", "fold": "F1"}
+{"rid": "test_unseen_00010", "id": "test_unseen_00010", "cond": "nyc0", "strict": false, "lenient": false, "error": null, "class": "wrong_result", "role": null, "template_id": "highest_avg_fare_zone_min_pickups", "fold": "F1"}
+{"rid": "train_00218", "id": "train_00218", "cond": "nyc0", "strict": false, "lenient": false, "error": null, "class": "wrong_result", "role": null, "template_id": "count_borough_to_borough", "fold": "F2"}
+{"rid": "train_00215", "id": "train_00215", "cond": "nyc0", "strict": false, "lenient": false, "error": null, "class": "wrong_result", "role": null, "template_id": "count_borough_to_borough", "fold": "F2"}
+{"rid": "train_00445", "id": "train_00445", "cond": "nyc0", "strict": false, "lenient": false, "error": null, "class": "wrong_result", "role": null, "template_id": "avg_tip_pct_hour_credit", "fold": "F3"}
+{"rid": "train_00102", "id": "train_00102", "cond": "nyc0", "strict": false, "lenient": false, "error": null, "class": "wrong_result", "role": null, "template_id": "longest_trip_per_payment_borough", "fold": "F3"}
+{"rid": "train_00259", "id": "train_00259", "cond": "nyc0", "strict": false, "lenient": false, "error": "OperationalError: misuse of aggregate: COUNT()", "class": "exec_error", "role": null, "template_id": "top_k_dropoff_zones_from_borough", "fold": "F4"}
+{"rid": "train_00594", "id": "train_00594", "cond": "nyc0", "strict": false, "lenient": false, "error": null, "class": "wrong_result", "role": null, "template_id": "top_tip_borough", "fold": "F4"}

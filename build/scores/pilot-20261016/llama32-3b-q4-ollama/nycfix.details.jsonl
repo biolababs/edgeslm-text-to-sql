@@ -1,0 +1,4 @@
+{"rid": "train_00365|F3|fixed", "id": "train_00365", "cond": "nycfix", "strict": false, "lenient": false, "error": "OperationalError: no such column: pz.borough", "class": "exec_error", "role": null, "template_id": "revenue_borough_dow", "fold": "F3"}
+{"rid": "train_00101|F3|fixed", "id": "train_00101", "cond": "nycfix", "strict": false, "lenient": false, "error": null, "class": "wrong_result", "role": null, "template_id": "longest_trip_per_payment_borough", "fold": "F3"}
+{"rid": "train_00228|F2|fixed", "id": "train_00228", "cond": "nycfix", "strict": true, "lenient": true, "error": null, "class": "correct", "role": null, "template_id": "count_borough_to_borough", "fold": "F2"}
+{"rid": "test_unseen_00136|F1|fixed", "id": "test_unseen_00136", "cond": "nycfix", "strict": false, "lenient": false, "error": null, "class": "wrong_result", "role": null, "template_id": "avg_speed_borough", "fold": "F1"}

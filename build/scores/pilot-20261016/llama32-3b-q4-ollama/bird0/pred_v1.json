@@ -1,0 +1,12 @@
+{
+ "0": "SELECT COUNT(T1.TransactionID) FROM transactions_1k AS T1 INNER JOIN gasstations AS T2 ON T1.GasStationID = T2.GasStationID WHERE T1.Date = '2012-08-26' AND T1.Time BETWEEN '08:00:00' AND '09:00:00' AND T2.Country = 'CZE'\t----- bird -----\tdebit_card_specializing",
+ "1": "SELECT COUNT(DISTINCT T1.ID) FROM Patient AS T1 INNER JOIN Laboratory AS T2 ON T1.ID = T2.ID WHERE T2.RNP = '-' AND T2.Admission = '+'\t----- bird -----\tthrombosis_prediction",
+ "2": "SELECT T1.url FROM seasons AS T1 INNER JOIN races AS T2 ON T1.year = T2.year WHERE T2.raceId = 901\t----- bird -----\tformula_1",
+ "3": "SELECT T1.lap FROM laptimes AS T1 INNER JOIN results AS T2 ON T1.raceId = T2.raceId INNER JOIN status AS T3 ON T2.statusId = T3.statusId WHERE T2.raceId = 2009 AND T3.status = 'Champion'\t----- bird -----\tformula_1",
+ "4": "SELECT COUNT(DISTINCT T1.driverId) FROM results AS T1 INNER JOIN status AS T2 ON T1.statusId = T2.statusId WHERE T1.raceId BETWEEN 50 AND 100 AND T2.status = 'Disqualified'\t----- bird -----\tformula_1",
+ "5": "SELECT T2.UserDisplayName FROM users AS T1 INNER JOIN badges AS T2 ON T1.Id = T2.UserId WHERE T1.CreationDate LIKE '2011%'\t----- bird -----\tcodebase_community",
+ "6": "SELECT T2.UserDisplayName FROM comments AS T1 INNER JOIN users AS T2 ON T1.UserId = T2.Id WHERE T1.Text = 'thank you user93'\t----- bird -----\tcodebase_community",
+ "7": "SELECT T1.format, T2.name FROM legalities AS T1 INNER JOIN cards AS T2 ON T1.uuid = T2.uuid GROUP BY T1.uuid ORDER BY COUNT(T1.status = 'Banned') DESC LIMIT 1\t----- bird -----\tcard_games",
+ "8": "SELECT MAX(T2.`Percent (%) Eligible Free (Ages 5-17)`) FROM satscores AS T1 INNER JOIN frpm AS T2 ON T1.cds = T2.CDSCode WHERE T1.AvgScrRead / T1.NumTstTakr > 0.3\t----- bird -----\tcalifornia_schools",
+ "9": "SELECT CAST(SUM(CASE WHEN T1.gender = 'M' THEN 1 ELSE 0 END) AS REAL) * 100 / COUNT(T1.client_id) FROM client AS T1 INNER JOIN order_ AS T2 ON T1.client_id = T2.account_id WHERE T2.type = 'POPLATEK TYDNE'\t----- bird -----\tfinancial"
+}

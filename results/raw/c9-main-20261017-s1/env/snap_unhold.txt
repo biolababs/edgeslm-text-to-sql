@@ -1,0 +1,1 @@
+Removed auto-refresh hold on all snaps

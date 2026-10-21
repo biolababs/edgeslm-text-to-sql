@@ -1,0 +1,22 @@
+== services (pre vs post; < pre only, > post only)
+1a2
+> anacron.service
+10a12
+> geoclue.service
+38a41
+> systemd-hostnamed.service
+39a43
+> systemd-localed.service
+== active timers
+== listening addresses
+8c8
+< 127.0.0.1:47739
+---
+> 127.0.0.1:51977
+== ollama env
+== nvpmodel
+== agent processes (command lines)
+3c3
+<  /home/trafficedge01/jetson-agent/bin/llama-server --no-cache-idle-slots --cache-prompt --host 127.0.0.1 --jinja --log-colors off --metrics --port 47739 --slots --no-webui --alias liquid-general --batch-size 512 --ctx-size 16384 --cache-ram 0 --cache-type-k q8_0 --cache-type-v q8_0 --flash-attn on --model /home/trafficedge01/jetson-agent/models/LFM2.5-1.2B-Instruct-QAD-Q4_0.gguf --n-gpu-layers 99 --parallel 1 --threads 6 --threads-batch 6 --timeout 600 --ubatch-size 128
+---
+>  /home/trafficedge01/jetson-agent/bin/llama-server --no-cache-idle-slots --cache-prompt --host 127.0.0.1 --jinja --log-colors off --metrics --port 51977 --slots --no-webui --alias liquid-general --batch-size 512 --ctx-size 16384 --cache-ram 0 --cache-type-k q8_0 --cache-type-v q8_0 --flash-attn on --model /home/trafficedge01/jetson-agent/models/LFM2.5-1.2B-Instruct-QAD-Q4_0.gguf --n-gpu-layers 99 --parallel 1 --threads 6 --threads-batch 6 --timeout 600 --ubatch-size 128

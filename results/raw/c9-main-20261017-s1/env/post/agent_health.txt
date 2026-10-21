@@ -1,0 +1,8 @@
+{"status":"ok"}
+{"status":"ok"}
+{"inference_throttle":"ok"}
+{"agent_host":"ok"}
+{"interface":"ok"}
+{"session_storage":"ok"}
+{"workbench":"ok"}
+{"status":"ok","version":"0.6.6","engine":"langgraph","active_run_id":null,"queued":0,"templates":3,"storage":"/data/jetson-agent/workflows","research_model":"liquid-general","quality_fallback_model":"jetson-agent","tool_budget":3,"cooldown_seconds":3,"memory_available_mb":4773,"maximum_temperature_c":55.4}

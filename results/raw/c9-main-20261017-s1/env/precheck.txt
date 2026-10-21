@@ -1,0 +1,43 @@
+== who
+== ps
+USER     %CPU   RSS     ELAPSED COMMAND
+traffic+  8.3 323556      01:07 /home/trafficedge01/jetson-agent/opencode/node_modules/.bin/opencode web --hostname 127.0.0.1 --port 8788 --log-level INFO --print-logs
+gdm       2.4 125000      01:06 /usr/bin/gnome-shell
+traffic+  2.0 64008       01:07 /home/trafficedge01/jetson-agent/workflow-venv/bin/python /home/trafficedge01/jetson-agent/workflow/server.py
+traffic+  1.9 1252976     01:07 /home/trafficedge01/jetson-agent/bin/llama-server --no-cache-idle-slots --cache-prompt --host 127.0.0.1 --jinja --log-colors off --metrics --port 47739 --slots --no-webui --alias liquid-general --batch-size 512 --ctx-size 16384 --cache-ram 0 --cache-type-k q8_0 --cache-type-v q8_0 --flash-attn on --model /home/trafficedge01/jetson-agent/models/LFM2.5-1.2B-Instruct-QAD-Q4_0.gguf --n-gpu-layers 99 --parallel 1 --threads 6 --threads-batch 6 --timeout 600 --ubatch-size 128
+root      0.6 39132       01:09 /usr/libexec/fwupd/fwupd
+root      0.6  9136       00:03 sshd: trafficedge01 [priv]
+traffic+  0.5 144120      01:07 /home/trafficedge01/jetson-agent/bin/llama-server --models-preset /home/trafficedge01/jetson-agent/config/models.ini --models-max 1 --models-autoload --host 127.0.0.1 --port 8001 --n-gpu-layers 99 --flash-attn on --cache-type-k q8_0 --cache-type-v q8_0 --parallel 1 --threads 6 --threads-batch 6 --jinja --cache-prompt --cache-ram 0 --no-cache-idle-slots --api-key-file /home/trafficedge01/jetson-agent/config/api-keys.txt --no-ui --metrics --slots --timeout 600
+gdm       0.5 18084       01:07 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+root      0.4 54808       01:07 /usr/lib/xorg/Xorg vt1 -displayfd 3 -auth /run/user/128/gdm/Xauthority -nolisten tcp -background none -noreset -keeptty -novtswitch -verbose 3
+gdm       0.3  8520       01:07 /lib/systemd/systemd --user
+root      0.2  3260  4-10:00:11 /lib/systemd/systemd-udevd
+traffic+  0.2 43632       01:07 node /home/trafficedge01/jetson-agent/proxy/server.js
+root      0.1  9324  4-10:00:21 /sbin/init 2
+root      0.1  7556  4-10:00:07 /usr/libexec/polkitd --no-debug
+ollama    0.1 29388       01:11 /usr/local/bin/ollama serve
+gdm       0.1  3588       01:07 dbus-daemon --nofork --print-address 4 --session
+gdm       0.1 14976       01:07 /usr/libexec/gnome-session-binary --autostart /usr/share/gdm/greeter/autostart
+gdm       0.1 23704       01:05 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.Shell.Notifications
+gdm       0.1 10704       01:04 ibus-daemon --panel disable --xim
+gdm       0.1 26392       01:04 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.ScreenSaver
+root      0.0     0  4-10:00:21 [kthreadd]
+root      0.0     0  4-10:00:21 [rcu_gp]
+root      0.0     0  4-10:00:21 [rcu_par_gp]
+root      0.0     0  4-10:00:21 [slub_flushwq]
+root      0.0     0  4-10:00:21 [netns]
+root      0.0     0  4-10:00:21 [mm_percpu_wq]
+root      0.0     0  4-10:00:21 [rcu_tasks_kthre]
+root      0.0     0  4-10:00:21 [rcu_tasks_rude_]
+root      0.0     0  4-10:00:21 [rcu_tasks_trace]
+== ollama ps
+NAME    ID    SIZE    PROCESSOR    CONTEXT    UNTIL 
+== established on 11434/8000/8787
+Recv-Q Send-Q Local Address:Port Peer Address:PortProcess
+== last agent server.log lines
+[47739] 0.01.806.720 I srv    load_model: initializing, n_slots = 1, n_ctx_slot = 16384, kv_unified = 'false'
+[47739] 0.01.819.351 W srv          init: chat template supports preserving reasoning, it is enabled by default (may use more tokens, disable via --no-reasoning-preserve)
+[47739] 0.01.819.456 I srv  llama_server: model loaded
+[47739] 0.01.819.470 I srv  llama_server: listening on http://127.0.0.1:47739
+[47739] 0.01.819.727 I srv    operator(): child server monitoring thread started, waiting for EOF on stdin...
+-rw-rw-r-- 1 trafficedge01 trafficedge01 1067672 2026-10-17 09:00:11.505308684 -0600 /home/trafficedge01/jetson-agent/logs/server.log

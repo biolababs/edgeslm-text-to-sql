@@ -1,0 +1,180 @@
+1792249276674161914	session 1 start blocks: block_B3.sh
+1792249893060039247	idle baseline tj=52.437 C VDD_IN=6.551 W
+1792249893066366839	samplers started s1-block_B3 (power pid 575880, gpu pid 575881)
+1792249893069757226	BLOCKFILE block_B3.sh start
+1792249893077435532	BLOCK B3 model prem1b-q4-ours
+1792249897968012135	sha ok prem1b-q4-ours
+1792249898025729035	model prem1b-q4-ours start swap=2MB
+1792249908387625923	100% GPU prem1b-q4-ours
+1792249908390150394	loaded_idle start prem1b-q4-ours
+1792250028393953454	loaded_idle end prem1b-q4-ours
+1792250028396629830	run prem1b-q4-ours nyc0 start
+1792250801724160551	run prem1b-q4-ours nyc0 end rc=0
+1792250801726803376	run prem1b-q4-ours cur0 start
+1792250902621438393	run prem1b-q4-ours cur0 end rc=0
+1792250902624081260	run prem1b-q4-ours nycsim start
+1792252620563356809	run prem1b-q4-ours nycsim end rc=0
+1792252620565986303	run prem1b-q4-ours cursim start
+1792252746308229761	run prem1b-q4-ours cursim end rc=0
+1792252746310915542	run prem1b-q4-ours nycfix start
+1792253570256943206	run prem1b-q4-ours nycfix end rc=0
+1792253570259588883	run prem1b-q4-ours curfix start
+1792253674172671157	run prem1b-q4-ours curfix end rc=0
+1792253674175311365	run prem1b-q4-ours spider0 start
+1792254547981302092	run prem1b-q4-ours spider0 end rc=0
+1792254547984062684	run prem1b-q4-ours bird0 start
+1792255409888280053	run prem1b-q4-ours bird0 end rc=0
+1792255409891181525	run prem1b-q4-ours birdarc start
+1792255665308470676	run prem1b-q4-ours birdarc end rc=0
+1792255668406481111	model prem1b-q4-ours end swap=108MB delta=106MB
+1792255668410427466	FLAG swap delta 106MB during prem1b-q4-ours (accuracy run kept, flagged)
+1792255669074410787	swapflush before=108MB after=0MB
+1792256374676226050	cooldown: 2026-10-17T10:59:34-06:00 cooldown ok elapsed=705s tj_mC=54437 target_mC=54437
+1792256374678684270	BLOCK B3 model qc15-q4-ollama
+1792256380238949107	sha ok qc15-q4-ollama
+1792256380274397414	model qc15-q4-ollama start swap=0MB
+1792256392851469224	100% GPU qc15-q4-ollama
+1792256392854023103	loaded_idle start qc15-q4-ollama
+1792256512857638102	loaded_idle end qc15-q4-ollama
+1792256512860191916	run qc15-q4-ollama nyc0 start
+1792257336894584631	run qc15-q4-ollama nyc0 end rc=0
+1792257336897349310	run qc15-q4-ollama cur0 start
+1792257458801680640	run qc15-q4-ollama cur0 end rc=0
+1792257458804507373	run qc15-q4-ollama nycsim start
+1792259178216314990	run qc15-q4-ollama nycsim end rc=0
+1792259178219063716	run qc15-q4-ollama cursim start
+1792259320604533163	run qc15-q4-ollama cursim end rc=0
+1792259320607290713	run qc15-q4-ollama nycfix start
+1792260094463060650	run qc15-q4-ollama nycfix end rc=0
+1792260094465827106	run qc15-q4-ollama curfix start
+1792260207711796366	run qc15-q4-ollama curfix end rc=0
+1792260207714506238	run qc15-q4-ollama spider0 start
+1792261316499445651	run qc15-q4-ollama spider0 end rc=0
+1792261316502219515	run qc15-q4-ollama bird0 start
+1792262149808667978	run qc15-q4-ollama bird0 end rc=0
+1792262149811369873	run qc15-q4-ollama birdarc start
+1792262385924170824	run qc15-q4-ollama birdarc end rc=0
+1792262389016499935	model qc15-q4-ollama end swap=0MB delta=0MB
+1792262389406991806	swapflush before=0MB after=0MB
+1792263019952461475	cooldown: 2026-10-17T12:50:19-06:00 cooldown ok elapsed=630s tj_mC=54343 target_mC=54437
+1792263019955022927	BLOCK B3 model qc3-q4-ollama
+1792263030826634729	sha ok qc3-q4-ollama
+1792263030861177386	model qc3-q4-ollama start swap=0MB
+1792263051426973221	100% GPU qc3-q4-ollama
+1792263051429531857	loaded_idle start qc3-q4-ollama
+1792263171433479785	loaded_idle end qc3-q4-ollama
+1792263171436149430	run qc3-q4-ollama nyc0 start
+1792264479380816065	run qc3-q4-ollama nyc0 end rc=0
+1792264479383604210	run qc3-q4-ollama cur0 start
+1792264659961803661	run qc3-q4-ollama cur0 end rc=0
+1792264659964792191	run qc3-q4-ollama nycsim start
+1792267417836983631	run qc3-q4-ollama nycsim end rc=0
+1792267417839701708	run qc3-q4-ollama cursim start
+1792267616313660733	run qc3-q4-ollama cursim end rc=0
+1792267616316423112	run qc3-q4-ollama nycfix start
+1792268855351077238	run qc3-q4-ollama nycfix end rc=0
+1792268855353749561	run qc3-q4-ollama curfix start
+1792269023673779431	run qc3-q4-ollama curfix end rc=0
+1792269023676463081	run qc3-q4-ollama spider0 start
+1792270787749015023	run qc3-q4-ollama spider0 end rc=0
+1792270787751744380	run qc3-q4-ollama bird0 start
+1792272174723208544	run qc3-q4-ollama bird0 end rc=0
+1792272174725966779	run qc3-q4-ollama birdarc start
+1792272568665062825	run qc3-q4-ollama birdarc end rc=0
+1792272571754684824	model qc3-q4-ollama end swap=0MB delta=0MB
+1792272572420605589	swapflush before=0MB after=0MB
+1792273042843503290	cooldown: 2026-10-17T15:37:22-06:00 cooldown ok elapsed=470s tj_mC=54375 target_mC=54437
+1792273042846106625	BLOCK B3 model xiyan3b-q4-ours
+1792273053476739859	sha ok xiyan3b-q4-ours
+1792273053511604776	model xiyan3b-q4-ours start swap=0MB
+1792273071803037809	100% GPU xiyan3b-q4-ours
+1792273071805657442	loaded_idle start xiyan3b-q4-ours
+1792273191809451544	loaded_idle end xiyan3b-q4-ours
+1792273191812033043	run xiyan3b-q4-ours nyc0 start
+1792274625698164842	run xiyan3b-q4-ours nyc0 end rc=0
+1792274625700943734	run xiyan3b-q4-ours cur0 start
+1792274824881131516	run xiyan3b-q4-ours cur0 end rc=0
+1792274824883944012	run xiyan3b-q4-ours nycsim start
+1792277611482646452	run xiyan3b-q4-ours nycsim end rc=0
+1792277611485361881	run xiyan3b-q4-ours cursim start
+1792277818898437971	run xiyan3b-q4-ours cursim end rc=0
+1792277818901273596	run xiyan3b-q4-ours nycfix start
+1792279059248538128	run xiyan3b-q4-ours nycfix end rc=0
+1792279059251328791	run xiyan3b-q4-ours curfix start
+1792279241874186673	run xiyan3b-q4-ours curfix end rc=0
+1792279241876910882	run xiyan3b-q4-ours spider0 start
+1792281064324215668	run xiyan3b-q4-ours spider0 end rc=0
+1792281064326942154	run xiyan3b-q4-ours bird0 start
+1792282507130611146	run xiyan3b-q4-ours bird0 end rc=0
+1792282507133334144	run xiyan3b-q4-ours birdarc start
+1792282912890358496	run xiyan3b-q4-ours birdarc end rc=0
+1792282912893042298	run xiyan3b-q4-ours nycnat start
+1792284509755385602	run xiyan3b-q4-ours nycnat end rc=0
+1792284509758211447	run xiyan3b-q4-ours curnat start
+1792284760562825307	run xiyan3b-q4-ours curnat end rc=0
+1792284760565672914	run xiyan3b-q4-ours birdnat start
+1792286742982280243	run xiyan3b-q4-ours birdnat end rc=0
+1792286746155245136	model xiyan3b-q4-ours end swap=266MB delta=266MB
+1792286746159470984	FLAG swap delta 266MB during xiyan3b-q4-ours (accuracy run kept, flagged)
+1792286747890579692	swapflush before=266MB after=0MB
+1792287508562439119	cooldown: 2026-10-17T19:38:28-06:00 cooldown ok elapsed=760s tj_mC=54406 target_mC=54437
+1792287508564964118	BLOCK B3 model llama32-3b-q4-ollama
+1792287519741663332	sha ok llama32-3b-q4-ollama
+1792287519776280600	model llama32-3b-q4-ollama start swap=0MB
+1792287540383611921	100% GPU llama32-3b-q4-ollama
+1792287540386264956	loaded_idle start llama32-3b-q4-ollama
+1792287660390119633	loaded_idle end llama32-3b-q4-ollama
+1792287660392692647	run llama32-3b-q4-ollama nyc0 start
+1792288973599370157	run llama32-3b-q4-ollama nyc0 end rc=0
+1792288973602061229	run llama32-3b-q4-ollama cur0 start
+1792289163383572809	run llama32-3b-q4-ollama cur0 end rc=0
+1792289163386287466	run llama32-3b-q4-ollama nycsim start
+1792292046120695084	run llama32-3b-q4-ollama nycsim end rc=0
+1792292046123410982	run llama32-3b-q4-ollama cursim start
+1792292262491565743	run llama32-3b-q4-ollama cursim end rc=0
+1792292262494326478	run llama32-3b-q4-ollama nycfix start
+1792293587973046775	run llama32-3b-q4-ollama nycfix end rc=0
+1792293587975755868	run llama32-3b-q4-ollama curfix start
+1792293772206532807	run llama32-3b-q4-ollama curfix end rc=0
+1792293772209197577	run llama32-3b-q4-ollama spider0 start
+1792295673204158464	run llama32-3b-q4-ollama spider0 end rc=0
+1792295673206929309	run llama32-3b-q4-ollama bird0 start
+1792297213910365023	run llama32-3b-q4-ollama bird0 end rc=0
+1792297213913084070	run llama32-3b-q4-ollama birdarc start
+1792297658527901810	run llama32-3b-q4-ollama birdarc end rc=0
+1792297661691051721	model llama32-3b-q4-ollama end swap=20MB delta=20MB
+1792297662294420663	swapflush before=20MB after=0MB
+1792298072691968675	cooldown: 2026-10-17T22:34:32-06:00 cooldown ok elapsed=410s tj_mC=54375 target_mC=54437
+1792298072694661859	BLOCK B3 model qwen3-4b-q4-ollama
+1792298086400641183	sha ok qwen3-4b-q4-ollama
+1792298086436933900	model qwen3-4b-q4-ollama start swap=0MB
+1792298111701053136	100% GPU qwen3-4b-q4-ollama
+1792298111703583379	loaded_idle start qwen3-4b-q4-ollama
+1792298231707329114	loaded_idle end qwen3-4b-q4-ollama
+1792298231709915843	run qwen3-4b-q4-ollama nyc0 start
+1792300261965090516	run qwen3-4b-q4-ollama nyc0 end rc=0
+1792300261967747197	run qwen3-4b-q4-ollama cur0 start
+1792300534277941350	run qwen3-4b-q4-ollama cur0 end rc=0
+1792300534280614681	run qwen3-4b-q4-ollama nycsim start
+1792304288486071022	run qwen3-4b-q4-ollama nycsim end rc=0
+1792304288488977947	run qwen3-4b-q4-ollama cursim start
+1792304580501166904	run qwen3-4b-q4-ollama cursim end rc=0
+1792304580503951650	run qwen3-4b-q4-ollama nycfix start
+1792306318112478607	run qwen3-4b-q4-ollama nycfix end rc=0
+1792306318115250237	run qwen3-4b-q4-ollama curfix start
+1792306579080656382	run qwen3-4b-q4-ollama curfix end rc=0
+1792306579083460298	run qwen3-4b-q4-ollama spider0 start
+1792308996341972492	run qwen3-4b-q4-ollama spider0 end rc=0
+1792308996344834887	run qwen3-4b-q4-ollama bird0 start
+1792310953440480823	run qwen3-4b-q4-ollama bird0 end rc=0
+1792310953443640573	run qwen3-4b-q4-ollama birdarc start
+1792311545730582403	run qwen3-4b-q4-ollama birdarc end rc=0
+1792311548875554683	model qwen3-4b-q4-ollama end swap=114MB delta=114MB
+1792311548882461707	FLAG swap delta 114MB during qwen3-4b-q4-ollama (accuracy run kept, flagged)
+1792311549684940093	swapflush before=114MB after=0MB
+1792312750652500016	cooldown: 2026-10-18T02:39:10-06:00 FLAG cooldown_max_reached elapsed=1201s tj_mC=54625 target_mC=54437
+1792312750656461036	FLAG cooldown_max_reached
+1792312750659080905	BLOCK B3 done
+1792312750661561090	BLOCKFILE block_B3.sh end
+1792312750675557864	samplers stopped
+1792312912850675621	test mode exit rc=0 (health.sh rc)

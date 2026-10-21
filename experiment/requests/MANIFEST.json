@@ -1,0 +1,126 @@
+{
+ "nyc0": {
+  "n": 449,
+  "sha256": "dffd3db8f85fdb67e73a91143d0d5a170706860fd53101d57bb2291fb6f866e1"
+ },
+ "nycsim": {
+  "n": 898,
+  "sha256": "0c02c3b6bdf593245c70ba55a3e20c1f06074d3068efc2cd940c62c5ed1a85b4"
+ },
+ "nycfix": {
+  "n": 449,
+  "sha256": "a286d80b60610a3da3325e48ac7fc3dbe6c86885a4202e8e4ebd2ea8708d087d"
+ },
+ "cur0": {
+  "n": 92,
+  "sha256": "c6d0531b12f5066ad7ebb336f7026de70fdba38cbe7dc6cf386f85ca21a9faa5"
+ },
+ "cursim": {
+  "n": 92,
+  "sha256": "29b7830a412748a56f2488ae92b762776133d9df1764a15feef744c6f426e106"
+ },
+ "curfix": {
+  "n": 92,
+  "sha256": "0ae7b58735c8e9210ef7f958a0c419d6635515c0b382f66473cd0829a98e4901"
+ },
+ "curnat": {
+  "n": 92,
+  "sha256": "8b7a32aaaeb136b48988f66e03253a7a51321b2ad9fca2877eef472325400c2c"
+ },
+ "spider0": {
+  "n": 1034,
+  "sha256": "153801dc5c818764961a905ab594e32d7a467e792b8a813e0eddbf1a07c814c2"
+ },
+ "bird0": {
+  "n": 500,
+  "sha256": "d9d70e1b4a6ce17fe440a00f8a28d46eb6d041b9aa6e1993c2f4ad116e1e73d2"
+ },
+ "nycnat": {
+  "n": 449,
+  "sha256": "21a1ab3e4081dccc1c07ce2b0c00b8aef39ec9744f1dedb9df271fb906b3d0aa"
+ },
+ "birdnat": {
+  "n": 500,
+  "sha256": "4dfb26184edc54bf5b833a6e65e8f99de7fda3ea379caff6875961a59aeb93c5"
+ },
+ "birdarc": {
+  "n": 129,
+  "sha256": "6129cf5d39da196a971dd9feeae552a304964950570adfbd7e1540e84a3a5582"
+ },
+ "lora10": {
+  "n": 217,
+  "sha256": "58c2af79435626c8315f2209907db2f4e77dbb120d902ce6a14ff28f35bdb828"
+ },
+ "lora1sim": {
+  "n": 217,
+  "sha256": "93a7cfbbf6ab839041474687f5a9e52321c724eb573f9a23784e7a36dba7b04b"
+ },
+ "lora20": {
+  "n": 233,
+  "sha256": "b6551bacfa6594f66a1c9926c5f45a148058eda1b85b8f30fc03ab903d964bd6"
+ },
+ "lora2sim": {
+  "n": 233,
+  "sha256": "b54e9a308d522c1fe3532017a879bc7744eccf1de5e9720d5eabe07179ac6f42"
+ },
+ "lora30": {
+  "n": 232,
+  "sha256": "df42bcbcbaa7cb16223f292f7ca997b7de697e42cba823182513c308fd7cde67"
+ },
+ "lora3sim": {
+  "n": 232,
+  "sha256": "77bb49345aa4954a558c873dacebf56d631a269eb05069b0ab574d93560af6dd"
+ },
+ "lora40": {
+  "n": 216,
+  "sha256": "f0f0a69814148a5877e3593c7dad77f5ec83db694d72a4d67bb8cb6dceadf2ed"
+ },
+ "lora4sim": {
+  "n": 216,
+  "sha256": "50b9583f1a569e433f6f5ff5f37971eb90f42905188ce08e641122e1b92c30ac"
+ },
+ "warmup": {
+  "n": 5,
+  "sha256": "839a59bcfc11b8d474330cd0cd045674d46a935f132ceb540783ed110902cc3b"
+ },
+ "pilot_nyc0": {
+  "n": 8,
+  "sha256": "c37b9faeb50b44d14789ccc53f5c7c94f2eafe5cf276a097731435590832a810"
+ },
+ "pilot_nycsim": {
+  "n": 8,
+  "sha256": "b783c24fb63aeaf1a20493fde450a7feb884a420539737e5fda7c6b2529a408d"
+ },
+ "pilot_nycfix": {
+  "n": 4,
+  "sha256": "95ede4e431f9289f0fa423f34a9f1b1925fffff09a671ae6241726f57143b52f"
+ },
+ "pilot_cur0": {
+  "n": 5,
+  "sha256": "12ca4c9a2e303b293b4dc8e7410881085566f18a1175839db81c07b1f91d4eaf"
+ },
+ "pilot_curnat": {
+  "n": 5,
+  "sha256": "7efee93b4ca504ef7e1357248996b6fd6463cf15a60b344ad2cab8550107a695"
+ },
+ "pilot_spider0": {
+  "n": 10,
+  "sha256": "0ced4c8f5e2d96143a01eab8eb5bf336bbce7aef30dadb2bc1a496318ea57721"
+ },
+ "pilot_bird0": {
+  "n": 10,
+  "sha256": "3b563a1258a5640c5383a98c9e078fc95d707bd24d52f4c1cbce7cd859c00478"
+ },
+ "pilot_nycnat": {
+  "n": 5,
+  "sha256": "f241918fb7a55c7104873a2e30db0d359302c6550773475d3d9d7740faa5e46a"
+ },
+ "pilot_birdnat": {
+  "n": 5,
+  "sha256": "9888f70bb6f5c5bf85847c72b4af24e2057a19405bb2781e31408ab0378c915d"
+ },
+ "pilot_determinism": {
+  "n": 20,
+  "sha256": "17a889e6e73914dc620e592aa8351bb53154769fe36534fe162b35e4f0deebf2"
+ }
+}

@@ -1,0 +1,11 @@
+start calculate EX
+                     simple               moderate             challenging          total               
+count                24                   71                   34                   129                 
+======================================    EX    =====================================
+EX                   54.17                30.99                26.47                34.11               
+===========================================================================================
+Finished EX evaluation for SQLite on Mini Dev set
+
+
+
+

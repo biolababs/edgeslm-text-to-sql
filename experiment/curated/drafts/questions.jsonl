@@ -1,0 +1,80 @@
+{"id": "cur_001", "category": "filtering_counting", "question": "How many trips carried exactly 2 passengers and were paid in cash?"}
+{"id": "cur_002", "category": "filtering_counting", "question": "How many trips were charged the JFK rate code (rate code 2)?"}
+{"id": "cur_003", "category": "filtering_counting", "question": "How many trips recorded by vendor 1 covered more than 10 miles?"}
+{"id": "cur_004", "category": "filtering_counting", "question": "How many rides that began at LaGuardia Airport were paid with a credit card?"}
+{"id": "cur_005", "category": "filtering_counting", "question": "How many trips had tolls of more than $10?"}
+{"id": "cur_006", "category": "filtering_counting", "question": "How many trips ended in Brooklyn?"}
+{"id": "cur_007", "category": "filtering_counting", "question": "How many trips had a total amount between $50 and $100, inclusive?"}
+{"id": "cur_008", "category": "filtering_counting", "question": "How many trips were charged an airport fee (an airport fee greater than zero)?"}
+{"id": "cur_009", "category": "aggregation", "question": "What is the average trip distance, in miles, of trips paid by credit card?"}
+{"id": "cur_010", "category": "aggregation", "question": "What is the sum of all tips, in dollars, on trips picked up in Queens?"}
+{"id": "cur_011", "category": "aggregation", "question": "What is the longest distance, in miles, of any trip that started at JFK Airport?"}
+{"id": "cur_012", "category": "aggregation", "question": "What is the average total amount of trips with five or more passengers?"}
+{"id": "cur_013", "category": "aggregation", "question": "What is the smallest fare amount above zero in the data?"}
+{"id": "cur_014", "category": "aggregation", "question": "On average, how many passengers did vendor 2's trips carry?"}
+{"id": "cur_015", "category": "aggregation", "question": "How much was paid in tolls, in total, on trips that ended at Newark Airport?"}
+{"id": "cur_016", "category": "aggregation", "question": "How many distinct pickup location IDs appear in the trip records?"}
+{"id": "cur_017", "category": "grouping", "question": "List each vendor ID together with its number of trips."}
+{"id": "cur_018", "category": "grouping", "question": "For each payment type that appears in the trips, give the payment type name and the average tip amount."}
+{"id": "cur_019", "category": "grouping", "question": "For each pickup borough, give the borough name and the average trip distance in miles."}
+{"id": "cur_020", "category": "grouping", "question": "For each passenger count from 1 to 6, give the passenger count and the number of trips."}
+{"id": "cur_021", "category": "grouping", "question": "For every rate code ID used in the trips, give the rate code ID and the average fare amount."}
+{"id": "cur_022", "category": "grouping", "question": "For rides that started at JFK Airport, give each dropoff borough and how many of those rides ended there."}
+{"id": "cur_023", "category": "grouping", "question": "Group trips by the service zone of their pickup zone: give each service zone and the total amount collected."}
+{"id": "cur_024", "category": "grouping", "question": "For trips with more than 3 passengers, give each vendor ID and the average trip distance."}
+{"id": "cur_025", "category": "ranking_topk", "question": "Name the 5 dropoff zones that received the most trips, from most to fewest."}
+{"id": "cur_026", "category": "ranking_topk", "question": "Which pickup zone generated the largest total tip amount? Give the zone name."}
+{"id": "cur_027", "category": "ranking_topk", "question": "Give the trip IDs of the 3 longest trips by distance, longest first."}
+{"id": "cur_028", "category": "ranking_topk", "question": "Which payment type has the highest average total amount? Give its name."}
+{"id": "cur_029", "category": "ranking_topk", "question": "Not counting JFK Airport and LaGuardia Airport, which Queens zone had the most pickups? Give the zone name."}
+{"id": "cur_030", "category": "ranking_topk", "question": "Name the 3 Brooklyn pickup zones with the most trips, from most to fewest."}
+{"id": "cur_031", "category": "ranking_topk", "question": "For trips that started in Manhattan, which dropoff borough has the highest average fare? Give the borough name."}
+{"id": "cur_032", "category": "ranking_topk", "question": "Among pickup zones with at least 200 pickups, name the 10 with the highest average trip distance, highest first."}
+{"id": "cur_033", "category": "ratio_percentage", "question": "What percentage of all trips were paid in cash?"}
+{"id": "cur_034", "category": "ratio_percentage", "question": "What percentage of rides that started at JFK Airport ended in Manhattan?"}
+{"id": "cur_035", "category": "ratio_percentage", "question": "For credit card trips, what is total tips divided by total fares (as a fraction, not a percentage)?"}
+{"id": "cur_036", "category": "ratio_percentage", "question": "What percentage of trips carried more than one passenger?"}
+{"id": "cur_037", "category": "ratio_percentage", "question": "What percentage of vendor 2's trips were longer than 5 miles?"}
+{"id": "cur_038", "category": "ratio_percentage", "question": "What percentage of the total amount collected across all trips came from rides picked up at JFK Airport or LaGuardia Airport?"}
+{"id": "cur_039", "category": "ratio_percentage", "question": "For pickups in Midtown Center, what is the total fare divided by the total distance, in dollars per mile?"}
+{"id": "cur_040", "category": "ratio_percentage", "question": "Of the trips that ended at LaGuardia Airport, what percentage paid any tolls (toll amount above zero)?"}
+{"id": "cur_041", "category": "time", "question": "How many trips were picked up on New Year's Day, January 1, 2024?"}
+{"id": "cur_042", "category": "time", "question": "How many trips were picked up between 7:00 AM and 9:59 AM?"}
+{"id": "cur_043", "category": "time", "question": "Which date had the fewest pickups? Answer in YYYY-MM-DD format."}
+{"id": "cur_044", "category": "time", "question": "What is the average trip duration, in minutes, for trips picked up on a Saturday?"}
+{"id": "cur_045", "category": "time", "question": "How many trips were dropped off on a later calendar date than the date they were picked up?"}
+{"id": "cur_046", "category": "time", "question": "How many trips were picked up from January 25 through January 31, 2024, inclusive?"}
+{"id": "cur_047", "category": "time", "question": "For each day of the week, give the day number (0 = Sunday through 6 = Saturday) and the number of pickups."}
+{"id": "cur_048", "category": "time", "question": "How many trips lasted longer than two hours?"}
+{"id": "cur_049", "category": "multi_join", "question": "How many trips both started and ended in Brooklyn?"}
+{"id": "cur_050", "category": "multi_join", "question": "How many rides went from JFK Airport to LaGuardia Airport?"}
+{"id": "cur_051", "category": "multi_join", "question": "What is the average fare of rides that started in Manhattan and ended in Queens?"}
+{"id": "cur_052", "category": "multi_join", "question": "Where did rides starting at Times Sq/Theatre District most often end? Give the dropoff zone name."}
+{"id": "cur_053", "category": "multi_join", "question": "How many trips were picked up in a Yellow Zone service zone and dropped off in a Boro Zone service zone?"}
+{"id": "cur_054", "category": "multi_join", "question": "Which pickup borough and dropoff borough combination is the most common? Give the pickup borough and the dropoff borough."}
+{"id": "cur_055", "category": "multi_join", "question": "How many trips that started in Queens ended at Newark Airport?"}
+{"id": "cur_056", "category": "multi_join", "question": "For credit card rides from LaGuardia Airport to any Manhattan zone, what is the average total amount?"}
+{"id": "cur_057", "category": "nested_subquery", "question": "How many trips were longer than the average trip distance across all trips?"}
+{"id": "cur_058", "category": "nested_subquery", "question": "Considering only pickup zones with at least one pickup, how many of them have more pickups than the average number of pickups per such zone?"}
+{"id": "cur_059", "category": "nested_subquery", "question": "What is the trip ID of the trip with the highest total amount?"}
+{"id": "cur_060", "category": "nested_subquery", "question": "How many credit card trips had a tip larger than the average tip of credit card trips?"}
+{"id": "cur_061", "category": "nested_subquery", "question": "What is the average fare of trips picked up in the pickup zone that has the most pickups overall?"}
+{"id": "cur_062", "category": "nested_subquery", "question": "For the dropoff zone that received the most trips, what is the average tip of trips that ended there?"}
+{"id": "cur_063", "category": "nested_subquery", "question": "How many trips had a fare more than twice the overall average fare?"}
+{"id": "cur_064", "category": "nested_subquery", "question": "Among pickup zones with at least one pickup, what percentage have an average tip above $3?"}
+{"id": "cur_065", "category": "anti_join_set", "question": "How many Manhattan taxi zones never appear as a trip's dropoff location?"}
+{"id": "cur_066", "category": "anti_join_set", "question": "How many location IDs were used as a pickup location but never as a dropoff location?"}
+{"id": "cur_067", "category": "anti_join_set", "question": "How many location IDs appear both as a pickup location and as a dropoff location?"}
+{"id": "cur_068", "category": "anti_join_set", "question": "How many Queens zones had neither a pickup nor a dropoff in the data?"}
+{"id": "cur_069", "category": "anti_join_set", "question": "How many Bronx zones had at least one dropoff but no pickups?"}
+{"id": "cur_070", "category": "anti_join_set", "question": "How many distinct dropoff location IDs were reached by trips from Manhattan but never by trips from Queens?"}
+{"id": "cur_071", "category": "anti_join_set", "question": "Which payment type names never occur in the trip records?"}
+{"id": "cur_072", "category": "anti_join_set", "question": "How many dropoff location IDs were reached from JFK Airport but never from LaGuardia Airport?"}
+{"id": "cur_073", "category": "null_edge", "question": "How many trips had a fare of exactly zero?"}
+{"id": "cur_074", "category": "null_edge", "question": "What percentage of cash trips have a recorded tip of zero?"}
+{"id": "cur_075", "category": "null_edge", "question": "What is the average tip of credit card trips, counting only trips with a fare above zero?"}
+{"id": "cur_076", "category": "null_edge", "question": "How many trips recorded zero passengers?"}
+{"id": "cur_077", "category": "null_edge", "question": "How many trips had a total amount smaller than their fare amount?"}
+{"id": "cur_078", "category": "null_edge", "question": "What percentage of credit card trips had no tip (a tip amount of zero)?"}
+{"id": "cur_079", "category": "null_edge", "question": "How many trips had no congestion surcharge, meaning a surcharge of zero?"}
+{"id": "cur_080", "category": "null_edge", "question": "Leaving out cash trips, whose tips are not recorded, what is the average tip in dollars for trips picked up in Queens?"}

@@ -1,0 +1,40 @@
+USER         PID %CPU   RSS     ELAPSED COMMAND
+traffic+ 1426018 18.3 339556      00:25 /home/trafficedge01/jetson-agent/opencode/node_modules/.bin/opencode web --hostname 127.0.0.1 --port 8788 --log-level INFO --print-logs
+gdm      1426280  6.6 133196      00:24 /usr/bin/gnome-shell
+traffic+ 1426032  5.3 65972       00:25 /home/trafficedge01/jetson-agent/workflow-venv/bin/python /home/trafficedge01/jetson-agent/workflow/server.py
+traffic+ 1426216  5.1 1252452     00:25 /home/trafficedge01/jetson-agent/bin/llama-server --no-cache-idle-slots --cache-prompt --host 127.0.0.1 --jinja --log-colors off --metrics --port 51977 --slots --no-webui --alias liquid-general --batch-size 512 --ctx-size 16384 --cache-ram 0 --cache-type-k q8_0 --cache-type-v q8_0 --flash-attn on --model /home/trafficedge01/jetson-agent/models/LFM2.5-1.2B-Instruct-QAD-Q4_0.gguf --n-gpu-layers 99 --parallel 1 --threads 6 --threads-batch 6 --timeout 600 --ubatch-size 128
+root     1427258  3.1 18040       00:11 cups-browsed -c /var/snap/cups/common/etc/cups/cups-browsed.conf
+root     1427245  2.1 14000       00:12 cupsd -f -s /var/snap/cups/common/etc/cups/cups-files.conf -c /var/snap/cups/common/etc/cups/cupsd.conf
+root     1425402  1.7 42696       00:27 /usr/libexec/fwupd/fwupd
+gdm      1426196  1.5 20120       00:25 /usr/bin/pulseaudio --daemonize=no --log-target=journal
+traffic+ 1426009  1.4 146624      00:25 /home/trafficedge01/jetson-agent/bin/llama-server --models-preset /home/trafficedge01/jetson-agent/config/models.ini --models-max 1 --models-autoload --host 127.0.0.1 --port 8001 --n-gpu-layers 99 --flash-attn on --cache-type-k q8_0 --cache-type-v q8_0 --parallel 1 --threads 6 --threads-batch 6 --jinja --cache-prompt --cache-ram 0 --no-cache-idle-slots --api-key-file /home/trafficedge01/jetson-agent/config/api-keys.txt --no-ui --metrics --slots --timeout 600
+root     1427082  1.3  1568       00:13 /bin/sh /snap/cups/1264/scripts/run-cupsd
+root     1426208  1.2 59068       00:25 /usr/lib/xorg/Xorg vt1 -displayfd 3 -auth /run/user/128/gdm/Xauthority -nolisten tcp -background none -noreset -keeptty -novtswitch -verbose 3
+gdm      1426049  1.1  9496       00:25 /lib/systemd/systemd --user
+root     1427089  1.1  1540       00:13 /bin/sh /snap/cups/1264/scripts/run-cups-browsed
+traffic+ 1426013  0.7 44296       00:25 node /home/trafficedge01/jetson-agent/proxy/server.js
+ollama   1425253  0.4 39968       00:29 /usr/local/bin/ollama serve
+gdm      1426238  0.4  4244       00:25 dbus-daemon --nofork --print-address 4 --session
+gdm      1426239  0.4 15632       00:25 /usr/libexec/gnome-session-binary --autostart /usr/share/gdm/greeter/autostart
+geoclue  1426416  0.4 11416       00:22 /usr/libexec/geoclue
+root     1426521  0.4  3612       00:22 /lib/systemd/systemd-hostnamed
+root     1426406  0.3  3616       00:23 /lib/systemd/systemd-localed
+gdm      1426423  0.3 25616       00:22 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.Shell.Notifications
+gdm      1426464  0.3 11184       00:22 ibus-daemon --panel disable --xim
+gdm      1426589  0.3 27828       00:22 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.ScreenSaver
+root         342  0.2  3800  5-03:40:47 /lib/systemd/systemd-udevd
+gdm      1426468  0.2 20736       00:22 /usr/libexec/gsd-color
+gdm      1426480  0.2 20076       00:22 /usr/libexec/gsd-media-keys
+gdm      1426504  0.2 20040       00:22 /usr/libexec/gsd-power
+root     1426674  0.2     0       00:20 [kworker/u12:7-events_freezable_power_]
+root           1  0.1  9608  5-03:40:57 /sbin/init 2
+root         705  0.1  8080  5-03:40:43 /usr/libexec/polkitd --no-debug
+root     1425450  0.1 18632       00:27 /usr/libexec/packagekitd
+gdm      1426466  0.1 14760       00:22 /usr/libexec/gsd-wacom
+gdm      1426470  0.1 14780       00:22 /usr/libexec/gsd-keyboard
+gdm      1426479  0.1 14140       00:22 /usr/libexec/gsd-datetime
+gdm      1426497  0.1  6400       00:22 /usr/libexec/gsd-housekeeping
+root           2  0.0     0  5-03:40:57 [kthreadd]
+root           3  0.0     0  5-03:40:57 [rcu_gp]
+root           4  0.0     0  5-03:40:57 [rcu_par_gp]
+root           5  0.0     0  5-03:40:57 [slub_flushwq]

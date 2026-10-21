@@ -1,0 +1,1512 @@
+2026-10-17T09:01:16-06:00 session 1 start blocks: block_B3.sh
+2026-10-17T09:01:46-06:00 precheck busy=0
+2026-10-17T09:01:46-06:00 ENTER test mode
+2026-10-17T09:01:47-06:00 agent stop.sh rc=0
+2026-10-17T09:01:54-06:00 agent stack stopped; ports closed
+2026-10-17T09:01:54-06:00 gdm stopped rc=0
+2026-10-17T09:01:55-06:00 snap hold rc=0
+2026-10-17T09:01:55-06:00 stopped units: trafficedge-ip-reporter.timer apt-daily.timer apt-daily-upgrade.timer fwupd-refresh.timer man-db.timer motd-news.timer update-notifier-download.timer update-notifier-motd.timer anacron.timer e2scrub_all.timer fstrim.timer dpkg-db-backup.timer logrotate.timer systemd-tmpfiles-clean.timer cron fwupd packagekit 
+2026-10-17T09:01:56-06:00 ollama restarted loopback-only with f16 KV cache
+2026-10-17T09:01:56-06:00 MAXN_SUPER, jetson_clocks on (GPU 1020000000 Hz)
+2026-10-17T09:01:56-06:00 swap flushed (was 0 MB)
+2026-10-17T09:01:57-06:00 ENTER done
+2026-10-17T09:01:57-06:00 VERIFY idle (180 s)
+{
+ "pass": true,
+ "checks": {
+  "gr3d_zero_ge_99pct": true,
+  "cpu_mean_lt_5pct": true,
+  "vdd_sd_lt_0.2w": true,
+  "power_rate_ge_9hz": true,
+  "ts_monotonic": true,
+  "no_foreign_proc_gt_1pct": true,
+  "ollama_ps_empty": true,
+  "listeners_allowed_only": true,
+  "swap_used_lt_50mb": true
+ },
+ "summary": {
+  "n": 1718,
+  "duration_s": 179.953203749,
+  "rate_hz": 9.541369446219383,
+  "ts_monotonic": true,
+  "vdd_in_median_w": 6.512,
+  "vdd_in_mean_w": 6.5279318975552965,
+  "vdd_in_sd_w": 0.03526885786755385,
+  "gr3d_zero_share": 1.0,
+  "cpu_mean_pct": 0.3503104384943733,
+  "tj_median_c": 52.937,
+  "tj_max_c": 54.156,
+  "ram_mb_median": 647.0,
+  "swap_mb_max": 0
+ },
+ "top_iterations": 35,
+ "procs_over_1pct_excluding_samplers": {},
+ "top_procs_avg_pct": {
+  "tegrast+": 0.78,
+  "systemd+": 0.27,
+  "top": 0.17,
+  "systemd": 0.11,
+  "irq/167+": 0.1,
+  "kworker+": 0.09,
+  "dbus-da+": 0.05,
+  "python3": 0.03,
+  "snapd": 0.03,
+  "contain+": 0.03,
+  "Network+": 0.02,
+  "irq/198+": 0.02,
+  "nvfanco+": 0.02,
+  "nvgpu_c+": 0.02,
+  "sshd": 0.02
+ },
+ "bad_listeners": [],
+ "swap_used_mb": 0,
+ "ollama_ps": [
+  "NAME    ID    SIZE    PROCESSOR    CONTEXT    UNTIL "
+ ]
+}
+2026-10-17T09:04:58-06:00 VERIFY rc=0
+/home/trafficedge01/c9/runs/c9-main-20261017-s1/env/record_20261017T150458Z
+2026-10-17T09:06:32-06:00 BASELINE session_start 300s
+{
+ "n": 2863,
+ "duration_s": 299.950431057,
+ "rate_hz": 9.541576552880933,
+ "ts_monotonic": true,
+ "vdd_in_median_w": 6.551,
+ "vdd_in_mean_w": 6.556168005588543,
+ "vdd_in_sd_w": 0.03791027603104779,
+ "gr3d_zero_share": 1.0,
+ "cpu_mean_pct": 0.3420072185353359,
+ "tj_median_c": 52.437,
+ "tj_max_c": 53.281,
+ "ram_mb_median": 694,
+ "swap_mb_max": 0
+}
+2026-10-17T09:11:32-06:00 BASELINE session_start done
+2026-10-17T09:11:33-06:00 idle baseline tj=52.437 C VDD_IN=6.551 W
+2026-10-17T09:11:33-06:00 samplers started s1-block_B3 (power pid 575880, gpu pid 575881)
+2026-10-17T09:11:33-06:00 BLOCKFILE block_B3.sh start
+PROGRESS 0/6 B3 models
+2026-10-17T09:11:33-06:00 BLOCK B3 model prem1b-q4-ours
+2026-10-17T09:11:37-06:00 sha ok prem1b-q4-ours
+2026-10-17T09:11:38-06:00 model prem1b-q4-ours start swap=2MB
+prem1b-q4-ours: 5 to do, 0 already done
+PROGRESS 1/5 prem1b-q4-ours warmup 4.79s 122 tok
+PROGRESS 5/5 prem1b-q4-ours warmup 1.84s 89 tok
+NAME                     ID              SIZE      PROCESSOR    CONTEXT    UNTIL               
+prem1b-q4-ours:latest    ee3a5e1b9957    1.7 GB    100% GPU     4096       29 minutes from now    
+2026-10-17T09:11:48-06:00 100% GPU prem1b-q4-ours
+2026-10-17T09:11:48-06:00 loaded_idle start prem1b-q4-ours
+2026-10-17T09:13:48-06:00 loaded_idle end prem1b-q4-ours
+2026-10-17T09:13:48-06:00 run prem1b-q4-ours nyc0 start
+prem1b-q4-ours: 449 to do, 0 already done
+PROGRESS 1/449 prem1b-q4-ours nyc0 2.17s 105 tok
+PROGRESS 25/449 prem1b-q4-ours nyc0 1.48s 71 tok
+PROGRESS 50/449 prem1b-q4-ours nyc0 1.90s 92 tok
+PROGRESS 75/449 prem1b-q4-ours nyc0 1.05s 49 tok
+PROGRESS 100/449 prem1b-q4-ours nyc0 2.30s 113 tok
+PROGRESS 125/449 prem1b-q4-ours nyc0 1.43s 68 tok
+PROGRESS 150/449 prem1b-q4-ours nyc0 3.33s 164 tok
+PROGRESS 175/449 prem1b-q4-ours nyc0 1.50s 71 tok
+PROGRESS 200/449 prem1b-q4-ours nyc0 0.62s 27 tok
+PROGRESS 225/449 prem1b-q4-ours nyc0 0.86s 39 tok
+PROGRESS 250/449 prem1b-q4-ours nyc0 1.92s 93 tok
+PROGRESS 275/449 prem1b-q4-ours nyc0 0.69s 30 tok
+PROGRESS 300/449 prem1b-q4-ours nyc0 3.39s 167 tok
+PROGRESS 325/449 prem1b-q4-ours nyc0 2.07s 101 tok
+PROGRESS 350/449 prem1b-q4-ours nyc0 2.01s 98 tok
+PROGRESS 375/449 prem1b-q4-ours nyc0 1.26s 60 tok
+PROGRESS 400/449 prem1b-q4-ours nyc0 1.66s 80 tok
+PROGRESS 425/449 prem1b-q4-ours nyc0 0.57s 24 tok
+PROGRESS 449/449 prem1b-q4-ours nyc0 1.27s 60 tok
+2026-10-17T09:26:41-06:00 run prem1b-q4-ours nyc0 end rc=0
+2026-10-17T09:26:41-06:00 run prem1b-q4-ours cur0 start
+prem1b-q4-ours: 92 to do, 0 already done
+PROGRESS 1/92 prem1b-q4-ours cur0 0.49s 20 tok
+PROGRESS 25/92 prem1b-q4-ours cur0 0.86s 39 tok
+PROGRESS 50/92 prem1b-q4-ours cur0 1.68s 81 tok
+PROGRESS 75/92 prem1b-q4-ours cur0 1.03s 48 tok
+PROGRESS 92/92 prem1b-q4-ours cur0 2.03s 99 tok
+2026-10-17T09:28:22-06:00 run prem1b-q4-ours cur0 end rc=0
+2026-10-17T09:28:22-06:00 run prem1b-q4-ours nycsim start
+prem1b-q4-ours: 898 to do, 0 already done
+PROGRESS 1/898 prem1b-q4-ours nycsim 2.50s 105 tok
+PROGRESS 25/898 prem1b-q4-ours nycsim 3.69s 162 tok
+PROGRESS 50/898 prem1b-q4-ours nycsim 3.07s 132 tok
+PROGRESS 75/898 prem1b-q4-ours nycsim 1.96s 82 tok
+PROGRESS 100/898 prem1b-q4-ours nycsim 1.37s 57 tok
+PROGRESS 125/898 prem1b-q4-ours nycsim 1.13s 45 tok
+PROGRESS 150/898 prem1b-q4-ours nycsim 2.39s 99 tok
+PROGRESS 175/898 prem1b-q4-ours nycsim 2.33s 96 tok
+PROGRESS 200/898 prem1b-q4-ours nycsim 2.08s 87 tok
+PROGRESS 225/898 prem1b-q4-ours nycsim 1.43s 58 tok
+PROGRESS 250/898 prem1b-q4-ours nycsim 2.20s 90 tok
+PROGRESS 275/898 prem1b-q4-ours nycsim 2.13s 87 tok
+PROGRESS 300/898 prem1b-q4-ours nycsim 2.23s 94 tok
+PROGRESS 325/898 prem1b-q4-ours nycsim 0.78s 34 tok
+PROGRESS 350/898 prem1b-q4-ours nycsim 2.19s 89 tok
+PROGRESS 375/898 prem1b-q4-ours nycsim 2.55s 110 tok
+PROGRESS 400/898 prem1b-q4-ours nycsim 2.06s 86 tok
+PROGRESS 425/898 prem1b-q4-ours nycsim 1.57s 65 tok
+PROGRESS 450/898 prem1b-q4-ours nycsim 1.45s 59 tok
+PROGRESS 475/898 prem1b-q4-ours nycsim 1.57s 63 tok
+PROGRESS 500/898 prem1b-q4-ours nycsim 2.13s 93 tok
+PROGRESS 525/898 prem1b-q4-ours nycsim 1.22s 42 tok
+PROGRESS 550/898 prem1b-q4-ours nycsim 2.21s 95 tok
+PROGRESS 575/898 prem1b-q4-ours nycsim 1.26s 58 tok
+PROGRESS 600/898 prem1b-q4-ours nycsim 1.68s 70 tok
+PROGRESS 625/898 prem1b-q4-ours nycsim 2.07s 87 tok
+PROGRESS 650/898 prem1b-q4-ours nycsim 1.23s 50 tok
+PROGRESS 675/898 prem1b-q4-ours nycsim 0.84s 37 tok
+PROGRESS 700/898 prem1b-q4-ours nycsim 1.26s 49 tok
+PROGRESS 725/898 prem1b-q4-ours nycsim 2.15s 91 tok
+PROGRESS 750/898 prem1b-q4-ours nycsim 2.34s 97 tok
+PROGRESS 775/898 prem1b-q4-ours nycsim 1.22s 51 tok
+PROGRESS 800/898 prem1b-q4-ours nycsim 2.43s 101 tok
+PROGRESS 825/898 prem1b-q4-ours nycsim 1.84s 76 tok
+PROGRESS 850/898 prem1b-q4-ours nycsim 0.75s 27 tok
+PROGRESS 875/898 prem1b-q4-ours nycsim 2.33s 96 tok
+PROGRESS 898/898 prem1b-q4-ours nycsim 2.33s 97 tok
+2026-10-17T09:57:00-06:00 run prem1b-q4-ours nycsim end rc=0
+2026-10-17T09:57:00-06:00 run prem1b-q4-ours cursim start
+prem1b-q4-ours: 92 to do, 0 already done
+PROGRESS 1/92 prem1b-q4-ours cursim 0.77s 20 tok
+PROGRESS 25/92 prem1b-q4-ours cursim 1.25s 44 tok
+PROGRESS 50/92 prem1b-q4-ours cursim 1.47s 54 tok
+PROGRESS 75/92 prem1b-q4-ours cursim 1.88s 74 tok
+PROGRESS 92/92 prem1b-q4-ours cursim 2.49s 104 tok
+2026-10-17T09:59:06-06:00 run prem1b-q4-ours cursim end rc=0
+2026-10-17T09:59:06-06:00 run prem1b-q4-ours nycfix start
+prem1b-q4-ours: 449 to do, 0 already done
+PROGRESS 1/449 prem1b-q4-ours nycfix 3.28s 145 tok
+PROGRESS 25/449 prem1b-q4-ours nycfix 2.64s 124 tok
+PROGRESS 50/449 prem1b-q4-ours nycfix 2.01s 93 tok
+PROGRESS 75/449 prem1b-q4-ours nycfix 1.86s 86 tok
+PROGRESS 100/449 prem1b-q4-ours nycfix 1.24s 56 tok
+PROGRESS 125/449 prem1b-q4-ours nycfix 1.29s 58 tok
+PROGRESS 150/449 prem1b-q4-ours nycfix 1.56s 71 tok
+PROGRESS 175/449 prem1b-q4-ours nycfix 1.87s 86 tok
+PROGRESS 200/449 prem1b-q4-ours nycfix 1.46s 66 tok
+PROGRESS 225/449 prem1b-q4-ours nycfix 0.73s 30 tok
+PROGRESS 250/449 prem1b-q4-ours nycfix 2.09s 97 tok
+PROGRESS 275/449 prem1b-q4-ours nycfix 1.69s 78 tok
+PROGRESS 300/449 prem1b-q4-ours nycfix 0.48s 19 tok
+PROGRESS 325/449 prem1b-q4-ours nycfix 8.05s 384 tok
+PROGRESS 350/449 prem1b-q4-ours nycfix 0.99s 44 tok
+PROGRESS 375/449 prem1b-q4-ours nycfix 2.00s 93 tok
+PROGRESS 400/449 prem1b-q4-ours nycfix 1.80s 83 tok
+PROGRESS 425/449 prem1b-q4-ours nycfix 1.56s 72 tok
+PROGRESS 449/449 prem1b-q4-ours nycfix 1.17s 53 tok
+2026-10-17T10:12:50-06:00 run prem1b-q4-ours nycfix end rc=0
+2026-10-17T10:12:50-06:00 run prem1b-q4-ours curfix start
+prem1b-q4-ours: 92 to do, 0 already done
+PROGRESS 1/92 prem1b-q4-ours curfix 0.78s 24 tok
+PROGRESS 25/92 prem1b-q4-ours curfix 1.11s 50 tok
+PROGRESS 50/92 prem1b-q4-ours curfix 1.28s 58 tok
+PROGRESS 75/92 prem1b-q4-ours curfix 1.18s 53 tok
+PROGRESS 92/92 prem1b-q4-ours curfix 1.51s 69 tok
+2026-10-17T10:14:34-06:00 run prem1b-q4-ours curfix end rc=0
+2026-10-17T10:14:34-06:00 run prem1b-q4-ours spider0 start
+prem1b-q4-ours: 1034 to do, 0 already done
+PROGRESS 1/1034 prem1b-q4-ours spider0 0.54s 8 tok
+PROGRESS 25/1034 prem1b-q4-ours spider0 1.41s 69 tok
+PROGRESS 50/1034 prem1b-q4-ours spider0 0.43s 18 tok
+PROGRESS 75/1034 prem1b-q4-ours spider0 0.45s 19 tok
+PROGRESS 100/1034 prem1b-q4-ours spider0 1.72s 84 tok
+PROGRESS 125/1034 prem1b-q4-ours spider0 1.17s 56 tok
+PROGRESS 150/1034 prem1b-q4-ours spider0 1.21s 58 tok
+PROGRESS 175/1034 prem1b-q4-ours spider0 0.54s 24 tok
+PROGRESS 200/1034 prem1b-q4-ours spider0 0.38s 15 tok
+PROGRESS 225/1034 prem1b-q4-ours spider0 1.04s 50 tok
+PROGRESS 250/1034 prem1b-q4-ours spider0 0.40s 16 tok
+PROGRESS 275/1034 prem1b-q4-ours spider0 0.42s 17 tok
+PROGRESS 300/1034 prem1b-q4-ours spider0 0.42s 17 tok
+PROGRESS 325/1034 prem1b-q4-ours spider0 0.51s 22 tok
+PROGRESS 350/1034 prem1b-q4-ours spider0 0.54s 23 tok
+PROGRESS 375/1034 prem1b-q4-ours spider0 1.27s 62 tok
+PROGRESS 400/1034 prem1b-q4-ours spider0 1.35s 66 tok
+PROGRESS 425/1034 prem1b-q4-ours spider0 0.79s 37 tok
+PROGRESS 450/1034 prem1b-q4-ours spider0 0.61s 26 tok
+PROGRESS 475/1034 prem1b-q4-ours spider0 0.42s 17 tok
+PROGRESS 500/1034 prem1b-q4-ours spider0 1.28s 62 tok
+PROGRESS 525/1034 prem1b-q4-ours spider0 0.37s 13 tok
+PROGRESS 550/1034 prem1b-q4-ours spider0 2.45s 111 tok
+PROGRESS 575/1034 prem1b-q4-ours spider0 1.37s 60 tok
+PROGRESS 600/1034 prem1b-q4-ours spider0 0.42s 17 tok
+PROGRESS 625/1034 prem1b-q4-ours spider0 1.05s 50 tok
+PROGRESS 650/1034 prem1b-q4-ours spider0 0.40s 17 tok
+PROGRESS 675/1034 prem1b-q4-ours spider0 0.37s 15 tok
+PROGRESS 700/1034 prem1b-q4-ours spider0 1.46s 71 tok
+PROGRESS 725/1034 prem1b-q4-ours spider0 0.62s 27 tok
+PROGRESS 750/1034 prem1b-q4-ours spider0 1.29s 61 tok
+PROGRESS 775/1034 prem1b-q4-ours spider0 0.76s 34 tok
+PROGRESS 800/1034 prem1b-q4-ours spider0 0.99s 45 tok
+PROGRESS 825/1034 prem1b-q4-ours spider0 0.28s 10 tok
+PROGRESS 850/1034 prem1b-q4-ours spider0 0.61s 27 tok
+PROGRESS 875/1034 prem1b-q4-ours spider0 0.45s 19 tok
+PROGRESS 900/1034 prem1b-q4-ours spider0 0.49s 21 tok
+PROGRESS 925/1034 prem1b-q4-ours spider0 0.99s 44 tok
+PROGRESS 950/1034 prem1b-q4-ours spider0 1.43s 66 tok
+PROGRESS 975/1034 prem1b-q4-ours spider0 0.53s 22 tok
+PROGRESS 1000/1034 prem1b-q4-ours spider0 1.86s 87 tok
+PROGRESS 1025/1034 prem1b-q4-ours spider0 1.03s 50 tok
+PROGRESS 1034/1034 prem1b-q4-ours spider0 1.78s 84 tok
+2026-10-17T10:29:07-06:00 run prem1b-q4-ours spider0 end rc=0
+2026-10-17T10:29:07-06:00 run prem1b-q4-ours bird0 start
+prem1b-q4-ours: 500 to do, 0 already done
+PROGRESS 1/500 prem1b-q4-ours bird0 1.00s 33 tok
+PROGRESS 25/500 prem1b-q4-ours bird0 1.88s 93 tok
+PROGRESS 50/500 prem1b-q4-ours bird0 1.23s 56 tok
+PROGRESS 75/500 prem1b-q4-ours bird0 1.21s 53 tok
+PROGRESS 100/500 prem1b-q4-ours bird0 2.21s 102 tok
+PROGRESS 125/500 prem1b-q4-ours bird0 1.57s 71 tok
+PROGRESS 150/500 prem1b-q4-ours bird0 2.21s 83 tok
+PROGRESS 175/500 prem1b-q4-ours bird0 1.52s 57 tok
+PROGRESS 200/500 prem1b-q4-ours bird0 1.98s 85 tok
+PROGRESS 225/500 prem1b-q4-ours bird0 3.50s 154 tok
+PROGRESS 250/500 prem1b-q4-ours bird0 1.23s 56 tok
+PROGRESS 275/500 prem1b-q4-ours bird0 2.12s 99 tok
+PROGRESS 300/500 prem1b-q4-ours bird0 0.66s 25 tok
+PROGRESS 325/500 prem1b-q4-ours bird0 1.73s 75 tok
+PROGRESS 350/500 prem1b-q4-ours bird0 1.36s 57 tok
+PROGRESS 375/500 prem1b-q4-ours bird0 1.14s 47 tok
+PROGRESS 400/500 prem1b-q4-ours bird0 1.33s 62 tok
+PROGRESS 425/500 prem1b-q4-ours bird0 1.69s 81 tok
+PROGRESS 450/500 prem1b-q4-ours bird0 2.70s 120 tok
+PROGRESS 475/500 prem1b-q4-ours bird0 1.63s 74 tok
+PROGRESS 500/500 prem1b-q4-ours bird0 1.77s 81 tok
+2026-10-17T10:43:29-06:00 run prem1b-q4-ours bird0 end rc=0
+2026-10-17T10:43:29-06:00 run prem1b-q4-ours birdarc start
+prem1b-q4-ours: 129 to do, 0 already done
+PROGRESS 1/129 prem1b-q4-ours birdarc 1.56s 53 tok
+PROGRESS 25/129 prem1b-q4-ours birdarc 1.97s 91 tok
+PROGRESS 50/129 prem1b-q4-ours birdarc 2.25s 97 tok
+PROGRESS 75/129 prem1b-q4-ours birdarc 1.89s 82 tok
+PROGRESS 100/129 prem1b-q4-ours birdarc 2.07s 99 tok
+PROGRESS 125/129 prem1b-q4-ours birdarc 2.58s 119 tok
+PROGRESS 129/129 prem1b-q4-ours birdarc 1.88s 87 tok
+2026-10-17T10:47:45-06:00 run prem1b-q4-ours birdarc end rc=0
+[?25l[?2026h[?25l[1G[K[?25h[?2026l[2K[1G[?25h2026-10-17T10:47:48-06:00 model prem1b-q4-ours end swap=108MB delta=106MB
+2026-10-17T10:47:48-06:00 FLAG swap delta 106MB during prem1b-q4-ours (accuracy run kept, flagged)
+2026-10-17T10:47:49-06:00 swapflush before=108MB after=0MB
+PROGRESS 0/1200 cooldown tj_mC=70031 target_mC=54437
+PROGRESS 60/1200 cooldown tj_mC=62156 target_mC=54437
+PROGRESS 120/1200 cooldown tj_mC=58750 target_mC=54437
+PROGRESS 180/1200 cooldown tj_mC=57312 target_mC=54437
+PROGRESS 240/1200 cooldown tj_mC=56437 target_mC=54437
+PROGRESS 300/1200 cooldown tj_mC=56062 target_mC=54437
+PROGRESS 360/1200 cooldown tj_mC=56031 target_mC=54437
+PROGRESS 420/1200 cooldown tj_mC=55625 target_mC=54437
+PROGRESS 480/1200 cooldown tj_mC=55531 target_mC=54437
+PROGRESS 540/1200 cooldown tj_mC=55218 target_mC=54437
+PROGRESS 600/1200 cooldown tj_mC=55250 target_mC=54437
+PROGRESS 660/1200 cooldown tj_mC=54750 target_mC=54437
+2026-10-17T10:59:34-06:00 cooldown: 2026-10-17T10:59:34-06:00 cooldown ok elapsed=705s tj_mC=54437 target_mC=54437
+PROGRESS 1/6 B3 models (done prem1b-q4-ours)
+2026-10-17T10:59:34-06:00 BLOCK B3 model qc15-q4-ollama
+2026-10-17T10:59:40-06:00 sha ok qc15-q4-ollama
+2026-10-17T10:59:40-06:00 model qc15-q4-ollama start swap=0MB
+qc15-q4-ollama: 5 to do, 0 already done
+PROGRESS 1/5 qc15-q4-ollama warmup 4.69s 55 tok
+PROGRESS 5/5 qc15-q4-ollama warmup 2.84s 103 tok
+NAME                     ID              SIZE      PROCESSOR    CONTEXT    UNTIL               
+qc15-q4-ollama:latest    d7372fd82851    1.2 GB    100% GPU     4096       29 minutes from now    
+2026-10-17T10:59:52-06:00 100% GPU qc15-q4-ollama
+2026-10-17T10:59:52-06:00 loaded_idle start qc15-q4-ollama
+2026-10-17T11:01:52-06:00 loaded_idle end qc15-q4-ollama
+2026-10-17T11:01:52-06:00 run qc15-q4-ollama nyc0 start
+qc15-q4-ollama: 449 to do, 0 already done
+PROGRESS 1/449 qc15-q4-ollama nyc0 0.95s 25 tok
+PROGRESS 25/449 qc15-q4-ollama nyc0 2.15s 75 tok
+PROGRESS 50/449 qc15-q4-ollama nyc0 2.14s 74 tok
+PROGRESS 75/449 qc15-q4-ollama nyc0 1.03s 27 tok
+PROGRESS 100/449 qc15-q4-ollama nyc0 1.74s 58 tok
+PROGRESS 125/449 qc15-q4-ollama nyc0 2.13s 74 tok
+PROGRESS 150/449 qc15-q4-ollama nyc0 2.71s 98 tok
+PROGRESS 175/449 qc15-q4-ollama nyc0 1.02s 27 tok
+PROGRESS 200/449 qc15-q4-ollama nyc0 0.77s 18 tok
+PROGRESS 225/449 qc15-q4-ollama nyc0 1.87s 63 tok
+PROGRESS 250/449 qc15-q4-ollama nyc0 2.28s 80 tok
+PROGRESS 275/449 qc15-q4-ollama nyc0 0.93s 24 tok
+PROGRESS 300/449 qc15-q4-ollama nyc0 1.18s 35 tok
+PROGRESS 325/449 qc15-q4-ollama nyc0 2.40s 85 tok
+PROGRESS 350/449 qc15-q4-ollama nyc0 2.59s 93 tok
+PROGRESS 375/449 qc15-q4-ollama nyc0 1.84s 62 tok
+PROGRESS 400/449 qc15-q4-ollama nyc0 1.77s 59 tok
+PROGRESS 425/449 qc15-q4-ollama nyc0 1.28s 39 tok
+PROGRESS 449/449 qc15-q4-ollama nyc0 1.62s 53 tok
+2026-10-17T11:15:36-06:00 run qc15-q4-ollama nyc0 end rc=0
+2026-10-17T11:15:36-06:00 run qc15-q4-ollama cur0 start
+qc15-q4-ollama: 92 to do, 0 already done
+PROGRESS 1/92 qc15-q4-ollama cur0 1.07s 30 tok
+PROGRESS 25/92 qc15-q4-ollama cur0 1.07s 30 tok
+PROGRESS 50/92 qc15-q4-ollama cur0 1.43s 45 tok
+PROGRESS 75/92 qc15-q4-ollama cur0 2.04s 70 tok
+PROGRESS 92/92 qc15-q4-ollama cur0 2.67s 96 tok
+2026-10-17T11:17:38-06:00 run qc15-q4-ollama cur0 end rc=0
+2026-10-17T11:17:38-06:00 run qc15-q4-ollama nycsim start
+qc15-q4-ollama: 898 to do, 0 already done
+PROGRESS 1/898 qc15-q4-ollama nycsim 2.15s 67 tok
+PROGRESS 25/898 qc15-q4-ollama nycsim 1.39s 36 tok
+PROGRESS 50/898 qc15-q4-ollama nycsim 2.29s 73 tok
+PROGRESS 75/898 qc15-q4-ollama nycsim 1.93s 59 tok
+PROGRESS 100/898 qc15-q4-ollama nycsim 0.92s 20 tok
+PROGRESS 125/898 qc15-q4-ollama nycsim 1.23s 33 tok
+PROGRESS 150/898 qc15-q4-ollama nycsim 2.33s 74 tok
+PROGRESS 175/898 qc15-q4-ollama nycsim 2.22s 70 tok
+PROGRESS 200/898 qc15-q4-ollama nycsim 2.03s 63 tok
+PROGRESS 225/898 qc15-q4-ollama nycsim 1.50s 43 tok
+PROGRESS 250/898 qc15-q4-ollama nycsim 2.10s 65 tok
+PROGRESS 275/898 qc15-q4-ollama nycsim 2.07s 64 tok
+PROGRESS 300/898 qc15-q4-ollama nycsim 2.25s 72 tok
+PROGRESS 325/898 qc15-q4-ollama nycsim 1.23s 37 tok
+PROGRESS 350/898 qc15-q4-ollama nycsim 2.17s 67 tok
+PROGRESS 375/898 qc15-q4-ollama nycsim 2.46s 82 tok
+PROGRESS 400/898 qc15-q4-ollama nycsim 2.09s 65 tok
+PROGRESS 425/898 qc15-q4-ollama nycsim 1.73s 52 tok
+PROGRESS 450/898 qc15-q4-ollama nycsim 1.55s 45 tok
+PROGRESS 475/898 qc15-q4-ollama nycsim 1.59s 45 tok
+PROGRESS 500/898 qc15-q4-ollama nycsim 1.74s 53 tok
+PROGRESS 525/898 qc15-q4-ollama nycsim 2.19s 68 tok
+PROGRESS 550/898 qc15-q4-ollama nycsim 2.09s 67 tok
+PROGRESS 575/898 qc15-q4-ollama nycsim 1.37s 43 tok
+PROGRESS 600/898 qc15-q4-ollama nycsim 1.67s 50 tok
+PROGRESS 625/898 qc15-q4-ollama nycsim 2.05s 64 tok
+PROGRESS 650/898 qc15-q4-ollama nycsim 1.31s 36 tok
+PROGRESS 675/898 qc15-q4-ollama nycsim 1.05s 30 tok
+PROGRESS 700/898 qc15-q4-ollama nycsim 9.89s 384 tok
+PROGRESS 725/898 qc15-q4-ollama nycsim 2.07s 65 tok
+PROGRESS 750/898 qc15-q4-ollama nycsim 2.36s 76 tok
+PROGRESS 775/898 qc15-q4-ollama nycsim 1.34s 38 tok
+PROGRESS 800/898 qc15-q4-ollama nycsim 2.24s 71 tok
+PROGRESS 825/898 qc15-q4-ollama nycsim 1.83s 55 tok
+PROGRESS 850/898 qc15-q4-ollama nycsim 0.98s 23 tok
+PROGRESS 875/898 qc15-q4-ollama nycsim 2.22s 70 tok
+PROGRESS 898/898 qc15-q4-ollama nycsim 2.17s 68 tok
+2026-10-17T11:46:18-06:00 run qc15-q4-ollama nycsim end rc=0
+2026-10-17T11:46:18-06:00 run qc15-q4-ollama cursim start
+qc15-q4-ollama: 92 to do, 0 already done
+PROGRESS 1/92 qc15-q4-ollama cursim 1.24s 30 tok
+PROGRESS 25/92 qc15-q4-ollama cursim 1.58s 44 tok
+PROGRESS 50/92 qc15-q4-ollama cursim 1.13s 25 tok
+PROGRESS 75/92 qc15-q4-ollama cursim 1.92s 57 tok
+PROGRESS 92/92 qc15-q4-ollama cursim 1.83s 54 tok
+2026-10-17T11:48:40-06:00 run qc15-q4-ollama cursim end rc=0
+2026-10-17T11:48:40-06:00 run qc15-q4-ollama nycfix start
+qc15-q4-ollama: 449 to do, 0 already done
+PROGRESS 1/449 qc15-q4-ollama nycfix 2.31s 74 tok
+PROGRESS 25/449 qc15-q4-ollama nycfix 1.18s 35 tok
+PROGRESS 50/449 qc15-q4-ollama nycfix 2.21s 77 tok
+PROGRESS 75/449 qc15-q4-ollama nycfix 1.22s 36 tok
+PROGRESS 100/449 qc15-q4-ollama nycfix 1.41s 44 tok
+PROGRESS 125/449 qc15-q4-ollama nycfix 1.38s 43 tok
+PROGRESS 150/449 qc15-q4-ollama nycfix 1.58s 51 tok
+PROGRESS 175/449 qc15-q4-ollama nycfix 1.90s 64 tok
+PROGRESS 200/449 qc15-q4-ollama nycfix 1.46s 46 tok
+PROGRESS 225/449 qc15-q4-ollama nycfix 0.93s 24 tok
+PROGRESS 250/449 qc15-q4-ollama nycfix 1.76s 58 tok
+PROGRESS 275/449 qc15-q4-ollama nycfix 1.74s 56 tok
+PROGRESS 300/449 qc15-q4-ollama nycfix 0.76s 18 tok
+PROGRESS 325/449 qc15-q4-ollama nycfix 1.49s 47 tok
+PROGRESS 350/449 qc15-q4-ollama nycfix 1.17s 34 tok
+PROGRESS 375/449 qc15-q4-ollama nycfix 1.98s 67 tok
+PROGRESS 400/449 qc15-q4-ollama nycfix 1.83s 61 tok
+PROGRESS 425/449 qc15-q4-ollama nycfix 1.87s 63 tok
+PROGRESS 449/449 qc15-q4-ollama nycfix 1.31s 40 tok
+2026-10-17T12:01:34-06:00 run qc15-q4-ollama nycfix end rc=0
+2026-10-17T12:01:34-06:00 run qc15-q4-ollama curfix start
+qc15-q4-ollama: 92 to do, 0 already done
+PROGRESS 1/92 qc15-q4-ollama curfix 1.24s 30 tok
+PROGRESS 25/92 qc15-q4-ollama curfix 0.72s 16 tok
+PROGRESS 50/92 qc15-q4-ollama curfix 1.50s 48 tok
+PROGRESS 75/92 qc15-q4-ollama curfix 1.71s 56 tok
+PROGRESS 92/92 qc15-q4-ollama curfix 1.66s 54 tok
+2026-10-17T12:03:27-06:00 run qc15-q4-ollama curfix end rc=0
+2026-10-17T12:03:27-06:00 run qc15-q4-ollama spider0 start
+qc15-q4-ollama: 1034 to do, 0 already done
+PROGRESS 1/1034 qc15-q4-ollama spider0 0.61s 6 tok
+PROGRESS 25/1034 qc15-q4-ollama spider0 1.74s 58 tok
+PROGRESS 50/1034 qc15-q4-ollama spider0 0.67s 14 tok
+PROGRESS 75/1034 qc15-q4-ollama spider0 0.66s 14 tok
+PROGRESS 100/1034 qc15-q4-ollama spider0 1.25s 38 tok
+PROGRESS 125/1034 qc15-q4-ollama spider0 1.13s 33 tok
+PROGRESS 150/1034 qc15-q4-ollama spider0 1.54s 50 tok
+PROGRESS 175/1034 qc15-q4-ollama spider0 1.15s 34 tok
+PROGRESS 200/1034 qc15-q4-ollama spider0 0.66s 14 tok
+PROGRESS 225/1034 qc15-q4-ollama spider0 0.71s 16 tok
+PROGRESS 250/1034 qc15-q4-ollama spider0 0.67s 14 tok
+PROGRESS 275/1034 qc15-q4-ollama spider0 0.72s 16 tok
+PROGRESS 300/1034 qc15-q4-ollama spider0 0.62s 12 tok
+PROGRESS 325/1034 qc15-q4-ollama spider0 0.76s 18 tok
+PROGRESS 350/1034 qc15-q4-ollama spider0 1.37s 43 tok
+PROGRESS 375/1034 qc15-q4-ollama spider0 1.59s 52 tok
+PROGRESS 400/1034 qc15-q4-ollama spider0 1.12s 33 tok
+PROGRESS 425/1034 qc15-q4-ollama spider0 0.71s 16 tok
+PROGRESS 450/1034 qc15-q4-ollama spider0 0.84s 21 tok
+PROGRESS 475/1034 qc15-q4-ollama spider0 0.64s 13 tok
+PROGRESS 500/1034 qc15-q4-ollama spider0 1.18s 35 tok
+PROGRESS 525/1034 qc15-q4-ollama spider0 0.55s 9 tok
+PROGRESS 550/1034 qc15-q4-ollama spider0 1.75s 58 tok
+PROGRESS 575/1034 qc15-q4-ollama spider0 1.65s 54 tok
+PROGRESS 600/1034 qc15-q4-ollama spider0 0.66s 14 tok
+PROGRESS 625/1034 qc15-q4-ollama spider0 1.32s 41 tok
+PROGRESS 650/1034 qc15-q4-ollama spider0 0.61s 12 tok
+PROGRESS 675/1034 qc15-q4-ollama spider0 0.63s 13 tok
+PROGRESS 700/1034 qc15-q4-ollama spider0 2.08s 72 tok
+PROGRESS 725/1034 qc15-q4-ollama spider0 1.52s 49 tok
+PROGRESS 750/1034 qc15-q4-ollama spider0 1.35s 42 tok
+PROGRESS 775/1034 qc15-q4-ollama spider0 1.65s 54 tok
+PROGRESS 800/1034 qc15-q4-ollama spider0 2.44s 86 tok
+PROGRESS 825/1034 qc15-q4-ollama spider0 0.54s 9 tok
+PROGRESS 850/1034 qc15-q4-ollama spider0 0.68s 15 tok
+PROGRESS 875/1034 qc15-q4-ollama spider0 0.76s 18 tok
+PROGRESS 900/1034 qc15-q4-ollama spider0 1.36s 43 tok
+PROGRESS 925/1034 qc15-q4-ollama spider0 1.33s 41 tok
+PROGRESS 950/1034 qc15-q4-ollama spider0 1.37s 43 tok
+PROGRESS 975/1034 qc15-q4-ollama spider0 0.74s 17 tok
+PROGRESS 1000/1034 qc15-q4-ollama spider0 1.23s 37 tok
+PROGRESS 1025/1034 qc15-q4-ollama spider0 1.32s 41 tok
+PROGRESS 1034/1034 qc15-q4-ollama spider0 1.62s 53 tok
+2026-10-17T12:21:56-06:00 run qc15-q4-ollama spider0 end rc=0
+2026-10-17T12:21:56-06:00 run qc15-q4-ollama bird0 start
+qc15-q4-ollama: 500 to do, 0 already done
+PROGRESS 1/500 qc15-q4-ollama bird0 1.56s 44 tok
+PROGRESS 25/500 qc15-q4-ollama bird0 2.26s 79 tok
+PROGRESS 50/500 qc15-q4-ollama bird0 1.49s 47 tok
+PROGRESS 75/500 qc15-q4-ollama bird0 1.52s 47 tok
+PROGRESS 100/500 qc15-q4-ollama bird0 2.38s 82 tok
+PROGRESS 125/500 qc15-q4-ollama bird0 1.82s 60 tok
+PROGRESS 150/500 qc15-q4-ollama bird0 2.29s 76 tok
+PROGRESS 175/500 qc15-q4-ollama bird0 0.86s 20 tok
+PROGRESS 200/500 qc15-q4-ollama bird0 1.67s 53 tok
+PROGRESS 225/500 qc15-q4-ollama bird0 1.75s 56 tok
+PROGRESS 250/500 qc15-q4-ollama bird0 0.88s 22 tok
+PROGRESS 275/500 qc15-q4-ollama bird0 1.85s 61 tok
+PROGRESS 300/500 qc15-q4-ollama bird0 0.93s 23 tok
+PROGRESS 325/500 qc15-q4-ollama bird0 1.05s 28 tok
+PROGRESS 350/500 qc15-q4-ollama bird0 1.55s 48 tok
+PROGRESS 375/500 qc15-q4-ollama bird0 1.59s 50 tok
+PROGRESS 400/500 qc15-q4-ollama bird0 0.97s 26 tok
+PROGRESS 425/500 qc15-q4-ollama bird0 1.96s 67 tok
+PROGRESS 450/500 qc15-q4-ollama bird0 2.61s 91 tok
+PROGRESS 475/500 qc15-q4-ollama bird0 1.72s 56 tok
+PROGRESS 500/500 qc15-q4-ollama bird0 1.33s 40 tok
+2026-10-17T12:35:49-06:00 run qc15-q4-ollama bird0 end rc=0
+2026-10-17T12:35:49-06:00 run qc15-q4-ollama birdarc start
+qc15-q4-ollama: 129 to do, 0 already done
+PROGRESS 1/129 qc15-q4-ollama birdarc 1.69s 54 tok
+PROGRESS 25/129 qc15-q4-ollama birdarc 2.39s 83 tok
+PROGRESS 50/129 qc15-q4-ollama birdarc 2.41s 83 tok
+PROGRESS 75/129 qc15-q4-ollama birdarc 1.48s 45 tok
+PROGRESS 100/129 qc15-q4-ollama birdarc 1.63s 53 tok
+PROGRESS 125/129 qc15-q4-ollama birdarc 2.39s 83 tok
+PROGRESS 129/129 qc15-q4-ollama birdarc 1.47s 46 tok
+2026-10-17T12:39:45-06:00 run qc15-q4-ollama birdarc end rc=0
+[?25l[?2026h[?25l[1G[K[?25h[?2026l[2K[1G[?25h2026-10-17T12:39:49-06:00 model qc15-q4-ollama end swap=0MB delta=0MB
+2026-10-17T12:39:49-06:00 swapflush before=0MB after=0MB
+PROGRESS 0/1200 cooldown tj_mC=66343 target_mC=54437
+PROGRESS 60/1200 cooldown tj_mC=60125 target_mC=54437
+PROGRESS 120/1200 cooldown tj_mC=57781 target_mC=54437
+PROGRESS 180/1200 cooldown tj_mC=56218 target_mC=54437
+PROGRESS 240/1200 cooldown tj_mC=55718 target_mC=54437
+PROGRESS 300/1200 cooldown tj_mC=55406 target_mC=54437
+PROGRESS 360/1200 cooldown tj_mC=55218 target_mC=54437
+PROGRESS 420/1200 cooldown tj_mC=55218 target_mC=54437
+PROGRESS 480/1200 cooldown tj_mC=55031 target_mC=54437
+PROGRESS 540/1200 cooldown tj_mC=54968 target_mC=54437
+PROGRESS 600/1200 cooldown tj_mC=54531 target_mC=54437
+2026-10-17T12:50:19-06:00 cooldown: 2026-10-17T12:50:19-06:00 cooldown ok elapsed=630s tj_mC=54343 target_mC=54437
+PROGRESS 2/6 B3 models (done qc15-q4-ollama)
+2026-10-17T12:50:19-06:00 BLOCK B3 model qc3-q4-ollama
+2026-10-17T12:50:30-06:00 sha ok qc3-q4-ollama
+2026-10-17T12:50:30-06:00 model qc3-q4-ollama start swap=0MB
+qc3-q4-ollama: 5 to do, 0 already done
+PROGRESS 1/5 qc3-q4-ollama warmup 8.44s 99 tok
+PROGRESS 5/5 qc3-q4-ollama warmup 3.59s 76 tok
+NAME                    ID              SIZE      PROCESSOR    CONTEXT    UNTIL               
+qc3-q4-ollama:latest    f72c60cabf62    2.2 GB    100% GPU     4096       29 minutes from now    
+2026-10-17T12:50:51-06:00 100% GPU qc3-q4-ollama
+2026-10-17T12:50:51-06:00 loaded_idle start qc3-q4-ollama
+2026-10-17T12:52:51-06:00 loaded_idle end qc3-q4-ollama
+2026-10-17T12:52:51-06:00 run qc3-q4-ollama nyc0 start
+qc3-q4-ollama: 449 to do, 0 already done
+PROGRESS 1/449 qc3-q4-ollama nyc0 2.57s 52 tok
+PROGRESS 25/449 qc3-q4-ollama nyc0 4.22s 91 tok
+PROGRESS 50/449 qc3-q4-ollama nyc0 2.91s 60 tok
+PROGRESS 75/449 qc3-q4-ollama nyc0 2.06s 39 tok
+PROGRESS 100/449 qc3-q4-ollama nyc0 2.74s 56 tok
+PROGRESS 125/449 qc3-q4-ollama nyc0 2.74s 56 tok
+PROGRESS 150/449 qc3-q4-ollama nyc0 4.82s 105 tok
+PROGRESS 175/449 qc3-q4-ollama nyc0 2.00s 38 tok
+PROGRESS 200/449 qc3-q4-ollama nyc0 1.12s 18 tok
+PROGRESS 225/449 qc3-q4-ollama nyc0 2.31s 46 tok
+PROGRESS 250/449 qc3-q4-ollama nyc0 4.58s 99 tok
+PROGRESS 275/449 qc3-q4-ollama nyc0 1.38s 24 tok
+PROGRESS 300/449 qc3-q4-ollama nyc0 1.63s 30 tok
+PROGRESS 325/449 qc3-q4-ollama nyc0 3.55s 75 tok
+PROGRESS 350/449 qc3-q4-ollama nyc0 3.32s 70 tok
+PROGRESS 375/449 qc3-q4-ollama nyc0 2.81s 58 tok
+PROGRESS 400/449 qc3-q4-ollama nyc0 1.79s 34 tok
+PROGRESS 425/449 qc3-q4-ollama nyc0 2.65s 54 tok
+PROGRESS 449/449 qc3-q4-ollama nyc0 3.81s 81 tok
+2026-10-17T13:14:39-06:00 run qc3-q4-ollama nyc0 end rc=0
+2026-10-17T13:14:39-06:00 run qc3-q4-ollama cur0 start
+qc3-q4-ollama: 92 to do, 0 already done
+PROGRESS 1/92 qc3-q4-ollama cur0 1.11s 18 tok
+PROGRESS 25/92 qc3-q4-ollama cur0 2.14s 42 tok
+PROGRESS 50/92 qc3-q4-ollama cur0 2.25s 45 tok
+PROGRESS 75/92 qc3-q4-ollama cur0 2.05s 40 tok
+PROGRESS 92/92 qc3-q4-ollama cur0 3.72s 79 tok
+2026-10-17T13:17:39-06:00 run qc3-q4-ollama cur0 end rc=0
+2026-10-17T13:17:39-06:00 run qc3-q4-ollama nycsim start
+qc3-q4-ollama: 898 to do, 0 already done
+PROGRESS 1/898 qc3-q4-ollama nycsim 3.89s 75 tok
+PROGRESS 25/898 qc3-q4-ollama nycsim 2.00s 31 tok
+PROGRESS 50/898 qc3-q4-ollama nycsim 4.36s 86 tok
+PROGRESS 75/898 qc3-q4-ollama nycsim 2.65s 47 tok
+PROGRESS 100/898 qc3-q4-ollama nycsim 2.46s 45 tok
+PROGRESS 125/898 qc3-q4-ollama nycsim 1.93s 33 tok
+PROGRESS 150/898 qc3-q4-ollama nycsim 3.88s 74 tok
+PROGRESS 175/898 qc3-q4-ollama nycsim 3.68s 70 tok
+PROGRESS 200/898 qc3-q4-ollama nycsim 3.34s 63 tok
+PROGRESS 225/898 qc3-q4-ollama nycsim 2.42s 43 tok
+PROGRESS 250/898 qc3-q4-ollama nycsim 3.59s 68 tok
+PROGRESS 275/898 qc3-q4-ollama nycsim 3.42s 64 tok
+PROGRESS 300/898 qc3-q4-ollama nycsim 3.72s 72 tok
+PROGRESS 325/898 qc3-q4-ollama nycsim 1.90s 37 tok
+PROGRESS 350/898 qc3-q4-ollama nycsim 3.58s 67 tok
+PROGRESS 375/898 qc3-q4-ollama nycsim 4.10s 82 tok
+PROGRESS 400/898 qc3-q4-ollama nycsim 3.45s 65 tok
+PROGRESS 425/898 qc3-q4-ollama nycsim 2.81s 52 tok
+PROGRESS 450/898 qc3-q4-ollama nycsim 2.50s 45 tok
+PROGRESS 475/898 qc3-q4-ollama nycsim 2.56s 45 tok
+PROGRESS 500/898 qc3-q4-ollama nycsim 2.96s 56 tok
+PROGRESS 525/898 qc3-q4-ollama nycsim 4.05s 78 tok
+PROGRESS 550/898 qc3-q4-ollama nycsim 3.46s 67 tok
+PROGRESS 575/898 qc3-q4-ollama nycsim 2.17s 43 tok
+PROGRESS 600/898 qc3-q4-ollama nycsim 2.72s 50 tok
+PROGRESS 625/898 qc3-q4-ollama nycsim 3.37s 64 tok
+PROGRESS 650/898 qc3-q4-ollama nycsim 2.08s 36 tok
+PROGRESS 675/898 qc3-q4-ollama nycsim 1.61s 30 tok
+PROGRESS 700/898 qc3-q4-ollama nycsim 2.13s 35 tok
+PROGRESS 725/898 qc3-q4-ollama nycsim 3.63s 70 tok
+PROGRESS 750/898 qc3-q4-ollama nycsim 3.67s 70 tok
+PROGRESS 775/898 qc3-q4-ollama nycsim 1.97s 34 tok
+PROGRESS 800/898 qc3-q4-ollama nycsim 3.72s 71 tok
+PROGRESS 825/898 qc3-q4-ollama nycsim 2.99s 55 tok
+PROGRESS 850/898 qc3-q4-ollama nycsim 1.50s 23 tok
+PROGRESS 875/898 qc3-q4-ollama nycsim 3.67s 70 tok
+PROGRESS 898/898 qc3-q4-ollama nycsim 3.58s 68 tok
+2026-10-17T14:03:37-06:00 run qc3-q4-ollama nycsim end rc=0
+2026-10-17T14:03:37-06:00 run qc3-q4-ollama cursim start
+qc3-q4-ollama: 92 to do, 0 already done
+PROGRESS 1/92 qc3-q4-ollama cursim 1.97s 30 tok
+PROGRESS 25/92 qc3-q4-ollama cursim 2.00s 31 tok
+PROGRESS 50/92 qc3-q4-ollama cursim 2.60s 45 tok
+PROGRESS 75/92 qc3-q4-ollama cursim 3.16s 57 tok
+PROGRESS 92/92 qc3-q4-ollama cursim 2.99s 54 tok
+2026-10-17T14:06:56-06:00 run qc3-q4-ollama cursim end rc=0
+2026-10-17T14:06:56-06:00 run qc3-q4-ollama nycfix start
+qc3-q4-ollama: 449 to do, 0 already done
+PROGRESS 1/449 qc3-q4-ollama nycfix 3.97s 77 tok
+PROGRESS 25/449 qc3-q4-ollama nycfix 3.73s 79 tok
+PROGRESS 50/449 qc3-q4-ollama nycfix 3.68s 78 tok
+PROGRESS 75/449 qc3-q4-ollama nycfix 2.19s 43 tok
+PROGRESS 100/449 qc3-q4-ollama nycfix 2.27s 45 tok
+PROGRESS 125/449 qc3-q4-ollama nycfix 2.18s 43 tok
+PROGRESS 150/449 qc3-q4-ollama nycfix 2.36s 47 tok
+PROGRESS 175/449 qc3-q4-ollama nycfix 3.08s 64 tok
+PROGRESS 200/449 qc3-q4-ollama nycfix 2.27s 45 tok
+PROGRESS 225/449 qc3-q4-ollama nycfix 1.77s 33 tok
+PROGRESS 250/449 qc3-q4-ollama nycfix 3.40s 71 tok
+PROGRESS 275/449 qc3-q4-ollama nycfix 2.84s 57 tok
+PROGRESS 300/449 qc3-q4-ollama nycfix 1.10s 18 tok
+PROGRESS 325/449 qc3-q4-ollama nycfix 2.80s 57 tok
+PROGRESS 350/449 qc3-q4-ollama nycfix 1.76s 33 tok
+PROGRESS 375/449 qc3-q4-ollama nycfix 3.23s 67 tok
+PROGRESS 400/449 qc3-q4-ollama nycfix 3.14s 65 tok
+PROGRESS 425/449 qc3-q4-ollama nycfix 3.03s 63 tok
+PROGRESS 449/449 qc3-q4-ollama nycfix 2.05s 40 tok
+2026-10-17T14:27:35-06:00 run qc3-q4-ollama nycfix end rc=0
+2026-10-17T14:27:35-06:00 run qc3-q4-ollama curfix start
+qc3-q4-ollama: 92 to do, 0 already done
+PROGRESS 1/92 qc3-q4-ollama curfix 1.44s 18 tok
+PROGRESS 25/92 qc3-q4-ollama curfix 1.67s 31 tok
+PROGRESS 50/92 qc3-q4-ollama curfix 2.26s 45 tok
+PROGRESS 75/92 qc3-q4-ollama curfix 2.18s 43 tok
+PROGRESS 92/92 qc3-q4-ollama curfix 2.62s 53 tok
+2026-10-17T14:30:23-06:00 run qc3-q4-ollama curfix end rc=0
+2026-10-17T14:30:23-06:00 run qc3-q4-ollama spider0 start
+qc3-q4-ollama: 1034 to do, 0 already done
+PROGRESS 1/1034 qc3-q4-ollama spider0 0.84s 6 tok
+PROGRESS 25/1034 qc3-q4-ollama spider0 3.03s 63 tok
+PROGRESS 50/1034 qc3-q4-ollama spider0 0.93s 14 tok
+PROGRESS 75/1034 qc3-q4-ollama spider0 0.92s 14 tok
+PROGRESS 100/1034 qc3-q4-ollama spider0 2.05s 40 tok
+PROGRESS 125/1034 qc3-q4-ollama spider0 2.21s 44 tok
+PROGRESS 150/1034 qc3-q4-ollama spider0 2.42s 49 tok
+PROGRESS 175/1034 qc3-q4-ollama spider0 1.77s 34 tok
+PROGRESS 200/1034 qc3-q4-ollama spider0 0.91s 14 tok
+PROGRESS 225/1034 qc3-q4-ollama spider0 1.26s 22 tok
+PROGRESS 250/1034 qc3-q4-ollama spider0 2.17s 43 tok
+PROGRESS 275/1034 qc3-q4-ollama spider0 0.94s 14 tok
+PROGRESS 300/1034 qc3-q4-ollama spider0 0.85s 12 tok
+PROGRESS 325/1034 qc3-q4-ollama spider0 1.10s 18 tok
+PROGRESS 350/1034 qc3-q4-ollama spider0 1.10s 18 tok
+PROGRESS 375/1034 qc3-q4-ollama spider0 2.30s 46 tok
+PROGRESS 400/1034 qc3-q4-ollama spider0 1.78s 34 tok
+PROGRESS 425/1034 qc3-q4-ollama spider0 1.10s 18 tok
+PROGRESS 450/1034 qc3-q4-ollama spider0 1.24s 21 tok
+PROGRESS 475/1034 qc3-q4-ollama spider0 0.88s 13 tok
+PROGRESS 500/1034 qc3-q4-ollama spider0 2.43s 49 tok
+PROGRESS 525/1034 qc3-q4-ollama spider0 0.71s 9 tok
+PROGRESS 550/1034 qc3-q4-ollama spider0 2.84s 58 tok
+PROGRESS 575/1034 qc3-q4-ollama spider0 2.87s 59 tok
+PROGRESS 600/1034 qc3-q4-ollama spider0 0.93s 14 tok
+PROGRESS 625/1034 qc3-q4-ollama spider0 2.08s 41 tok
+PROGRESS 650/1034 qc3-q4-ollama spider0 0.83s 12 tok
+PROGRESS 675/1034 qc3-q4-ollama spider0 0.87s 13 tok
+PROGRESS 700/1034 qc3-q4-ollama spider0 3.29s 69 tok
+PROGRESS 725/1034 qc3-q4-ollama spider0 2.48s 50 tok
+PROGRESS 750/1034 qc3-q4-ollama spider0 3.33s 70 tok
+PROGRESS 775/1034 qc3-q4-ollama spider0 3.63s 77 tok
+PROGRESS 800/1034 qc3-q4-ollama spider0 3.36s 70 tok
+PROGRESS 825/1034 qc3-q4-ollama spider0 0.72s 9 tok
+PROGRESS 850/1034 qc3-q4-ollama spider0 0.96s 15 tok
+PROGRESS 875/1034 qc3-q4-ollama spider0 1.10s 18 tok
+PROGRESS 900/1034 qc3-q4-ollama spider0 2.12s 42 tok
+PROGRESS 925/1034 qc3-q4-ollama spider0 2.14s 42 tok
+PROGRESS 950/1034 qc3-q4-ollama spider0 2.18s 43 tok
+PROGRESS 975/1034 qc3-q4-ollama spider0 1.18s 20 tok
+PROGRESS 1000/1034 qc3-q4-ollama spider0 2.87s 59 tok
+PROGRESS 1025/1034 qc3-q4-ollama spider0 1.91s 37 tok
+PROGRESS 1034/1034 qc3-q4-ollama spider0 2.64s 54 tok
+2026-10-17T14:59:47-06:00 run qc3-q4-ollama spider0 end rc=0
+2026-10-17T14:59:47-06:00 run qc3-q4-ollama bird0 start
+qc3-q4-ollama: 500 to do, 0 already done
+PROGRESS 1/500 qc3-q4-ollama bird0 1.87s 29 tok
+PROGRESS 25/500 qc3-q4-ollama bird0 3.69s 78 tok
+PROGRESS 50/500 qc3-q4-ollama bird0 2.36s 47 tok
+PROGRESS 75/500 qc3-q4-ollama bird0 2.42s 47 tok
+PROGRESS 100/500 qc3-q4-ollama bird0 3.79s 79 tok
+PROGRESS 125/500 qc3-q4-ollama bird0 2.97s 60 tok
+PROGRESS 150/500 qc3-q4-ollama bird0 3.25s 65 tok
+PROGRESS 175/500 qc3-q4-ollama bird0 1.64s 29 tok
+PROGRESS 200/500 qc3-q4-ollama bird0 3.67s 76 tok
+PROGRESS 225/500 qc3-q4-ollama bird0 3.46s 71 tok
+PROGRESS 250/500 qc3-q4-ollama bird0 1.30s 22 tok
+PROGRESS 275/500 qc3-q4-ollama bird0 2.87s 58 tok
+PROGRESS 300/500 qc3-q4-ollama bird0 1.42s 24 tok
+PROGRESS 325/500 qc3-q4-ollama bird0 3.96s 83 tok
+PROGRESS 350/500 qc3-q4-ollama bird0 2.47s 48 tok
+PROGRESS 375/500 qc3-q4-ollama bird0 2.11s 40 tok
+PROGRESS 400/500 qc3-q4-ollama bird0 3.26s 68 tok
+PROGRESS 425/500 qc3-q4-ollama bird0 2.83s 58 tok
+PROGRESS 450/500 qc3-q4-ollama bird0 3.43s 70 tok
+PROGRESS 475/500 qc3-q4-ollama bird0 2.74s 55 tok
+PROGRESS 500/500 qc3-q4-ollama bird0 3.21s 66 tok
+2026-10-17T15:22:54-06:00 run qc3-q4-ollama bird0 end rc=0
+2026-10-17T15:22:54-06:00 run qc3-q4-ollama birdarc start
+qc3-q4-ollama: 129 to do, 0 already done
+PROGRESS 1/129 qc3-q4-ollama birdarc 3.28s 67 tok
+PROGRESS 25/129 qc3-q4-ollama birdarc 3.18s 65 tok
+PROGRESS 50/129 qc3-q4-ollama birdarc 3.88s 81 tok
+PROGRESS 75/129 qc3-q4-ollama birdarc 2.43s 47 tok
+PROGRESS 100/129 qc3-q4-ollama birdarc 2.25s 44 tok
+PROGRESS 125/129 qc3-q4-ollama birdarc 3.74s 78 tok
+PROGRESS 129/129 qc3-q4-ollama birdarc 2.60s 52 tok
+2026-10-17T15:29:28-06:00 run qc3-q4-ollama birdarc end rc=0
+[?25l[?2026h[?25l[1G[K[?25h[?2026l[2K[1G[?25h2026-10-17T15:29:31-06:00 model qc3-q4-ollama end swap=0MB delta=0MB
+2026-10-17T15:29:32-06:00 swapflush before=0MB after=0MB
+PROGRESS 0/1200 cooldown tj_mC=68500 target_mC=54437
+PROGRESS 60/1200 cooldown tj_mC=61062 target_mC=54437
+PROGRESS 120/1200 cooldown tj_mC=58000 target_mC=54437
+PROGRESS 180/1200 cooldown tj_mC=56718 target_mC=54437
+PROGRESS 240/1200 cooldown tj_mC=55625 target_mC=54437
+PROGRESS 300/1200 cooldown tj_mC=55281 target_mC=54437
+PROGRESS 360/1200 cooldown tj_mC=55031 target_mC=54437
+PROGRESS 420/1200 cooldown tj_mC=54750 target_mC=54437
+2026-10-17T15:37:22-06:00 cooldown: 2026-10-17T15:37:22-06:00 cooldown ok elapsed=470s tj_mC=54375 target_mC=54437
+PROGRESS 3/6 B3 models (done qc3-q4-ollama)
+2026-10-17T15:37:22-06:00 BLOCK B3 model xiyan3b-q4-ours
+2026-10-17T15:37:33-06:00 sha ok xiyan3b-q4-ours
+2026-10-17T15:37:33-06:00 model xiyan3b-q4-ours start swap=0MB
+xiyan3b-q4-ours: 5 to do, 0 already done
+PROGRESS 1/5 xiyan3b-q4-ours warmup 6.88s 62 tok
+PROGRESS 5/5 xiyan3b-q4-ours warmup 3.51s 74 tok
+NAME                      ID              SIZE      PROCESSOR    CONTEXT    UNTIL               
+xiyan3b-q4-ours:latest    ad14726bf3db    2.2 GB    100% GPU     4096       29 minutes from now    
+2026-10-17T15:37:51-06:00 100% GPU xiyan3b-q4-ours
+2026-10-17T15:37:51-06:00 loaded_idle start xiyan3b-q4-ours
+2026-10-17T15:39:51-06:00 loaded_idle end xiyan3b-q4-ours
+2026-10-17T15:39:51-06:00 run xiyan3b-q4-ours nyc0 start
+xiyan3b-q4-ours: 449 to do, 0 already done
+PROGRESS 1/449 xiyan3b-q4-ours nyc0 2.35s 47 tok
+PROGRESS 25/449 xiyan3b-q4-ours nyc0 2.94s 61 tok
+PROGRESS 50/449 xiyan3b-q4-ours nyc0 2.70s 55 tok
+PROGRESS 75/449 xiyan3b-q4-ours nyc0 2.15s 41 tok
+PROGRESS 100/449 xiyan3b-q4-ours nyc0 3.85s 82 tok
+PROGRESS 125/449 xiyan3b-q4-ours nyc0 3.46s 73 tok
+PROGRESS 150/449 xiyan3b-q4-ours nyc0 3.79s 81 tok
+PROGRESS 175/449 xiyan3b-q4-ours nyc0 2.56s 51 tok
+PROGRESS 200/449 xiyan3b-q4-ours nyc0 1.12s 18 tok
+PROGRESS 225/449 xiyan3b-q4-ours nyc0 2.52s 51 tok
+PROGRESS 250/449 xiyan3b-q4-ours nyc0 3.34s 70 tok
+PROGRESS 275/449 xiyan3b-q4-ours nyc0 1.85s 35 tok
+PROGRESS 300/449 xiyan3b-q4-ours nyc0 3.64s 77 tok
+PROGRESS 325/449 xiyan3b-q4-ours nyc0 3.47s 73 tok
+PROGRESS 350/449 xiyan3b-q4-ours nyc0 3.50s 74 tok
+PROGRESS 375/449 xiyan3b-q4-ours nyc0 3.63s 77 tok
+PROGRESS 400/449 xiyan3b-q4-ours nyc0 2.91s 60 tok
+PROGRESS 425/449 xiyan3b-q4-ours nyc0 2.66s 54 tok
+PROGRESS 449/449 xiyan3b-q4-ours nyc0 3.72s 79 tok
+2026-10-17T16:03:45-06:00 run xiyan3b-q4-ours nyc0 end rc=0
+2026-10-17T16:03:45-06:00 run xiyan3b-q4-ours cur0 start
+xiyan3b-q4-ours: 92 to do, 0 already done
+PROGRESS 1/92 xiyan3b-q4-ours cur0 2.23s 44 tok
+PROGRESS 25/92 xiyan3b-q4-ours cur0 2.05s 40 tok
+PROGRESS 50/92 xiyan3b-q4-ours cur0 3.11s 65 tok
+PROGRESS 75/92 xiyan3b-q4-ours cur0 3.29s 69 tok
+PROGRESS 92/92 xiyan3b-q4-ours cur0 3.59s 76 tok
+2026-10-17T16:07:04-06:00 run xiyan3b-q4-ours cur0 end rc=0
+2026-10-17T16:07:04-06:00 run xiyan3b-q4-ours nycsim start
+xiyan3b-q4-ours: 898 to do, 0 already done
+PROGRESS 1/898 xiyan3b-q4-ours nycsim 3.55s 67 tok
+PROGRESS 25/898 xiyan3b-q4-ours nycsim 4.10s 80 tok
+PROGRESS 50/898 xiyan3b-q4-ours nycsim 4.28s 84 tok
+PROGRESS 75/898 xiyan3b-q4-ours nycsim 2.61s 46 tok
+PROGRESS 100/898 xiyan3b-q4-ours nycsim 2.47s 45 tok
+PROGRESS 125/898 xiyan3b-q4-ours nycsim 1.93s 33 tok
+PROGRESS 150/898 xiyan3b-q4-ours nycsim 3.88s 74 tok
+PROGRESS 175/898 xiyan3b-q4-ours nycsim 3.68s 70 tok
+PROGRESS 200/898 xiyan3b-q4-ours nycsim 3.33s 63 tok
+PROGRESS 225/898 xiyan3b-q4-ours nycsim 2.42s 43 tok
+PROGRESS 250/898 xiyan3b-q4-ours nycsim 3.58s 68 tok
+PROGRESS 275/898 xiyan3b-q4-ours nycsim 3.41s 64 tok
+PROGRESS 300/898 xiyan3b-q4-ours nycsim 3.89s 76 tok
+PROGRESS 325/898 xiyan3b-q4-ours nycsim 1.52s 28 tok
+PROGRESS 350/898 xiyan3b-q4-ours nycsim 3.59s 67 tok
+PROGRESS 375/898 xiyan3b-q4-ours nycsim 4.10s 82 tok
+PROGRESS 400/898 xiyan3b-q4-ours nycsim 3.46s 65 tok
+PROGRESS 425/898 xiyan3b-q4-ours nycsim 2.81s 52 tok
+PROGRESS 450/898 xiyan3b-q4-ours nycsim 2.51s 45 tok
+PROGRESS 475/898 xiyan3b-q4-ours nycsim 2.60s 46 tok
+PROGRESS 500/898 xiyan3b-q4-ours nycsim 2.84s 53 tok
+PROGRESS 525/898 xiyan3b-q4-ours nycsim 4.06s 78 tok
+PROGRESS 550/898 xiyan3b-q4-ours nycsim 3.45s 67 tok
+PROGRESS 575/898 xiyan3b-q4-ours nycsim 2.17s 43 tok
+PROGRESS 600/898 xiyan3b-q4-ours nycsim 2.71s 50 tok
+PROGRESS 625/898 xiyan3b-q4-ours nycsim 3.38s 64 tok
+PROGRESS 650/898 xiyan3b-q4-ours nycsim 2.08s 36 tok
+PROGRESS 675/898 xiyan3b-q4-ours nycsim 1.61s 30 tok
+PROGRESS 700/898 xiyan3b-q4-ours nycsim 2.17s 36 tok
+PROGRESS 725/898 xiyan3b-q4-ours nycsim 3.63s 70 tok
+PROGRESS 750/898 xiyan3b-q4-ours nycsim 3.67s 70 tok
+PROGRESS 775/898 xiyan3b-q4-ours nycsim 2.27s 41 tok
+PROGRESS 800/898 xiyan3b-q4-ours nycsim 3.73s 71 tok
+PROGRESS 825/898 xiyan3b-q4-ours nycsim 3.00s 55 tok
+PROGRESS 850/898 xiyan3b-q4-ours nycsim 1.50s 23 tok
+PROGRESS 875/898 xiyan3b-q4-ours nycsim 3.67s 70 tok
+PROGRESS 898/898 xiyan3b-q4-ours nycsim 3.58s 68 tok
+2026-10-17T16:53:31-06:00 run xiyan3b-q4-ours nycsim end rc=0
+2026-10-17T16:53:31-06:00 run xiyan3b-q4-ours cursim start
+xiyan3b-q4-ours: 92 to do, 0 already done
+PROGRESS 1/92 xiyan3b-q4-ours cursim 2.18s 35 tok
+PROGRESS 25/92 xiyan3b-q4-ours cursim 2.00s 31 tok
+PROGRESS 50/92 xiyan3b-q4-ours cursim 2.86s 51 tok
+PROGRESS 75/92 xiyan3b-q4-ours cursim 3.15s 57 tok
+PROGRESS 92/92 xiyan3b-q4-ours cursim 2.99s 54 tok
+2026-10-17T16:56:58-06:00 run xiyan3b-q4-ours cursim end rc=0
+2026-10-17T16:56:58-06:00 run xiyan3b-q4-ours nycfix start
+xiyan3b-q4-ours: 449 to do, 0 already done
+PROGRESS 1/449 xiyan3b-q4-ours nycfix 4.02s 78 tok
+PROGRESS 25/449 xiyan3b-q4-ours nycfix 3.77s 80 tok
+PROGRESS 50/449 xiyan3b-q4-ours nycfix 3.67s 78 tok
+PROGRESS 75/449 xiyan3b-q4-ours nycfix 2.23s 44 tok
+PROGRESS 100/449 xiyan3b-q4-ours nycfix 2.27s 45 tok
+PROGRESS 125/449 xiyan3b-q4-ours nycfix 2.17s 43 tok
+PROGRESS 150/449 xiyan3b-q4-ours nycfix 2.36s 47 tok
+PROGRESS 175/449 xiyan3b-q4-ours nycfix 2.56s 52 tok
+PROGRESS 200/449 xiyan3b-q4-ours nycfix 1.84s 35 tok
+PROGRESS 225/449 xiyan3b-q4-ours nycfix 1.38s 24 tok
+PROGRESS 250/449 xiyan3b-q4-ours nycfix 2.53s 51 tok
+PROGRESS 275/449 xiyan3b-q4-ours nycfix 2.71s 54 tok
+PROGRESS 300/449 xiyan3b-q4-ours nycfix 1.10s 18 tok
+PROGRESS 325/449 xiyan3b-q4-ours nycfix 2.71s 55 tok
+PROGRESS 350/449 xiyan3b-q4-ours nycfix 1.76s 33 tok
+PROGRESS 375/449 xiyan3b-q4-ours nycfix 3.23s 67 tok
+PROGRESS 400/449 xiyan3b-q4-ours nycfix 3.18s 66 tok
+PROGRESS 425/449 xiyan3b-q4-ours nycfix 3.03s 63 tok
+PROGRESS 449/449 xiyan3b-q4-ours nycfix 2.05s 40 tok
+2026-10-17T17:17:39-06:00 run xiyan3b-q4-ours nycfix end rc=0
+2026-10-17T17:17:39-06:00 run xiyan3b-q4-ours curfix start
+xiyan3b-q4-ours: 92 to do, 0 already done
+PROGRESS 1/92 xiyan3b-q4-ours curfix 2.17s 35 tok
+PROGRESS 25/92 xiyan3b-q4-ours curfix 1.59s 29 tok
+PROGRESS 50/92 xiyan3b-q4-ours curfix 2.64s 54 tok
+PROGRESS 75/92 xiyan3b-q4-ours curfix 2.92s 60 tok
+PROGRESS 92/92 xiyan3b-q4-ours curfix 2.62s 53 tok
+2026-10-17T17:20:41-06:00 run xiyan3b-q4-ours curfix end rc=0
+2026-10-17T17:20:41-06:00 run xiyan3b-q4-ours spider0 start
+xiyan3b-q4-ours: 1034 to do, 0 already done
+PROGRESS 1/1034 xiyan3b-q4-ours spider0 0.84s 6 tok
+PROGRESS 25/1034 xiyan3b-q4-ours spider0 2.73s 56 tok
+PROGRESS 50/1034 xiyan3b-q4-ours spider0 0.93s 14 tok
+PROGRESS 75/1034 xiyan3b-q4-ours spider0 0.92s 14 tok
+PROGRESS 100/1034 xiyan3b-q4-ours spider0 1.93s 37 tok
+PROGRESS 125/1034 xiyan3b-q4-ours spider0 2.26s 45 tok
+PROGRESS 150/1034 xiyan3b-q4-ours spider0 2.21s 44 tok
+PROGRESS 175/1034 xiyan3b-q4-ours spider0 1.77s 34 tok
+PROGRESS 200/1034 xiyan3b-q4-ours spider0 1.00s 16 tok
+PROGRESS 225/1034 xiyan3b-q4-ours spider0 2.19s 44 tok
+PROGRESS 250/1034 xiyan3b-q4-ours spider0 2.33s 47 tok
+PROGRESS 275/1034 xiyan3b-q4-ours spider0 0.94s 14 tok
+PROGRESS 300/1034 xiyan3b-q4-ours spider0 0.85s 12 tok
+PROGRESS 325/1034 xiyan3b-q4-ours spider0 2.55s 52 tok
+PROGRESS 350/1034 xiyan3b-q4-ours spider0 2.13s 42 tok
+PROGRESS 375/1034 xiyan3b-q4-ours spider0 2.30s 46 tok
+PROGRESS 400/1034 xiyan3b-q4-ours spider0 2.37s 48 tok
+PROGRESS 425/1034 xiyan3b-q4-ours spider0 0.97s 15 tok
+PROGRESS 450/1034 xiyan3b-q4-ours spider0 1.24s 21 tok
+PROGRESS 475/1034 xiyan3b-q4-ours spider0 0.88s 13 tok
+PROGRESS 500/1034 xiyan3b-q4-ours spider0 2.05s 40 tok
+PROGRESS 525/1034 xiyan3b-q4-ours spider0 0.72s 9 tok
+PROGRESS 550/1034 xiyan3b-q4-ours spider0 2.84s 58 tok
+PROGRESS 575/1034 xiyan3b-q4-ours spider0 2.61s 53 tok
+PROGRESS 600/1034 xiyan3b-q4-ours spider0 0.93s 14 tok
+PROGRESS 625/1034 xiyan3b-q4-ours spider0 2.08s 41 tok
+PROGRESS 650/1034 xiyan3b-q4-ours spider0 0.83s 12 tok
+PROGRESS 675/1034 xiyan3b-q4-ours spider0 0.87s 13 tok
+PROGRESS 700/1034 xiyan3b-q4-ours spider0 2.56s 52 tok
+PROGRESS 725/1034 xiyan3b-q4-ours spider0 2.44s 49 tok
+PROGRESS 750/1034 xiyan3b-q4-ours spider0 3.25s 68 tok
+PROGRESS 775/1034 xiyan3b-q4-ours spider0 1.58s 29 tok
+PROGRESS 800/1034 xiyan3b-q4-ours spider0 2.93s 60 tok
+PROGRESS 825/1034 xiyan3b-q4-ours spider0 0.72s 9 tok
+PROGRESS 850/1034 xiyan3b-q4-ours spider0 0.96s 15 tok
+PROGRESS 875/1034 xiyan3b-q4-ours spider0 1.14s 19 tok
+PROGRESS 900/1034 xiyan3b-q4-ours spider0 0.93s 14 tok
+PROGRESS 925/1034 xiyan3b-q4-ours spider0 2.10s 41 tok
+PROGRESS 950/1034 xiyan3b-q4-ours spider0 2.13s 42 tok
+PROGRESS 975/1034 xiyan3b-q4-ours spider0 1.05s 17 tok
+PROGRESS 1000/1034 xiyan3b-q4-ours spider0 2.78s 57 tok
+PROGRESS 1025/1034 xiyan3b-q4-ours spider0 1.99s 39 tok
+PROGRESS 1034/1034 xiyan3b-q4-ours spider0 4.40s 95 tok
+2026-10-17T17:51:04-06:00 run xiyan3b-q4-ours spider0 end rc=0
+2026-10-17T17:51:04-06:00 run xiyan3b-q4-ours bird0 start
+xiyan3b-q4-ours: 500 to do, 0 already done
+PROGRESS 1/500 xiyan3b-q4-ours bird0 2.59s 46 tok
+PROGRESS 25/500 xiyan3b-q4-ours bird0 3.81s 81 tok
+PROGRESS 50/500 xiyan3b-q4-ours bird0 2.36s 47 tok
+PROGRESS 75/500 xiyan3b-q4-ours bird0 2.43s 47 tok
+PROGRESS 100/500 xiyan3b-q4-ours bird0 3.96s 83 tok
+PROGRESS 125/500 xiyan3b-q4-ours bird0 2.88s 58 tok
+PROGRESS 150/500 xiyan3b-q4-ours bird0 3.26s 65 tok
+PROGRESS 175/500 xiyan3b-q4-ours bird0 2.30s 44 tok
+PROGRESS 200/500 xiyan3b-q4-ours bird0 2.29s 44 tok
+PROGRESS 225/500 xiyan3b-q4-ours bird0 3.29s 67 tok
+PROGRESS 250/500 xiyan3b-q4-ours bird0 2.24s 44 tok
+PROGRESS 275/500 xiyan3b-q4-ours bird0 2.87s 58 tok
+PROGRESS 300/500 xiyan3b-q4-ours bird0 1.42s 24 tok
+PROGRESS 325/500 xiyan3b-q4-ours bird0 2.71s 54 tok
+PROGRESS 350/500 xiyan3b-q4-ours bird0 2.47s 48 tok
+PROGRESS 375/500 xiyan3b-q4-ours bird0 2.20s 42 tok
+PROGRESS 400/500 xiyan3b-q4-ours bird0 2.57s 52 tok
+PROGRESS 425/500 xiyan3b-q4-ours bird0 2.44s 49 tok
+PROGRESS 450/500 xiyan3b-q4-ours bird0 4.24s 89 tok
+PROGRESS 475/500 xiyan3b-q4-ours bird0 2.74s 55 tok
+PROGRESS 500/500 xiyan3b-q4-ours bird0 3.89s 82 tok
+2026-10-17T18:15:07-06:00 run xiyan3b-q4-ours bird0 end rc=0
+2026-10-17T18:15:07-06:00 run xiyan3b-q4-ours birdarc start
+xiyan3b-q4-ours: 129 to do, 0 already done
+PROGRESS 1/129 xiyan3b-q4-ours birdarc 2.89s 58 tok
+PROGRESS 25/129 xiyan3b-q4-ours birdarc 3.35s 69 tok
+PROGRESS 50/129 xiyan3b-q4-ours birdarc 3.88s 81 tok
+PROGRESS 75/129 xiyan3b-q4-ours birdarc 3.85s 80 tok
+PROGRESS 100/129 xiyan3b-q4-ours birdarc 2.25s 44 tok
+PROGRESS 125/129 xiyan3b-q4-ours birdarc 3.14s 64 tok
+PROGRESS 129/129 xiyan3b-q4-ours birdarc 2.59s 52 tok
+2026-10-17T18:21:52-06:00 run xiyan3b-q4-ours birdarc end rc=0
+2026-10-17T18:21:52-06:00 run xiyan3b-q4-ours nycnat start
+xiyan3b-q4-ours: 449 to do, 0 already done
+PROGRESS 1/449 xiyan3b-q4-ours nycnat 2.95s 47 tok
+PROGRESS 25/449 xiyan3b-q4-ours nycnat 3.47s 61 tok
+PROGRESS 50/449 xiyan3b-q4-ours nycnat 3.64s 65 tok
+PROGRESS 75/449 xiyan3b-q4-ours nycnat 2.23s 32 tok
+PROGRESS 100/449 xiyan3b-q4-ours nycnat 4.36s 82 tok
+PROGRESS 125/449 xiyan3b-q4-ours nycnat 3.60s 64 tok
+PROGRESS 150/449 xiyan3b-q4-ours nycnat 4.93s 95 tok
+PROGRESS 175/449 xiyan3b-q4-ours nycnat 2.96s 49 tok
+PROGRESS 200/449 xiyan3b-q4-ours nycnat 1.63s 18 tok
+PROGRESS 225/449 xiyan3b-q4-ours nycnat 2.67s 42 tok
+PROGRESS 250/449 xiyan3b-q4-ours nycnat 3.52s 62 tok
+PROGRESS 275/449 xiyan3b-q4-ours nycnat 1.90s 24 tok
+PROGRESS 300/449 xiyan3b-q4-ours nycnat 3.69s 66 tok
+PROGRESS 325/449 xiyan3b-q4-ours nycnat 3.52s 62 tok
+PROGRESS 350/449 xiyan3b-q4-ours nycnat 4.03s 74 tok
+PROGRESS 375/449 xiyan3b-q4-ours nycnat 3.40s 58 tok
+PROGRESS 400/449 xiyan3b-q4-ours nycnat 3.92s 66 tok
+PROGRESS 425/449 xiyan3b-q4-ours nycnat 3.22s 53 tok
+PROGRESS 449/449 xiyan3b-q4-ours nycnat 3.45s 59 tok
+2026-10-17T18:48:29-06:00 run xiyan3b-q4-ours nycnat end rc=0
+2026-10-17T18:48:29-06:00 run xiyan3b-q4-ours curnat start
+xiyan3b-q4-ours: 92 to do, 0 already done
+PROGRESS 1/92 xiyan3b-q4-ours curnat 2.25s 31 tok
+PROGRESS 25/92 xiyan3b-q4-ours curnat 2.59s 39 tok
+PROGRESS 50/92 xiyan3b-q4-ours curnat 3.71s 65 tok
+PROGRESS 75/92 xiyan3b-q4-ours curnat 3.35s 57 tok
+PROGRESS 92/92 xiyan3b-q4-ours curnat 4.02s 72 tok
+2026-10-17T18:52:40-06:00 run xiyan3b-q4-ours curnat end rc=0
+2026-10-17T18:52:40-06:00 run xiyan3b-q4-ours birdnat start
+xiyan3b-q4-ours: 500 to do, 0 already done
+PROGRESS 1/500 xiyan3b-q4-ours birdnat 2.73s 46 tok
+PROGRESS 25/500 xiyan3b-q4-ours birdnat 4.00s 77 tok
+PROGRESS 50/500 xiyan3b-q4-ours birdnat 3.04s 47 tok
+PROGRESS 75/500 xiyan3b-q4-ours birdnat 3.10s 47 tok
+PROGRESS 100/500 xiyan3b-q4-ours birdnat 4.62s 79 tok
+PROGRESS 125/500 xiyan3b-q4-ours birdnat 3.81s 60 tok
+PROGRESS 150/500 xiyan3b-q4-ours birdnat 5.77s 65 tok
+PROGRESS 175/500 xiyan3b-q4-ours birdnat 4.86s 44 tok
+PROGRESS 200/500 xiyan3b-q4-ours birdnat 4.77s 66 tok
+PROGRESS 225/500 xiyan3b-q4-ours birdnat 4.57s 60 tok
+PROGRESS 250/500 xiyan3b-q4-ours birdnat 2.89s 44 tok
+PROGRESS 275/500 xiyan3b-q4-ours birdnat 3.51s 58 tok
+PROGRESS 300/500 xiyan3b-q4-ours birdnat 2.60s 24 tok
+PROGRESS 325/500 xiyan3b-q4-ours birdnat 4.44s 66 tok
+PROGRESS 350/500 xiyan3b-q4-ours birdnat 3.75s 48 tok
+PROGRESS 375/500 xiyan3b-q4-ours birdnat 3.43s 41 tok
+PROGRESS 400/500 xiyan3b-q4-ours birdnat 2.96s 52 tok
+PROGRESS 425/500 xiyan3b-q4-ours birdnat 3.21s 58 tok
+PROGRESS 450/500 xiyan3b-q4-ours birdnat 4.40s 62 tok
+PROGRESS 475/500 xiyan3b-q4-ours birdnat 3.79s 59 tok
+PROGRESS 500/500 xiyan3b-q4-ours birdnat 4.62s 78 tok
+2026-10-17T19:25:42-06:00 run xiyan3b-q4-ours birdnat end rc=0
+[?25l[?2026h[?25l[1G[K[?25h[?2026l[2K[1G[?25h2026-10-17T19:25:46-06:00 model xiyan3b-q4-ours end swap=266MB delta=266MB
+2026-10-17T19:25:46-06:00 FLAG swap delta 266MB during xiyan3b-q4-ours (accuracy run kept, flagged)
+2026-10-17T19:25:47-06:00 swapflush before=266MB after=0MB
+PROGRESS 0/1200 cooldown tj_mC=67718 target_mC=54437
+PROGRESS 60/1200 cooldown tj_mC=60562 target_mC=54437
+PROGRESS 120/1200 cooldown tj_mC=57781 target_mC=54437
+PROGRESS 180/1200 cooldown tj_mC=56062 target_mC=54437
+PROGRESS 240/1200 cooldown tj_mC=55406 target_mC=54437
+PROGRESS 300/1200 cooldown tj_mC=55000 target_mC=54437
+PROGRESS 360/1200 cooldown tj_mC=54937 target_mC=54437
+PROGRESS 420/1200 cooldown tj_mC=55093 target_mC=54437
+PROGRESS 480/1200 cooldown tj_mC=55218 target_mC=54437
+PROGRESS 540/1200 cooldown tj_mC=55125 target_mC=54437
+PROGRESS 600/1200 cooldown tj_mC=55125 target_mC=54437
+PROGRESS 660/1200 cooldown tj_mC=54750 target_mC=54437
+PROGRESS 720/1200 cooldown tj_mC=54656 target_mC=54437
+2026-10-17T19:38:28-06:00 cooldown: 2026-10-17T19:38:28-06:00 cooldown ok elapsed=760s tj_mC=54406 target_mC=54437
+PROGRESS 4/6 B3 models (done xiyan3b-q4-ours)
+2026-10-17T19:38:28-06:00 BLOCK B3 model llama32-3b-q4-ollama
+2026-10-17T19:38:39-06:00 sha ok llama32-3b-q4-ollama
+2026-10-17T19:38:39-06:00 model llama32-3b-q4-ollama start swap=0MB
+llama32-3b-q4-ollama: 5 to do, 0 already done
+PROGRESS 1/5 llama32-3b-q4-ollama warmup 8.28s 80 tok
+PROGRESS 5/5 llama32-3b-q4-ollama warmup 4.37s 89 tok
+NAME                           ID              SIZE      PROCESSOR    CONTEXT    UNTIL               
+llama32-3b-q4-ollama:latest    a80c4f17acd5    2.6 GB    100% GPU     4096       29 minutes from now    
+2026-10-17T19:39:00-06:00 100% GPU llama32-3b-q4-ollama
+2026-10-17T19:39:00-06:00 loaded_idle start llama32-3b-q4-ollama
+2026-10-17T19:41:00-06:00 loaded_idle end llama32-3b-q4-ollama
+2026-10-17T19:41:00-06:00 run llama32-3b-q4-ollama nyc0 start
+llama32-3b-q4-ollama: 449 to do, 0 already done
+PROGRESS 1/449 llama32-3b-q4-ollama nyc0 1.56s 26 tok
+PROGRESS 25/449 llama32-3b-q4-ollama nyc0 2.93s 57 tok
+PROGRESS 50/449 llama32-3b-q4-ollama nyc0 3.30s 65 tok
+PROGRESS 75/449 llama32-3b-q4-ollama nyc0 2.82s 53 tok
+PROGRESS 100/449 llama32-3b-q4-ollama nyc0 3.12s 61 tok
+PROGRESS 125/449 llama32-3b-q4-ollama nyc0 3.30s 65 tok
+PROGRESS 150/449 llama32-3b-q4-ollama nyc0 3.73s 75 tok
+PROGRESS 175/449 llama32-3b-q4-ollama nyc0 3.02s 58 tok
+PROGRESS 200/449 llama32-3b-q4-ollama nyc0 1.21s 18 tok
+PROGRESS 225/449 llama32-3b-q4-ollama nyc0 2.59s 49 tok
+PROGRESS 250/449 llama32-3b-q4-ollama nyc0 3.92s 79 tok
+PROGRESS 275/449 llama32-3b-q4-ollama nyc0 1.31s 20 tok
+PROGRESS 300/449 llama32-3b-q4-ollama nyc0 1.48s 24 tok
+PROGRESS 325/449 llama32-3b-q4-ollama nyc0 3.97s 80 tok
+PROGRESS 350/449 llama32-3b-q4-ollama nyc0 3.56s 71 tok
+PROGRESS 375/449 llama32-3b-q4-ollama nyc0 3.29s 65 tok
+PROGRESS 400/449 llama32-3b-q4-ollama nyc0 2.45s 46 tok
+PROGRESS 425/449 llama32-3b-q4-ollama nyc0 2.77s 53 tok
+PROGRESS 449/449 llama32-3b-q4-ollama nyc0 3.21s 63 tok
+2026-10-17T20:02:53-06:00 run llama32-3b-q4-ollama nyc0 end rc=0
+2026-10-17T20:02:53-06:00 run llama32-3b-q4-ollama cur0 start
+llama32-3b-q4-ollama: 92 to do, 0 already done
+PROGRESS 1/92 llama32-3b-q4-ollama cur0 1.21s 18 tok
+PROGRESS 25/92 llama32-3b-q4-ollama cur0 2.50s 47 tok
+PROGRESS 50/92 llama32-3b-q4-ollama cur0 3.42s 68 tok
+PROGRESS 75/92 llama32-3b-q4-ollama cur0 2.01s 36 tok
+PROGRESS 92/92 llama32-3b-q4-ollama cur0 3.52s 70 tok
+2026-10-17T20:06:03-06:00 run llama32-3b-q4-ollama cur0 end rc=0
+2026-10-17T20:06:03-06:00 run llama32-3b-q4-ollama nycsim start
+llama32-3b-q4-ollama: 898 to do, 0 already done
+PROGRESS 1/898 llama32-3b-q4-ollama nycsim 4.73s 89 tok
+PROGRESS 25/898 llama32-3b-q4-ollama nycsim 2.35s 36 tok
+PROGRESS 50/898 llama32-3b-q4-ollama nycsim 3.65s 65 tok
+PROGRESS 75/898 llama32-3b-q4-ollama nycsim 2.58s 42 tok
+PROGRESS 100/898 llama32-3b-q4-ollama nycsim 2.61s 45 tok
+PROGRESS 125/898 llama32-3b-q4-ollama nycsim 2.05s 33 tok
+PROGRESS 150/898 llama32-3b-q4-ollama nycsim 3.92s 71 tok
+PROGRESS 175/898 llama32-3b-q4-ollama nycsim 3.83s 69 tok
+PROGRESS 200/898 llama32-3b-q4-ollama nycsim 3.52s 63 tok
+PROGRESS 225/898 llama32-3b-q4-ollama nycsim 2.54s 43 tok
+PROGRESS 250/898 llama32-3b-q4-ollama nycsim 3.61s 64 tok
+PROGRESS 275/898 llama32-3b-q4-ollama nycsim 3.60s 64 tok
+PROGRESS 300/898 llama32-3b-q4-ollama nycsim 4.37s 82 tok
+PROGRESS 325/898 llama32-3b-q4-ollama nycsim 1.46s 24 tok
+PROGRESS 350/898 llama32-3b-q4-ollama nycsim 3.69s 66 tok
+PROGRESS 375/898 llama32-3b-q4-ollama nycsim 4.14s 78 tok
+PROGRESS 400/898 llama32-3b-q4-ollama nycsim 3.61s 64 tok
+PROGRESS 425/898 llama32-3b-q4-ollama nycsim 2.92s 51 tok
+PROGRESS 450/898 llama32-3b-q4-ollama nycsim 2.65s 45 tok
+PROGRESS 475/898 llama32-3b-q4-ollama nycsim 2.76s 46 tok
+PROGRESS 500/898 llama32-3b-q4-ollama nycsim 3.47s 64 tok
+PROGRESS 525/898 llama32-3b-q4-ollama nycsim 3.73s 66 tok
+PROGRESS 550/898 llama32-3b-q4-ollama nycsim 3.69s 68 tok
+PROGRESS 575/898 llama32-3b-q4-ollama nycsim 2.31s 43 tok
+PROGRESS 600/898 llama32-3b-q4-ollama nycsim 2.87s 50 tok
+PROGRESS 625/898 llama32-3b-q4-ollama nycsim 3.56s 64 tok
+PROGRESS 650/898 llama32-3b-q4-ollama nycsim 2.21s 36 tok
+PROGRESS 675/898 llama32-3b-q4-ollama nycsim 1.55s 26 tok
+PROGRESS 700/898 llama32-3b-q4-ollama nycsim 2.25s 36 tok
+PROGRESS 725/898 llama32-3b-q4-ollama nycsim 3.80s 69 tok
+PROGRESS 750/898 llama32-3b-q4-ollama nycsim 4.10s 75 tok
+PROGRESS 775/898 llama32-3b-q4-ollama nycsim 1.73s 26 tok
+PROGRESS 800/898 llama32-3b-q4-ollama nycsim 3.88s 70 tok
+PROGRESS 825/898 llama32-3b-q4-ollama nycsim 3.17s 55 tok
+PROGRESS 850/898 llama32-3b-q4-ollama nycsim 1.56s 22 tok
+PROGRESS 875/898 llama32-3b-q4-ollama nycsim 3.88s 70 tok
+PROGRESS 898/898 llama32-3b-q4-ollama nycsim 3.78s 68 tok
+2026-10-17T20:54:06-06:00 run llama32-3b-q4-ollama nycsim end rc=0
+2026-10-17T20:54:06-06:00 run llama32-3b-q4-ollama cursim start
+llama32-3b-q4-ollama: 92 to do, 0 already done
+PROGRESS 1/92 llama32-3b-q4-ollama cursim 2.31s 35 tok
+PROGRESS 25/92 llama32-3b-q4-ollama cursim 2.66s 43 tok
+PROGRESS 50/92 llama32-3b-q4-ollama cursim 3.43s 60 tok
+PROGRESS 75/92 llama32-3b-q4-ollama cursim 3.12s 53 tok
+PROGRESS 92/92 llama32-3b-q4-ollama cursim 3.07s 52 tok
+2026-10-17T20:57:42-06:00 run llama32-3b-q4-ollama cursim end rc=0
+2026-10-17T20:57:42-06:00 run llama32-3b-q4-ollama nycfix start
+llama32-3b-q4-ollama: 449 to do, 0 already done
+PROGRESS 1/449 llama32-3b-q4-ollama nycfix 3.96s 72 tok
+PROGRESS 25/449 llama32-3b-q4-ollama nycfix 2.96s 57 tok
+PROGRESS 50/449 llama32-3b-q4-ollama nycfix 3.36s 66 tok
+PROGRESS 75/449 llama32-3b-q4-ollama nycfix 3.10s 60 tok
+PROGRESS 100/449 llama32-3b-q4-ollama nycfix 2.83s 54 tok
+PROGRESS 125/449 llama32-3b-q4-ollama nycfix 2.23s 41 tok
+PROGRESS 150/449 llama32-3b-q4-ollama nycfix 3.28s 64 tok
+PROGRESS 175/449 llama32-3b-q4-ollama nycfix 3.40s 67 tok
+PROGRESS 200/449 llama32-3b-q4-ollama nycfix 1.98s 35 tok
+PROGRESS 225/449 llama32-3b-q4-ollama nycfix 1.90s 33 tok
+PROGRESS 250/449 llama32-3b-q4-ollama nycfix 3.59s 71 tok
+PROGRESS 275/449 llama32-3b-q4-ollama nycfix 3.29s 63 tok
+PROGRESS 300/449 llama32-3b-q4-ollama nycfix 1.20s 18 tok
+PROGRESS 325/449 llama32-3b-q4-ollama nycfix 2.88s 55 tok
+PROGRESS 350/449 llama32-3b-q4-ollama nycfix 2.29s 42 tok
+PROGRESS 375/449 llama32-3b-q4-ollama nycfix 2.84s 54 tok
+PROGRESS 400/449 llama32-3b-q4-ollama nycfix 3.55s 70 tok
+PROGRESS 425/449 llama32-3b-q4-ollama nycfix 3.27s 64 tok
+PROGRESS 449/449 llama32-3b-q4-ollama nycfix 2.19s 40 tok
+2026-10-17T21:19:47-06:00 run llama32-3b-q4-ollama nycfix end rc=0
+2026-10-17T21:19:47-06:00 run llama32-3b-q4-ollama curfix start
+llama32-3b-q4-ollama: 92 to do, 0 already done
+PROGRESS 1/92 llama32-3b-q4-ollama curfix 1.69s 22 tok
+PROGRESS 25/92 llama32-3b-q4-ollama curfix 1.93s 34 tok
+PROGRESS 50/92 llama32-3b-q4-ollama curfix 2.59s 49 tok
+PROGRESS 75/92 llama32-3b-q4-ollama curfix 2.38s 44 tok
+PROGRESS 92/92 llama32-3b-q4-ollama curfix 2.74s 52 tok
+2026-10-17T21:22:52-06:00 run llama32-3b-q4-ollama curfix end rc=0
+2026-10-17T21:22:52-06:00 run llama32-3b-q4-ollama spider0 start
+llama32-3b-q4-ollama: 1034 to do, 0 already done
+PROGRESS 1/1034 llama32-3b-q4-ollama spider0 1.11s 10 tok
+PROGRESS 25/1034 llama32-3b-q4-ollama spider0 3.14s 62 tok
+PROGRESS 50/1034 llama32-3b-q4-ollama spider0 1.02s 14 tok
+PROGRESS 75/1034 llama32-3b-q4-ollama spider0 1.04s 15 tok
+PROGRESS 100/1034 llama32-3b-q4-ollama spider0 2.04s 37 tok
+PROGRESS 125/1034 llama32-3b-q4-ollama spider0 1.33s 21 tok
+PROGRESS 150/1034 llama32-3b-q4-ollama spider0 3.02s 59 tok
+PROGRESS 175/1034 llama32-3b-q4-ollama spider0 1.23s 19 tok
+PROGRESS 200/1034 llama32-3b-q4-ollama spider0 1.01s 14 tok
+PROGRESS 225/1034 llama32-3b-q4-ollama spider0 2.46s 47 tok
+PROGRESS 250/1034 llama32-3b-q4-ollama spider0 1.02s 14 tok
+PROGRESS 275/1034 llama32-3b-q4-ollama spider0 1.03s 14 tok
+PROGRESS 300/1034 llama32-3b-q4-ollama spider0 0.93s 12 tok
+PROGRESS 325/1034 llama32-3b-q4-ollama spider0 1.20s 18 tok
+PROGRESS 350/1034 llama32-3b-q4-ollama spider0 1.20s 18 tok
+PROGRESS 375/1034 llama32-3b-q4-ollama spider0 2.26s 42 tok
+PROGRESS 400/1034 llama32-3b-q4-ollama spider0 1.89s 34 tok
+PROGRESS 425/1034 llama32-3b-q4-ollama spider0 1.28s 20 tok
+PROGRESS 450/1034 llama32-3b-q4-ollama spider0 1.16s 17 tok
+PROGRESS 475/1034 llama32-3b-q4-ollama spider0 1.06s 15 tok
+PROGRESS 500/1034 llama32-3b-q4-ollama spider0 2.84s 55 tok
+PROGRESS 525/1034 llama32-3b-q4-ollama spider0 1.83s 32 tok
+PROGRESS 550/1034 llama32-3b-q4-ollama spider0 3.24s 63 tok
+PROGRESS 575/1034 llama32-3b-q4-ollama spider0 3.01s 58 tok
+PROGRESS 600/1034 llama32-3b-q4-ollama spider0 1.02s 14 tok
+PROGRESS 625/1034 llama32-3b-q4-ollama spider0 2.21s 41 tok
+PROGRESS 650/1034 llama32-3b-q4-ollama spider0 0.92s 12 tok
+PROGRESS 675/1034 llama32-3b-q4-ollama spider0 0.96s 13 tok
+PROGRESS 700/1034 llama32-3b-q4-ollama spider0 3.24s 64 tok
+PROGRESS 725/1034 llama32-3b-q4-ollama spider0 3.29s 65 tok
+PROGRESS 750/1034 llama32-3b-q4-ollama spider0 2.05s 37 tok
+PROGRESS 775/1034 llama32-3b-q4-ollama spider0 5.30s 110 tok
+PROGRESS 800/1034 llama32-3b-q4-ollama spider0 5.02s 103 tok
+PROGRESS 825/1034 llama32-3b-q4-ollama spider0 0.80s 9 tok
+PROGRESS 850/1034 llama32-3b-q4-ollama spider0 1.23s 19 tok
+PROGRESS 875/1034 llama32-3b-q4-ollama spider0 1.19s 18 tok
+PROGRESS 900/1034 llama32-3b-q4-ollama spider0 2.24s 42 tok
+PROGRESS 925/1034 llama32-3b-q4-ollama spider0 2.19s 40 tok
+PROGRESS 950/1034 llama32-3b-q4-ollama spider0 2.32s 43 tok
+PROGRESS 975/1034 llama32-3b-q4-ollama spider0 1.16s 17 tok
+PROGRESS 1000/1034 llama32-3b-q4-ollama spider0 3.03s 59 tok
+PROGRESS 1025/1034 llama32-3b-q4-ollama spider0 2.16s 40 tok
+PROGRESS 1034/1034 llama32-3b-q4-ollama spider0 3.61s 72 tok
+2026-10-17T21:54:33-06:00 run llama32-3b-q4-ollama spider0 end rc=0
+2026-10-17T21:54:33-06:00 run llama32-3b-q4-ollama bird0 start
+llama32-3b-q4-ollama: 500 to do, 0 already done
+PROGRESS 1/500 llama32-3b-q4-ollama bird0 2.52s 41 tok
+PROGRESS 25/500 llama32-3b-q4-ollama bird0 3.56s 71 tok
+PROGRESS 50/500 llama32-3b-q4-ollama bird0 2.25s 41 tok
+PROGRESS 75/500 llama32-3b-q4-ollama bird0 3.54s 69 tok
+PROGRESS 100/500 llama32-3b-q4-ollama bird0 3.64s 71 tok
+PROGRESS 125/500 llama32-3b-q4-ollama bird0 3.05s 58 tok
+PROGRESS 150/500 llama32-3b-q4-ollama bird0 3.51s 65 tok
+PROGRESS 175/500 llama32-3b-q4-ollama bird0 2.68s 48 tok
+PROGRESS 200/500 llama32-3b-q4-ollama bird0 2.86s 53 tok
+PROGRESS 225/500 llama32-3b-q4-ollama bird0 3.19s 60 tok
+PROGRESS 250/500 llama32-3b-q4-ollama bird0 2.61s 49 tok
+PROGRESS 275/500 llama32-3b-q4-ollama bird0 4.02s 80 tok
+PROGRESS 300/500 llama32-3b-q4-ollama bird0 1.47s 23 tok
+PROGRESS 325/500 llama32-3b-q4-ollama bird0 2.80s 52 tok
+PROGRESS 350/500 llama32-3b-q4-ollama bird0 2.63s 48 tok
+PROGRESS 375/500 llama32-3b-q4-ollama bird0 3.34s 64 tok
+PROGRESS 400/500 llama32-3b-q4-ollama bird0 2.37s 44 tok
+PROGRESS 425/500 llama32-3b-q4-ollama bird0 3.97s 80 tok
+PROGRESS 450/500 llama32-3b-q4-ollama bird0 3.46s 66 tok
+PROGRESS 475/500 llama32-3b-q4-ollama bird0 2.77s 52 tok
+PROGRESS 500/500 llama32-3b-q4-ollama bird0 3.58s 70 tok
+2026-10-17T22:20:13-06:00 run llama32-3b-q4-ollama bird0 end rc=0
+2026-10-17T22:20:13-06:00 run llama32-3b-q4-ollama birdarc start
+llama32-3b-q4-ollama: 129 to do, 0 already done
+PROGRESS 1/129 llama32-3b-q4-ollama birdarc 3.11s 58 tok
+PROGRESS 25/129 llama32-3b-q4-ollama birdarc 4.44s 89 tok
+PROGRESS 50/129 llama32-3b-q4-ollama birdarc 3.69s 71 tok
+PROGRESS 75/129 llama32-3b-q4-ollama birdarc 2.36s 42 tok
+PROGRESS 100/129 llama32-3b-q4-ollama birdarc 5.29s 110 tok
+PROGRESS 125/129 llama32-3b-q4-ollama birdarc 2.34s 42 tok
+PROGRESS 129/129 llama32-3b-q4-ollama birdarc 2.71s 51 tok
+2026-10-17T22:27:38-06:00 run llama32-3b-q4-ollama birdarc end rc=0
+[?25l[?2026h[?25l[1G[K[?25h[?2026l[2K[1G[?25h2026-10-17T22:27:41-06:00 model llama32-3b-q4-ollama end swap=20MB delta=20MB
+2026-10-17T22:27:42-06:00 swapflush before=20MB after=0MB
+PROGRESS 0/1200 cooldown tj_mC=68125 target_mC=54437
+PROGRESS 60/1200 cooldown tj_mC=60437 target_mC=54437
+PROGRESS 120/1200 cooldown tj_mC=57875 target_mC=54437
+PROGRESS 180/1200 cooldown tj_mC=56062 target_mC=54437
+PROGRESS 240/1200 cooldown tj_mC=55656 target_mC=54437
+PROGRESS 300/1200 cooldown tj_mC=55031 target_mC=54437
+PROGRESS 360/1200 cooldown tj_mC=54781 target_mC=54437
+2026-10-17T22:34:32-06:00 cooldown: 2026-10-17T22:34:32-06:00 cooldown ok elapsed=410s tj_mC=54375 target_mC=54437
+PROGRESS 5/6 B3 models (done llama32-3b-q4-ollama)
+2026-10-17T22:34:32-06:00 BLOCK B3 model qwen3-4b-q4-ollama
+2026-10-17T22:34:46-06:00 sha ok qwen3-4b-q4-ollama
+2026-10-17T22:34:46-06:00 model qwen3-4b-q4-ollama start swap=0MB
+qwen3-4b-q4-ollama: 5 to do, 0 already done
+PROGRESS 1/5 qwen3-4b-q4-ollama warmup 8.26s 62 tok
+PROGRESS 5/5 qwen3-4b-q4-ollama warmup 5.50s 92 tok
+NAME                         ID              SIZE      PROCESSOR    CONTEXT    UNTIL               
+qwen3-4b-q4-ollama:latest    0edcdef34593    3.2 GB    100% GPU     4096       29 minutes from now    
+2026-10-17T22:35:11-06:00 100% GPU qwen3-4b-q4-ollama
+2026-10-17T22:35:11-06:00 loaded_idle start qwen3-4b-q4-ollama
+2026-10-17T22:37:11-06:00 loaded_idle end qwen3-4b-q4-ollama
+2026-10-17T22:37:11-06:00 run qwen3-4b-q4-ollama nyc0 start
+qwen3-4b-q4-ollama: 449 to do, 0 already done
+PROGRESS 1/449 qwen3-4b-q4-ollama nyc0 2.94s 46 tok
+PROGRESS 25/449 qwen3-4b-q4-ollama nyc0 6.43s 109 tok
+PROGRESS 50/449 qwen3-4b-q4-ollama nyc0 4.51s 74 tok
+PROGRESS 75/449 qwen3-4b-q4-ollama nyc0 2.35s 34 tok
+PROGRESS 100/449 qwen3-4b-q4-ollama nyc0 3.82s 62 tok
+PROGRESS 125/449 qwen3-4b-q4-ollama nyc0 4.16s 68 tok
+PROGRESS 150/449 qwen3-4b-q4-ollama nyc0 6.32s 107 tok
+PROGRESS 175/449 qwen3-4b-q4-ollama nyc0 4.56s 74 tok
+PROGRESS 200/449 qwen3-4b-q4-ollama nyc0 1.54s 21 tok
+PROGRESS 225/449 qwen3-4b-q4-ollama nyc0 2.43s 37 tok
+PROGRESS 250/449 qwen3-4b-q4-ollama nyc0 3.82s 62 tok
+PROGRESS 275/449 qwen3-4b-q4-ollama nyc0 1.88s 27 tok
+PROGRESS 300/449 qwen3-4b-q4-ollama nyc0 4.38s 72 tok
+PROGRESS 325/449 qwen3-4b-q4-ollama nyc0 4.61s 76 tok
+PROGRESS 350/449 qwen3-4b-q4-ollama nyc0 6.21s 105 tok
+PROGRESS 375/449 qwen3-4b-q4-ollama nyc0 4.20s 69 tok
+PROGRESS 400/449 qwen3-4b-q4-ollama nyc0 2.88s 45 tok
+PROGRESS 425/449 qwen3-4b-q4-ollama nyc0 3.05s 48 tok
+PROGRESS 449/449 qwen3-4b-q4-ollama nyc0 5.61s 94 tok
+2026-10-17T23:11:01-06:00 run qwen3-4b-q4-ollama nyc0 end rc=0
+2026-10-17T23:11:01-06:00 run qwen3-4b-q4-ollama cur0 start
+qwen3-4b-q4-ollama: 92 to do, 0 already done
+PROGRESS 1/92 qwen3-4b-q4-ollama cur0 2.27s 34 tok
+PROGRESS 25/92 qwen3-4b-q4-ollama cur0 2.82s 44 tok
+PROGRESS 50/92 qwen3-4b-q4-ollama cur0 2.64s 41 tok
+PROGRESS 75/92 qwen3-4b-q4-ollama cur0 3.88s 63 tok
+PROGRESS 92/92 qwen3-4b-q4-ollama cur0 5.33s 89 tok
+2026-10-17T23:15:34-06:00 run qwen3-4b-q4-ollama cur0 end rc=0
+2026-10-17T23:15:34-06:00 run qwen3-4b-q4-ollama nycsim start
+qwen3-4b-q4-ollama: 898 to do, 0 already done
+PROGRESS 1/898 qwen3-4b-q4-ollama nycsim 4.90s 71 tok
+PROGRESS 25/898 qwen3-4b-q4-ollama nycsim 4.26s 60 tok
+PROGRESS 50/898 qwen3-4b-q4-ollama nycsim 5.17s 76 tok
+PROGRESS 75/898 qwen3-4b-q4-ollama nycsim 3.27s 43 tok
+PROGRESS 100/898 qwen3-4b-q4-ollama nycsim 3.25s 45 tok
+PROGRESS 125/898 qwen3-4b-q4-ollama nycsim 2.56s 33 tok
+PROGRESS 150/898 qwen3-4b-q4-ollama nycsim 5.14s 75 tok
+PROGRESS 175/898 qwen3-4b-q4-ollama nycsim 4.84s 70 tok
+PROGRESS 200/898 qwen3-4b-q4-ollama nycsim 4.40s 63 tok
+PROGRESS 225/898 qwen3-4b-q4-ollama nycsim 3.20s 43 tok
+PROGRESS 250/898 qwen3-4b-q4-ollama nycsim 5.05s 74 tok
+PROGRESS 275/898 qwen3-4b-q4-ollama nycsim 4.49s 64 tok
+PROGRESS 300/898 qwen3-4b-q4-ollama nycsim 5.47s 82 tok
+PROGRESS 325/898 qwen3-4b-q4-ollama nycsim 2.42s 37 tok
+PROGRESS 350/898 qwen3-4b-q4-ollama nycsim 4.71s 67 tok
+PROGRESS 375/898 qwen3-4b-q4-ollama nycsim 5.38s 82 tok
+PROGRESS 400/898 qwen3-4b-q4-ollama nycsim 4.52s 65 tok
+PROGRESS 425/898 qwen3-4b-q4-ollama nycsim 3.74s 52 tok
+PROGRESS 450/898 qwen3-4b-q4-ollama nycsim 3.33s 45 tok
+PROGRESS 475/898 qwen3-4b-q4-ollama nycsim 3.43s 46 tok
+PROGRESS 500/898 qwen3-4b-q4-ollama nycsim 4.47s 66 tok
+PROGRESS 525/898 qwen3-4b-q4-ollama nycsim 4.80s 69 tok
+PROGRESS 550/898 qwen3-4b-q4-ollama nycsim 4.63s 68 tok
+PROGRESS 575/898 qwen3-4b-q4-ollama nycsim 2.76s 43 tok
+PROGRESS 600/898 qwen3-4b-q4-ollama nycsim 3.57s 50 tok
+PROGRESS 625/898 qwen3-4b-q4-ollama nycsim 4.44s 64 tok
+PROGRESS 650/898 qwen3-4b-q4-ollama nycsim 2.74s 36 tok
+PROGRESS 675/898 qwen3-4b-q4-ollama nycsim 2.03s 30 tok
+PROGRESS 700/898 qwen3-4b-q4-ollama nycsim 2.82s 36 tok
+PROGRESS 725/898 qwen3-4b-q4-ollama nycsim 4.68s 68 tok
+PROGRESS 750/898 qwen3-4b-q4-ollama nycsim 5.14s 76 tok
+PROGRESS 775/898 qwen3-4b-q4-ollama nycsim 3.00s 41 tok
+PROGRESS 800/898 qwen3-4b-q4-ollama nycsim 4.92s 71 tok
+PROGRESS 825/898 qwen3-4b-q4-ollama nycsim 3.94s 55 tok
+PROGRESS 850/898 qwen3-4b-q4-ollama nycsim 2.00s 23 tok
+PROGRESS 875/898 qwen3-4b-q4-ollama nycsim 4.84s 70 tok
+PROGRESS 898/898 qwen3-4b-q4-ollama nycsim 4.68s 68 tok
+2026-10-18T00:18:08-06:00 run qwen3-4b-q4-ollama nycsim end rc=0
+2026-10-18T00:18:08-06:00 run qwen3-4b-q4-ollama cursim start
+qwen3-4b-q4-ollama: 92 to do, 0 already done
+PROGRESS 1/92 qwen3-4b-q4-ollama cursim 2.61s 30 tok
+PROGRESS 25/92 qwen3-4b-q4-ollama cursim 2.65s 31 tok
+PROGRESS 50/92 qwen3-4b-q4-ollama cursim 3.75s 51 tok
+PROGRESS 75/92 qwen3-4b-q4-ollama cursim 3.80s 51 tok
+PROGRESS 92/92 qwen3-4b-q4-ollama cursim 4.00s 55 tok
+2026-10-18T00:23:00-06:00 run qwen3-4b-q4-ollama cursim end rc=0
+2026-10-18T00:23:00-06:00 run qwen3-4b-q4-ollama nycfix start
+qwen3-4b-q4-ollama: 449 to do, 0 already done
+PROGRESS 1/449 qwen3-4b-q4-ollama nycfix 5.11s 75 tok
+PROGRESS 25/449 qwen3-4b-q4-ollama nycfix 4.42s 72 tok
+PROGRESS 50/449 qwen3-4b-q4-ollama nycfix 7.16s 121 tok
+PROGRESS 75/449 qwen3-4b-q4-ollama nycfix 3.63s 58 tok
+PROGRESS 100/449 qwen3-4b-q4-ollama nycfix 3.40s 54 tok
+PROGRESS 125/449 qwen3-4b-q4-ollama nycfix 2.83s 44 tok
+PROGRESS 150/449 qwen3-4b-q4-ollama nycfix 3.24s 51 tok
+PROGRESS 175/449 qwen3-4b-q4-ollama nycfix 4.01s 65 tok
+PROGRESS 200/449 qwen3-4b-q4-ollama nycfix 2.39s 36 tok
+PROGRESS 225/449 qwen3-4b-q4-ollama nycfix 2.46s 37 tok
+PROGRESS 250/449 qwen3-4b-q4-ollama nycfix 4.82s 79 tok
+PROGRESS 275/449 qwen3-4b-q4-ollama nycfix 3.60s 56 tok
+PROGRESS 300/449 qwen3-4b-q4-ollama nycfix 1.42s 19 tok
+PROGRESS 325/449 qwen3-4b-q4-ollama nycfix 4.88s 80 tok
+PROGRESS 350/449 qwen3-4b-q4-ollama nycfix 2.29s 34 tok
+PROGRESS 375/449 qwen3-4b-q4-ollama nycfix 4.27s 69 tok
+PROGRESS 400/449 qwen3-4b-q4-ollama nycfix 4.48s 73 tok
+PROGRESS 425/449 qwen3-4b-q4-ollama nycfix 6.27s 105 tok
+PROGRESS 449/449 qwen3-4b-q4-ollama nycfix 2.78s 43 tok
+2026-10-18T00:51:58-06:00 run qwen3-4b-q4-ollama nycfix end rc=0
+2026-10-18T00:51:58-06:00 run qwen3-4b-q4-ollama curfix start
+qwen3-4b-q4-ollama: 92 to do, 0 already done
+PROGRESS 1/92 qwen3-4b-q4-ollama curfix 2.56s 30 tok
+PROGRESS 25/92 qwen3-4b-q4-ollama curfix 2.52s 38 tok
+PROGRESS 50/92 qwen3-4b-q4-ollama curfix 3.22s 51 tok
+PROGRESS 75/92 qwen3-4b-q4-ollama curfix 4.76s 78 tok
+PROGRESS 92/92 qwen3-4b-q4-ollama curfix 3.47s 55 tok
+2026-10-18T00:56:19-06:00 run qwen3-4b-q4-ollama curfix end rc=0
+2026-10-18T00:56:19-06:00 run qwen3-4b-q4-ollama spider0 start
+qwen3-4b-q4-ollama: 1034 to do, 0 already done
+PROGRESS 1/1034 qwen3-4b-q4-ollama spider0 1.31s 9 tok
+PROGRESS 25/1034 qwen3-4b-q4-ollama spider0 3.58s 58 tok
+PROGRESS 50/1034 qwen3-4b-q4-ollama spider0 1.46s 20 tok
+PROGRESS 75/1034 qwen3-4b-q4-ollama spider0 1.44s 20 tok
+PROGRESS 100/1034 qwen3-4b-q4-ollama spider0 3.58s 58 tok
+PROGRESS 125/1034 qwen3-4b-q4-ollama spider0 3.02s 48 tok
+PROGRESS 150/1034 qwen3-4b-q4-ollama spider0 2.80s 44 tok
+PROGRESS 175/1034 qwen3-4b-q4-ollama spider0 2.56s 40 tok
+PROGRESS 200/1034 qwen3-4b-q4-ollama spider0 1.11s 14 tok
+PROGRESS 225/1034 qwen3-4b-q4-ollama spider0 2.98s 48 tok
+PROGRESS 250/1034 qwen3-4b-q4-ollama spider0 2.39s 37 tok
+PROGRESS 275/1034 qwen3-4b-q4-ollama spider0 1.65s 23 tok
+PROGRESS 300/1034 qwen3-4b-q4-ollama spider0 1.36s 18 tok
+PROGRESS 325/1034 qwen3-4b-q4-ollama spider0 1.97s 29 tok
+PROGRESS 350/1034 qwen3-4b-q4-ollama spider0 1.47s 20 tok
+PROGRESS 375/1034 qwen3-4b-q4-ollama spider0 3.18s 51 tok
+PROGRESS 400/1034 qwen3-4b-q4-ollama spider0 2.55s 40 tok
+PROGRESS 425/1034 qwen3-4b-q4-ollama spider0 1.90s 28 tok
+PROGRESS 450/1034 qwen3-4b-q4-ollama spider0 1.92s 28 tok
+PROGRESS 475/1034 qwen3-4b-q4-ollama spider0 1.40s 19 tok
+PROGRESS 500/1034 qwen3-4b-q4-ollama spider0 3.68s 60 tok
+PROGRESS 525/1034 qwen3-4b-q4-ollama spider0 1.14s 14 tok
+PROGRESS 550/1034 qwen3-4b-q4-ollama spider0 3.75s 60 tok
+PROGRESS 575/1034 qwen3-4b-q4-ollama spider0 2.90s 45 tok
+PROGRESS 600/1034 qwen3-4b-q4-ollama spider0 1.75s 25 tok
+PROGRESS 625/1034 qwen3-4b-q4-ollama spider0 2.52s 39 tok
+PROGRESS 650/1034 qwen3-4b-q4-ollama spider0 1.45s 20 tok
+PROGRESS 675/1034 qwen3-4b-q4-ollama spider0 1.33s 18 tok
+PROGRESS 700/1034 qwen3-4b-q4-ollama spider0 3.03s 48 tok
+PROGRESS 725/1034 qwen3-4b-q4-ollama spider0 2.71s 42 tok
+PROGRESS 750/1034 qwen3-4b-q4-ollama spider0 4.89s 81 tok
+PROGRESS 775/1034 qwen3-4b-q4-ollama spider0 3.15s 50 tok
+PROGRESS 800/1034 qwen3-4b-q4-ollama spider0 4.57s 75 tok
+PROGRESS 825/1034 qwen3-4b-q4-ollama spider0 0.91s 10 tok
+PROGRESS 850/1034 qwen3-4b-q4-ollama spider0 1.73s 25 tok
+PROGRESS 875/1034 qwen3-4b-q4-ollama spider0 1.57s 22 tok
+PROGRESS 900/1034 qwen3-4b-q4-ollama spider0 3.76s 62 tok
+PROGRESS 925/1034 qwen3-4b-q4-ollama spider0 3.00s 47 tok
+PROGRESS 950/1034 qwen3-4b-q4-ollama spider0 2.98s 47 tok
+PROGRESS 975/1034 qwen3-4b-q4-ollama spider0 1.63s 23 tok
+PROGRESS 1000/1034 qwen3-4b-q4-ollama spider0 3.61s 58 tok
+PROGRESS 1025/1034 qwen3-4b-q4-ollama spider0 2.72s 43 tok
+PROGRESS 1034/1034 qwen3-4b-q4-ollama spider0 3.43s 55 tok
+2026-10-18T01:36:36-06:00 run qwen3-4b-q4-ollama spider0 end rc=0
+2026-10-18T01:36:36-06:00 run qwen3-4b-q4-ollama bird0 start
+qwen3-4b-q4-ollama: 500 to do, 0 already done
+PROGRESS 1/500 qwen3-4b-q4-ollama bird0 3.64s 51 tok
+PROGRESS 25/500 qwen3-4b-q4-ollama bird0 4.66s 77 tok
+PROGRESS 50/500 qwen3-4b-q4-ollama bird0 2.68s 41 tok
+PROGRESS 75/500 qwen3-4b-q4-ollama bird0 3.32s 51 tok
+PROGRESS 100/500 qwen3-4b-q4-ollama bird0 4.44s 71 tok
+PROGRESS 125/500 qwen3-4b-q4-ollama bird0 3.19s 49 tok
+PROGRESS 150/500 qwen3-4b-q4-ollama bird0 3.80s 57 tok
+PROGRESS 175/500 qwen3-4b-q4-ollama bird0 2.93s 43 tok
+PROGRESS 200/500 qwen3-4b-q4-ollama bird0 4.48s 71 tok
+PROGRESS 225/500 qwen3-4b-q4-ollama bird0 9.87s 165 tok
+PROGRESS 250/500 qwen3-4b-q4-ollama bird0 2.52s 38 tok
+PROGRESS 275/500 qwen3-4b-q4-ollama bird0 5.57s 92 tok
+PROGRESS 300/500 qwen3-4b-q4-ollama bird0 1.82s 25 tok
+PROGRESS 325/500 qwen3-4b-q4-ollama bird0 4.22s 67 tok
+PROGRESS 350/500 qwen3-4b-q4-ollama bird0 2.89s 43 tok
+PROGRESS 375/500 qwen3-4b-q4-ollama bird0 3.20s 49 tok
+PROGRESS 400/500 qwen3-4b-q4-ollama bird0 4.77s 79 tok
+PROGRESS 425/500 qwen3-4b-q4-ollama bird0 4.21s 69 tok
+PROGRESS 450/500 qwen3-4b-q4-ollama bird0 5.74s 93 tok
+PROGRESS 475/500 qwen3-4b-q4-ollama bird0 3.30s 51 tok
+PROGRESS 500/500 qwen3-4b-q4-ollama bird0 5.54s 91 tok
+2026-10-18T02:09:13-06:00 run qwen3-4b-q4-ollama bird0 end rc=0
+2026-10-18T02:09:13-06:00 run qwen3-4b-q4-ollama birdarc start
+qwen3-4b-q4-ollama: 129 to do, 0 already done
+PROGRESS 1/129 qwen3-4b-q4-ollama birdarc 4.39s 69 tok
+PROGRESS 25/129 qwen3-4b-q4-ollama birdarc 4.76s 77 tok
+PROGRESS 50/129 qwen3-4b-q4-ollama birdarc 4.43s 70 tok
+PROGRESS 75/129 qwen3-4b-q4-ollama birdarc 4.42s 70 tok
+PROGRESS 100/129 qwen3-4b-q4-ollama birdarc 6.05s 102 tok
+PROGRESS 125/129 qwen3-4b-q4-ollama birdarc 4.72s 76 tok
+PROGRESS 129/129 qwen3-4b-q4-ollama birdarc 3.66s 58 tok
+2026-10-18T02:19:05-06:00 run qwen3-4b-q4-ollama birdarc end rc=0
+[?25l[?2026h[?25l[1G[K[?25h[?2026l[2K[1G[?25h2026-10-18T02:19:08-06:00 model qwen3-4b-q4-ollama end swap=114MB delta=114MB
+2026-10-18T02:19:08-06:00 FLAG swap delta 114MB during qwen3-4b-q4-ollama (accuracy run kept, flagged)
+2026-10-18T02:19:09-06:00 swapflush before=114MB after=0MB
+PROGRESS 0/1200 cooldown tj_mC=70218 target_mC=54437
+PROGRESS 60/1200 cooldown tj_mC=62437 target_mC=54437
+PROGRESS 120/1200 cooldown tj_mC=58781 target_mC=54437
+PROGRESS 180/1200 cooldown tj_mC=57375 target_mC=54437
+PROGRESS 240/1200 cooldown tj_mC=56500 target_mC=54437
+PROGRESS 301/1200 cooldown tj_mC=56093 target_mC=54437
+PROGRESS 361/1200 cooldown tj_mC=56062 target_mC=54437
+PROGRESS 421/1200 cooldown tj_mC=55406 target_mC=54437
+PROGRESS 481/1200 cooldown tj_mC=55593 target_mC=54437
+PROGRESS 541/1200 cooldown tj_mC=55375 target_mC=54437
+PROGRESS 601/1200 cooldown tj_mC=55250 target_mC=54437
+PROGRESS 661/1200 cooldown tj_mC=55156 target_mC=54437
+PROGRESS 721/1200 cooldown tj_mC=54906 target_mC=54437
+PROGRESS 781/1200 cooldown tj_mC=54968 target_mC=54437
+PROGRESS 841/1200 cooldown tj_mC=55093 target_mC=54437
+PROGRESS 901/1200 cooldown tj_mC=55093 target_mC=54437
+PROGRESS 961/1200 cooldown tj_mC=55218 target_mC=54437
+PROGRESS 1021/1200 cooldown tj_mC=54906 target_mC=54437
+PROGRESS 1081/1200 cooldown tj_mC=54906 target_mC=54437
+PROGRESS 1141/1200 cooldown tj_mC=55125 target_mC=54437
+2026-10-18T02:39:10-06:00 cooldown: 2026-10-18T02:39:10-06:00 FLAG cooldown_max_reached elapsed=1201s tj_mC=54625 target_mC=54437
+2026-10-18T02:39:10-06:00 FLAG cooldown_max_reached
+PROGRESS 6/6 B3 models (done qwen3-4b-q4-ollama)
+2026-10-18T02:39:10-06:00 BLOCK B3 done
+2026-10-18T02:39:10-06:00 BLOCKFILE block_B3.sh end
+2026-10-18T02:39:10-06:00 samplers stopped
+2026-10-18T02:39:12-06:00 BASELINE session_end 120s
+{
+ "n": 1145,
+ "duration_s": 119.894089653,
+ "rate_hz": 9.54175475464211,
+ "ts_monotonic": true,
+ "vdd_in_median_w": 6.512,
+ "vdd_in_mean_w": 6.5013187772925765,
+ "vdd_in_sd_w": 0.03792153063684572,
+ "gr3d_zero_share": 1.0,
+ "cpu_mean_pct": 0.2924308588064047,
+ "tj_median_c": 54.625,
+ "tj_max_c": 55.062,
+ "ram_mb_median": 670,
+ "swap_mb_max": 0
+}
+2026-10-18T02:41:12-06:00 BASELINE session_end done
+/home/trafficedge01/c9/runs/c9-main-20261017-s1/env/record_20261018T084112Z
+2026-10-18T02:41:23-06:00 EXIT test mode
+2026-10-18T02:41:24-06:00 ollama env restored
+2026-10-18T02:41:24-06:00 ollama listening on *:11434
+2026-10-18T02:41:24-06:00 start trafficedge-ip-reporter.timer rc=0
+2026-10-18T02:41:24-06:00 start apt-daily.timer rc=0
+2026-10-18T02:41:24-06:00 start apt-daily-upgrade.timer rc=0
+2026-10-18T02:41:24-06:00 start fwupd-refresh.timer rc=0
+2026-10-18T02:41:24-06:00 start man-db.timer rc=0
+2026-10-18T02:41:24-06:00 start motd-news.timer rc=0
+2026-10-18T02:41:25-06:00 start update-notifier-download.timer rc=0
+2026-10-18T02:41:25-06:00 start update-notifier-motd.timer rc=0
+2026-10-18T02:41:25-06:00 start anacron.timer rc=0
+2026-10-18T02:41:25-06:00 start e2scrub_all.timer rc=0
+2026-10-18T02:41:25-06:00 start fstrim.timer rc=0
+2026-10-18T02:41:25-06:00 start dpkg-db-backup.timer rc=0
+2026-10-18T02:41:25-06:00 start logrotate.timer rc=0
+2026-10-18T02:41:25-06:00 start systemd-tmpfiles-clean.timer rc=0
+2026-10-18T02:41:25-06:00 start cron rc=0
+2026-10-18T02:41:25-06:00 start fwupd rc=0
+2026-10-18T02:41:25-06:00 start packagekit rc=0
+2026-10-18T02:41:27-06:00 snap unhold rc=0
+2026-10-18T02:41:27-06:00 gdm start rc=0
+2026-10-18T02:41:32-06:00 agent health.sh rc=0 after 5 s
+2026-10-18T02:41:32-06:00 port 8000 listening
+2026-10-18T02:41:32-06:00 port 8001 listening
+2026-10-18T02:41:32-06:00 port 8787 listening
+2026-10-18T02:41:32-06:00 port 8788 listening
+2026-10-18T02:41:32-06:00 port 8790 listening
+2026-10-18T02:41:32-06:00 liquid-general llama-server loaded
+== services (pre vs post; < pre only, > post only)
+1a2
+> anacron.service
+10a12
+> geoclue.service
+38a41
+> systemd-hostnamed.service
+39a43
+> systemd-localed.service
+== active timers
+== listening addresses
+8c8
+< 127.0.0.1:47739
+---
+> 127.0.0.1:51977
+== ollama env
+== nvpmodel
+== agent processes (command lines)
+3c3
+<  /home/trafficedge01/jetson-agent/bin/llama-server --no-cache-idle-slots --cache-prompt --host 127.0.0.1 --jinja --log-colors off --metrics --port 47739 --slots --no-webui --alias liquid-general --batch-size 512 --ctx-size 16384 --cache-ram 0 --cache-type-k q8_0 --cache-type-v q8_0 --flash-attn on --model /home/trafficedge01/jetson-agent/models/LFM2.5-1.2B-Instruct-QAD-Q4_0.gguf --n-gpu-layers 99 --parallel 1 --threads 6 --threads-batch 6 --timeout 600 --ubatch-size 128
+---
+>  /home/trafficedge01/jetson-agent/bin/llama-server --no-cache-idle-slots --cache-prompt --host 127.0.0.1 --jinja --log-colors off --metrics --port 51977 --slots --no-webui --alias liquid-general --batch-size 512 --ctx-size 16384 --cache-ram 0 --cache-type-k q8_0 --cache-type-v q8_0 --flash-attn on --model /home/trafficedge01/jetson-agent/models/LFM2.5-1.2B-Instruct-QAD-Q4_0.gguf --n-gpu-layers 99 --parallel 1 --threads 6 --threads-batch 6 --timeout 600 --ubatch-size 128
+2026-10-18T02:41:52-06:00 EXIT done (health rc=0)
+2026-10-18T02:41:52-06:00 test mode exit rc=0 (health.sh rc)
+SESSION_EXIT health_rc=0
+SESSION1_DONE health_rc=0

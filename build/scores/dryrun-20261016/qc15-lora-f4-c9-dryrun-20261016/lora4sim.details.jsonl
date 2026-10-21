@@ -1,0 +1,1 @@
+{"rid": "train_00169|F4|unseen", "id": "train_00169", "cond": "lora4sim", "strict": true, "lenient": true, "error": null, "class": "correct", "role": null, "template_id": "avg_fare_zone", "fold": "F4"}

@@ -1,7 +1,7 @@
 <p align="center">
   <h1 align="center">Edge SLM Text-to-SQL</h1>
   <p align="center">
-    <b>Accuracy, Generalisation, and Energy Cost of Small Open-Weight Models<br>on the NVIDIA Jetson Orin Nano Super</b>
+    <b>Accuracy and Energy Trade-offs of Small Text-to-SQL Models<br>on an 8 GB Edge Device — A Reproducible Measurement Study</b>
   </p>
   <p align="center">
     <a href="#reproduction">Reproduce</a> &nbsp;·&nbsp;
@@ -28,19 +28,56 @@ This repository contains data, code, and instructions to **reproduce every numbe
 
 ### Key findings
 
-> **Results will appear here once scoring and verification are complete.**
-> All numbers in the paper are generated from raw data in this repository;
-> `reproduce.py` regenerates and checks every one.
+**Example retrieval is the effect that survives scrutiny.** Supplying three
+retrieved demonstrations raises strict execution accuracy on the taxi database
+from 8.5–31.2 % (zero-shot) to 70.2–82.7 %. The effect holds for every model
+under an exact McNemar test on paired items (p from 3 × 10⁻¹⁵ to 6 × 10⁻⁷²).
+
+**About half that gain is template recall, not schema reasoning.** Each item is
+measured twice: once with its own query template present in the example pool,
+once with it withheld. Accuracy falls from 89.8–99.8 % to 50.6–68.6 % — a gap of
+28.3–48.8 pp, decisive for every model (exact McNemar, p from 6 × 10⁻³¹ to
+2 × 10⁻⁶⁶; every cluster-bootstrap interval excludes zero).
+
+Decomposing the three-shot gain: examples supply roughly half the benefit
+regardless of template match, and template exposure supplies the other half
+(mean 49.3 %, range 37.1–59.7 % across the six models). Retrieval gains measured
+on template-generated question sets will therefore overstate performance on
+genuinely novel queries — the curated question set, which shares less vocabulary
+with the pool, gains far less.
+
+**Differences *between models* are not resolvable at this sample size.** The two
+leading models differ by 1.4 pp, 95 % CI [−4.4, 7.1].
+
+**Energy per correct answer reorders the models.** The cheapest correct answer
+costs 42.4 J (QwenCoder-1.5B); the highest-scoring model costs 94.5 J.
+
+**Benchmark standing did not predict local ordering here.** Prem-1B-SQL leads
+Spider (84.5 %) but reaches 14.9 % zero-shot on the taxi database, while
+QwenCoder-3B is fourth on Spider and first on the taxi set. With six models the
+rank correlation is weak and not significant (ρ = 0.26, p = 0.62).
+
+> ⚠️ **A cautionary result worth reusing.** Comparing corrected-annotation BIRD
+> scores on a 369-item subset against v1 scores on the full 500 items appears to
+> show gains of up to +9.4 pp. On a *fixed* item set, correcting the reference
+> SQL in fact *lowers* accuracy for five of six models. The apparent gain was a
+> change of denominator. See `bird_sensitivity` in the paper.
+
+All numbers above are generated from the raw data in this repository;
+`reproduce.py` regenerates and checks every one.
 
 ## Research Questions
 
 | # | Question | Evaluation |
 |:-:|---------|-----------|
-| **RQ1** | How accurately do the models answer taxi queries, and how does accuracy change when query templates are withheld from the example pool? | Strict EX on 449 items × 4 held-out folds |
-| **RQ2** | How do the same artifacts score on published benchmarks? | Spider EX / TS / EM; BIRD EX / Soft F1 |
-| **RQ3** | Do retrieved three-shot examples improve accuracy — including on unseen templates? | Δ EX zero-shot → 3-shot (similar / fixed) |
-| **RQ4** | SQL-specialised vs. general models at similar scale? | Head-to-head across all workloads |
+| **RQ1** | How accurately do the models answer taxi queries, and how much does accuracy change when a query's own template is withheld from the example pool? | Strict EX on 449 items measured under both exposures, paired within items; template-cluster bootstrap intervals and exact McNemar |
+| **RQ2** | How do the same artifacts score on published benchmarks, and how sensitive are those scores to annotation quality? | Spider EX / TS / EM; BIRD EX / Soft F1; paired corrected-gold comparison on a fixed item set |
+| **RQ3** | Do three-shot examples improve accuracy, does retrieval beat a fixed set, and how much of the gain is template recall rather than schema reasoning? | Δ EX zero-shot → 3-shot, exact McNemar on paired items, gain decomposed by exposure |
+| **RQ4** | Do SQL-specialised models outperform general and code models at similar scale? | Head-to-head across all workloads, reported as observed differences with intervals |
 | **RQ5** | What are the latency, memory, and energy costs per correct answer? | Wall-clock s, peak VRAM, joules / correct |
+
+> **Scope.** This is a measurement study. Where the design cannot resolve a
+> difference, the paper reports that rather than ranking the models.
 
 ## Models
 
@@ -70,89 +107,122 @@ All models served as **Q4\_K\_M GGUF** through Ollama with F16 KV cache, flash a
 
 | Benchmark | Items | Metrics | Design |
 |-----------|------:|---------|--------|
-| NYC Taxi | 449 eval / 744 pool | Strict EX | 26 templates, 4 held-out folds |
+| NYC Taxi | 449 eval / 744 pool | Strict EX | 26 templates, 4 pool folds; each item measured with its template present and withheld |
 | Spider dev | 1,034 | EX, TS, EM | Standard development split |
 | BIRD Mini-Dev v1 | 500 | EX, Soft F1 | SQLite subset |
 
 ## Repository Structure
 
+The reusable tooling is kept free of anything specific to this study, so it can
+be pointed at another paper without editing it. Everything that knows about
+*these* six models and *this* taxi database lives in `analysis/`, `experiment/`
+and a single config file.
+
 ```
 .
-├── reproduce.py                # One command: verify → analyze → check → build
-├── requirements.txt
+├── reproduce.py                  # verify -> analyse -> check -> citations -> build
+├── requirements.txt              # requirements.lock.txt pins exact versions
 │
-├── experiment/
-│   ├── PLAN.md                 # Full experimental protocol
-│   └── code/
-│       └── score.py            # Scoring pipeline (NYC · Spider · BIRD)
+├── tools/                        # REUSABLE - no knowledge of this study
+│   ├── common.py                 # numbers, tables, figures, Wilson intervals
+│   ├── render.py                 # fills {{placeholders}} from numbers.json
+│   ├── fingerprint.py            # SHA-256 manifest over results/raw
+│   ├── verify_citations.py       # Crossref + arXiv lookup, with retry
+│   └── audit_claims.py           # guards ranking/quantifier claims in prose
 │
-├── analysis/
-│   └── analyze.py              # Raw scores → paper numbers + tables
-│
-├── tools/
-│   ├── common.py               # Analysis helpers (CIs, formatting)
-│   ├── render.py               # Fill {{placeholders}} → final paper
-│   ├── fingerprint.py          # SHA-256 integrity verification
-│   └── verify_citations.py     # Bibliography metadata checker
+├── analysis/                     # THIS STUDY
+│   ├── analyze.py                # scored outputs -> numbers + tables
+│   ├── stats_tests.py            # cluster bootstrap, McNemar, Holm, energy
+│   └── figures.py                # the seven figures
 │
 ├── paper/
-│   ├── paper.md                # Manuscript source
-│   ├── references.bib          # Bibliography
-│   └── numbers.lock.json       # Author-verified values
+│   ├── paper.md                  # manuscript source; every result is a placeholder
+│   ├── references.bib            # 22 references, all verified
+│   ├── audit.config.json         # models + metrics the claim auditor ranks on
+│   └── claims.reviewed.json      # 206 prose claims, verified and pinned by hash
 │
-├── results/raw/                # Read-only experimental outputs
-│   └── c9-main-20261017-s1/
-│       ├── acc/                # .jsonl per model × condition
-│       ├── env/                # Environment snapshots + model hashes
-│       ├── logs/               # Session logs, flags, events
-│       └── power/              # VDD_IN power traces (100 Hz)
+├── experiment/
+│   ├── PLAN.md                   # the registered protocol
+│   ├── code/                     # runner, scorer, test-mode and env scripts
+│   ├── config/                   # generation settings, model files, score paths
+│   ├── data/                     # question sets and schema
+│   ├── curated/                  # the 92-item curated set and its provenance
+│   ├── prompts/                  # prompt templates
+│   └── requests/                 # the exact prompt sent for every request
 │
-├── data/
-│   ├── taxi.db                 # NYC taxi SQLite database
-│   ├── questions/              # Question sets (generated + curated)
-│   └── benchmarks/             # Spider dev + BIRD Mini-Dev v1
+├── results/
+│   ├── MANIFEST.sha256           # hashes for every raw file
+│   ├── RUN_REPORT.md             # what happened during the run
+│   └── raw/c9-main-20261017-s1/
+│       ├── acc/                  # raw per-query outputs, one .jsonl per model x condition
+│       ├── env/                  # environment snapshots and model hashes
+│       ├── logs/                 # session logs, flags, events
+│       └── power/                # VDD_IN trace (gzipped) and GPU clocks
 │
-└── build/                      # Generated (gitignored)
-    ├── numbers.json
-    ├── tables/
-    └── figures/
+└── build/scores/                 # scored outputs - INPUT to the analysis, see below
 ```
+
+**Not included, by design:** model weights (`.gguf`), LoRA adapters from
+fine-tuning dry runs that no reported result depends on, and the Spider
+test-suite and BIRD evaluator databases. None are ours to redistribute, and all
+are obtainable from their original sources.
 
 ## Reproduction
 
-### Quick start — verify existing results
+### Verify the published results
 
 ```bash
 git clone https://github.com/biolababs/edgeslm-text-to-sql.git
 cd edgeslm-text-to-sql
-pip install -r requirements.txt
+pip install -r requirements.lock.txt
 
-# Download benchmark evaluators (one-time, ~1.5 GB)
-python setup.py --download-benchmarks
+# The power trace ships compressed; the manifest hashes the uncompressed file
+gunzip -k results/raw/c9-main-20261017-s1/power/session_s1-block_B3.log.gz
+gunzip -k results/raw/c9-main-20261017-s1/env/ollama_journal_s1.txt.gz
 
-# Verify everything: fingerprints → analysis → number check → citations → paper
 python reproduce.py
 ```
 
 `reproduce.py` runs five stages:
 
-1. **Fingerprint** — SHA-256 hashes confirm raw data is unmodified
-2. **Analyze** — regenerate all numbers and tables from scored outputs
-3. **Check** — compare every paper value against `numbers.lock.json`
-4. **Citations** — verify bibliography metadata against online sources
-5. **Render** — fill placeholders and build the final document
+1. **Fingerprint** — SHA-256 hashes confirm the raw data is unmodified
+2. **Analyse** — regenerate every number, table and figure from the scored outputs
+3. **Check** — compare each value against `paper/numbers.lock.json`
+4. **Citations** — re-resolve the bibliography against Crossref and arXiv
+5. **Render** — fill the placeholders and build the document
 
-### Rerun the full experiment
+This path needs no database and no benchmark evaluator: it consumes
+`build/scores/`, which is why those scored outputs ship with the archive rather
+than being regenerated.
 
-Requires a Jetson Orin Nano Super with JetPack 6.2+ and Ollama 0.30+.
-See [`experiment/PLAN.md`](experiment/PLAN.md) for the complete protocol.
+### Re-score from the raw outputs
+
+Scoring executes predicted SQL, so it needs the taxi database and the benchmark
+evaluators and their databases. Obtain Spider and BIRD from their own
+distributions, then:
 
 ```bash
-python experiment/code/run.py --config experiment/config/main.json
-python experiment/code/score.py \
-    --run results/raw/<your-run-id> \
-    --cfg experiment/config/score_paths.json
-python analysis/analyze.py --run <your-run-id>
+python experiment/code/score.py     --run results/raw/c9-main-20261017-s1     --cfg experiment/config/score_paths.json
+```
+
+### Re-run the experiment
+
+Requires a Jetson Orin Nano Super with JetPack 6.2+ and Ollama 0.30+, and the
+model artifacts named in `experiment/config/modelfiles/`. Set `JETSON_HOST` to
+`user@host` for the board. See [`experiment/PLAN.md`](experiment/PLAN.md) for the
+protocol, including the test-mode procedure and the power-sampling setup.
+
+### Checking the prose, not just the numbers
+
+Every reported value in the manuscript is substituted from `numbers.json`, so no
+number can drift. Claims *about* those numbers are hand-written, and three
+review rounds found errors in exactly that layer. `tools/audit_claims.py` finds
+every ranking, superlative, ordinal and universal-quantifier claim, prints the
+true ordering beside it, and fails until each is verified and pinned by hash:
+
+```bash
+python tools/audit_claims.py              # fails on any unreviewed claim
+python tools/audit_claims.py --rankings   # ground-truth ordering per metric
 ```
 
 ## Companion Study
@@ -163,8 +233,8 @@ Controlled precision comparison (F16 / Q8 / Q4 from the same source weights) and
 
 ```bibtex
 @misc{biolababs2026texttosql,
-  title   = {Text-to-SQL on an 8\,GB Edge Device: Accuracy, Generalisation,
-             and Energy Cost of Small Open-Weight Models},
+  title   = {Accuracy and Energy Trade-offs of Small Text-to-SQL Models on an
+             8\,GB Edge Device: A Reproducible Measurement Study},
   author  = {Abiola Babsalaam},
   year    = {2026},
   url     = {https://github.com/biolababs/edgeslm-text-to-sql}

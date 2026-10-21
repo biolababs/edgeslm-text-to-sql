@@ -1,0 +1,713 @@
+{
+ "qwen25coder15": {
+  "tags": [
+   "qc15-q4-ollama",
+   "qc15-f16-ours",
+   "qc15-q8-ours",
+   "qc15-q4-ours"
+  ],
+  "files": {
+   "bird0": {
+    "n": 500,
+    "max_tokens": 2156,
+    "mean_tokens": 939.346,
+    "over_limit": []
+   },
+   "birdarc": {
+    "n": 129,
+    "max_tokens": 2124,
+    "mean_tokens": 973.1240310077519,
+    "over_limit": []
+   },
+   "cur0": {
+    "n": 92,
+    "max_tokens": 512,
+    "mean_tokens": 502.2717391304348,
+    "over_limit": []
+   },
+   "curfix": {
+    "n": 92,
+    "max_tokens": 786,
+    "mean_tokens": 776.2717391304348,
+    "over_limit": []
+   },
+   "cursim": {
+    "n": 92,
+    "max_tokens": 874,
+    "mean_tokens": 757.8586956521739,
+    "over_limit": []
+   },
+   "lora10": {
+    "n": 217,
+    "max_tokens": 517,
+    "mean_tokens": 504.70506912442397,
+    "over_limit": []
+   },
+   "lora1sim": {
+    "n": 217,
+    "max_tokens": 837,
+    "mean_tokens": 773.4193548387096,
+    "over_limit": []
+   },
+   "lora20": {
+    "n": 233,
+    "max_tokens": 517,
+    "mean_tokens": 503.587982832618,
+    "over_limit": []
+   },
+   "lora2sim": {
+    "n": 233,
+    "max_tokens": 891,
+    "mean_tokens": 778.9957081545065,
+    "over_limit": []
+   },
+   "lora30": {
+    "n": 232,
+    "max_tokens": 520,
+    "mean_tokens": 502.6508620689655,
+    "over_limit": []
+   },
+   "lora3sim": {
+    "n": 232,
+    "max_tokens": 840,
+    "mean_tokens": 749.7844827586207,
+    "over_limit": []
+   },
+   "lora40": {
+    "n": 216,
+    "max_tokens": 520,
+    "mean_tokens": 503.7037037037037,
+    "over_limit": []
+   },
+   "lora4sim": {
+    "n": 216,
+    "max_tokens": 865,
+    "mean_tokens": 759.0694444444445,
+    "over_limit": []
+   },
+   "nyc0": {
+    "n": 449,
+    "max_tokens": 520,
+    "mean_tokens": 503.6436525612472,
+    "over_limit": []
+   },
+   "nycfix": {
+    "n": 449,
+    "max_tokens": 799,
+    "mean_tokens": 778.3986636971047,
+    "over_limit": []
+   },
+   "nycsim": {
+    "n": 898,
+    "max_tokens": 891,
+    "mean_tokens": 765.3084632516703,
+    "over_limit": []
+   },
+   "spider0": {
+    "n": 1034,
+    "max_tokens": 920,
+    "mean_tokens": 378.3607350096712,
+    "over_limit": []
+   },
+   "warmup": {
+    "n": 5,
+    "max_tokens": 506,
+    "mean_tokens": 502.8,
+    "over_limit": []
+   }
+  }
+ },
+ "qwen25coder3": {
+  "tags": [
+   "qc3-q4-ollama"
+  ],
+  "files": {
+   "bird0": {
+    "n": 500,
+    "max_tokens": 2156,
+    "mean_tokens": 939.346,
+    "over_limit": []
+   },
+   "birdarc": {
+    "n": 129,
+    "max_tokens": 2124,
+    "mean_tokens": 973.1240310077519,
+    "over_limit": []
+   },
+   "cur0": {
+    "n": 92,
+    "max_tokens": 512,
+    "mean_tokens": 502.2717391304348,
+    "over_limit": []
+   },
+   "curfix": {
+    "n": 92,
+    "max_tokens": 786,
+    "mean_tokens": 776.2717391304348,
+    "over_limit": []
+   },
+   "cursim": {
+    "n": 92,
+    "max_tokens": 874,
+    "mean_tokens": 757.8586956521739,
+    "over_limit": []
+   },
+   "lora10": {
+    "n": 217,
+    "max_tokens": 517,
+    "mean_tokens": 504.70506912442397,
+    "over_limit": []
+   },
+   "lora1sim": {
+    "n": 217,
+    "max_tokens": 837,
+    "mean_tokens": 773.4193548387096,
+    "over_limit": []
+   },
+   "lora20": {
+    "n": 233,
+    "max_tokens": 517,
+    "mean_tokens": 503.587982832618,
+    "over_limit": []
+   },
+   "lora2sim": {
+    "n": 233,
+    "max_tokens": 891,
+    "mean_tokens": 778.9957081545065,
+    "over_limit": []
+   },
+   "lora30": {
+    "n": 232,
+    "max_tokens": 520,
+    "mean_tokens": 502.6508620689655,
+    "over_limit": []
+   },
+   "lora3sim": {
+    "n": 232,
+    "max_tokens": 840,
+    "mean_tokens": 749.7844827586207,
+    "over_limit": []
+   },
+   "lora40": {
+    "n": 216,
+    "max_tokens": 520,
+    "mean_tokens": 503.7037037037037,
+    "over_limit": []
+   },
+   "lora4sim": {
+    "n": 216,
+    "max_tokens": 865,
+    "mean_tokens": 759.0694444444445,
+    "over_limit": []
+   },
+   "nyc0": {
+    "n": 449,
+    "max_tokens": 520,
+    "mean_tokens": 503.6436525612472,
+    "over_limit": []
+   },
+   "nycfix": {
+    "n": 449,
+    "max_tokens": 799,
+    "mean_tokens": 778.3986636971047,
+    "over_limit": []
+   },
+   "nycsim": {
+    "n": 898,
+    "max_tokens": 891,
+    "mean_tokens": 765.3084632516703,
+    "over_limit": []
+   },
+   "spider0": {
+    "n": 1034,
+    "max_tokens": 920,
+    "mean_tokens": 378.3607350096712,
+    "over_limit": []
+   },
+   "warmup": {
+    "n": 5,
+    "max_tokens": 506,
+    "mean_tokens": 502.8,
+    "over_limit": []
+   }
+  }
+ },
+ "llama32_3b": {
+  "tags": [
+   "llama32-3b-q4-ollama"
+  ],
+  "files": {
+   "bird0": {
+    "n": 500,
+    "max_tokens": 2151,
+    "mean_tokens": 953.44,
+    "over_limit": []
+   },
+   "birdarc": {
+    "n": 129,
+    "max_tokens": 2126,
+    "mean_tokens": 985.1085271317829,
+    "over_limit": []
+   },
+   "cur0": {
+    "n": 92,
+    "max_tokens": 533,
+    "mean_tokens": 523.0326086956521,
+    "over_limit": []
+   },
+   "curfix": {
+    "n": 92,
+    "max_tokens": 797,
+    "mean_tokens": 787.0326086956521,
+    "over_limit": []
+   },
+   "cursim": {
+    "n": 92,
+    "max_tokens": 882,
+    "mean_tokens": 775.6630434782609,
+    "over_limit": []
+   },
+   "lora10": {
+    "n": 217,
+    "max_tokens": 537,
+    "mean_tokens": 525.405529953917,
+    "over_limit": []
+   },
+   "lora1sim": {
+    "n": 217,
+    "max_tokens": 846,
+    "mean_tokens": 790.7142857142857,
+    "over_limit": []
+   },
+   "lora20": {
+    "n": 233,
+    "max_tokens": 537,
+    "mean_tokens": 524.1802575107296,
+    "over_limit": []
+   },
+   "lora2sim": {
+    "n": 233,
+    "max_tokens": 897,
+    "mean_tokens": 796.0386266094421,
+    "over_limit": []
+   },
+   "lora30": {
+    "n": 232,
+    "max_tokens": 538,
+    "mean_tokens": 523.2284482758621,
+    "over_limit": []
+   },
+   "lora3sim": {
+    "n": 232,
+    "max_tokens": 853,
+    "mean_tokens": 767.1724137931035,
+    "over_limit": []
+   },
+   "lora40": {
+    "n": 216,
+    "max_tokens": 538,
+    "mean_tokens": 524.3888888888889,
+    "over_limit": []
+   },
+   "lora4sim": {
+    "n": 216,
+    "max_tokens": 868,
+    "mean_tokens": 777.3935185185185,
+    "over_limit": []
+   },
+   "nyc0": {
+    "n": 449,
+    "max_tokens": 538,
+    "mean_tokens": 524.2806236080178,
+    "over_limit": []
+   },
+   "nycfix": {
+    "n": 449,
+    "max_tokens": 816,
+    "mean_tokens": 792.837416481069,
+    "over_limit": []
+   },
+   "nycsim": {
+    "n": 898,
+    "max_tokens": 897,
+    "mean_tokens": 782.8095768374164,
+    "over_limit": []
+   },
+   "spider0": {
+    "n": 1034,
+    "max_tokens": 885,
+    "mean_tokens": 389.96905222437135,
+    "over_limit": []
+   },
+   "warmup": {
+    "n": 5,
+    "max_tokens": 527,
+    "mean_tokens": 523.8,
+    "over_limit": []
+   }
+  }
+ },
+ "qwen3_4b_2507": {
+  "tags": [
+   "qwen3-4b-q4-ollama"
+  ],
+  "files": {
+   "bird0": {
+    "n": 500,
+    "max_tokens": 2156,
+    "mean_tokens": 939.346,
+    "over_limit": []
+   },
+   "birdarc": {
+    "n": 129,
+    "max_tokens": 2124,
+    "mean_tokens": 973.1240310077519,
+    "over_limit": []
+   },
+   "cur0": {
+    "n": 92,
+    "max_tokens": 512,
+    "mean_tokens": 502.2717391304348,
+    "over_limit": []
+   },
+   "curfix": {
+    "n": 92,
+    "max_tokens": 786,
+    "mean_tokens": 776.2717391304348,
+    "over_limit": []
+   },
+   "cursim": {
+    "n": 92,
+    "max_tokens": 874,
+    "mean_tokens": 757.8586956521739,
+    "over_limit": []
+   },
+   "lora10": {
+    "n": 217,
+    "max_tokens": 517,
+    "mean_tokens": 504.70506912442397,
+    "over_limit": []
+   },
+   "lora1sim": {
+    "n": 217,
+    "max_tokens": 837,
+    "mean_tokens": 773.4193548387096,
+    "over_limit": []
+   },
+   "lora20": {
+    "n": 233,
+    "max_tokens": 517,
+    "mean_tokens": 503.587982832618,
+    "over_limit": []
+   },
+   "lora2sim": {
+    "n": 233,
+    "max_tokens": 891,
+    "mean_tokens": 778.9957081545065,
+    "over_limit": []
+   },
+   "lora30": {
+    "n": 232,
+    "max_tokens": 520,
+    "mean_tokens": 502.6508620689655,
+    "over_limit": []
+   },
+   "lora3sim": {
+    "n": 232,
+    "max_tokens": 840,
+    "mean_tokens": 749.7844827586207,
+    "over_limit": []
+   },
+   "lora40": {
+    "n": 216,
+    "max_tokens": 520,
+    "mean_tokens": 503.7037037037037,
+    "over_limit": []
+   },
+   "lora4sim": {
+    "n": 216,
+    "max_tokens": 865,
+    "mean_tokens": 759.0694444444445,
+    "over_limit": []
+   },
+   "nyc0": {
+    "n": 449,
+    "max_tokens": 520,
+    "mean_tokens": 503.6436525612472,
+    "over_limit": []
+   },
+   "nycfix": {
+    "n": 449,
+    "max_tokens": 799,
+    "mean_tokens": 778.3986636971047,
+    "over_limit": []
+   },
+   "nycsim": {
+    "n": 898,
+    "max_tokens": 891,
+    "mean_tokens": 765.3084632516703,
+    "over_limit": []
+   },
+   "spider0": {
+    "n": 1034,
+    "max_tokens": 920,
+    "mean_tokens": 378.3607350096712,
+    "over_limit": []
+   },
+   "warmup": {
+    "n": 5,
+    "max_tokens": 506,
+    "mean_tokens": 502.8,
+    "over_limit": []
+   }
+  }
+ },
+ "xiyan3b": {
+  "tags": [
+   "xiyan3b-q4-ours"
+  ],
+  "files": {
+   "bird0": {
+    "n": 500,
+    "max_tokens": 2156,
+    "mean_tokens": 939.346,
+    "over_limit": []
+   },
+   "birdarc": {
+    "n": 129,
+    "max_tokens": 2124,
+    "mean_tokens": 973.1240310077519,
+    "over_limit": []
+   },
+   "birdnat": {
+    "n": 500,
+    "max_tokens": 2234,
+    "mean_tokens": 1003.92,
+    "over_limit": []
+   },
+   "cur0": {
+    "n": 92,
+    "max_tokens": 512,
+    "mean_tokens": 502.2717391304348,
+    "over_limit": []
+   },
+   "curfix": {
+    "n": 92,
+    "max_tokens": 786,
+    "mean_tokens": 776.2717391304348,
+    "over_limit": []
+   },
+   "curnat": {
+    "n": 92,
+    "max_tokens": 584,
+    "mean_tokens": 564.5652173913044,
+    "over_limit": []
+   },
+   "cursim": {
+    "n": 92,
+    "max_tokens": 874,
+    "mean_tokens": 757.8586956521739,
+    "over_limit": []
+   },
+   "lora10": {
+    "n": 217,
+    "max_tokens": 517,
+    "mean_tokens": 504.70506912442397,
+    "over_limit": []
+   },
+   "lora1sim": {
+    "n": 217,
+    "max_tokens": 837,
+    "mean_tokens": 773.4193548387096,
+    "over_limit": []
+   },
+   "lora20": {
+    "n": 233,
+    "max_tokens": 517,
+    "mean_tokens": 503.587982832618,
+    "over_limit": []
+   },
+   "lora2sim": {
+    "n": 233,
+    "max_tokens": 891,
+    "mean_tokens": 778.9957081545065,
+    "over_limit": []
+   },
+   "lora30": {
+    "n": 232,
+    "max_tokens": 520,
+    "mean_tokens": 502.6508620689655,
+    "over_limit": []
+   },
+   "lora3sim": {
+    "n": 232,
+    "max_tokens": 840,
+    "mean_tokens": 749.7844827586207,
+    "over_limit": []
+   },
+   "lora40": {
+    "n": 216,
+    "max_tokens": 520,
+    "mean_tokens": 503.7037037037037,
+    "over_limit": []
+   },
+   "lora4sim": {
+    "n": 216,
+    "max_tokens": 865,
+    "mean_tokens": 759.0694444444445,
+    "over_limit": []
+   },
+   "nyc0": {
+    "n": 449,
+    "max_tokens": 520,
+    "mean_tokens": 503.6436525612472,
+    "over_limit": []
+   },
+   "nycfix": {
+    "n": 449,
+    "max_tokens": 799,
+    "mean_tokens": 778.3986636971047,
+    "over_limit": []
+   },
+   "nycnat": {
+    "n": 449,
+    "max_tokens": 600,
+    "mean_tokens": 567.3363028953229,
+    "over_limit": []
+   },
+   "nycsim": {
+    "n": 898,
+    "max_tokens": 891,
+    "mean_tokens": 765.3084632516703,
+    "over_limit": []
+   },
+   "spider0": {
+    "n": 1034,
+    "max_tokens": 920,
+    "mean_tokens": 378.3607350096712,
+    "over_limit": []
+   },
+   "warmup": {
+    "n": 5,
+    "max_tokens": 506,
+    "mean_tokens": 502.8,
+    "over_limit": []
+   }
+  }
+ },
+ "prem1b": {
+  "tags": [
+   "prem1b-q4-ours"
+  ],
+  "files": {
+   "bird0": {
+    "n": 500,
+    "max_tokens": 3061,
+    "mean_tokens": 1264.248,
+    "over_limit": []
+   },
+   "birdarc": {
+    "n": 129,
+    "max_tokens": 3031,
+    "mean_tokens": 1291.077519379845,
+    "over_limit": []
+   },
+   "cur0": {
+    "n": 92,
+    "max_tokens": 662,
+    "mean_tokens": 648.4021739130435,
+    "over_limit": []
+   },
+   "curfix": {
+    "n": 92,
+    "max_tokens": 1008,
+    "mean_tokens": 994.4021739130435,
+    "over_limit": []
+   },
+   "cursim": {
+    "n": 92,
+    "max_tokens": 1119,
+    "mean_tokens": 975.695652173913,
+    "over_limit": []
+   },
+   "lora10": {
+    "n": 217,
+    "max_tokens": 666,
+    "mean_tokens": 651.4331797235023,
+    "over_limit": []
+   },
+   "lora1sim": {
+    "n": 217,
+    "max_tokens": 1073,
+    "mean_tokens": 999.9585253456221,
+    "over_limit": []
+   },
+   "lora20": {
+    "n": 233,
+    "max_tokens": 666,
+    "mean_tokens": 650.3090128755365,
+    "over_limit": []
+   },
+   "lora2sim": {
+    "n": 233,
+    "max_tokens": 1143,
+    "mean_tokens": 1003.0729613733905,
+    "over_limit": []
+   },
+   "lora30": {
+    "n": 232,
+    "max_tokens": 666,
+    "mean_tokens": 649.1465517241379,
+    "over_limit": []
+   },
+   "lora3sim": {
+    "n": 232,
+    "max_tokens": 1076,
+    "mean_tokens": 968.426724137931,
+    "over_limit": []
+   },
+   "lora40": {
+    "n": 216,
+    "max_tokens": 666,
+    "mean_tokens": 650.1898148148148,
+    "over_limit": []
+   },
+   "lora4sim": {
+    "n": 216,
+    "max_tokens": 1089,
+    "mean_tokens": 978.9768518518518,
+    "over_limit": []
+   },
+   "nyc0": {
+    "n": 449,
+    "max_tokens": 666,
+    "mean_tokens": 650.2516703786191,
+    "over_limit": []
+   },
+   "nycfix": {
+    "n": 449,
+    "max_tokens": 1032,
+    "mean_tokens": 1001.4988864142539,
+    "over_limit": []
+   },
+   "nycsim": {
+    "n": 898,
+    "max_tokens": 1143,
+    "mean_tokens": 987.5734966592428,
+    "over_limit": []
+   },
+   "spider0": {
+    "n": 1034,
+    "max_tokens": 1307,
+    "mean_tokens": 499.784332688588,
+    "over_limit": []
+   },
+   "warmup": {
+    "n": 5,
+    "max_tokens": 653,
+    "mean_tokens": 650.6,
+    "over_limit": []
+   }
+  }
+ }
+}

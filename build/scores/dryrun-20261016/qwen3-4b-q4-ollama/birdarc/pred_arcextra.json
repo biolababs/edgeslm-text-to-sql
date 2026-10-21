@@ -1,0 +1,3 @@
+{
+ "0": "SELECT AVG(SUM(c.Consumption)) / 12 AS average_monthly_consumption FROM \"yearmonth\" c JOIN customers cu ON c.CustomerID = cu.CustomerID WHERE cu.Segment = 'SME' AND substr(c.Date, 1, 4) = '2013';\t----- bird -----\tdebit_card_specializing"
+}

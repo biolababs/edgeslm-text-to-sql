@@ -1,0 +1,2 @@
+NAME                    ID              SIZE      PROCESSOR    CONTEXT    UNTIL               
+qc3-q4-ollama:latest    f72c60cabf62    2.2 GB    100% GPU     4096       29 minutes from now    

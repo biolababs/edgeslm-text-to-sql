@@ -1,0 +1,3 @@
+{
+ "0": "SELECT CAST(SUM(CASE WHEN Currency = 'EUR' THEN 1 ELSE 0 END) AS REAL) / COUNT(*) FROM customers\t----- bird -----\tdebit_card_specializing"
+}

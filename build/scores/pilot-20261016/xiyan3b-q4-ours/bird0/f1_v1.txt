@@ -1,0 +1,9 @@
+start calculate Soft F1
+
+Traceback (most recent call last):
+  File "C:\Users\biola\paper\models-cache\c9\data\mini_dev\evaluation\evaluation_f1.py", line 242, in <module>
+    simple_acc, moderate_acc, challenging_acc, acc, count_lists = compute_f1_by_diff(
+                                                                  ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\biola\paper\models-cache\c9\data\mini_dev\evaluation\evaluation_f1.py", line 185, in compute_f1_by_diff
+    sum([res["res"] for res in challenging_results])
+ZeroDivisionError: division by zero
