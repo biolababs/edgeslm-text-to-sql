@@ -26,6 +26,8 @@ Can a small language model translate natural-language questions into correct SQL
 
 This repository contains data, code, and instructions to **reproduce every number** in the accompanying paper. Six open-weight models (1 B – 4 B parameters, 4-bit quantised) are evaluated across three workloads — a single-domain taxi database with held-out query templates, the Spider development set, and BIRD Mini-Dev v1 — with every accuracy figure paired to per-query latency and energy drawn from the Jetson's on-board power sensor.
 
+It is first of all the archive for one study, so the findings below describe that study and nothing broader. The one part meant to be lifted elsewhere is [`tools/`](#repository-structure), which holds no knowledge of these models or this database.
+
 ### Key findings
 
 **Example retrieval is the effect that survives scrutiny.** Supplying three
@@ -57,11 +59,14 @@ Spider (84.5 %) but reaches 14.9 % zero-shot on the taxi database, while
 QwenCoder-3B is fourth on Spider and first on the taxi set. With six models the
 rank correlation is weak and not significant (ρ = 0.26, p = 0.62).
 
-> ⚠️ **A cautionary result worth reusing.** Comparing corrected-annotation BIRD
-> scores on a 369-item subset against v1 scores on the full 500 items appears to
-> show gains of up to +9.4 pp. On a *fixed* item set, correcting the reference
-> SQL in fact *lowers* accuracy for five of six models. The apparent gain was a
-> change of denominator. See `bird_sensitivity` in the paper.
+> ⚠️ **A trap to avoid if you use BIRD's corrected annotations.** Scoring the
+> 369 items whose question and evidence are unchanged against corrected gold,
+> and comparing that to v1 scores on the full 500, appears to show gains of up
+> to +9.4 pp. The subset is simply easier. On a *fixed* item set, correcting the
+> reference SQL in fact *lowers* accuracy for five of six models. The apparent
+> gain was a change of denominator, not of annotation quality. The
+> `bird_sensitivity` table reports both item sets side by side so the two
+> effects cannot be confused.
 
 All numbers above are generated from the raw data in this repository;
 `reproduce.py` regenerates and checks every one.
